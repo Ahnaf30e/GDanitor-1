@@ -21,7 +21,7 @@
     "gridColor": 10401023,
     "gridAlpha": 0.8,
     "snap": true,
-    "zoomFactor": 0.40000000000000024,
+    "zoomFactor": 0.27500000000000013,
     "windowMask": false
   },
   "objectsGroups": [
@@ -59,7 +59,14 @@
       ]
     }
   ],
-  "variables": [],
+  "variables": [
+    {
+      "folded": true,
+      "name": "zoom",
+      "type": "number",
+      "value": 1
+    }
+  ],
   "instances": [
     {
       "angle": 0,
@@ -9043,7 +9050,6 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
-          "folded": true,
           "name": "Ui ",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -9200,6 +9206,299 @@
                         "\"both\"",
                         "Middle",
                         ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ZoomCamera"
+                      },
+                      "parameters": [
+                        "",
+                        "Variable(zoom)",
+                        "\"\"",
+                        "0"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Comment",
+                  "color": {
+                    "b": 109,
+                    "g": 230,
+                    "r": 255,
+                    "textB": 0,
+                    "textG": 0,
+                    "textR": 0
+                  },
+                  "comment": "So there is \ncenter.CenterX()-320/2 (320 being the \"properties\" panel size)\nand\ncenter.CenterY()+288/2 (288 being the \"animation\" panel size)\nare here to center in the view and not from the middle of the screen itself",
+                  "comment2": ""
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "MouseButtonPressed"
+                      },
+                      "parameters": [
+                        "",
+                        "Middle"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::Or"
+                      },
+                      "parameters": [],
+                      "subInstructions": [
+                        {
+                          "type": {
+                            "value": "KeyPressed"
+                          },
+                          "parameters": [
+                            "",
+                            "LControl"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "KeyPressed"
+                          },
+                          "parameters": [
+                            "",
+                            "RControl"
+                          ]
+                        }
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetCameraCenterX"
+                      },
+                      "parameters": [
+                        "",
+                        "=",
+                        "center.CenterX()-320/2",
+                        "\"\"",
+                        "0"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetCameraCenterY"
+                      },
+                      "parameters": [
+                        "",
+                        "=",
+                        "center.CenterY()+288/2",
+                        "\"\"",
+                        "0"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ModVarScene"
+                      },
+                      "parameters": [
+                        "zoom",
+                        "=",
+                        "1"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "DepartScene"
+                      },
+                      "parameters": [
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "TiledSpriteObject::Height"
+                      },
+                      "parameters": [
+                        "grid",
+                        "=",
+                        "SceneWindowHeight()*100"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "TiledSpriteObject::Width"
+                      },
+                      "parameters": [
+                        "grid",
+                        "=",
+                        "SceneWindowWidth()*100"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BBText::IsFontSize"
+                      },
+                      "parameters": [
+                        "supporterGuideText",
+                        ">",
+                        "16"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "BBText::SetFontSize"
+                      },
+                      "parameters": [
+                        "supporterGuideText",
+                        "=",
+                        "32/Variable(zoom)"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BBText::IsFontSize"
+                      },
+                      "parameters": [
+                        "supporterGuideText",
+                        "<",
+                        "16"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "BBText::SetFontSize"
+                      },
+                      "parameters": [
+                        "supporterGuideText",
+                        "=",
+                        "18"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "VarScene"
+                      },
+                      "parameters": [
+                        "zoom",
+                        ">",
+                        "9"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "ModVarScene"
+                      },
+                      "parameters": [
+                        "zoom",
+                        "=",
+                        "9"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "VarScene"
+                      },
+                      "parameters": [
+                        "zoom",
+                        "<",
+                        "0.1"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "ModVarScene"
+                      },
+                      "parameters": [
+                        "zoom",
+                        "=",
+                        "0.1"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "IsMouseWheelScrollingDown"
+                      },
+                      "parameters": [
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "ModVarScene"
+                      },
+                      "parameters": [
+                        "zoom",
+                        "-",
+                        "0.2"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "IsMouseWheelScrollingUp"
+                      },
+                      "parameters": [
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "ModVarScene"
+                      },
+                      "parameters": [
+                        "zoom",
+                        "+",
+                        "0.2"
                       ]
                     }
                   ]
