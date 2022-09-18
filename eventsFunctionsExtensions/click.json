@@ -1,0 +1,172 @@
+{
+  "author": "",
+  "category": "",
+  "description": "",
+  "extensionNamespace": "",
+  "fullName": "",
+  "helpPath": "",
+  "iconUrl": "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0ibWRpLWhhbmQtcG9pbnRpbmctZG93biIgd2lkdGg9IjI0IiBoZWlnaHQ9IjI0IiB2aWV3Qm94PSIwIDAgMjQgMjQiPjxwYXRoIGQ9Ik05LjksMjFWMTFMNi43LDEyLjY5TDYuNSwxMi43MkM2LjE5LDEyLjcyIDUuOTMsMTIuNiA1Ljc0LDEyLjRMNSwxMS42M0w5LjksNy40M0MxMC4xNiw3LjE2IDEwLjUsNyAxMC45LDdIMTcuNEMxOC4xNyw3IDE4LjksNy43IDE4LjksOC41VjEyLjg2QzE4LjksMTMuNDcgMTguNTUsMTQgMTguMDUsMTQuMkwxMy4xMSwxNi40TDExLjksMTYuNTNWMjFBMSwxIDAgMCwxIDEwLjksMjJBMSwxIDAgMCwxIDkuOSwyMU0xOC45LDVIMTAuOVYySDE4LjlWNVoiIC8+PC9zdmc+",
+  "name": "Click",
+  "previewIconUrl": "https://resources.gdevelop-app.com/assets/Icons/hand-pointing-down.svg",
+  "shortDescription": "",
+  "version": "",
+  "tags": [],
+  "authorIds": [],
+  "dependencies": [],
+  "eventsFunctions": [
+    {
+      "description": "If clicked",
+      "fullName": "Clicked",
+      "functionType": "Condition",
+      "group": "",
+      "name": "click",
+      "private": false,
+      "sentence": "If _PARAM1_ clicked on _PARAM2_.",
+      "events": [
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "StrEqual"
+              },
+              "parameters": [
+                "GetArgumentAsString(\"mouse\")",
+                "=",
+                "\"Right\""
+              ]
+            }
+          ],
+          "actions": [],
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "MouseButtonPressed"
+                  },
+                  "parameters": [
+                    "",
+                    "Right"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SourisSurObjet"
+                  },
+                  "parameters": [
+                    "object",
+                    "",
+                    "",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::Once"
+                  },
+                  "parameters": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetReturnBoolean"
+                  },
+                  "parameters": [
+                    "True"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "StrEqual"
+              },
+              "parameters": [
+                "GetArgumentAsString(\"mouse\")",
+                "=",
+                "\"Left\""
+              ]
+            }
+          ],
+          "actions": [],
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "MouseButtonPressed"
+                  },
+                  "parameters": [
+                    "",
+                    "Left"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::Once"
+                  },
+                  "parameters": []
+                },
+                {
+                  "type": {
+                    "value": "SourisSurObjet"
+                  },
+                  "parameters": [
+                    "object",
+                    "",
+                    "",
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetReturnBoolean"
+                  },
+                  "parameters": [
+                    "True"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "parameters": [
+        {
+          "codeOnly": false,
+          "defaultValue": "",
+          "description": "Mousebutton",
+          "longDescription": "",
+          "name": "mouse",
+          "optional": false,
+          "supplementaryInformation": "",
+          "type": "mouse"
+        },
+        {
+          "codeOnly": false,
+          "defaultValue": "",
+          "description": "object",
+          "longDescription": "",
+          "name": "object",
+          "optional": false,
+          "supplementaryInformation": "",
+          "type": "objectList"
+        }
+      ],
+      "objectGroups": []
+    }
+  ],
+  "eventsBasedBehaviors": [],
+  "eventsBasedObjects": []
+}

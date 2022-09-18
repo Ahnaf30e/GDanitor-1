@@ -1,0 +1,94 @@
+{
+  "author": "",
+  "category": "",
+  "description": "",
+  "extensionNamespace": "",
+  "fullName": "Boolen Conversion",
+  "helpPath": "",
+  "iconUrl": "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0ibWRpLWVsZWN0cmljLXN3aXRjaCIgd2lkdGg9IjI0IiBoZWlnaHQ9IjI0IiB2aWV3Qm94PSIwIDAgMjQgMjQiPjxwYXRoIGQ9Ik0xLDExSDMuMTdDMy41OCw5LjgzIDQuNjksOSA2LDlDNi42NSw5IDcuMjUsOS4yMSA3Ljc0LDkuNTZMMTQuNDQsNC44N0wxNS41OCw2LjVMOC44OSwxMS4yQzguOTYsMTEuNDUgOSwxMS43MiA5LDEyQTMsMyAwIDAsMSA2LDE1QzQuNjksMTUgMy41OCwxNC4xNyAzLjE3LDEzSDFWMTFNMjMsMTFWMTNIMjAuODNDMjAuNDIsMTQuMTcgMTkuMzEsMTUgMTgsMTVBMywzIDAgMCwxIDE1LDEyQTMsMyAwIDAsMSAxOCw5QzE5LjMxLDkgMjAuNDIsOS44MyAyMC44MywxMUgyM002LDExQTEsMSAwIDAsMCA1LDEyQTEsMSAwIDAsMCA2LDEzQTEsMSAwIDAsMCA3LDEyQTEsMSAwIDAsMCA2LDExTTE4LDExQTEsMSAwIDAsMCAxNywxMkExLDEgMCAwLDAgMTgsMTNBMSwxIDAgMCwwIDE5LDEyQTEsMSAwIDAsMCAxOCwxMVoiIC8+PC9zdmc+",
+  "name": "BoolenConversion",
+  "previewIconUrl": "https://resources.gdevelop-app.com/assets/Icons/electric-switch.svg",
+  "shortDescription": "",
+  "version": "",
+  "tags": [],
+  "authorIds": [],
+  "dependencies": [],
+  "eventsFunctions": [
+    {
+      "description": "Number to boolen YES NO",
+      "fullName": "Number to boolen YES NO",
+      "functionType": "StringExpression",
+      "group": "",
+      "name": "NumberToYN",
+      "private": false,
+      "sentence": "",
+      "events": [
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "BuiltinCommonInstructions::CompareNumbers"
+              },
+              "parameters": [
+                "GetArgumentAsNumber(\"Number\")",
+                "<=",
+                "0"
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "SetReturnString"
+              },
+              "parameters": [
+                "\"no\""
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "BuiltinCommonInstructions::CompareNumbers"
+              },
+              "parameters": [
+                "GetArgumentAsNumber(\"Number\")",
+                ">",
+                "0"
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "SetReturnString"
+              },
+              "parameters": [
+                "\"yes\""
+              ]
+            }
+          ]
+        }
+      ],
+      "parameters": [
+        {
+          "codeOnly": false,
+          "defaultValue": "",
+          "description": "0 or 1",
+          "longDescription": "",
+          "name": "Number",
+          "optional": false,
+          "supplementaryInformation": "",
+          "type": "expression"
+        }
+      ],
+      "objectGroups": []
+    }
+  ],
+  "eventsBasedBehaviors": [],
+  "eventsBasedObjects": []
+}

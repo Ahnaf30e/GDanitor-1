@@ -1,0 +1,585 @@
+{
+  "firstLayout": "",
+  "gdVersion": {
+    "build": 99,
+    "major": 4,
+    "minor": 0,
+    "revision": 0
+  },
+  "properties": {
+    "adaptGameResolutionAtRuntime": true,
+    "folderProject": true,
+    "orientation": "landscape",
+    "packageName": "com.example.gamename",
+    "pixelsRounding": true,
+    "projectUuid": "72475ff2-c736-4470-95f9-df650e26e9ff",
+    "scaleMode": "nearest",
+    "sizeOnStartupMode": "",
+    "templateSlug": "",
+    "useExternalSourceFiles": false,
+    "version": "0.1.0",
+    "name": "GD:anitor",
+    "description": "",
+    "author": "",
+    "windowWidth": 1920,
+    "windowHeight": 1080,
+    "latestCompilationDirectory": "",
+    "maxFPS": 180,
+    "minFPS": 20,
+    "verticalSync": false,
+    "platformSpecificAssets": {},
+    "loadingScreen": {
+      "backgroundColor": 0,
+      "backgroundFadeInDuration": 0.2,
+      "backgroundImageResourceName": "",
+      "gdevelopLogoStyle": "light",
+      "logoAndProgressFadeInDuration": 0.2,
+      "logoAndProgressLogoFadeInDelay": 0.2,
+      "minDuration": 1.5,
+      "progressBarColor": 16777215,
+      "progressBarHeight": 20,
+      "progressBarMaxWidth": 200,
+      "progressBarMinWidth": 40,
+      "progressBarWidthPercent": 30,
+      "showGDevelopSplash": true,
+      "showProgressBar": true
+    },
+    "authorIds": [
+      "onPsboRtDkUHNOsx7OPr8R8G1oj2"
+    ],
+    "categories": [],
+    "playableDevices": [],
+    "extensionProperties": [],
+    "platforms": [
+      {
+        "name": "GDevelop JS platform"
+      }
+    ],
+    "currentPlatform": "GDevelop JS platform"
+  },
+  "resources": {
+    "resources": [
+      {
+        "alwaysLoaded": false,
+        "file": "assets/NewSprite-1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\NewSprite-1.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "NewFile-1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "NewFile-1.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/box1-1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\box1-1.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/normal-invert.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\normal-invert.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/hue200.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\hue200.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Angle-1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Angle-1.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/Angle-1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\Angle-1.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/NewFile-1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\NewFile-1.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "NewSprite-1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "NewSprite-1.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/nodes/all.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\nodes\\all.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "buttonzx/pen-1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "buttonzx\\pen-1.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "redSelectTool-1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "redSelectTool-1.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/redSelectTool-1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\redSelectTool-1.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "Minecraft.ttf",
+        "kind": "font",
+        "metadata": "",
+        "name": "Minecraft.ttf",
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/sixze.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\sixze.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/Angle-1-0.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\Angle-1-0.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/Angle-1-1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\Angle-1-1.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/Size-1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\Size-1.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/Angle-1-2.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\Angle-1-2.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "NewSprite-1-0.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "NewSprite-1-0.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "NewSprite-1-1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "NewSprite-1-1.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/paramlist-1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\paramlist-1.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "buttonzx/boxdrag.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "buttonzx\\boxdrag.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "buttonzx/nah.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "buttonzx\\nah.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "buttonzx/right.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "buttonzx\\right.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/empty/empty-1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\empty\\empty-1.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/empty/boxImage-1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\empty\\boxImage-1.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/empty/NewSprite-1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\empty\\NewSprite-1.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/empty/NewSprite-1-0.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\empty\\NewSprite-1-0.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "dfsdf-1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "dfsdf-1.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/infinity/grid.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\infinity\\grid.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "buttonzx/center.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "buttonzx\\center.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/lgotas/asdsdasd.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\lgotas\\asdsdasd.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "alagard.ttf",
+        "kind": "font",
+        "metadata": "",
+        "name": "alagard.ttf",
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "buttonzx/gooo.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "buttonzx\\gooo.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "buttonzx/plate.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "buttonzx\\plate.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "buttonzx/createnew.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "buttonzx\\createnew.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "buttonzx/loadlast.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "buttonzx\\loadlast.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/lgotas/gfgf.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\lgotas\\gfgf.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "buttonzx/saveskelli.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "buttonzx\\saveskelli.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/NewSprite-1-0.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\NewSprite-1-0.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "buttonzx/plate-1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "buttonzx\\plate-1.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "NewSprite2-1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "NewSprite2-1.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "buttonzx/saveanim.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "buttonzx\\saveanim.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "buttonzx/home.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "buttonzx\\home.png",
+        "smoothed": false,
+        "userAdded": false
+      }
+    ],
+    "resourceFolders": []
+  },
+  "objects": [],
+  "objectsGroups": [],
+  "variables": [
+    {
+      "name": "version",
+      "type": "array",
+      "children": [
+        {
+          "type": "string",
+          "value": "0"
+        },
+        {
+          "folded": true,
+          "type": "string",
+          "value": "1"
+        },
+        {
+          "type": "string",
+          "value": "0-beta"
+        }
+      ]
+    },
+    {
+      "folded": true,
+      "name": "saveJSON",
+      "type": "string",
+      "value": ""
+    },
+    {
+      "folded": true,
+      "name": "saveLoaded",
+      "type": "boolean",
+      "value": false
+    }
+  ],
+  "layouts": [
+    {
+      "__REFERENCE_TO_SPLIT_OBJECT": true,
+      "referenceTo": "/layouts/menu"
+    },
+    {
+      "__REFERENCE_TO_SPLIT_OBJECT": true,
+      "referenceTo": "/layouts/stage"
+    },
+    {
+      "__REFERENCE_TO_SPLIT_OBJECT": true,
+      "referenceTo": "/layouts/untitled-scene"
+    }
+  ],
+  "externalEvents": [
+    {
+      "__REFERENCE_TO_SPLIT_OBJECT": true,
+      "referenceTo": "/externalEvents/untitled-external-events"
+    },
+    {
+      "__REFERENCE_TO_SPLIT_OBJECT": true,
+      "referenceTo": "/externalEvents/untitled-external-events2"
+    }
+  ],
+  "eventsFunctionsExtensions": [
+    {
+      "__REFERENCE_TO_SPLIT_OBJECT": true,
+      "referenceTo": "/eventsFunctionsExtensions/snaptogrid"
+    },
+    {
+      "__REFERENCE_TO_SPLIT_OBJECT": true,
+      "referenceTo": "/eventsFunctionsExtensions/references"
+    },
+    {
+      "__REFERENCE_TO_SPLIT_OBJECT": true,
+      "referenceTo": "/eventsFunctionsExtensions/dragcamerawithpointer"
+    },
+    {
+      "__REFERENCE_TO_SPLIT_OBJECT": true,
+      "referenceTo": "/eventsFunctionsExtensions/clipboard"
+    },
+    {
+      "__REFERENCE_TO_SPLIT_OBJECT": true,
+      "referenceTo": "/eventsFunctionsExtensions/sticker"
+    },
+    {
+      "__REFERENCE_TO_SPLIT_OBJECT": true,
+      "referenceTo": "/eventsFunctionsExtensions/resourceloadingtools"
+    },
+    {
+      "__REFERENCE_TO_SPLIT_OBJECT": true,
+      "referenceTo": "/eventsFunctionsExtensions/fps"
+    },
+    {
+      "__REFERENCE_TO_SPLIT_OBJECT": true,
+      "referenceTo": "/eventsFunctionsExtensions/uuid"
+    },
+    {
+      "__REFERENCE_TO_SPLIT_OBJECT": true,
+      "referenceTo": "/eventsFunctionsExtensions/ysort"
+    },
+    {
+      "__REFERENCE_TO_SPLIT_OBJECT": true,
+      "referenceTo": "/eventsFunctionsExtensions/wrapnumber"
+    },
+    {
+      "__REFERENCE_TO_SPLIT_OBJECT": true,
+      "referenceTo": "/eventsFunctionsExtensions/draggableslidercontrol"
+    },
+    {
+      "__REFERENCE_TO_SPLIT_OBJECT": true,
+      "referenceTo": "/eventsFunctionsExtensions/click"
+    },
+    {
+      "__REFERENCE_TO_SPLIT_OBJECT": true,
+      "referenceTo": "/eventsFunctionsExtensions/boolenconversion"
+    },
+    {
+      "__REFERENCE_TO_SPLIT_OBJECT": true,
+      "referenceTo": "/eventsFunctionsExtensions/gdaitoranimator"
+    }
+  ],
+  "externalLayouts": [],
+  "externalSourceFiles": []
+}

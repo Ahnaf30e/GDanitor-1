@@ -1,0 +1,131 @@
+{
+  "author": "",
+  "category": "",
+  "description": "Add expressions for Wrapping numbers in a range",
+  "extensionNamespace": "",
+  "fullName": "Wrap number",
+  "helpPath": "",
+  "iconUrl": "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0ibWRpLXByaW9yaXR5LWhpZ2giIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBkPSJNMTQsMTlIMjJWMTdIMTRWMTlNMTQsMTMuNUgyMlYxMS41SDE0VjEzLjVNMTQsOEgyMlY2SDE0VjhNMiwxMi41QzIsOC45MiA0LjkyLDYgOC41LDZIOVY0TDEyLDdMOSwxMFY4SDguNUM2LDggNCwxMCA0LDEyLjVDNCwxNSA2LDE3IDguNSwxN0gxMlYxOUg4LjVDNC45MiwxOSAyLDE2LjA4IDIsMTIuNVoiIC8+PC9zdmc+",
+  "name": "WrapNumber",
+  "previewIconUrl": "https://resources.gdevelop-app.com/assets/Icons/priority-high.svg",
+  "shortDescription": "Add expressions for Wrapping numbers in a range",
+  "version": "1.0.0",
+  "tags": [
+    "wrap",
+    "number",
+    "limit"
+  ],
+  "authorIds": [
+    "onPsboRtDkUHNOsx7OPr8R8G1oj2"
+  ],
+  "dependencies": [],
+  "eventsFunctions": [
+    {
+      "description": "Wrap a number in a range ",
+      "fullName": "Wrap a number",
+      "functionType": "Expression",
+      "group": "",
+      "name": "WrapNumber",
+      "private": false,
+      "sentence": "",
+      "events": [
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "BuiltinCommonInstructions::CompareNumbers"
+              },
+              "parameters": [
+                "GetArgumentAsNumber(\"Min\")",
+                "!=",
+                "GetArgumentAsNumber(\"Max\")"
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "SetReturnNumber"
+              },
+              "parameters": [
+                "((GetArgumentAsNumber(\"Num\")-GetArgumentAsNumber(\"Min\"))-((GetArgumentAsNumber(\"Max\")-GetArgumentAsNumber(\"Min\"))*floor((GetArgumentAsNumber(\"Num\")-GetArgumentAsNumber(\"Min\"))/(GetArgumentAsNumber(\"Max\")-GetArgumentAsNumber(\"Min\")))))+GetArgumentAsNumber(\"Min\")"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "BuiltinCommonInstructions::CompareNumbers"
+              },
+              "parameters": [
+                "GetArgumentAsNumber(\"Min\")",
+                "=",
+                "GetArgumentAsNumber(\"Max\")"
+              ]
+            },
+            {
+              "type": {
+                "value": "CompareTimer"
+              },
+              "parameters": [
+                "",
+                "\"sad\"",
+                ">",
+                "34"
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "SetReturnNumber"
+              },
+              "parameters": [
+                "GetArgumentAsNumber(\"Min\")"
+              ]
+            }
+          ]
+        }
+      ],
+      "parameters": [
+        {
+          "codeOnly": false,
+          "defaultValue": "",
+          "description": "The value to convert",
+          "longDescription": "",
+          "name": "Num",
+          "optional": false,
+          "supplementaryInformation": "",
+          "type": "expression"
+        },
+        {
+          "codeOnly": false,
+          "defaultValue": "",
+          "description": "The lowest value of the range",
+          "longDescription": "",
+          "name": "Min",
+          "optional": false,
+          "supplementaryInformation": "",
+          "type": "expression"
+        },
+        {
+          "codeOnly": false,
+          "defaultValue": "",
+          "description": "The highest value of the range",
+          "longDescription": "",
+          "name": "Max",
+          "optional": false,
+          "supplementaryInformation": "",
+          "type": "expression"
+        }
+      ],
+      "objectGroups": []
+    }
+  ],
+  "eventsBasedBehaviors": [],
+  "eventsBasedObjects": []
+}

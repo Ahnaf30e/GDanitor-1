@@ -1,0 +1,233 @@
+{
+  "associatedLayout": "stage",
+  "lastChangeTimeStamp": 0,
+  "name": "Untitled external events2",
+  "events": [
+    {
+      "colorB": 228,
+      "colorG": 176,
+      "colorR": 74,
+      "creationTime": 0,
+      "name": "Images",
+      "source": "",
+      "type": "BuiltinCommonInstructions::Group",
+      "events": [
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": [
+            {
+              "type": {
+                "value": "Create"
+              },
+              "parameters": [
+                "",
+                "boxImager",
+                "0",
+                "0",
+                "\"\""
+              ]
+            },
+            {
+              "type": {
+                "value": "ChangePlan"
+              },
+              "parameters": [
+                "boxImager",
+                "=",
+                "box.ZOrder()+1"
+              ]
+            },
+            {
+              "type": {
+                "value": "ChangeHeight"
+              },
+              "parameters": [
+                "boxImager",
+                "=",
+                "box.Height()"
+              ]
+            },
+            {
+              "type": {
+                "value": "ChangeWidth"
+              },
+              "parameters": [
+                "boxImager",
+                "=",
+                "box.Width()"
+              ]
+            },
+            {
+              "type": {
+                "value": "SetAngle"
+              },
+              "parameters": [
+                "boxImager",
+                "=",
+                "box.Angle()"
+              ]
+            },
+            {
+              "type": {
+                "value": "MettreXY"
+              },
+              "parameters": [
+                "boxImager",
+                "=",
+                "box.X()",
+                "=",
+                "box.Y()"
+              ]
+            },
+            {
+              "type": {
+                "value": "LinkedObjects::LinkObjects"
+              },
+              "parameters": [
+                "",
+                "box",
+                "boxImager"
+              ]
+            }
+          ],
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Create"
+                  },
+                  "parameters": [
+                    "",
+                    "boxImage",
+                    "0",
+                    "0",
+                    "\"\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ChangePlan"
+                  },
+                  "parameters": [
+                    "boxImage",
+                    "=",
+                    "box.ZOrder()+1"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ChangeHeight"
+                  },
+                  "parameters": [
+                    "boxImage",
+                    "=",
+                    "box.Height()"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ChangeWidth"
+                  },
+                  "parameters": [
+                    "boxImage",
+                    "=",
+                    "box.Width()"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetAngle"
+                  },
+                  "parameters": [
+                    "boxImage",
+                    "=",
+                    "box.Angle()"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "MettreXY"
+                  },
+                  "parameters": [
+                    "boxImage",
+                    "=",
+                    "box.X()",
+                    "=",
+                    "box.Y()"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "LinkedObjects::LinkObjects"
+                  },
+                  "parameters": [
+                    "",
+                    "box",
+                    "boxImage"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "LinkedObjects::LinkObjects"
+                  },
+                  "parameters": [
+                    "",
+                    "boxImager",
+                    "boxImage"
+                  ]
+                }
+              ],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "VarSceneTxt"
+                      },
+                      "parameters": [
+                        "box.anm.object.imgURL",
+                        "!=",
+                        "\"0\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "VarSceneTxt"
+                      },
+                      "parameters": [
+                        "box.anm.object.imgURL",
+                        "!=",
+                        "\"\""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "ResourceLoadingTools::LoadURLIntoSprite"
+                      },
+                      "parameters": [
+                        "",
+                        "VariableString(box.anm.object.imgURL)",
+                        "boxImage",
+                        "",
+                        "yes",
+                        ""
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "parameters": []
+    }
+  ]
+}
