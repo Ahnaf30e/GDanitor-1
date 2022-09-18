@@ -2997,6 +2997,7 @@
               "colorG": 176,
               "colorR": 74,
               "creationTime": 0,
+              "folded": true,
               "name": "DUPLICTAE boxies copppppy pasteeeeee",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
@@ -4671,7 +4672,6 @@
                           ]
                         },
                         {
-                          "folded": true,
                           "type": "BuiltinCommonInstructions::ForEach",
                           "object": "box",
                           "conditions": [],
@@ -4757,6 +4757,7 @@
                   "colorG": 176,
                   "colorR": 74,
                   "creationTime": 0,
+                  "folded": true,
                   "name": "angle",
                   "source": "",
                   "type": "BuiltinCommonInstructions::Group",
@@ -5101,7 +5102,102 @@
                   "parameters": []
                 },
                 {
-                  "folded": true,
+                  "colorB": 228,
+                  "colorG": 176,
+                  "colorR": 74,
+                  "creationTime": 0,
+                  "name": "moved",
+                  "source": "",
+                  "type": "BuiltinCommonInstructions::Group",
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "DraggableBehavior::Dragged"
+                          },
+                          "parameters": [
+                            "box",
+                            "Draggable"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "MettreXY"
+                          },
+                          "parameters": [
+                            "supporterGuideText",
+                            "=",
+                            "MouseX()",
+                            "=",
+                            "MouseY()"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "BBText::SetBBText"
+                          },
+                          "parameters": [
+                            "supporterGuideText",
+                            "=",
+                            "\"[outline=black]\"+\" X:\"+ToString(round(box.X()))+\" Y:\"+ToString(round(box.Y()))+\"[/outline]\""
+                          ]
+                        }
+                      ],
+                      "events": [
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "BuiltinCommonInstructions::Once"
+                              },
+                              "parameters": []
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "Create"
+                              },
+                              "parameters": [
+                                "",
+                                "supporterGuideText",
+                                "box.X()",
+                                "box.Y()",
+                                "\"\""
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "ChangePlan"
+                              },
+                              "parameters": [
+                                "supporterGuideText",
+                                "=",
+                                "200"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "BBText::SetWordWrap"
+                              },
+                              "parameters": [
+                                "supporterGuideText",
+                                ""
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ],
+                  "parameters": []
+                },
+                {
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [],
                   "actions": []
@@ -8947,6 +9043,7 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
+          "folded": true,
           "name": "Ui ",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -9576,7 +9673,6 @@
                                       ]
                                     },
                                     {
-                                      "folded": true,
                                       "type": "BuiltinCommonInstructions::ForEachChildVariable",
                                       "iterableVariableName": "paramValue",
                                       "valueIteratorVariableName": "subParamValue",
