@@ -1,8 +1,8 @@
 {
   "b": 17,
   "disableInputWhenNotFocused": true,
-  "mangledName": "menu",
-  "name": "menu",
+  "mangledName": "saveList",
+  "name": "saveList",
   "r": 11,
   "standardSortMethod": true,
   "stopSoundsOnStartup": true,
@@ -18,7 +18,7 @@
     "gridColor": 10401023,
     "gridAlpha": 0.2,
     "snap": true,
-    "zoomFactor": 0.475,
+    "zoomFactor": 0.4250000000000003,
     "windowMask": false
   },
   "objectsGroups": [],
@@ -27,124 +27,14 @@
     {
       "angle": 0,
       "customSize": true,
-      "height": 540,
-      "layer": "",
-      "name": "logo",
-      "persistentUuid": "b9aae989-ab9f-4f94-8cec-45b3d23479b1",
-      "width": 960,
-      "x": 0,
-      "y": -92,
-      "zOrder": 1,
-      "numberProperties": [],
-      "stringProperties": [],
-      "initialVariables": []
-    },
-    {
-      "angle": 0,
-      "customSize": false,
-      "height": 0,
-      "layer": "",
+      "height": 34,
+      "layer": "GUI",
       "name": "version",
       "persistentUuid": "5f96f031-f168-4ce4-8ff9-77cc49d63a22",
-      "width": 0,
-      "x": 369,
-      "y": 74,
+      "width": 480,
+      "x": 96,
+      "y": 30,
       "zOrder": 2,
-      "numberProperties": [],
-      "stringProperties": [],
-      "initialVariables": []
-    },
-    {
-      "angle": 0,
-      "customSize": true,
-      "height": 320,
-      "layer": "",
-      "name": "jsonCode",
-      "persistentUuid": "5c662c79-a296-4be3-9cfc-362538da4a4e",
-      "width": 864,
-      "x": 96,
-      "y": 672,
-      "zOrder": 3,
-      "numberProperties": [],
-      "stringProperties": [],
-      "initialVariables": []
-    },
-    {
-      "angle": 0,
-      "customSize": true,
-      "height": 128,
-      "layer": "",
-      "name": "enter",
-      "persistentUuid": "a71863fb-a463-45f0-8789-73b2e608eb73",
-      "width": 128,
-      "x": 992,
-      "y": 896,
-      "zOrder": 4,
-      "numberProperties": [],
-      "stringProperties": [],
-      "initialVariables": []
-    },
-    {
-      "angle": 0,
-      "customSize": true,
-      "height": 160,
-      "layer": "",
-      "name": "plate",
-      "persistentUuid": "24ed8efe-66ae-4150-85ea-7761de37b983",
-      "width": 160,
-      "x": 320,
-      "y": 416,
-      "zOrder": 5,
-      "numberProperties": [],
-      "stringProperties": [],
-      "initialVariables": []
-    },
-    {
-      "angle": 0,
-      "customSize": true,
-      "height": 160,
-      "layer": "",
-      "name": "plateons",
-      "persistentUuid": "46acf57b-a6ed-425c-b792-6fd22ee8cd24",
-      "width": 160,
-      "x": 320,
-      "y": 416,
-      "zOrder": 6,
-      "numberProperties": [
-        {
-          "name": "animation",
-          "value": 1
-        }
-      ],
-      "stringProperties": [],
-      "initialVariables": []
-    },
-    {
-      "angle": 0,
-      "customSize": true,
-      "height": 160,
-      "layer": "",
-      "name": "plate",
-      "persistentUuid": "71a16299-11ae-4142-aac2-c039cb23af1d",
-      "width": 160,
-      "x": 96,
-      "y": 416,
-      "zOrder": 5,
-      "numberProperties": [],
-      "stringProperties": [],
-      "initialVariables": []
-    },
-    {
-      "angle": 0,
-      "customSize": true,
-      "height": 160,
-      "layer": "",
-      "name": "plateons",
-      "persistentUuid": "e5c31d98-2bc0-4c67-be19-b89bca37c8fe",
-      "width": 160,
-      "x": 96,
-      "y": 416,
-      "zOrder": 6,
       "numberProperties": [],
       "stringProperties": [],
       "initialVariables": []
@@ -168,35 +58,15 @@
     {
       "angle": 0,
       "customSize": true,
-      "height": 160,
-      "layer": "",
-      "name": "plate",
-      "persistentUuid": "3841f375-2d31-4c7e-b486-77c0fc025797",
-      "width": 160,
-      "x": 544,
-      "y": 416,
-      "zOrder": 7,
+      "height": 32,
+      "layer": "GUI",
+      "name": "home",
+      "persistentUuid": "9c55ec72-3103-4656-a32c-0fcca93aa7ed",
+      "width": 32,
+      "x": 32,
+      "y": 32,
+      "zOrder": 3,
       "numberProperties": [],
-      "stringProperties": [],
-      "initialVariables": []
-    },
-    {
-      "angle": 0,
-      "customSize": true,
-      "height": 160,
-      "layer": "",
-      "name": "plateons",
-      "persistentUuid": "3b81a2d0-61cd-4759-bf27-577d598f9427",
-      "width": 160,
-      "x": 544,
-      "y": 416,
-      "zOrder": 8,
-      "numberProperties": [
-        {
-          "name": "animation",
-          "value": 2
-        }
-      ],
       "stringProperties": [],
       "initialVariables": []
     }
@@ -257,6 +127,25 @@
         "fontSize": 20,
         "visible": true,
         "color": "166;252;219",
+        "fontFamily": "Minecraft.ttf",
+        "align": "left",
+        "wordWrap": true
+      }
+    },
+    {
+      "assetStoreId": "",
+      "name": "listObjectText",
+      "tags": "",
+      "type": "BBText::BBText",
+      "variables": [],
+      "effects": [],
+      "behaviors": [],
+      "content": {
+        "text": "Numba ONE",
+        "opacity": 255,
+        "fontSize": 20,
+        "visible": true,
+        "color": "11;11;17",
         "fontFamily": "Minecraft.ttf",
         "align": "left",
         "wordWrap": true
@@ -437,7 +326,7 @@
           ]
         },
         {
-          "name": "list",
+          "name": "",
           "useMultipleDirections": false,
           "directions": [
             {
@@ -447,6 +336,47 @@
                 {
                   "hasCustomCollisionMask": false,
                   "image": "buttonzx\\savelist.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "assetStoreId": "",
+      "name": "home",
+      "tags": "",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [],
+      "effects": [],
+      "behaviors": [],
+      "animations": [
+        {
+          "name": "dfsdf",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.07999999821186066,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "buttonzx\\home.png",
                   "points": [],
                   "originPoint": {
                     "name": "origine",
@@ -507,6 +437,34 @@
           ]
         }
       ]
+    },
+    {
+      "assetStoreId": "",
+      "name": "NewSprite",
+      "tags": "",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [],
+      "effects": [],
+      "behaviors": [],
+      "animations": []
+    },
+    {
+      "assetStoreId": "",
+      "bottomMargin": 16,
+      "height": 32,
+      "leftMargin": 4,
+      "name": "listObject",
+      "rightMargin": 4,
+      "tags": "",
+      "texture": "buttonzx\\savelistitem.png",
+      "tiled": false,
+      "topMargin": 4,
+      "type": "PanelSpriteObject::PanelSprite",
+      "width": 32,
+      "variables": [],
+      "effects": [],
+      "behaviors": []
     }
   ],
   "events": [
@@ -573,7 +531,158 @@
                   "parameters": [
                     "version",
                     "=",
-                    "GlobalVariableString(version[0])+\".\"+GlobalVariableString(version[1])+\".\"+GlobalVariableString(version[2])"
+                    "\"Current GDanitor Version \"+GlobalVariableString(version[0])+\".\"+GlobalVariableString(version[1])+\".\"+GlobalVariableString(version[2])"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "LireFichierTxt"
+                  },
+                  "parameters": [
+                    "\"Root/Save/SaveList\"",
+                    "\"saveList\"",
+                    "GlobalVarToJSON(saveList)",
+                    "saveListJSON"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "JSONToVariableStructure"
+                  },
+                  "parameters": [
+                    "VariableString(saveListJSON)",
+                    "saveList"
+                  ]
+                }
+              ],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "ModVarScene"
+                      },
+                      "parameters": [
+                        "listIndex",
+                        "=",
+                        "96"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::ForEachChildVariable",
+                  "iterableVariableName": "saveList",
+                  "valueIteratorVariableName": "saveData",
+                  "keyIteratorVariableName": "itemName",
+                  "conditions": [],
+                  "actions": [],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "Create"
+                          },
+                          "parameters": [
+                            "",
+                            "listObject",
+                            "32",
+                            "Variable(listIndex)",
+                            "\"GUI\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "PanelSpriteObject::Width"
+                          },
+                          "parameters": [
+                            "listObject",
+                            "=",
+                            "1856"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "PanelSpriteObject::Height"
+                          },
+                          "parameters": [
+                            "listObject",
+                            "=",
+                            "96"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "Create"
+                          },
+                          "parameters": [
+                            "",
+                            "listObjectText",
+                            "48",
+                            "Variable(listIndex)+8",
+                            "\"GUI\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "BBText::SetBBText"
+                          },
+                          "parameters": [
+                            "listObjectText",
+                            "=",
+                            "\"[size=32]\"+VariableString(saveData.settings.saveTime)+\"[/size]\"+NewLine()+VariableString(saveData.settings.saveTimeSmall)+\",  Version: \"+VariableString(saveData.settings.version)"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ChangePlan"
+                          },
+                          "parameters": [
+                            "listObjectText",
+                            "=",
+                            "listObject.ZOrder()+1"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ModVarObjetTxt"
+                          },
+                          "parameters": [
+                            "listObject",
+                            "id",
+                            "=",
+                            "VariableString(itemName)"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "ModVarScene"
+                          },
+                          "parameters": [
+                            "listIndex",
+                            "+",
+                            "128"
+                          ]
+                        }
+                      ]
+                    }
                   ]
                 }
               ]
@@ -606,63 +715,7 @@
                     "value": "SourisSurObjet"
                   },
                   "parameters": [
-                    "enter",
-                    "",
-                    "",
-                    ""
-                  ]
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "value": "SetGlobalVariableAsBoolean"
-                  },
-                  "parameters": [
-                    "saveLoaded",
-                    "True"
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "ModVarGlobalTxt"
-                  },
-                  "parameters": [
-                    "saveJSON",
-                    "=",
-                    "jsonCode.Text()"
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "Scene"
-                  },
-                  "parameters": [
-                    "",
-                    "\"stage\"",
-                    ""
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "value": "MouseButtonReleased"
-                  },
-                  "parameters": [
-                    "",
-                    "Left"
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "SourisSurObjet"
-                  },
-                  "parameters": [
-                    "plateons",
+                    "listObject",
                     "",
                     "",
                     ""
@@ -673,18 +726,18 @@
               "events": [
                 {
                   "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [
+                  "conditions": [],
+                  "actions": [
                     {
                       "type": {
-                        "value": "AnimationName"
+                        "value": "ModVarGlobalTxt"
                       },
                       "parameters": [
-                        "plateons",
-                        "\"last\""
+                        "saveJSON",
+                        "=",
+                        "ToJSON(saveList[listObject.VariableString(id)])"
                       ]
-                    }
-                  ],
-                  "actions": [
+                    },
                     {
                       "type": {
                         "value": "SetGlobalVariableAsBoolean"
@@ -694,79 +747,6 @@
                         "True"
                       ]
                     },
-                    {
-                      "type": {
-                        "value": "LireFichierTxt"
-                      },
-                      "parameters": [
-                        "\"Root/Save/LastSave\"",
-                        "\"lastSave\"",
-                        "",
-                        "lastSave"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "ModVarGlobalTxt"
-                      },
-                      "parameters": [
-                        "saveJSON",
-                        "=",
-                        "VariableString(lastSave)"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "Scene"
-                      },
-                      "parameters": [
-                        "",
-                        "\"stage\"",
-                        ""
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [
-                    {
-                      "type": {
-                        "value": "AnimationName"
-                      },
-                      "parameters": [
-                        "plateons",
-                        "\"list\""
-                      ]
-                    }
-                  ],
-                  "actions": [
-                    {
-                      "type": {
-                        "value": "Scene"
-                      },
-                      "parameters": [
-                        "",
-                        "\"saveList\"",
-                        ""
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [
-                    {
-                      "type": {
-                        "value": "AnimationName"
-                      },
-                      "parameters": [
-                        "plateons",
-                        "\"new\""
-                      ]
-                    }
-                  ],
-                  "actions": [
                     {
                       "type": {
                         "value": "Scene"
@@ -783,6 +763,34 @@
             }
           ],
           "parameters": []
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "Click::click"
+              },
+              "parameters": [
+                "home",
+                "Left",
+                "home",
+                ""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "Scene"
+              },
+              "parameters": [
+                "",
+                "\"menu\"",
+                ""
+              ]
+            }
+          ]
         }
       ],
       "parameters": []
@@ -820,6 +828,17 @@
           "width": 0
         }
       ],
+      "effects": []
+    },
+    {
+      "ambientLightColorB": 7993928,
+      "ambientLightColorG": 6046000,
+      "ambientLightColorR": 13350928,
+      "followBaseLayerCamera": false,
+      "isLightingLayer": false,
+      "name": "GUI",
+      "visibility": true,
+      "cameras": [],
       "effects": []
     }
   ],

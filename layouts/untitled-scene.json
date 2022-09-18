@@ -283,6 +283,30 @@
       "conditions": [
         {
           "type": {
+            "value": "DepartScene"
+          },
+          "parameters": [
+            ""
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "value": "JSONToGlobalVariableStructure"
+          },
+          "parameters": [
+            "\"[\\\"January\\\",\\\"February\\\",\\\"March\\\",\\\"April\\\",\\\"May\\\",\\\"June\\\",\\\"July\\\",\\\"August\\\",\\\"September\\\",\\\"October\\\",\\\"November\\\",\\\"December\\\"]\"",
+            "months"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
             "value": "KeyPressed"
           },
           "parameters": [
@@ -294,12 +318,11 @@
       "actions": [
         {
           "type": {
-            "value": "ChangeScale"
+            "value": "FlipY"
           },
           "parameters": [
             "NewSprite",
-            "=",
-            "1"
+            "no"
           ]
         }
       ]
@@ -320,12 +343,11 @@
       "actions": [
         {
           "type": {
-            "value": "ChangeScale"
+            "value": "FlipY"
           },
           "parameters": [
             "NewSprite",
-            "=",
-            "0.1"
+            "yes"
           ]
         }
       ]

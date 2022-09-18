@@ -10,7 +10,7 @@
     "adaptGameResolutionAtRuntime": true,
     "folderProject": true,
     "orientation": "landscape",
-    "packageName": "com.example.gamename",
+    "packageName": "com.ahnaf30e.gdanitor",
     "pixelsRounding": true,
     "projectUuid": "72475ff2-c736-4470-95f9-df650e26e9ff",
     "scaleMode": "nearest",
@@ -18,16 +18,45 @@
     "templateSlug": "",
     "useExternalSourceFiles": false,
     "version": "0.1.0",
-    "name": "GD:anitor",
-    "description": "",
+    "name": "GDanitor",
+    "description": "A tool for making animations for your games in GDevelop :D",
     "author": "",
     "windowWidth": 1920,
     "windowHeight": 1080,
-    "latestCompilationDirectory": "",
+    "latestCompilationDirectory": "G:\\OthersDesktop1\\my stuff\\Gdevelop25thing\\gitstuffidk\\importantZCARPZ\\buildos\\gdanitor0-1-0-beta",
     "maxFPS": 180,
     "minFPS": 20,
     "verticalSync": false,
-    "platformSpecificAssets": {},
+    "platformSpecificAssets": {
+      "android-icon-144": "assets\\lgotas\\selogua\\android-icon-144.png",
+      "android-icon-192": "assets\\lgotas\\selogua\\android-icon-192.png",
+      "android-icon-36": "assets\\lgotas\\selogua\\android-icon-36.png",
+      "android-icon-48": "assets\\lgotas\\selogua\\android-icon-48.png",
+      "android-icon-72": "assets\\lgotas\\selogua\\android-icon-72.png",
+      "android-icon-96": "assets\\lgotas\\selogua\\android-icon-96.png",
+      "android-windowSplashScreenAnimatedIcon": "assets\\lgotas\\selogua\\android-windowSplashScreenAnimatedIcon.png",
+      "desktop-icon-512": "assets\\lgotas\\selogua\\desktop-icon-512.png",
+      "ios-icon-100": "assets\\lgotas\\selogua\\ios-icon-100.png",
+      "ios-icon-1024": "assets\\lgotas\\selogua\\ios-icon-1024.png",
+      "ios-icon-114": "assets\\lgotas\\selogua\\ios-icon-114.png",
+      "ios-icon-120": "assets\\lgotas\\selogua\\ios-icon-120.png",
+      "ios-icon-144": "assets\\lgotas\\selogua\\ios-icon-144.png",
+      "ios-icon-152": "assets\\lgotas\\selogua\\ios-icon-152.png",
+      "ios-icon-167": "assets\\lgotas\\selogua\\ios-icon-167.png",
+      "ios-icon-180": "assets\\lgotas\\selogua\\ios-icon-180.png",
+      "ios-icon-20": "ios-icon-20.png",
+      "ios-icon-29": "ios-icon-29.png",
+      "ios-icon-40": "ios-icon-40.png",
+      "ios-icon-50": "ios-icon-50.png",
+      "ios-icon-57": "ios-icon-57.png",
+      "ios-icon-58": "assets\\lgotas\\selogua\\ios-icon-58.png",
+      "ios-icon-60": "assets\\lgotas\\selogua\\ios-icon-60.png",
+      "ios-icon-72": "assets\\lgotas\\selogua\\ios-icon-72.png",
+      "ios-icon-76": "assets\\lgotas\\selogua\\ios-icon-76.png",
+      "ios-icon-80": "assets\\lgotas\\selogua\\ios-icon-80.png",
+      "ios-icon-87": "assets\\lgotas\\selogua\\ios-icon-87.png",
+      "liluo-thumbnail": "assets\\lgotas\\selogua\\dayum.png"
+    },
     "loadingScreen": {
       "backgroundColor": 0,
       "backgroundFadeInDuration": 0.2,
@@ -47,8 +76,12 @@
     "authorIds": [
       "onPsboRtDkUHNOsx7OPr8R8G1oj2"
     ],
-    "categories": [],
-    "playableDevices": [],
+    "categories": [
+      "simulation"
+    ],
+    "playableDevices": [
+      "keyboard"
+    ],
     "extensionProperties": [],
     "platforms": [
       {
@@ -67,15 +100,6 @@
         "name": "assets\\NewSprite-1.png",
         "smoothed": false,
         "userAdded": false
-      },
-      {
-        "alwaysLoaded": false,
-        "file": "NewFile-1.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "NewFile-1.png",
-        "smoothed": false,
-        "userAdded": true
       },
       {
         "alwaysLoaded": false,
@@ -106,15 +130,6 @@
       },
       {
         "alwaysLoaded": false,
-        "file": "Angle-1.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "Angle-1.png",
-        "smoothed": false,
-        "userAdded": false
-      },
-      {
-        "alwaysLoaded": false,
         "file": "assets/Angle-1.png",
         "kind": "image",
         "metadata": "",
@@ -128,15 +143,6 @@
         "kind": "image",
         "metadata": "",
         "name": "assets\\NewFile-1.png",
-        "smoothed": false,
-        "userAdded": false
-      },
-      {
-        "alwaysLoaded": false,
-        "file": "NewSprite-1.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "NewSprite-1.png",
         "smoothed": false,
         "userAdded": false
       },
@@ -157,15 +163,6 @@
         "name": "buttonzx\\pen-1.png",
         "smoothed": false,
         "userAdded": true
-      },
-      {
-        "alwaysLoaded": false,
-        "file": "redSelectTool-1.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "redSelectTool-1.png",
-        "smoothed": false,
-        "userAdded": false
       },
       {
         "alwaysLoaded": false,
@@ -227,24 +224,6 @@
         "name": "assets\\Angle-1-2.png",
         "smoothed": false,
         "userAdded": false
-      },
-      {
-        "alwaysLoaded": false,
-        "file": "NewSprite-1-0.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "NewSprite-1-0.png",
-        "smoothed": false,
-        "userAdded": true
-      },
-      {
-        "alwaysLoaded": false,
-        "file": "NewSprite-1-1.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "NewSprite-1-1.png",
-        "smoothed": false,
-        "userAdded": true
       },
       {
         "alwaysLoaded": false,
@@ -315,15 +294,6 @@
         "kind": "image",
         "metadata": "",
         "name": "assets\\empty\\NewSprite-1-0.png",
-        "smoothed": false,
-        "userAdded": true
-      },
-      {
-        "alwaysLoaded": false,
-        "file": "dfsdf-1.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "dfsdf-1.png",
         "smoothed": false,
         "userAdded": true
       },
@@ -459,6 +429,330 @@
         "name": "buttonzx\\home.png",
         "smoothed": false,
         "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/lgotas/selogua/desktop-icon-512.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\lgotas\\selogua\\desktop-icon-512.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/lgotas/selogua/android-windowSplashScreenAnimatedIcon.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\lgotas\\selogua\\android-windowSplashScreenAnimatedIcon.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/lgotas/selogua/android-icon-192.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\lgotas\\selogua\\android-icon-192.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/lgotas/selogua/android-icon-144.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\lgotas\\selogua\\android-icon-144.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/lgotas/selogua/android-icon-96.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\lgotas\\selogua\\android-icon-96.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/lgotas/selogua/android-icon-72.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\lgotas\\selogua\\android-icon-72.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/lgotas/selogua/android-icon-48.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\lgotas\\selogua\\android-icon-48.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/lgotas/selogua/android-icon-36.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\lgotas\\selogua\\android-icon-36.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/lgotas/selogua/ios-icon-1024.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\lgotas\\selogua\\ios-icon-1024.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/lgotas/selogua/ios-icon-180.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\lgotas\\selogua\\ios-icon-180.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/lgotas/selogua/ios-icon-167.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\lgotas\\selogua\\ios-icon-167.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/lgotas/selogua/ios-icon-152.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\lgotas\\selogua\\ios-icon-152.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/lgotas/selogua/ios-icon-144.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\lgotas\\selogua\\ios-icon-144.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/lgotas/selogua/ios-icon-114.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\lgotas\\selogua\\ios-icon-114.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/lgotas/selogua/ios-icon-120.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\lgotas\\selogua\\ios-icon-120.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/lgotas/selogua/ios-icon-100.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\lgotas\\selogua\\ios-icon-100.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/lgotas/selogua/ios-icon-87.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\lgotas\\selogua\\ios-icon-87.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/lgotas/selogua/ios-icon-80.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\lgotas\\selogua\\ios-icon-80.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/lgotas/selogua/ios-icon-76.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\lgotas\\selogua\\ios-icon-76.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/lgotas/selogua/ios-icon-72.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\lgotas\\selogua\\ios-icon-72.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/lgotas/selogua/ios-icon-60.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\lgotas\\selogua\\ios-icon-60.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/lgotas/selogua/ios-icon-58.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\lgotas\\selogua\\ios-icon-58.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/lgotas/selogua/danglogogotda.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\lgotas\\selogua\\danglogogotda.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/lgotas/selogua/ios-icon-20.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\lgotas\\selogua\\ios-icon-20.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/lgotas/selogua/ios-icon-29.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\lgotas\\selogua\\ios-icon-29.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/lgotas/selogua/ios-icon-40.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\lgotas\\selogua\\ios-icon-40.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/lgotas/selogua/ios-icon-50.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\lgotas\\selogua\\ios-icon-50.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/lgotas/selogua/ios-icon-57.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\lgotas\\selogua\\ios-icon-57.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "buttonzx/dfsdf-1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "buttonzx\\dfsdf-1.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "buttonzx/NewSprite-1-0.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "buttonzx\\NewSprite-1-0.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "buttonzx/NewSprite-1-1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "buttonzx\\NewSprite-1-1.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "buttonzx/NewSprite-1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "buttonzx\\NewSprite-1.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "buttonzx/platetemplate.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "buttonzx\\platetemplate.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/lgotas/selogua/dayum.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\lgotas\\selogua\\dayum.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "buttonzx/savelist.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "buttonzx\\savelist.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "buttonzx/savelistitem.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "buttonzx\\savelistitem.png",
+        "smoothed": false,
+        "userAdded": true
       }
     ],
     "resourceFolders": []
@@ -502,6 +796,10 @@
     {
       "__REFERENCE_TO_SPLIT_OBJECT": true,
       "referenceTo": "/layouts/menu"
+    },
+    {
+      "__REFERENCE_TO_SPLIT_OBJECT": true,
+      "referenceTo": "/layouts/savelist"
     },
     {
       "__REFERENCE_TO_SPLIT_OBJECT": true,

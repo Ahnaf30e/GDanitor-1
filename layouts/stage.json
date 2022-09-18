@@ -548,7 +548,7 @@
               "sprites": [
                 {
                   "hasCustomCollisionMask": false,
-                  "image": "NewSprite-1.png",
+                  "image": "buttonzx\\NewSprite-1.png",
                   "points": [],
                   "originPoint": {
                     "name": "origine",
@@ -1192,7 +1192,7 @@
               "sprites": [
                 {
                   "hasCustomCollisionMask": false,
-                  "image": "NewSprite-1-0.png",
+                  "image": "buttonzx\\NewSprite-1-0.png",
                   "points": [],
                   "originPoint": {
                     "name": "origine",
@@ -1221,7 +1221,7 @@
               "sprites": [
                 {
                   "hasCustomCollisionMask": false,
-                  "image": "NewSprite-1-1.png",
+                  "image": "buttonzx\\NewSprite-1-1.png",
                   "points": [],
                   "originPoint": {
                     "name": "origine",
@@ -1262,7 +1262,7 @@
               "sprites": [
                 {
                   "hasCustomCollisionMask": false,
-                  "image": "dfsdf-1.png",
+                  "image": "buttonzx\\dfsdf-1.png",
                   "points": [],
                   "originPoint": {
                     "name": "origine",
@@ -1652,10 +1652,35 @@
       "type": "BuiltinCommonInstructions::Group",
       "events": [
         {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "DepartScene"
+              },
+              "parameters": [
+                ""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "JSONToGlobalVariableStructure"
+              },
+              "parameters": [
+                "\"[\\\"January\\\",\\\"February\\\",\\\"March\\\",\\\"April\\\",\\\"May\\\",\\\"June\\\",\\\"July\\\",\\\"August\\\",\\\"September\\\",\\\"October\\\",\\\"November\\\",\\\"December\\\"]\"",
+                "months"
+              ]
+            }
+          ]
+        },
+        {
           "colorB": 228,
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
+          "folded": true,
           "name": "Slect boxies",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -3856,6 +3881,7 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
+          "folded": true,
           "name": "nodes out side",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -5605,7 +5631,6 @@
                   "parameters": []
                 },
                 {
-                  "folded": true,
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [],
                   "actions": [
@@ -6003,12 +6028,68 @@
                           "actions": [
                             {
                               "type": {
+                                "value": "LireFichierTxt"
+                              },
+                              "parameters": [
+                                "\"Root/Save/SaveList\"",
+                                "\"saveList\"",
+                                "GlobalVarToJSON(saveList)",
+                                "saveListJSON"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "JSONToVariableStructure"
+                              },
+                              "parameters": [
+                                "VariableString(saveListJSON)",
+                                "saveList"
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [],
+                          "actions": [
+                            {
+                              "type": {
                                 "value": "ModVarScene"
                               },
                               "parameters": [
                                 "saveData.settings.time",
                                 "=",
                                 "ToNumber(timeLength.Text())"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "ModVarSceneTxt"
+                              },
+                              "parameters": [
+                                "saveData.settings.saveTime",
+                                "=",
+                                "ToString(Time(\"mday\"))+\" \"+GlobalVariableString(months[Time(\"mon\")])+\", 20\"+SubStr(ToString(Time(\"year\")), 1, 2)"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "ModVarSceneTxt"
+                              },
+                              "parameters": [
+                                "saveData.settings.saveTimeSmall",
+                                "=",
+                                "ToString(Time(\"hour\"))+\":\"+ToString(Time(\"min\"))"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "ModVarSceneTxt"
+                              },
+                              "parameters": [
+                                "saveData.settings.version",
+                                "=",
+                                "GlobalVariableString(version[0])+\".\"+GlobalVariableString(version[1])+\".\"+GlobalVariableString(version[2])"
                               ]
                             }
                           ]
@@ -6025,6 +6106,25 @@
                                 "\"Root/Save/LastSave\"",
                                 "\"lastSave\"",
                                 "ToJSON(saveData)"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "SceneVariablePush"
+                              },
+                              "parameters": [
+                                "saveList",
+                                "saveData"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "EcrireFichierTxt"
+                              },
+                              "parameters": [
+                                "\"Root/Save/SaveList\"",
+                                "\"saveList\"",
+                                "ToJSON(saveList)"
                               ]
                             }
                           ]
@@ -6688,12 +6788,68 @@
                           "actions": [
                             {
                               "type": {
+                                "value": "LireFichierTxt"
+                              },
+                              "parameters": [
+                                "\"Root/Save/SaveList\"",
+                                "\"saveList\"",
+                                "GlobalVarToJSON(saveList)",
+                                "saveListJSON"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "JSONToVariableStructure"
+                              },
+                              "parameters": [
+                                "VariableString(saveListJSON)",
+                                "saveList"
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [],
+                          "actions": [
+                            {
+                              "type": {
                                 "value": "ModVarScene"
                               },
                               "parameters": [
                                 "saveData.settings.time",
                                 "=",
                                 "ToNumber(timeLength.Text())"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "ModVarSceneTxt"
+                              },
+                              "parameters": [
+                                "saveData.settings.saveTime",
+                                "=",
+                                "ToString(Time(\"mday\"))+\" \"+GlobalVariableString(months[Time(\"mon\")])+\", 20\"+SubStr(ToString(Time(\"year\")), 1, 2)"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "ModVarSceneTxt"
+                              },
+                              "parameters": [
+                                "saveData.settings.saveTimeSmall",
+                                "=",
+                                "ToString(Time(\"hour\"))+\":\"+ToString(Time(\"min\"))"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "ModVarSceneTxt"
+                              },
+                              "parameters": [
+                                "saveData.settings.version",
+                                "=",
+                                "GlobalVariableString(version[0])+\".\"+GlobalVariableString(version[1])+\".\"+GlobalVariableString(version[2])"
                               ]
                             }
                           ]
@@ -6711,6 +6867,25 @@
                                 "\"lastSave\"",
                                 "ToJSON(saveData)"
                               ]
+                            },
+                            {
+                              "type": {
+                                "value": "SceneVariablePush"
+                              },
+                              "parameters": [
+                                "saveList",
+                                "saveData"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "EcrireFichierTxt"
+                              },
+                              "parameters": [
+                                "\"Root/Save/SaveList\"",
+                                "\"saveList\"",
+                                "ToJSON(saveList)"
+                              ]
                             }
                           ]
                         }
@@ -6722,6 +6897,7 @@
               ]
             },
             {
+              "folded": true,
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
                 {
@@ -7131,12 +7307,68 @@
                       "actions": [
                         {
                           "type": {
+                            "value": "LireFichierTxt"
+                          },
+                          "parameters": [
+                            "\"Root/Save/SaveList\"",
+                            "\"saveList\"",
+                            "GlobalVarToJSON(saveList)",
+                            "saveListJSON"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "JSONToVariableStructure"
+                          },
+                          "parameters": [
+                            "VariableString(saveListJSON)",
+                            "saveList"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [],
+                      "actions": [
+                        {
+                          "type": {
                             "value": "ModVarScene"
                           },
                           "parameters": [
                             "saveData.settings.time",
                             "=",
                             "ToNumber(timeLength.Text())"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ModVarSceneTxt"
+                          },
+                          "parameters": [
+                            "saveData.settings.saveTime",
+                            "=",
+                            "ToString(Time(\"mday\"))+\" \"+GlobalVariableString(months[Time(\"mon\")])+\", 20\"+SubStr(ToString(Time(\"year\")), 1, 2)"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ModVarSceneTxt"
+                          },
+                          "parameters": [
+                            "saveData.settings.saveTimeSmall",
+                            "=",
+                            "ToString(Time(\"hour\"))+\":\"+ToString(Time(\"min\"))"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ModVarSceneTxt"
+                          },
+                          "parameters": [
+                            "saveData.settings.version",
+                            "=",
+                            "GlobalVariableString(version[0])+\".\"+GlobalVariableString(version[1])+\".\"+GlobalVariableString(version[2])"
                           ]
                         }
                       ]
@@ -7154,6 +7386,25 @@
                             "\"lastSave\"",
                             "ToJSON(saveData)"
                           ]
+                        },
+                        {
+                          "type": {
+                            "value": "SceneVariablePush"
+                          },
+                          "parameters": [
+                            "saveList",
+                            "saveData"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "EcrireFichierTxt"
+                          },
+                          "parameters": [
+                            "\"Root/Save/SaveList\"",
+                            "\"saveList\"",
+                            "ToJSON(saveList)"
+                          ]
                         }
                       ]
                     }
@@ -7163,11 +7414,23 @@
                 {
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [],
-                  "actions": []
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "Scene"
+                      },
+                      "parameters": [
+                        "",
+                        "\"menu\"",
+                        ""
+                      ]
+                    }
+                  ]
                 }
               ]
             },
             {
+              "folded": true,
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
                 {
@@ -7567,11 +7830,36 @@
                   "colorG": 176,
                   "colorR": 74,
                   "creationTime": 0,
-                  "folded": true,
                   "name": "prjet 💀 ",
                   "source": "",
                   "type": "BuiltinCommonInstructions::Group",
                   "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "LireFichierTxt"
+                          },
+                          "parameters": [
+                            "\"Root/Save/SaveList\"",
+                            "\"saveList\"",
+                            "GlobalVarToJSON(saveList)",
+                            "saveListJSON"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "JSONToVariableStructure"
+                          },
+                          "parameters": [
+                            "VariableString(saveListJSON)",
+                            "saveList"
+                          ]
+                        }
+                      ]
+                    },
                     {
                       "type": "BuiltinCommonInstructions::Standard",
                       "conditions": [],
@@ -7584,6 +7872,36 @@
                             "saveData.settings.time",
                             "=",
                             "ToNumber(timeLength.Text())"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ModVarSceneTxt"
+                          },
+                          "parameters": [
+                            "saveData.settings.saveTimeSmall",
+                            "=",
+                            "ToString(Time(\"hour\"))+\":\"+ToString(Time(\"min\"))"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ModVarSceneTxt"
+                          },
+                          "parameters": [
+                            "saveData.settings.saveTime",
+                            "=",
+                            "ToString(Time(\"mday\"))+\" \"+GlobalVariableString(months[Time(\"mon\")])+\", 20\"+SubStr(ToString(Time(\"year\")), 1, 2)"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ModVarSceneTxt"
+                          },
+                          "parameters": [
+                            "saveData.settings.version",
+                            "=",
+                            "GlobalVariableString(version[0])+\".\"+GlobalVariableString(version[1])+\".\"+GlobalVariableString(version[2])"
                           ]
                         }
                       ]
@@ -7610,6 +7928,25 @@
                             "\"Root/Save/LastSave\"",
                             "\"lastSave\"",
                             "ToJSON(saveData)"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SceneVariablePush"
+                          },
+                          "parameters": [
+                            "saveList",
+                            "saveData"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "EcrireFichierTxt"
+                          },
+                          "parameters": [
+                            "\"Root/Save/SaveList\"",
+                            "\"saveList\"",
+                            "ToJSON(saveList)"
                           ]
                         }
                       ]
@@ -8110,6 +8447,7 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
+          "folded": true,
           "name": "Tools",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -11588,6 +11926,7 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
+          "folded": true,
           "name": "boxes but mainly Nodes",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
