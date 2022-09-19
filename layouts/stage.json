@@ -3,6 +3,9 @@
   "disableInputWhenNotFocused": true,
   "mangledName": "stage",
   "name": "stage",
+  "oglFOV": 0,
+  "oglZFar": 0,
+  "oglZNear": 0,
   "r": 11,
   "standardSortMethod": true,
   "stopSoundsOnStartup": true,
@@ -18,7 +21,7 @@
     "gridColor": 10401023,
     "gridAlpha": 0.8,
     "snap": true,
-    "zoomFactor": 0.8500000000000006,
+    "zoomFactor": 0.27500000000000013,
     "windowMask": false
   },
   "objectsGroups": [
@@ -56,7 +59,14 @@
       ]
     }
   ],
-  "variables": [],
+  "variables": [
+    {
+      "folded": true,
+      "name": "zoom",
+      "type": "number",
+      "value": 1
+    }
+  ],
   "instances": [
     {
       "angle": 0,
@@ -1680,7 +1690,6 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
-          "folded": true,
           "name": "Slect boxies",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -1690,13 +1699,11 @@
               "colorG": 176,
               "colorR": 74,
               "creationTime": 0,
-              "folded": true,
               "name": "shorty hots mate 🐀",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
               "events": [
                 {
-                  "folded": true,
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [
                     {
@@ -1786,7 +1793,6 @@
               "colorG": 176,
               "colorR": 74,
               "creationTime": 0,
-              "folded": true,
               "name": "clecked toggle oand untoggle",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
@@ -2053,7 +2059,6 @@
                   "colorG": 176,
                   "colorR": 74,
                   "creationTime": 0,
-                  "folded": true,
                   "name": "Deselectc?",
                   "source": "",
                   "type": "BuiltinCommonInstructions::Group",
@@ -2289,7 +2294,6 @@
               "colorG": 176,
               "colorR": 74,
               "creationTime": 0,
-              "folded": true,
               "name": "LOOKS",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
@@ -2425,7 +2429,6 @@
               "colorG": 176,
               "colorR": 74,
               "creationTime": 0,
-              "folded": true,
               "name": "Create boxes",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
@@ -2500,7 +2503,6 @@
                       "colorG": 176,
                       "colorR": 74,
                       "creationTime": 0,
-                      "folded": true,
                       "name": "data",
                       "source": "",
                       "type": "BuiltinCommonInstructions::Group",
@@ -2646,7 +2648,6 @@
                       "type": "BuiltinCommonInstructions::Group",
                       "events": [
                         {
-                          "folded": true,
                           "type": "BuiltinCommonInstructions::Standard",
                           "conditions": [],
                           "actions": [
@@ -3013,13 +3014,11 @@
                   "colorG": 176,
                   "colorR": 74,
                   "creationTime": 0,
-                  "folded": true,
                   "name": "savery",
                   "source": "",
                   "type": "BuiltinCommonInstructions::Group",
                   "events": [
                     {
-                      "folded": true,
                       "type": "BuiltinCommonInstructions::Standard",
                       "conditions": [
                         {
@@ -3384,8 +3383,8 @@
                               "parameters": [
                                 "",
                                 "box",
-                                "",
-                                "",
+                                "MouseX()",
+                                "MouseY()",
                                 "\"\""
                               ]
                             }
@@ -3515,7 +3514,6 @@
                                   "colorG": 176,
                                   "colorR": 74,
                                   "creationTime": 0,
-                                  "folded": true,
                                   "name": "Images",
                                   "source": "",
                                   "type": "BuiltinCommonInstructions::Group",
@@ -3872,6 +3870,227 @@
                 }
               ],
               "parameters": []
+            },
+            {
+              "colorB": 228,
+              "colorG": 176,
+              "colorR": 74,
+              "creationTime": 0,
+              "name": "Delete da box",
+              "source": "",
+              "type": "BuiltinCommonInstructions::Group",
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "SceneVariableAsBoolean"
+                      },
+                      "parameters": [
+                        "gettingSupported",
+                        "False"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "KeyReleased"
+                      },
+                      "parameters": [
+                        "",
+                        "Delete"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ObjectVariableAsBoolean"
+                      },
+                      "parameters": [
+                        "box",
+                        "selected",
+                        "True"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::Not"
+                      },
+                      "parameters": [],
+                      "subInstructions": [
+                        {
+                          "type": {
+                            "value": "SourisSurObjet"
+                          },
+                          "parameters": [
+                            "controlPLate",
+                            "",
+                            "",
+                            ""
+                          ]
+                        }
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "Delete"
+                      },
+                      "parameters": [
+                        "box",
+                        ""
+                      ]
+                    }
+                  ],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "Delete"
+                          },
+                          "parameters": [
+                            "boxSupporters",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "Delete"
+                          },
+                          "parameters": [
+                            "node",
+                            ""
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "parameters": []
+            },
+            {
+              "colorB": 228,
+              "colorG": 176,
+              "colorR": 74,
+              "creationTime": 0,
+              "name": "Copy da box",
+              "source": "",
+              "type": "BuiltinCommonInstructions::Group",
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "SourisSurObjet"
+                      },
+                      "parameters": [
+                        "box",
+                        "",
+                        "",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SceneVariableAsBoolean"
+                      },
+                      "parameters": [
+                        "gettingSupported",
+                        "False"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "KeyReleased"
+                      },
+                      "parameters": [
+                        "",
+                        "c"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ObjectVariableAsBoolean"
+                      },
+                      "parameters": [
+                        "box",
+                        "selected",
+                        "True"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetObjectVariableAsBoolean"
+                      },
+                      "parameters": [
+                        "box",
+                        "selected",
+                        "="
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetObjectVariableAsBoolean"
+                      },
+                      "parameters": [
+                        "box",
+                        "followm",
+                        "="
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Create"
+                      },
+                      "parameters": [
+                        "",
+                        "box",
+                        "MouseX()",
+                        "MouseY()",
+                        "\"\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetObjectVariableAsBoolean"
+                      },
+                      "parameters": [
+                        "box",
+                        "selected",
+                        "True"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetObjectVariableAsBoolean"
+                      },
+                      "parameters": [
+                        "box",
+                        "followm",
+                        "True"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ChangeScale"
+                      },
+                      "parameters": [
+                        "box",
+                        "=",
+                        "4"
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "parameters": []
             }
           ],
           "parameters": []
@@ -4016,13 +4235,11 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
-          "folded": true,
           "name": "Supporters",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
           "events": [
             {
-              "folded": true,
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [],
               "actions": [],
@@ -4032,7 +4249,6 @@
                   "colorG": 176,
                   "colorR": 74,
                   "creationTime": 0,
-                  "folded": true,
                   "name": "size",
                   "source": "",
                   "type": "BuiltinCommonInstructions::Group",
@@ -4132,11 +4348,63 @@
                             "=",
                             "6"
                           ]
+                        },
+                        {
+                          "type": {
+                            "value": "Create"
+                          },
+                          "parameters": [
+                            "",
+                            "supporterGuideText",
+                            "box.X()",
+                            "box.Y()",
+                            "\"\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ChangePlan"
+                          },
+                          "parameters": [
+                            "supporterGuideText",
+                            "=",
+                            "200"
+                          ]
                         }
                       ]
                     },
                     {
-                      "folded": true,
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "SceneVariableAsBoolean"
+                          },
+                          "parameters": [
+                            "changingBoxSize",
+                            "False"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "BuiltinCommonInstructions::Once"
+                          },
+                          "parameters": []
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "Delete"
+                          },
+                          "parameters": [
+                            "supporterGuideText",
+                            ""
+                          ]
+                        }
+                      ]
+                    },
+                    {
                       "type": "BuiltinCommonInstructions::Standard",
                       "conditions": [
                         {
@@ -4162,7 +4430,6 @@
                       "actions": [],
                       "events": [
                         {
-                          "folded": true,
                           "type": "BuiltinCommonInstructions::Standard",
                           "conditions": [
                             {
@@ -4266,7 +4533,6 @@
                               ]
                             },
                             {
-                              "folded": true,
                               "type": "BuiltinCommonInstructions::Standard",
                               "conditions": [
                                 {
@@ -4380,11 +4646,39 @@
                                   ]
                                 }
                               ]
+                            },
+                            {
+                              "folded": true,
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "MettreXY"
+                                  },
+                                  "parameters": [
+                                    "supporterGuideText",
+                                    "=",
+                                    "MouseX()",
+                                    "=",
+                                    "MouseY()"
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "BBText::SetBBText"
+                                  },
+                                  "parameters": [
+                                    "supporterGuideText",
+                                    "=",
+                                    "\"[outline=black]\"+\" W:\"+ToString(round(box.Width()))+\" H:\"+ToString(round(box.Height()))+\"[/outline]\""
+                                  ]
+                                }
+                              ]
                             }
                           ]
                         },
                         {
-                          "folded": true,
                           "type": "BuiltinCommonInstructions::ForEach",
                           "object": "box",
                           "conditions": [],
@@ -4582,11 +4876,20 @@
                             "gettingSupported",
                             "True"
                           ]
+                        },
+                        {
+                          "type": {
+                            "value": "ChangePlan"
+                          },
+                          "parameters": [
+                            "supporterGuideText",
+                            "=",
+                            "200"
+                          ]
                         }
                       ]
                     },
                     {
-                      "folded": true,
                       "type": "BuiltinCommonInstructions::Standard",
                       "conditions": [
                         {
@@ -4661,7 +4964,6 @@
                           ]
                         },
                         {
-                          "folded": true,
                           "type": "BuiltinCommonInstructions::ForEach",
                           "object": "box",
                           "conditions": [],
@@ -4741,7 +5043,6 @@
                           ]
                         },
                         {
-                          "folded": true,
                           "type": "BuiltinCommonInstructions::Standard",
                           "conditions": [
                             {
@@ -4783,9 +5084,9 @@
                                   "parameters": [
                                     "supporterGuideText",
                                     "=",
-                                    "box.X()",
+                                    "MouseX()",
                                     "=",
-                                    "box.Y()"
+                                    "MouseY()"
                                   ]
                                 },
                                 {
@@ -4808,7 +5109,102 @@
                   "parameters": []
                 },
                 {
-                  "folded": true,
+                  "colorB": 228,
+                  "colorG": 176,
+                  "colorR": 74,
+                  "creationTime": 0,
+                  "name": "moved",
+                  "source": "",
+                  "type": "BuiltinCommonInstructions::Group",
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "DraggableBehavior::Dragged"
+                          },
+                          "parameters": [
+                            "box",
+                            "Draggable"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "MettreXY"
+                          },
+                          "parameters": [
+                            "supporterGuideText",
+                            "=",
+                            "MouseX()",
+                            "=",
+                            "MouseY()"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "BBText::SetBBText"
+                          },
+                          "parameters": [
+                            "supporterGuideText",
+                            "=",
+                            "\"[outline=black]\"+\" X:\"+ToString(round(box.X()))+\" Y:\"+ToString(round(box.Y()))+\"[/outline]\""
+                          ]
+                        }
+                      ],
+                      "events": [
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "BuiltinCommonInstructions::Once"
+                              },
+                              "parameters": []
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "Create"
+                              },
+                              "parameters": [
+                                "",
+                                "supporterGuideText",
+                                "box.X()",
+                                "box.Y()",
+                                "\"\""
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "ChangePlan"
+                              },
+                              "parameters": [
+                                "supporterGuideText",
+                                "=",
+                                "200"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "BBText::SetWordWrap"
+                              },
+                              "parameters": [
+                                "supporterGuideText",
+                                ""
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ],
+                  "parameters": []
+                },
+                {
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [],
                   "actions": []
@@ -5297,6 +5693,7 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
+          "folded": true,
           "name": "savery",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -8653,7 +9050,6 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
-          "folded": true,
           "name": "Ui ",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -8811,6 +9207,299 @@
                         "Middle",
                         ""
                       ]
+                    },
+                    {
+                      "type": {
+                        "value": "ZoomCamera"
+                      },
+                      "parameters": [
+                        "",
+                        "Variable(zoom)",
+                        "\"\"",
+                        "0"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Comment",
+                  "color": {
+                    "b": 109,
+                    "g": 230,
+                    "r": 255,
+                    "textB": 0,
+                    "textG": 0,
+                    "textR": 0
+                  },
+                  "comment": "So there is \ncenter.CenterX()-320/2 (320 being the \"properties\" panel size)\nand\ncenter.CenterY()+288/2 (288 being the \"animation\" panel size)\nare here to center in the view and not from the middle of the screen itself",
+                  "comment2": ""
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "MouseButtonPressed"
+                      },
+                      "parameters": [
+                        "",
+                        "Middle"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::Or"
+                      },
+                      "parameters": [],
+                      "subInstructions": [
+                        {
+                          "type": {
+                            "value": "KeyPressed"
+                          },
+                          "parameters": [
+                            "",
+                            "LControl"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "KeyPressed"
+                          },
+                          "parameters": [
+                            "",
+                            "RControl"
+                          ]
+                        }
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetCameraCenterX"
+                      },
+                      "parameters": [
+                        "",
+                        "=",
+                        "center.CenterX()-320/2",
+                        "\"\"",
+                        "0"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetCameraCenterY"
+                      },
+                      "parameters": [
+                        "",
+                        "=",
+                        "center.CenterY()+288/2",
+                        "\"\"",
+                        "0"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ModVarScene"
+                      },
+                      "parameters": [
+                        "zoom",
+                        "=",
+                        "1"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "DepartScene"
+                      },
+                      "parameters": [
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "TiledSpriteObject::Height"
+                      },
+                      "parameters": [
+                        "grid",
+                        "=",
+                        "SceneWindowHeight()*100"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "TiledSpriteObject::Width"
+                      },
+                      "parameters": [
+                        "grid",
+                        "=",
+                        "SceneWindowWidth()*100"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BBText::IsFontSize"
+                      },
+                      "parameters": [
+                        "supporterGuideText",
+                        ">",
+                        "16"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "BBText::SetFontSize"
+                      },
+                      "parameters": [
+                        "supporterGuideText",
+                        "=",
+                        "32/Variable(zoom)"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BBText::IsFontSize"
+                      },
+                      "parameters": [
+                        "supporterGuideText",
+                        "<",
+                        "16"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "BBText::SetFontSize"
+                      },
+                      "parameters": [
+                        "supporterGuideText",
+                        "=",
+                        "18"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "VarScene"
+                      },
+                      "parameters": [
+                        "zoom",
+                        ">",
+                        "9"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "ModVarScene"
+                      },
+                      "parameters": [
+                        "zoom",
+                        "=",
+                        "9"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "VarScene"
+                      },
+                      "parameters": [
+                        "zoom",
+                        "<",
+                        "0.1"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "ModVarScene"
+                      },
+                      "parameters": [
+                        "zoom",
+                        "=",
+                        "0.1"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "IsMouseWheelScrollingDown"
+                      },
+                      "parameters": [
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "ModVarScene"
+                      },
+                      "parameters": [
+                        "zoom",
+                        "-",
+                        "0.2"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "IsMouseWheelScrollingUp"
+                      },
+                      "parameters": [
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "ModVarScene"
+                      },
+                      "parameters": [
+                        "zoom",
+                        "+",
+                        "0.2"
+                      ]
                     }
                   ]
                 }
@@ -8944,7 +9633,6 @@
                       ],
                       "events": [
                         {
-                          "folded": true,
                           "type": "BuiltinCommonInstructions::Standard",
                           "conditions": [
                             {
@@ -9284,7 +9972,6 @@
                                       ]
                                     },
                                     {
-                                      "folded": true,
                                       "type": "BuiltinCommonInstructions::ForEachChildVariable",
                                       "iterableVariableName": "paramValue",
                                       "valueIteratorVariableName": "subParamValue",
@@ -9650,7 +10337,6 @@
                               "actions": [],
                               "events": [
                                 {
-                                  "folded": true,
                                   "type": "BuiltinCommonInstructions::Standard",
                                   "conditions": [
                                     {
@@ -9859,7 +10545,6 @@
                                       ]
                                     },
                                     {
-                                      "folded": true,
                                       "type": "BuiltinCommonInstructions::ForEachChildVariable",
                                       "iterableVariableName": "paramValue",
                                       "valueIteratorVariableName": "subParamValue",
@@ -9868,7 +10553,6 @@
                                       "actions": [],
                                       "events": [
                                         {
-                                          "folded": true,
                                           "type": "BuiltinCommonInstructions::Standard",
                                           "conditions": [],
                                           "actions": [
@@ -11926,7 +12610,6 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
-          "folded": true,
           "name": "boxes but mainly Nodes",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -12102,13 +12785,11 @@
                   "colorG": 176,
                   "colorR": 74,
                   "creationTime": 0,
-                  "folded": true,
                   "name": "Suports?",
                   "source": "",
                   "type": "BuiltinCommonInstructions::Group",
                   "events": [
                     {
-                      "folded": true,
                       "type": "BuiltinCommonInstructions::Standard",
                       "conditions": [
                         {
@@ -12129,7 +12810,6 @@
                           "colorG": 176,
                           "colorR": 74,
                           "creationTime": 0,
-                          "folded": true,
                           "name": "boxs",
                           "source": "",
                           "type": "BuiltinCommonInstructions::Group",
@@ -12139,7 +12819,6 @@
                               "colorG": 176,
                               "colorR": 74,
                               "creationTime": 0,
-                              "folded": true,
                               "name": "support",
                               "source": "",
                               "type": "BuiltinCommonInstructions::Group",
@@ -12149,7 +12828,6 @@
                                   "colorG": 176,
                                   "colorR": 74,
                                   "creationTime": 0,
-                                  "folded": true,
                                   "name": "move and crap sapwn",
                                   "source": "",
                                   "type": "BuiltinCommonInstructions::Group",
@@ -12279,7 +12957,6 @@
                                   "colorG": 176,
                                   "colorR": 74,
                                   "creationTime": 0,
-                                  "folded": true,
                                   "name": "MOVE",
                                   "source": "",
                                   "type": "BuiltinCommonInstructions::Group",
@@ -12458,18 +13135,18 @@
                                         },
                                         {
                                           "type": {
-                                            "value": "BuiltinCommonInstructions::Once"
-                                          },
-                                          "parameters": []
-                                        },
-                                        {
-                                          "type": {
-                                            "value": "KeyPressed"
+                                            "value": "KeyReleased"
                                           },
                                           "parameters": [
                                             "",
-                                            "LControl"
+                                            "c"
                                           ]
+                                        },
+                                        {
+                                          "type": {
+                                            "value": "BuiltinCommonInstructions::Once"
+                                          },
+                                          "parameters": []
                                         }
                                       ],
                                       "actions": [],
@@ -15067,7 +15744,6 @@
               "colorG": 176,
               "colorR": 74,
               "creationTime": 0,
-              "folded": true,
               "name": "move emm nodes babeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
@@ -15155,7 +15831,6 @@
                       ]
                     },
                     {
-                      "folded": true,
                       "type": "BuiltinCommonInstructions::Standard",
                       "conditions": [
                         {

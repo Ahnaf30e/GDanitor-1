@@ -3,6 +3,9 @@
   "disableInputWhenNotFocused": true,
   "mangledName": "Untitled_32scene",
   "name": "Untitled scene",
+  "oglFOV": 0,
+  "oglZFar": 0,
+  "oglZNear": 0,
   "r": 209,
   "standardSortMethod": true,
   "stopSoundsOnStartup": true,
@@ -18,7 +21,7 @@
     "gridColor": 10401023,
     "gridAlpha": 0.8,
     "snap": false,
-    "zoomFactor": 0.29999999999999966,
+    "zoomFactor": 0.9500000000000002,
     "windowMask": false
   },
   "objectsGroups": [
