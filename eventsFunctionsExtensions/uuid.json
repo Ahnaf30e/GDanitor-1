@@ -88,5 +88,6 @@
       "objectGroups": []
     }
   ],
-  "eventsBasedBehaviors": []
+  "eventsBasedBehaviors": [],
+  "eventsBasedObjects": []
 }

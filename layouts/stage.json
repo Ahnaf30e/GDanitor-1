@@ -3,9 +3,6 @@
   "disableInputWhenNotFocused": true,
   "mangledName": "stage",
   "name": "stage",
-  "oglFOV": 0,
-  "oglZFar": 0,
-  "oglZNear": 0,
   "r": 11,
   "standardSortMethod": true,
   "stopSoundsOnStartup": true,
@@ -21,7 +18,7 @@
     "gridColor": 10401023,
     "gridAlpha": 0.8,
     "snap": true,
-    "zoomFactor": 0.27500000000000013,
+    "zoomFactor": 0.9750000000000006,
     "windowMask": false
   },
   "objectsGroups": [
@@ -101,13 +98,13 @@
     {
       "angle": 0,
       "customSize": true,
-      "height": 304,
+      "height": 320,
       "layer": "GUI",
       "name": "timeCursor",
       "persistentUuid": "87d293e9-d942-4e60-a64c-ca03e2021607",
       "width": 16,
       "x": 32,
-      "y": 760,
+      "y": 752,
       "zOrder": 4,
       "numberProperties": [],
       "stringProperties": [],
@@ -853,8 +850,8 @@
       "effects": [],
       "behaviors": [],
       "content": {
-        "initialValue": "0.1",
-        "placeholder": "???",
+        "initialValue": "0.5",
+        "placeholder": "how?????",
         "fontResourceName": "Minecraft.ttf",
         "fontSize": 32,
         "inputType": "number",
@@ -1690,6 +1687,7 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
+          "folded": true,
           "name": "Slect boxies",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -4235,6 +4233,7 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
+          "folded": true,
           "name": "Supporters",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -5312,7 +5311,6 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
-          "folded": true,
           "name": "play and unplayfied",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -5371,7 +5369,6 @@
               ]
             },
             {
-              "folded": true,
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
                 {
@@ -5491,7 +5488,7 @@
                       "parameters": [
                         "timeCursor",
                         "=",
-                        "clamp(MouseX(), timeline.X(), timeline.X()+timeline.Width())"
+                        "clamp(MouseX(\"GUI\", 0), timeline.X(), timeline.X()+timeline.Width())"
                       ]
                     }
                   ]

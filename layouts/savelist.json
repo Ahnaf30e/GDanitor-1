@@ -3,9 +3,6 @@
   "disableInputWhenNotFocused": true,
   "mangledName": "saveList",
   "name": "saveList",
-  "oglFOV": 0,
-  "oglZFar": 0,
-  "oglZNear": 0,
   "r": 11,
   "standardSortMethod": true,
   "stopSoundsOnStartup": true,
@@ -644,7 +641,7 @@
                           "parameters": [
                             "listObjectText",
                             "=",
-                            "\"[size=32]\"+VariableString(saveData.settings.saveTime)+\"[/size]\"+NewLine()+VariableString(saveData.settings.saveTimeSmall)+\",  Version: \"+VariableString(saveData.settings.version)"
+                            "\"[size=32]\"+VariableString(saveData.settings.saveTime)+\"[/size]\"+NewLine()+VariableString(saveData.settings.saveTimeSmall)+\",  [i]Version: \"+VariableString(saveData.settings.version)+\"[/i]\""
                           ]
                         },
                         {
