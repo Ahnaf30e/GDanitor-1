@@ -1,7 +1,7 @@
 {
   "author": "",
   "category": "Advanced",
-  "description": "Animates the object in a model according the given GDanitor animation data. Can also be used to just create objects as a model and move them around with the object with the 'ObjectAnimator' behavior.\n\n## How to use:\n- Create an object with the behavior 'ObjectAnimator'.\n- Create the model using the action 'CreateModel'.\n- Add or delete objects to the model using the actions 'AddObjectToModel' or 'DeleteObjectInModel'",
+  "description": "Animates the object in a model according the given GDanitor animation data. Can also be used to just create objects as a model and move them around with the object with the 'ObjectAnimator' behavior.\n\n## How to use:\n- Create an object with the behavior 'ObjectAnimator'.\n- Create the model using the action 'CreateModel'.\n- Add or delete objects to the model using the actions 'AddObjectToModel' or 'RemoveObjectFromModel'",
   "extensionNamespace": "",
   "fullName": "GDanitor",
   "helpPath": "",
@@ -1901,6 +1901,92 @@
               "codeOnly": false,
               "defaultValue": "",
               "description": "Object to add",
+              "longDescription": "",
+              "name": "Part",
+              "optional": false,
+              "supplementaryInformation": "",
+              "type": "objectList"
+            },
+            {
+              "codeOnly": false,
+              "defaultValue": "",
+              "description": "UUID of the object",
+              "longDescription": "",
+              "name": "UUID",
+              "optional": false,
+              "supplementaryInformation": "",
+              "type": "string"
+            }
+          ],
+          "objectGroups": []
+        },
+        {
+          "description": "Remove object from the model",
+          "fullName": "Remove object",
+          "functionType": "Action",
+          "group": "",
+          "name": "RemoveObjectFromModel",
+          "private": false,
+          "sentence": "Remove object _PARAM2_ from the model of object _PARAM0_ with UUID _PARAM3_.",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "VarObjetTxt"
+                  },
+                  "parameters": [
+                    "Part",
+                    "__GDanitorAnimator.UUID",
+                    "=",
+                    "GetArgumentAsString(\"UUID\")"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Delete"
+                  },
+                  "parameters": [
+                    "Part",
+                    ""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": []
+            }
+          ],
+          "parameters": [
+            {
+              "codeOnly": false,
+              "defaultValue": "",
+              "description": "Object",
+              "longDescription": "",
+              "name": "Object",
+              "optional": false,
+              "supplementaryInformation": "Sprite",
+              "type": "object"
+            },
+            {
+              "codeOnly": false,
+              "defaultValue": "",
+              "description": "Behavior",
+              "longDescription": "",
+              "name": "Behavior",
+              "optional": false,
+              "supplementaryInformation": "GDaitorAnimator::ObjectAnimator",
+              "type": "behavior"
+            },
+            {
+              "codeOnly": false,
+              "defaultValue": "",
+              "description": "Object to remove",
               "longDescription": "",
               "name": "Part",
               "optional": false,

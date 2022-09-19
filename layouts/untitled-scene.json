@@ -307,7 +307,7 @@
       "conditions": [
         {
           "type": {
-            "value": "KeyPressed"
+            "value": "KeyReleased"
           },
           "parameters": [
             "",
@@ -318,11 +318,26 @@
       "actions": [
         {
           "type": {
-            "value": "FlipY"
+            "value": "Create"
+          },
+          "parameters": [
+            "",
+            "jcop",
+            "MouseX()",
+            "MouseY()",
+            ""
+          ]
+        },
+        {
+          "type": {
+            "value": "GDaitorAnimator::ObjectAnimator::AddObjectToModel"
           },
           "parameters": [
             "NewSprite",
-            "no"
+            "ObjectAnimator",
+            "jcop",
+            "\"1\"",
+            ""
           ]
         }
       ]
@@ -332,7 +347,7 @@
       "conditions": [
         {
           "type": {
-            "value": "KeyPressed"
+            "value": "KeyReleased"
           },
           "parameters": [
             "",
@@ -343,11 +358,14 @@
       "actions": [
         {
           "type": {
-            "value": "FlipY"
+            "value": "GDaitorAnimator::ObjectAnimator::RemoveObjectFromModel"
           },
           "parameters": [
             "NewSprite",
-            "yes"
+            "ObjectAnimator",
+            "jcop",
+            "\"1\"",
+            ""
           ]
         }
       ]
@@ -375,16 +393,6 @@
             "NewSprite",
             "MouseX()",
             "MouseY()",
-            ""
-          ]
-        },
-        {
-          "type": {
-            "value": "GDaitorAnimator::ObjectAnimator::CreateModel"
-          },
-          "parameters": [
-            "NewSprite",
-            "ObjectAnimator",
             ""
           ]
         }
