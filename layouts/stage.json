@@ -1704,12 +1704,14 @@
       "colorG": 176,
       "colorR": 74,
       "creationTime": 0,
+      "folded": true,
       "name": "Debugging",
       "source": "",
       "type": "BuiltinCommonInstructions::Group",
       "events": [
         {
           "disabled": true,
+          "folded": true,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [],
           "actions": [
@@ -1729,6 +1731,7 @@
         },
         {
           "disabled": true,
+          "folded": true,
           "type": "BuiltinCommonInstructions::ForEach",
           "object": "box",
           "conditions": [
@@ -1770,6 +1773,7 @@
       "type": "BuiltinCommonInstructions::Group",
       "events": [
         {
+          "folded": true,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
             {
@@ -1807,11 +1811,13 @@
               "colorG": 176,
               "colorR": 74,
               "creationTime": 0,
+              "folded": true,
               "name": "Select all ",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
               "events": [
                 {
+                  "folded": true,
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [
                     {
@@ -1863,6 +1869,7 @@
                   ],
                   "events": [
                     {
+                      "folded": true,
                       "type": "BuiltinCommonInstructions::Standard",
                       "conditions": [
                         {
@@ -1900,11 +1907,13 @@
               "colorG": 176,
               "colorR": 74,
               "creationTime": 0,
+              "folded": true,
               "name": "Box Selection",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
               "events": [
                 {
+                  "folded": true,
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [],
                   "actions": [
@@ -1920,6 +1929,7 @@
                   ]
                 },
                 {
+                  "folded": true,
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [
                     {
@@ -1957,6 +1967,7 @@
                   ]
                 },
                 {
+                  "folded": true,
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [
                     {
@@ -1996,11 +2007,13 @@
                   "colorG": 176,
                   "colorR": 74,
                   "creationTime": 0,
+                  "folded": true,
                   "name": "Select",
                   "source": "",
                   "type": "BuiltinCommonInstructions::Group",
                   "events": [
                     {
+                      "folded": true,
                       "type": "BuiltinCommonInstructions::Standard",
                       "conditions": [
                         {
@@ -2036,6 +2049,7 @@
                       "actions": [],
                       "events": [
                         {
+                          "folded": true,
                           "type": "BuiltinCommonInstructions::Standard",
                           "conditions": [
                             {
@@ -2123,6 +2137,7 @@
                           ],
                           "events": [
                             {
+                              "folded": true,
                               "type": "BuiltinCommonInstructions::Standard",
                               "conditions": [
                                 {
@@ -2162,11 +2177,13 @@
                   "colorG": 176,
                   "colorR": 74,
                   "creationTime": 0,
+                  "folded": true,
                   "name": "Deselect",
                   "source": "",
                   "type": "BuiltinCommonInstructions::Group",
                   "events": [
                     {
+                      "folded": true,
                       "type": "BuiltinCommonInstructions::Standard",
                       "conditions": [
                         {
@@ -2241,11 +2258,13 @@
                           "colorG": 176,
                           "colorR": 74,
                           "creationTime": 0,
+                          "folded": true,
                           "name": "Control over what is selected",
                           "source": "",
                           "type": "BuiltinCommonInstructions::Group",
                           "events": [
                             {
+                              "folded": true,
                               "type": "BuiltinCommonInstructions::Standard",
                               "conditions": [
                                 {
@@ -2273,12 +2292,14 @@
                               ],
                               "events": [
                                 {
+                                  "folded": true,
                                   "type": "BuiltinCommonInstructions::ForEach",
                                   "object": "box",
                                   "conditions": [],
                                   "actions": [],
                                   "events": [
                                     {
+                                      "folded": true,
                                       "type": "BuiltinCommonInstructions::Standard",
                                       "conditions": [
                                         {
@@ -2306,6 +2327,7 @@
                                       ]
                                     },
                                     {
+                                      "folded": true,
                                       "type": "BuiltinCommonInstructions::Standard",
                                       "conditions": [
                                         {
@@ -2356,6 +2378,7 @@
                                   ]
                                 },
                                 {
+                                  "folded": true,
                                   "type": "BuiltinCommonInstructions::Standard",
                                   "conditions": [],
                                   "actions": [
@@ -2376,6 +2399,7 @@
                           "parameters": []
                         },
                         {
+                          "folded": true,
                           "type": "BuiltinCommonInstructions::Standard",
                           "conditions": [],
                           "actions": []
@@ -2393,11 +2417,13 @@
               "colorG": 176,
               "colorR": 74,
               "creationTime": 0,
+              "folded": true,
               "name": "Box Selection Effects",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
               "events": [
                 {
+                  "folded": true,
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [
                     {
@@ -2425,6 +2451,7 @@
                   ]
                 },
                 {
+                  "folded": true,
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [
                     {
@@ -2452,6 +2479,7 @@
                   ]
                 },
                 {
+                  "folded": true,
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [
                     {
@@ -2489,6 +2517,7 @@
                   ]
                 },
                 {
+                  "folded": true,
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [
                     {
@@ -2524,11 +2553,13 @@
               "colorG": 176,
               "colorR": 74,
               "creationTime": 0,
+              "folded": true,
               "name": "Create boxes",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
               "events": [
                 {
+                  "folded": true,
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [
                     {
@@ -2598,11 +2629,13 @@
                       "colorG": 176,
                       "colorR": 74,
                       "creationTime": 0,
+                      "folded": true,
                       "name": "Data",
                       "source": "",
                       "type": "BuiltinCommonInstructions::Group",
                       "events": [
                         {
+                          "folded": true,
                           "type": "BuiltinCommonInstructions::Standard",
                           "conditions": [],
                           "actions": [
@@ -2748,11 +2781,13 @@
                       "colorG": 176,
                       "colorR": 74,
                       "creationTime": 0,
+                      "folded": true,
                       "name": "Images",
                       "source": "",
                       "type": "BuiltinCommonInstructions::Group",
                       "events": [
                         {
+                          "folded": true,
                           "type": "BuiltinCommonInstructions::Standard",
                           "conditions": [],
                           "actions": [
@@ -2833,6 +2868,7 @@
                           ],
                           "events": [
                             {
+                              "folded": true,
                               "type": "BuiltinCommonInstructions::Standard",
                               "conditions": [],
                               "actions": [
@@ -2928,6 +2964,7 @@
                       "parameters": []
                     },
                     {
+                      "folded": true,
                       "type": "BuiltinCommonInstructions::Standard",
                       "conditions": [
                         {
@@ -2945,6 +2982,7 @@
                       "actions": [],
                       "events": [
                         {
+                          "folded": true,
                           "type": "BuiltinCommonInstructions::Standard",
                           "conditions": [
                             {
@@ -2971,6 +3009,7 @@
                           ]
                         },
                         {
+                          "folded": true,
                           "type": "BuiltinCommonInstructions::Standard",
                           "conditions": [
                             {
@@ -3001,6 +3040,7 @@
                   ]
                 },
                 {
+                  "folded": true,
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [
                     {
@@ -3030,6 +3070,7 @@
                   ]
                 },
                 {
+                  "folded": true,
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [
                     {
@@ -3066,6 +3107,7 @@
                   ],
                   "events": [
                     {
+                      "folded": true,
                       "type": "BuiltinCommonInstructions::Standard",
                       "conditions": [
                         {
@@ -3102,6 +3144,7 @@
               "colorG": 176,
               "colorR": 74,
               "creationTime": 0,
+              "folded": true,
               "name": "Duplicate boxes",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
@@ -3111,11 +3154,13 @@
                   "colorG": 176,
                   "colorR": 74,
                   "creationTime": 0,
+                  "folded": true,
                   "name": "Copying the data and the creating another box with the data",
                   "source": "",
                   "type": "BuiltinCommonInstructions::Group",
                   "events": [
                     {
+                      "folded": true,
                       "type": "BuiltinCommonInstructions::Standard",
                       "conditions": [
                         {
@@ -3155,11 +3200,13 @@
                       ],
                       "events": [
                         {
+                          "folded": true,
                           "type": "BuiltinCommonInstructions::Standard",
                           "conditions": [],
                           "actions": [],
                           "events": [
                             {
+                              "folded": true,
                               "type": "BuiltinCommonInstructions::Standard",
                               "conditions": [],
                               "actions": [
@@ -3252,6 +3299,7 @@
                               ],
                               "events": [
                                 {
+                                  "folded": true,
                                   "type": "BuiltinCommonInstructions::Standard",
                                   "conditions": [
                                     {
@@ -3269,6 +3317,7 @@
                                   "actions": [],
                                   "events": [
                                     {
+                                      "folded": true,
                                       "type": "BuiltinCommonInstructions::Standard",
                                       "conditions": [
                                         {
@@ -3295,6 +3344,7 @@
                                       ]
                                     },
                                     {
+                                      "folded": true,
                                       "type": "BuiltinCommonInstructions::Standard",
                                       "conditions": [
                                         {
@@ -3323,6 +3373,7 @@
                                   ]
                                 },
                                 {
+                                  "folded": true,
                                   "type": "BuiltinCommonInstructions::Standard",
                                   "conditions": [
                                     {
@@ -3340,12 +3391,14 @@
                                   "actions": [],
                                   "events": [
                                     {
+                                      "folded": true,
                                       "type": "BuiltinCommonInstructions::ForEach",
                                       "object": "node",
                                       "conditions": [],
                                       "actions": [],
                                       "events": [
                                         {
+                                          "folded": true,
                                           "type": "BuiltinCommonInstructions::Standard",
                                           "conditions": [],
                                           "actions": [
@@ -3419,6 +3472,7 @@
                                   ]
                                 },
                                 {
+                                  "folded": true,
                                   "type": "BuiltinCommonInstructions::Standard",
                                   "conditions": [],
                                   "actions": [
@@ -3445,6 +3499,7 @@
                               ]
                             },
                             {
+                              "folded": true,
                               "type": "BuiltinCommonInstructions::Standard",
                               "conditions": [],
                               "actions": []
@@ -3454,6 +3509,7 @@
                       ]
                     },
                     {
+                      "folded": true,
                       "type": "BuiltinCommonInstructions::Standard",
                       "conditions": [
                         {
@@ -3479,6 +3535,7 @@
                       ],
                       "events": [
                         {
+                          "folded": true,
                           "type": "BuiltinCommonInstructions::Standard",
                           "conditions": [],
                           "actions": [
@@ -3497,6 +3554,7 @@
                           ],
                           "events": [
                             {
+                              "folded": true,
                               "type": "BuiltinCommonInstructions::Standard",
                               "conditions": [],
                               "actions": [
@@ -3576,6 +3634,7 @@
                               ],
                               "events": [
                                 {
+                                  "folded": true,
                                   "type": "BuiltinCommonInstructions::Standard",
                                   "conditions": [
                                     {
@@ -3601,6 +3660,7 @@
                                   ]
                                 },
                                 {
+                                  "folded": true,
                                   "type": "BuiltinCommonInstructions::Standard",
                                   "conditions": [
                                     {
@@ -3630,11 +3690,13 @@
                                   "colorG": 176,
                                   "colorR": 74,
                                   "creationTime": 0,
+                                  "folded": true,
                                   "name": "Images",
                                   "source": "",
                                   "type": "BuiltinCommonInstructions::Group",
                                   "events": [
                                     {
+                                      "folded": true,
                                       "type": "BuiltinCommonInstructions::Standard",
                                       "conditions": [],
                                       "actions": [
@@ -3715,6 +3777,7 @@
                                       ],
                                       "events": [
                                         {
+                                          "folded": true,
                                           "type": "BuiltinCommonInstructions::Standard",
                                           "conditions": [],
                                           "actions": [
@@ -3805,6 +3868,7 @@
                                           ],
                                           "events": [
                                             {
+                                              "folded": true,
                                               "type": "BuiltinCommonInstructions::Standard",
                                               "conditions": [
                                                 {
@@ -3852,6 +3916,7 @@
                                   "parameters": []
                                 },
                                 {
+                                  "folded": true,
                                   "type": "BuiltinCommonInstructions::ForEachChildVariable",
                                   "iterableVariableName": "boxData.node",
                                   "valueIteratorVariableName": "node",
@@ -3860,6 +3925,7 @@
                                   "actions": [],
                                   "events": [
                                     {
+                                      "folded": true,
                                       "type": "BuiltinCommonInstructions::Standard",
                                       "conditions": [],
                                       "actions": [
@@ -3929,6 +3995,7 @@
                   "parameters": []
                 },
                 {
+                  "folded": true,
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [],
                   "actions": []
@@ -3946,6 +4013,7 @@
               "type": "BuiltinCommonInstructions::Group",
               "events": [
                 {
+                  "folded": true,
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [
                     {
@@ -3964,6 +4032,15 @@
                       "parameters": [
                         "",
                         "LShift"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "KeyPressed"
+                      },
+                      "parameters": [
+                        "",
+                        "s"
                       ]
                     }
                   ],
@@ -3992,11 +4069,13 @@
               "colorG": 176,
               "colorR": 74,
               "creationTime": 0,
+              "folded": true,
               "name": "Delete boxes",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
               "events": [
                 {
+                  "folded": true,
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [
                     {
@@ -4060,6 +4139,7 @@
                   ],
                   "events": [
                     {
+                      "folded": true,
                       "type": "BuiltinCommonInstructions::Standard",
                       "conditions": [],
                       "actions": [
@@ -4094,11 +4174,13 @@
               "colorR": 74,
               "creationTime": 0,
               "disabled": true,
+              "folded": true,
               "name": "Copy da box",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
               "events": [
                 {
+                  "folded": true,
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [
                     {
@@ -4217,6 +4299,7 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
+          "folded": true,
           "name": "Nodes",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -4226,11 +4309,13 @@
               "colorG": 176,
               "colorR": 74,
               "creationTime": 0,
+              "folded": true,
               "name": "Selecting nodes",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
               "events": [
                 {
+                  "folded": true,
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [
                     {
@@ -4248,6 +4333,7 @@
                   "actions": [],
                   "events": [
                     {
+                      "folded": true,
                       "type": "BuiltinCommonInstructions::Standard",
                       "conditions": [
                         {
@@ -4302,6 +4388,7 @@
                       ],
                       "events": [
                         {
+                          "folded": true,
                           "type": "BuiltinCommonInstructions::Standard",
                           "conditions": [
                             {
@@ -4332,6 +4419,7 @@
                   ]
                 },
                 {
+                  "folded": true,
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [],
                   "actions": []
@@ -4347,11 +4435,13 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
+          "folded": true,
           "name": "Box supporters",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
           "events": [
             {
+              "folded": true,
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [],
               "actions": [],
@@ -4361,11 +4451,13 @@
                   "colorG": 176,
                   "colorR": 74,
                   "creationTime": 0,
+                  "folded": true,
                   "name": "Size",
                   "source": "",
                   "type": "BuiltinCommonInstructions::Group",
                   "events": [
                     {
+                      "folded": true,
                       "type": "BuiltinCommonInstructions::Standard",
                       "conditions": [
                         {
@@ -4485,6 +4577,7 @@
                       ]
                     },
                     {
+                      "folded": true,
                       "type": "BuiltinCommonInstructions::Standard",
                       "conditions": [
                         {
@@ -4516,6 +4609,7 @@
                       ]
                     },
                     {
+                      "folded": true,
                       "type": "BuiltinCommonInstructions::Standard",
                       "conditions": [
                         {
@@ -4541,6 +4635,7 @@
                       "actions": [],
                       "events": [
                         {
+                          "folded": true,
                           "type": "BuiltinCommonInstructions::Standard",
                           "conditions": [
                             {
@@ -4569,6 +4664,7 @@
                           ],
                           "events": [
                             {
+                              "folded": true,
                               "type": "BuiltinCommonInstructions::Standard",
                               "conditions": [
                                 {
@@ -4606,6 +4702,7 @@
                               ]
                             },
                             {
+                              "folded": true,
                               "type": "BuiltinCommonInstructions::Standard",
                               "conditions": [
                                 {
@@ -4642,6 +4739,7 @@
                               ]
                             },
                             {
+                              "folded": true,
                               "type": "BuiltinCommonInstructions::Standard",
                               "conditions": [
                                 {
@@ -4657,6 +4755,7 @@
                               "actions": [],
                               "events": [
                                 {
+                                  "folded": true,
                                   "type": "BuiltinCommonInstructions::Standard",
                                   "conditions": [
                                     {
@@ -4700,6 +4799,7 @@
                                   ]
                                 },
                                 {
+                                  "folded": true,
                                   "type": "BuiltinCommonInstructions::Standard",
                                   "conditions": [],
                                   "actions": [
@@ -4728,6 +4828,7 @@
                               ]
                             },
                             {
+                              "folded": true,
                               "type": "BuiltinCommonInstructions::Standard",
                               "conditions": [],
                               "actions": [
@@ -4754,6 +4855,7 @@
                               ]
                             },
                             {
+                              "folded": true,
                               "type": "BuiltinCommonInstructions::Standard",
                               "conditions": [],
                               "actions": [
@@ -4784,12 +4886,14 @@
                           ]
                         },
                         {
+                          "folded": true,
                           "type": "BuiltinCommonInstructions::ForEach",
                           "object": "box",
                           "conditions": [],
                           "actions": [],
                           "events": [
                             {
+                              "folded": true,
                               "type": "BuiltinCommonInstructions::Standard",
                               "conditions": [],
                               "actions": [
@@ -4817,6 +4921,7 @@
                             },
                             {
                               "disabled": true,
+                              "folded": true,
                               "type": "BuiltinCommonInstructions::Standard",
                               "conditions": [
                                 {
@@ -4867,11 +4972,13 @@
                   "colorG": 176,
                   "colorR": 74,
                   "creationTime": 0,
+                  "folded": true,
                   "name": "Angle",
                   "source": "",
                   "type": "BuiltinCommonInstructions::Group",
                   "events": [
                     {
+                      "folded": true,
                       "type": "BuiltinCommonInstructions::Standard",
                       "conditions": [
                         {
@@ -4991,6 +5098,7 @@
                       ]
                     },
                     {
+                      "folded": true,
                       "type": "BuiltinCommonInstructions::Standard",
                       "conditions": [
                         {
@@ -5016,6 +5124,7 @@
                       "actions": [],
                       "events": [
                         {
+                          "folded": true,
                           "type": "BuiltinCommonInstructions::Standard",
                           "conditions": [
                             {
@@ -5064,12 +5173,14 @@
                           ]
                         },
                         {
+                          "folded": true,
                           "type": "BuiltinCommonInstructions::ForEach",
                           "object": "box",
                           "conditions": [],
                           "actions": [],
                           "events": [
                             {
+                              "folded": true,
                               "type": "BuiltinCommonInstructions::Standard",
                               "conditions": [],
                               "actions": [
@@ -5086,6 +5197,7 @@
                               ]
                             },
                             {
+                              "folded": true,
                               "type": "BuiltinCommonInstructions::Standard",
                               "conditions": [
                                 {
@@ -5112,6 +5224,7 @@
                               ]
                             },
                             {
+                              "folded": true,
                               "type": "BuiltinCommonInstructions::Standard",
                               "conditions": [
                                 {
@@ -5140,6 +5253,7 @@
                           ]
                         },
                         {
+                          "folded": true,
                           "type": "BuiltinCommonInstructions::Standard",
                           "conditions": [
                             {
@@ -5170,6 +5284,7 @@
                           ],
                           "events": [
                             {
+                              "folded": true,
                               "type": "BuiltinCommonInstructions::Standard",
                               "conditions": [],
                               "actions": [
@@ -5209,11 +5324,13 @@
                   "colorG": 176,
                   "colorR": 74,
                   "creationTime": 0,
+                  "folded": true,
                   "name": "Label for position when moving",
                   "source": "",
                   "type": "BuiltinCommonInstructions::Group",
                   "events": [
                     {
+                      "folded": true,
                       "type": "BuiltinCommonInstructions::Standard",
                       "conditions": [
                         {
@@ -5252,6 +5369,7 @@
                       ],
                       "events": [
                         {
+                          "folded": true,
                           "type": "BuiltinCommonInstructions::Standard",
                           "conditions": [
                             {
@@ -5301,6 +5419,7 @@
                   "parameters": []
                 },
                 {
+                  "folded": true,
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [],
                   "actions": []
@@ -5308,6 +5427,7 @@
               ]
             },
             {
+              "folded": true,
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
                 {
@@ -5407,11 +5527,13 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
+          "folded": true,
           "name": "Timeline events",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
           "events": [
             {
+              "folded": true,
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
                 {
@@ -5438,6 +5560,7 @@
               ]
             },
             {
+              "folded": true,
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
                 {
@@ -5463,6 +5586,7 @@
               ]
             },
             {
+              "folded": true,
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
                 {
@@ -5499,6 +5623,7 @@
               ],
               "events": [
                 {
+                  "folded": true,
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [
                     {
@@ -5560,6 +5685,7 @@
                   ]
                 },
                 {
+                  "folded": true,
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [
                     {
@@ -5588,6 +5714,7 @@
               ]
             },
             {
+              "folded": true,
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
                 {
@@ -5623,6 +5750,7 @@
               ],
               "events": [
                 {
+                  "folded": true,
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [
                     {
@@ -5650,6 +5778,7 @@
                   ]
                 },
                 {
+                  "folded": true,
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [],
                   "actions": [
@@ -5666,6 +5795,7 @@
                   ]
                 },
                 {
+                  "folded": true,
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [
                     {
@@ -5703,6 +5833,7 @@
                   ]
                 },
                 {
+                  "folded": true,
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [
                     {
@@ -5745,11 +5876,13 @@
                   "colorR": 74,
                   "creationTime": 0,
                   "disabled": true,
+                  "folded": true,
                   "name": "actually",
                   "source": "",
                   "type": "BuiltinCommonInstructions::Group",
                   "events": [
                     {
+                      "folded": true,
                       "type": "BuiltinCommonInstructions::Standard",
                       "conditions": [
                         {
@@ -5778,11 +5911,13 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
+          "folded": true,
           "name": "Saving the project",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
           "events": [
             {
+              "folded": true,
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
                 {
@@ -5809,17 +5944,20 @@
               ],
               "events": [
                 {
+                  "folded": true,
                   "type": "BuiltinCommonInstructions::ForEach",
                   "object": "box",
                   "conditions": [],
                   "actions": [],
                   "events": [
                     {
+                      "folded": true,
                       "type": "BuiltinCommonInstructions::Standard",
                       "conditions": [],
                       "actions": [],
                       "events": [
                         {
+                          "folded": true,
                           "type": "BuiltinCommonInstructions::Standard",
                           "conditions": [],
                           "actions": [
@@ -5923,6 +6061,7 @@
                           ],
                           "events": [
                             {
+                              "folded": true,
                               "type": "BuiltinCommonInstructions::Standard",
                               "conditions": [
                                 {
@@ -5940,6 +6079,7 @@
                               "actions": [],
                               "events": [
                                 {
+                                  "folded": true,
                                   "type": "BuiltinCommonInstructions::Standard",
                                   "conditions": [
                                     {
@@ -5966,6 +6106,7 @@
                                   ]
                                 },
                                 {
+                                  "folded": true,
                                   "type": "BuiltinCommonInstructions::Standard",
                                   "conditions": [
                                     {
@@ -6000,11 +6141,13 @@
                           "colorG": 176,
                           "colorR": 74,
                           "creationTime": 0,
+                          "folded": true,
                           "name": "UUID, checking if another object also has the same UUID",
                           "source": "",
                           "type": "BuiltinCommonInstructions::Group",
                           "events": [
                             {
+                              "folded": true,
                               "type": "BuiltinCommonInstructions::Standard",
                               "conditions": [
                                 {
@@ -6041,6 +6184,7 @@
                               ]
                             },
                             {
+                              "folded": true,
                               "type": "BuiltinCommonInstructions::Standard",
                               "conditions": [
                                 {
@@ -6070,6 +6214,7 @@
                           "parameters": []
                         },
                         {
+                          "folded": true,
                           "type": "BuiltinCommonInstructions::Standard",
                           "conditions": [],
                           "actions": []
@@ -6083,11 +6228,13 @@
                   "colorG": 176,
                   "colorR": 74,
                   "creationTime": 0,
+                  "folded": true,
                   "name": "Project settings and saving",
                   "source": "",
                   "type": "BuiltinCommonInstructions::Group",
                   "events": [
                     {
+                      "folded": true,
                       "type": "BuiltinCommonInstructions::Standard",
                       "conditions": [],
                       "actions": [
@@ -6107,6 +6254,7 @@
                   "parameters": []
                 },
                 {
+                  "folded": true,
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [],
                   "actions": [
@@ -6121,17 +6269,20 @@
                   ],
                   "events": [
                     {
+                      "folded": true,
                       "type": "BuiltinCommonInstructions::ForEach",
                       "object": "box",
                       "conditions": [],
                       "actions": [],
                       "events": [
                         {
+                          "folded": true,
                           "type": "BuiltinCommonInstructions::Standard",
                           "conditions": [],
                           "actions": [],
                           "events": [
                             {
+                              "folded": true,
                               "type": "BuiltinCommonInstructions::Standard",
                               "conditions": [],
                               "actions": [
@@ -6235,6 +6386,7 @@
                               ],
                               "events": [
                                 {
+                                  "folded": true,
                                   "type": "BuiltinCommonInstructions::Standard",
                                   "conditions": [
                                     {
@@ -6252,6 +6404,7 @@
                                   "actions": [],
                                   "events": [
                                     {
+                                      "folded": true,
                                       "type": "BuiltinCommonInstructions::Standard",
                                       "conditions": [
                                         {
@@ -6278,6 +6431,7 @@
                                       ]
                                     },
                                     {
+                                      "folded": true,
                                       "type": "BuiltinCommonInstructions::Standard",
                                       "conditions": [
                                         {
@@ -6308,6 +6462,7 @@
                               ]
                             },
                             {
+                              "folded": true,
                               "type": "BuiltinCommonInstructions::Standard",
                               "conditions": [
                                 {
@@ -6325,12 +6480,14 @@
                               "actions": [],
                               "events": [
                                 {
+                                  "folded": true,
                                   "type": "BuiltinCommonInstructions::ForEach",
                                   "object": "node",
                                   "conditions": [],
                                   "actions": [],
                                   "events": [
                                     {
+                                      "folded": true,
                                       "type": "BuiltinCommonInstructions::Standard",
                                       "conditions": [],
                                       "actions": [
@@ -6408,11 +6565,13 @@
                               "colorG": 176,
                               "colorR": 74,
                               "creationTime": 0,
+                              "folded": true,
                               "name": "UUID, checking if another object also has the same UUID",
                               "source": "",
                               "type": "BuiltinCommonInstructions::Group",
                               "events": [
                                 {
+                                  "folded": true,
                                   "type": "BuiltinCommonInstructions::Standard",
                                   "conditions": [
                                     {
@@ -6449,6 +6608,7 @@
                                   ]
                                 },
                                 {
+                                  "folded": true,
                                   "type": "BuiltinCommonInstructions::Standard",
                                   "conditions": [
                                     {
@@ -6478,6 +6638,7 @@
                               "parameters": []
                             },
                             {
+                              "folded": true,
                               "type": "BuiltinCommonInstructions::Standard",
                               "conditions": [],
                               "actions": []
@@ -6491,11 +6652,13 @@
                       "colorG": 176,
                       "colorR": 74,
                       "creationTime": 0,
+                      "folded": true,
                       "name": "Project settings and saving",
                       "source": "",
                       "type": "BuiltinCommonInstructions::Group",
                       "events": [
                         {
+                          "folded": true,
                           "type": "BuiltinCommonInstructions::Standard",
                           "conditions": [],
                           "actions": [
@@ -6522,6 +6685,7 @@
                           ]
                         },
                         {
+                          "folded": true,
                           "type": "BuiltinCommonInstructions::Standard",
                           "conditions": [],
                           "actions": [
@@ -6568,6 +6732,7 @@
                           ]
                         },
                         {
+                          "folded": true,
                           "type": "BuiltinCommonInstructions::Standard",
                           "conditions": [],
                           "actions": [
@@ -6610,6 +6775,7 @@
               ]
             },
             {
+              "folded": true,
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
                 {
@@ -6636,6 +6802,7 @@
               ],
               "events": [
                 {
+                  "folded": true,
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [],
                   "actions": [
@@ -6651,17 +6818,20 @@
                   ]
                 },
                 {
+                  "folded": true,
                   "type": "BuiltinCommonInstructions::ForEach",
                   "object": "box",
                   "conditions": [],
                   "actions": [],
                   "events": [
                     {
+                      "folded": true,
                       "type": "BuiltinCommonInstructions::Standard",
                       "conditions": [],
                       "actions": [],
                       "events": [
                         {
+                          "folded": true,
                           "type": "BuiltinCommonInstructions::Standard",
                           "conditions": [
                             {
@@ -6679,12 +6849,14 @@
                           "actions": [],
                           "events": [
                             {
+                              "folded": true,
                               "type": "BuiltinCommonInstructions::ForEach",
                               "object": "node",
                               "conditions": [],
                               "actions": [],
                               "events": [
                                 {
+                                  "folded": true,
                                   "type": "BuiltinCommonInstructions::Standard",
                                   "conditions": [],
                                   "actions": [
@@ -6739,11 +6911,13 @@
                           "colorG": 176,
                           "colorR": 74,
                           "creationTime": 0,
+                          "folded": true,
                           "name": "UUID, checking if another object also has the same UUID",
                           "source": "",
                           "type": "BuiltinCommonInstructions::Group",
                           "events": [
                             {
+                              "folded": true,
                               "type": "BuiltinCommonInstructions::Standard",
                               "conditions": [
                                 {
@@ -6780,6 +6954,7 @@
                               ]
                             },
                             {
+                              "folded": true,
                               "type": "BuiltinCommonInstructions::Standard",
                               "conditions": [
                                 {
@@ -6809,6 +6984,7 @@
                           "parameters": []
                         },
                         {
+                          "folded": true,
                           "type": "BuiltinCommonInstructions::Standard",
                           "conditions": [],
                           "actions": []
@@ -6822,11 +6998,13 @@
                   "colorG": 176,
                   "colorR": 74,
                   "creationTime": 0,
+                  "folded": true,
                   "name": "Project settings and saving",
                   "source": "",
                   "type": "BuiltinCommonInstructions::Group",
                   "events": [
                     {
+                      "folded": true,
                       "type": "BuiltinCommonInstructions::Standard",
                       "conditions": [],
                       "actions": [
@@ -6843,6 +7021,7 @@
                       ]
                     },
                     {
+                      "folded": true,
                       "type": "BuiltinCommonInstructions::Standard",
                       "conditions": [],
                       "actions": [
@@ -6862,6 +7041,7 @@
                   "parameters": []
                 },
                 {
+                  "folded": true,
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [],
                   "actions": [
@@ -6876,17 +7056,20 @@
                   ],
                   "events": [
                     {
+                      "folded": true,
                       "type": "BuiltinCommonInstructions::ForEach",
                       "object": "box",
                       "conditions": [],
                       "actions": [],
                       "events": [
                         {
+                          "folded": true,
                           "type": "BuiltinCommonInstructions::Standard",
                           "conditions": [],
                           "actions": [],
                           "events": [
                             {
+                              "folded": true,
                               "type": "BuiltinCommonInstructions::Standard",
                               "conditions": [],
                               "actions": [
@@ -6990,6 +7173,7 @@
                               ],
                               "events": [
                                 {
+                                  "folded": true,
                                   "type": "BuiltinCommonInstructions::Standard",
                                   "conditions": [
                                     {
@@ -7007,6 +7191,7 @@
                                   "actions": [],
                                   "events": [
                                     {
+                                      "folded": true,
                                       "type": "BuiltinCommonInstructions::Standard",
                                       "conditions": [
                                         {
@@ -7033,6 +7218,7 @@
                                       ]
                                     },
                                     {
+                                      "folded": true,
                                       "type": "BuiltinCommonInstructions::Standard",
                                       "conditions": [
                                         {
@@ -7063,6 +7249,7 @@
                               ]
                             },
                             {
+                              "folded": true,
                               "type": "BuiltinCommonInstructions::Standard",
                               "conditions": [
                                 {
@@ -7080,12 +7267,14 @@
                               "actions": [],
                               "events": [
                                 {
+                                  "folded": true,
                                   "type": "BuiltinCommonInstructions::ForEach",
                                   "object": "node",
                                   "conditions": [],
                                   "actions": [],
                                   "events": [
                                     {
+                                      "folded": true,
                                       "type": "BuiltinCommonInstructions::Standard",
                                       "conditions": [],
                                       "actions": [
@@ -7163,11 +7352,13 @@
                               "colorG": 176,
                               "colorR": 74,
                               "creationTime": 0,
+                              "folded": true,
                               "name": "UUID, checking if another object also has the same UUID",
                               "source": "",
                               "type": "BuiltinCommonInstructions::Group",
                               "events": [
                                 {
+                                  "folded": true,
                                   "type": "BuiltinCommonInstructions::Standard",
                                   "conditions": [
                                     {
@@ -7204,6 +7395,7 @@
                                   ]
                                 },
                                 {
+                                  "folded": true,
                                   "type": "BuiltinCommonInstructions::Standard",
                                   "conditions": [
                                     {
@@ -7233,6 +7425,7 @@
                               "parameters": []
                             },
                             {
+                              "folded": true,
                               "type": "BuiltinCommonInstructions::Standard",
                               "conditions": [],
                               "actions": []
@@ -7246,11 +7439,13 @@
                       "colorG": 176,
                       "colorR": 74,
                       "creationTime": 0,
+                      "folded": true,
                       "name": "Project settings and saving",
                       "source": "",
                       "type": "BuiltinCommonInstructions::Group",
                       "events": [
                         {
+                          "folded": true,
                           "type": "BuiltinCommonInstructions::Standard",
                           "conditions": [],
                           "actions": [
@@ -7277,6 +7472,7 @@
                           ]
                         },
                         {
+                          "folded": true,
                           "type": "BuiltinCommonInstructions::Standard",
                           "conditions": [],
                           "actions": [
@@ -7323,6 +7519,7 @@
                           ]
                         },
                         {
+                          "folded": true,
                           "type": "BuiltinCommonInstructions::Standard",
                           "conditions": [],
                           "actions": [
@@ -7365,6 +7562,7 @@
               ]
             },
             {
+              "folded": true,
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
                 {
@@ -7391,17 +7589,20 @@
               ],
               "events": [
                 {
+                  "folded": true,
                   "type": "BuiltinCommonInstructions::ForEach",
                   "object": "box",
                   "conditions": [],
                   "actions": [],
                   "events": [
                     {
+                      "folded": true,
                       "type": "BuiltinCommonInstructions::Standard",
                       "conditions": [],
                       "actions": [],
                       "events": [
                         {
+                          "folded": true,
                           "type": "BuiltinCommonInstructions::Standard",
                           "conditions": [],
                           "actions": [
@@ -7505,6 +7706,7 @@
                           ],
                           "events": [
                             {
+                              "folded": true,
                               "type": "BuiltinCommonInstructions::Standard",
                               "conditions": [
                                 {
@@ -7522,6 +7724,7 @@
                               "actions": [],
                               "events": [
                                 {
+                                  "folded": true,
                                   "type": "BuiltinCommonInstructions::Standard",
                                   "conditions": [
                                     {
@@ -7548,6 +7751,7 @@
                                   ]
                                 },
                                 {
+                                  "folded": true,
                                   "type": "BuiltinCommonInstructions::Standard",
                                   "conditions": [
                                     {
@@ -7578,6 +7782,7 @@
                           ]
                         },
                         {
+                          "folded": true,
                           "type": "BuiltinCommonInstructions::Standard",
                           "conditions": [
                             {
@@ -7595,12 +7800,14 @@
                           "actions": [],
                           "events": [
                             {
+                              "folded": true,
                               "type": "BuiltinCommonInstructions::ForEach",
                               "object": "node",
                               "conditions": [],
                               "actions": [],
                               "events": [
                                 {
+                                  "folded": true,
                                   "type": "BuiltinCommonInstructions::Standard",
                                   "conditions": [],
                                   "actions": [
@@ -7678,11 +7885,13 @@
                           "colorG": 176,
                           "colorR": 74,
                           "creationTime": 0,
+                          "folded": true,
                           "name": "UUID, checking if another object also has the same UUID",
                           "source": "",
                           "type": "BuiltinCommonInstructions::Group",
                           "events": [
                             {
+                              "folded": true,
                               "type": "BuiltinCommonInstructions::Standard",
                               "conditions": [
                                 {
@@ -7719,6 +7928,7 @@
                               ]
                             },
                             {
+                              "folded": true,
                               "type": "BuiltinCommonInstructions::Standard",
                               "conditions": [
                                 {
@@ -7748,6 +7958,7 @@
                           "parameters": []
                         },
                         {
+                          "folded": true,
                           "type": "BuiltinCommonInstructions::Standard",
                           "conditions": [],
                           "actions": []
@@ -7761,11 +7972,13 @@
                   "colorG": 176,
                   "colorR": 74,
                   "creationTime": 0,
+                  "folded": true,
                   "name": "Project settings and saving",
                   "source": "",
                   "type": "BuiltinCommonInstructions::Group",
                   "events": [
                     {
+                      "folded": true,
                       "type": "BuiltinCommonInstructions::Standard",
                       "conditions": [],
                       "actions": [
@@ -7792,6 +8005,7 @@
                       ]
                     },
                     {
+                      "folded": true,
                       "type": "BuiltinCommonInstructions::Standard",
                       "conditions": [],
                       "actions": [
@@ -7838,6 +8052,7 @@
                       ]
                     },
                     {
+                      "folded": true,
                       "type": "BuiltinCommonInstructions::Standard",
                       "conditions": [],
                       "actions": [
@@ -7876,6 +8091,7 @@
                   "parameters": []
                 },
                 {
+                  "folded": true,
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [],
                   "actions": [
@@ -7894,6 +8110,7 @@
               ]
             },
             {
+              "folded": true,
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
                 {
@@ -7920,17 +8137,20 @@
               ],
               "events": [
                 {
+                  "folded": true,
                   "type": "BuiltinCommonInstructions::ForEach",
                   "object": "box",
                   "conditions": [],
                   "actions": [],
                   "events": [
                     {
+                      "folded": true,
                       "type": "BuiltinCommonInstructions::Standard",
                       "conditions": [],
                       "actions": [],
                       "events": [
                         {
+                          "folded": true,
                           "type": "BuiltinCommonInstructions::Standard",
                           "conditions": [],
                           "actions": [
@@ -8034,6 +8254,7 @@
                           ],
                           "events": [
                             {
+                              "folded": true,
                               "type": "BuiltinCommonInstructions::Standard",
                               "conditions": [
                                 {
@@ -8051,6 +8272,7 @@
                               "actions": [],
                               "events": [
                                 {
+                                  "folded": true,
                                   "type": "BuiltinCommonInstructions::Standard",
                                   "conditions": [
                                     {
@@ -8077,6 +8299,7 @@
                                   ]
                                 },
                                 {
+                                  "folded": true,
                                   "type": "BuiltinCommonInstructions::Standard",
                                   "conditions": [
                                     {
@@ -8107,6 +8330,7 @@
                           ]
                         },
                         {
+                          "folded": true,
                           "type": "BuiltinCommonInstructions::Standard",
                           "conditions": [
                             {
@@ -8124,12 +8348,14 @@
                           "actions": [],
                           "events": [
                             {
+                              "folded": true,
                               "type": "BuiltinCommonInstructions::ForEach",
                               "object": "node",
                               "conditions": [],
                               "actions": [],
                               "events": [
                                 {
+                                  "folded": true,
                                   "type": "BuiltinCommonInstructions::Standard",
                                   "conditions": [],
                                   "actions": [
@@ -8207,11 +8433,13 @@
                           "colorG": 176,
                           "colorR": 74,
                           "creationTime": 0,
+                          "folded": true,
                           "name": "UUID, checking if another object also has the same UUID",
                           "source": "",
                           "type": "BuiltinCommonInstructions::Group",
                           "events": [
                             {
+                              "folded": true,
                               "type": "BuiltinCommonInstructions::Standard",
                               "conditions": [
                                 {
@@ -8248,6 +8476,7 @@
                               ]
                             },
                             {
+                              "folded": true,
                               "type": "BuiltinCommonInstructions::Standard",
                               "conditions": [
                                 {
@@ -8277,6 +8506,7 @@
                           "parameters": []
                         },
                         {
+                          "folded": true,
                           "type": "BuiltinCommonInstructions::Standard",
                           "conditions": [],
                           "actions": []
@@ -8290,11 +8520,13 @@
                   "colorG": 176,
                   "colorR": 74,
                   "creationTime": 0,
+                  "folded": true,
                   "name": "Project settings and saving",
                   "source": "",
                   "type": "BuiltinCommonInstructions::Group",
                   "events": [
                     {
+                      "folded": true,
                       "type": "BuiltinCommonInstructions::Standard",
                       "conditions": [],
                       "actions": [
@@ -8321,6 +8553,7 @@
                       ]
                     },
                     {
+                      "folded": true,
                       "type": "BuiltinCommonInstructions::Standard",
                       "conditions": [],
                       "actions": [
@@ -8367,6 +8600,7 @@
                       ]
                     },
                     {
+                      "folded": true,
                       "type": "BuiltinCommonInstructions::Standard",
                       "conditions": [],
                       "actions": [
@@ -8417,6 +8651,7 @@
               ]
             },
             {
+              "folded": true,
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
                 {
@@ -8431,6 +8666,7 @@
               "actions": [],
               "events": [
                 {
+                  "folded": true,
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [
                     {
@@ -8464,6 +8700,7 @@
                   ],
                   "events": [
                     {
+                      "folded": true,
                       "type": "BuiltinCommonInstructions::Standard",
                       "conditions": [],
                       "actions": [
@@ -8480,6 +8717,7 @@
                       ]
                     },
                     {
+                      "folded": true,
                       "type": "BuiltinCommonInstructions::ForEachChildVariable",
                       "iterableVariableName": "saveData.box",
                       "valueIteratorVariableName": "box",
@@ -8488,6 +8726,7 @@
                       "actions": [],
                       "events": [
                         {
+                          "folded": true,
                           "type": "BuiltinCommonInstructions::Standard",
                           "conditions": [],
                           "actions": [
@@ -8546,6 +8785,7 @@
                           ],
                           "events": [
                             {
+                              "folded": true,
                               "type": "BuiltinCommonInstructions::Standard",
                               "conditions": [
                                 {
@@ -8571,6 +8811,7 @@
                               ]
                             },
                             {
+                              "folded": true,
                               "type": "BuiltinCommonInstructions::Standard",
                               "conditions": [
                                 {
@@ -8600,11 +8841,13 @@
                               "colorG": 176,
                               "colorR": 74,
                               "creationTime": 0,
+                              "folded": true,
                               "name": "Images",
                               "source": "",
                               "type": "BuiltinCommonInstructions::Group",
                               "events": [
                                 {
+                                  "folded": true,
                                   "type": "BuiltinCommonInstructions::Standard",
                                   "conditions": [],
                                   "actions": [
@@ -8685,6 +8928,7 @@
                                   ],
                                   "events": [
                                     {
+                                      "folded": true,
                                       "type": "BuiltinCommonInstructions::Standard",
                                       "conditions": [],
                                       "actions": [
@@ -8775,6 +9019,7 @@
                                       ],
                                       "events": [
                                         {
+                                          "folded": true,
                                           "type": "BuiltinCommonInstructions::Standard",
                                           "conditions": [
                                             {
@@ -8822,6 +9067,7 @@
                               "parameters": []
                             },
                             {
+                              "folded": true,
                               "type": "BuiltinCommonInstructions::ForEachChildVariable",
                               "iterableVariableName": "box.node",
                               "valueIteratorVariableName": "node",
@@ -8830,6 +9076,7 @@
                               "actions": [],
                               "events": [
                                 {
+                                  "folded": true,
                                   "type": "BuiltinCommonInstructions::Standard",
                                   "conditions": [],
                                   "actions": [
@@ -8905,17 +9152,20 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
+          "folded": true,
           "name": "Tools and buttons for actions",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
           "events": [
             {
+              "folded": true,
               "type": "BuiltinCommonInstructions::ForEach",
               "object": "tools",
               "conditions": [],
               "actions": [],
               "events": [
                 {
+                  "folded": true,
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [
                     {
@@ -8983,6 +9233,7 @@
                   ]
                 },
                 {
+                  "folded": true,
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [
                     {
@@ -9020,6 +9271,7 @@
                   ]
                 },
                 {
+                  "folded": true,
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [
                     {
@@ -9062,11 +9314,13 @@
               "colorG": 176,
               "colorR": 74,
               "creationTime": 0,
+              "folded": true,
               "name": "Pen tool (tool for creating nodes easily)",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
               "events": [
                 {
+                  "folded": true,
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [
                     {
@@ -9109,6 +9363,7 @@
           "type": "BuiltinCommonInstructions::Group",
           "events": [
             {
+              "folded": true,
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
                 {
@@ -9134,6 +9389,7 @@
               ]
             },
             {
+              "folded": true,
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
                 {
@@ -9160,6 +9416,7 @@
               ]
             },
             {
+              "folded": true,
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [],
               "actions": [
@@ -9204,6 +9461,7 @@
               ]
             },
             {
+              "folded": true,
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
                 {
@@ -9261,11 +9519,13 @@
                   "colorG": 176,
                   "colorR": 74,
                   "creationTime": 0,
+                  "folded": true,
                   "name": "Box supporters",
                   "source": "",
                   "type": "BuiltinCommonInstructions::Group",
                   "events": [
                     {
+                      "folded": true,
                       "type": "BuiltinCommonInstructions::Standard",
                       "conditions": [
                         {
@@ -9286,6 +9546,7 @@
                           "colorG": 176,
                           "colorR": 74,
                           "creationTime": 0,
+                          "folded": true,
                           "name": "Support",
                           "source": "",
                           "type": "BuiltinCommonInstructions::Group",
@@ -9295,11 +9556,13 @@
                               "colorG": 176,
                               "colorR": 74,
                               "creationTime": 0,
+                              "folded": true,
                               "name": "Creating the suport handles",
                               "source": "",
                               "type": "BuiltinCommonInstructions::Group",
                               "events": [
                                 {
+                                  "folded": true,
                                   "type": "BuiltinCommonInstructions::Standard",
                                   "conditions": [
                                     {
@@ -9327,6 +9590,7 @@
                                   ],
                                   "events": [
                                     {
+                                      "folded": true,
                                       "type": "BuiltinCommonInstructions::Standard",
                                       "conditions": [],
                                       "actions": [
@@ -9374,6 +9638,7 @@
                                       ]
                                     },
                                     {
+                                      "folded": true,
                                       "type": "BuiltinCommonInstructions::Standard",
                                       "conditions": [],
                                       "actions": [
@@ -9421,11 +9686,13 @@
                               "colorG": 176,
                               "colorR": 74,
                               "creationTime": 0,
+                              "folded": true,
                               "name": "Changing position of the handles based on what type of handle they are",
                               "source": "",
                               "type": "BuiltinCommonInstructions::Group",
                               "events": [
                                 {
+                                  "folded": true,
                                   "type": "BuiltinCommonInstructions::Standard",
                                   "conditions": [
                                     {
@@ -9454,6 +9721,7 @@
                                   ],
                                   "events": [
                                     {
+                                      "folded": true,
                                       "type": "BuiltinCommonInstructions::Standard",
                                       "conditions": [
                                         {
@@ -9482,6 +9750,7 @@
                                       ]
                                     },
                                     {
+                                      "folded": true,
                                       "type": "BuiltinCommonInstructions::Standard",
                                       "conditions": [
                                         {
@@ -9527,11 +9796,13 @@
                   "colorG": 176,
                   "colorR": 74,
                   "creationTime": 0,
+                  "folded": true,
                   "name": "For each node",
                   "source": "",
                   "type": "BuiltinCommonInstructions::Group",
                   "events": [
                     {
+                      "folded": true,
                       "type": "BuiltinCommonInstructions::Standard",
                       "conditions": [
                         {
@@ -9549,12 +9820,14 @@
                       "actions": [],
                       "events": [
                         {
+                          "folded": true,
                           "type": "BuiltinCommonInstructions::ForEach",
                           "object": "node",
                           "conditions": [],
                           "actions": [],
                           "events": [
                             {
+                              "folded": true,
                               "type": "BuiltinCommonInstructions::Standard",
                               "conditions": [
                                 {
@@ -9575,11 +9848,13 @@
                                   "colorG": 176,
                                   "colorR": 74,
                                   "creationTime": 0,
+                                  "folded": true,
                                   "name": "Copying the node data for duplicating node",
                                   "source": "",
                                   "type": "BuiltinCommonInstructions::Group",
                                   "events": [
                                     {
+                                      "folded": true,
                                       "type": "BuiltinCommonInstructions::Standard",
                                       "conditions": [
                                         {
@@ -9610,6 +9885,7 @@
                                       "actions": [],
                                       "events": [
                                         {
+                                          "folded": true,
                                           "type": "BuiltinCommonInstructions::Standard",
                                           "conditions": [],
                                           "actions": [
@@ -9688,11 +9964,13 @@
                                   "colorG": 176,
                                   "colorR": 74,
                                   "creationTime": 0,
+                                  "folded": true,
                                   "name": "Check if cursor on node",
                                   "source": "",
                                   "type": "BuiltinCommonInstructions::Group",
                                   "events": [
                                     {
+                                      "folded": true,
                                       "type": "BuiltinCommonInstructions::Standard",
                                       "conditions": [
                                         {
@@ -9759,6 +10037,7 @@
                                       ],
                                       "events": [
                                         {
+                                          "folded": true,
                                           "type": "BuiltinCommonInstructions::Standard",
                                           "conditions": [
                                             {
@@ -9814,11 +10093,13 @@
                                   "colorG": 176,
                                   "colorR": 74,
                                   "creationTime": 0,
+                                  "folded": true,
                                   "name": "Selecting nodes",
                                   "source": "",
                                   "type": "BuiltinCommonInstructions::Group",
                                   "events": [
                                     {
+                                      "folded": true,
                                       "type": "BuiltinCommonInstructions::Standard",
                                       "conditions": [
                                         {
@@ -9847,6 +10128,7 @@
                                       "actions": [],
                                       "events": [
                                         {
+                                          "folded": true,
                                           "type": "BuiltinCommonInstructions::Standard",
                                           "conditions": [
                                             {
@@ -9883,6 +10165,7 @@
                                           ]
                                         },
                                         {
+                                          "folded": true,
                                           "type": "BuiltinCommonInstructions::Standard",
                                           "conditions": [],
                                           "actions": [
@@ -9928,6 +10211,7 @@
                                           ],
                                           "events": [
                                             {
+                                              "folded": true,
                                               "type": "BuiltinCommonInstructions::Standard",
                                               "conditions": [],
                                               "actions": [
@@ -9982,10 +10266,21 @@
                                                     "=",
                                                     "node.Variable(data.anm.opacity)"
                                                   ]
+                                                },
+                                                {
+                                                  "type": {
+                                                    "value": "ChangePlan"
+                                                  },
+                                                  "parameters": [
+                                                    "box",
+                                                    "=",
+                                                    "node.Variable(data.anm.zOrder)"
+                                                  ]
                                                 }
                                               ],
                                               "events": [
                                                 {
+                                                  "folded": true,
                                                   "type": "BuiltinCommonInstructions::Standard",
                                                   "conditions": [
                                                     {
@@ -10012,6 +10307,7 @@
                                                   ]
                                                 },
                                                 {
+                                                  "folded": true,
                                                   "type": "BuiltinCommonInstructions::Standard",
                                                   "conditions": [
                                                     {
@@ -10038,6 +10334,7 @@
                                                   ]
                                                 },
                                                 {
+                                                  "folded": true,
                                                   "type": "BuiltinCommonInstructions::Standard",
                                                   "conditions": [
                                                     {
@@ -10064,6 +10361,7 @@
                                                   ]
                                                 },
                                                 {
+                                                  "folded": true,
                                                   "type": "BuiltinCommonInstructions::Standard",
                                                   "conditions": [
                                                     {
@@ -10103,11 +10401,13 @@
                                   "colorG": 176,
                                   "colorR": 74,
                                   "creationTime": 0,
+                                  "folded": true,
                                   "name": "Extending nodes",
                                   "source": "",
                                   "type": "BuiltinCommonInstructions::Group",
                                   "events": [
                                     {
+                                      "folded": true,
                                       "type": "BuiltinCommonInstructions::Standard",
                                       "conditions": [
                                         {
@@ -10159,6 +10459,7 @@
                                       ]
                                     },
                                     {
+                                      "folded": true,
                                       "type": "BuiltinCommonInstructions::Standard",
                                       "conditions": [
                                         {
@@ -10175,6 +10476,7 @@
                                       "actions": [],
                                       "events": [
                                         {
+                                          "folded": true,
                                           "type": "BuiltinCommonInstructions::Standard",
                                           "conditions": [
                                             {
@@ -10201,6 +10503,7 @@
                                           ],
                                           "events": [
                                             {
+                                              "folded": true,
                                               "type": "BuiltinCommonInstructions::Standard",
                                               "conditions": [
                                                 {
@@ -10229,6 +10532,7 @@
                                           ]
                                         },
                                         {
+                                          "folded": true,
                                           "type": "BuiltinCommonInstructions::Standard",
                                           "conditions": [
                                             {
@@ -10264,6 +10568,7 @@
                                           ],
                                           "events": [
                                             {
+                                              "folded": true,
                                               "type": "BuiltinCommonInstructions::Standard",
                                               "conditions": [
                                                 {
@@ -10301,11 +10606,13 @@
                                   "colorG": 176,
                                   "colorR": 74,
                                   "creationTime": 0,
+                                  "folded": true,
                                   "name": "Effects for selecting nodes",
                                   "source": "",
                                   "type": "BuiltinCommonInstructions::Group",
                                   "events": [
                                     {
+                                      "folded": true,
                                       "type": "BuiltinCommonInstructions::Standard",
                                       "conditions": [
                                         {
@@ -10332,6 +10639,7 @@
                                       ],
                                       "events": [
                                         {
+                                          "folded": true,
                                           "type": "BuiltinCommonInstructions::Standard",
                                           "conditions": [
                                             {
@@ -10361,6 +10669,7 @@
                                       ]
                                     },
                                     {
+                                      "folded": true,
                                       "type": "BuiltinCommonInstructions::Standard",
                                       "conditions": [
                                         {
@@ -10387,6 +10696,7 @@
                                       ],
                                       "events": [
                                         {
+                                          "folded": true,
                                           "type": "BuiltinCommonInstructions::Standard",
                                           "conditions": [
                                             {
@@ -10435,11 +10745,13 @@
                               "colorG": 176,
                               "colorR": 74,
                               "creationTime": 0,
+                              "folded": true,
                               "name": "Extend guide",
                               "source": "",
                               "type": "BuiltinCommonInstructions::Group",
                               "events": [
                                 {
+                                  "folded": true,
                                   "type": "BuiltinCommonInstructions::Standard",
                                   "conditions": [
                                     {
@@ -10475,11 +10787,13 @@
                               "colorG": 55,
                               "colorR": 131,
                               "creationTime": 0,
+                              "folded": true,
                               "name": "Animate",
                               "source": "",
                               "type": "BuiltinCommonInstructions::Group",
                               "events": [
                                 {
+                                  "folded": true,
                                   "type": "BuiltinCommonInstructions::Standard",
                                   "conditions": [
                                     {
@@ -10530,11 +10844,13 @@
                                       "colorG": 176,
                                       "colorR": 74,
                                       "creationTime": 0,
+                                      "folded": true,
                                       "name": "Tweens",
                                       "source": "",
                                       "type": "BuiltinCommonInstructions::Group",
                                       "events": [
                                         {
+                                          "folded": true,
                                           "type": "BuiltinCommonInstructions::Standard",
                                           "conditions": [],
                                           "actions": [
@@ -10593,11 +10909,13 @@
                                                   "colorG": 176,
                                                   "colorR": 74,
                                                   "creationTime": 0,
+                                                  "folded": true,
                                                   "name": "positoin",
                                                   "source": "",
                                                   "type": "BuiltinCommonInstructions::Group",
                                                   "events": [
                                                     {
+                                                      "folded": true,
                                                       "type": "BuiltinCommonInstructions::Standard",
                                                       "conditions": [
                                                         {
@@ -10625,6 +10943,7 @@
                                                       ]
                                                     },
                                                     {
+                                                      "folded": true,
                                                       "type": "BuiltinCommonInstructions::Standard",
                                                       "conditions": [
                                                         {
@@ -10655,6 +10974,7 @@
                                                   "parameters": []
                                                 },
                                                 {
+                                                  "folded": true,
                                                   "type": "BuiltinCommonInstructions::Standard",
                                                   "conditions": [
                                                     {
@@ -10682,6 +11002,7 @@
                                                   ]
                                                 },
                                                 {
+                                                  "folded": true,
                                                   "type": "BuiltinCommonInstructions::Standard",
                                                   "conditions": [
                                                     {
@@ -10709,6 +11030,7 @@
                                                   ]
                                                 },
                                                 {
+                                                  "folded": true,
                                                   "type": "BuiltinCommonInstructions::Standard",
                                                   "conditions": [
                                                     {
@@ -10736,6 +11058,7 @@
                                                   ]
                                                 },
                                                 {
+                                                  "folded": true,
                                                   "type": "BuiltinCommonInstructions::Standard",
                                                   "conditions": [
                                                     {
@@ -10800,11 +11123,13 @@
                                                   "colorG": 176,
                                                   "colorR": 74,
                                                   "creationTime": 0,
+                                                  "folded": true,
                                                   "name": "positoin",
                                                   "source": "",
                                                   "type": "BuiltinCommonInstructions::Group",
                                                   "events": [
                                                     {
+                                                      "folded": true,
                                                       "type": "BuiltinCommonInstructions::Standard",
                                                       "conditions": [
                                                         {
@@ -10836,6 +11161,7 @@
                                                       ]
                                                     },
                                                     {
+                                                      "folded": true,
                                                       "type": "BuiltinCommonInstructions::Standard",
                                                       "conditions": [
                                                         {
@@ -10870,6 +11196,7 @@
                                                   "parameters": []
                                                 },
                                                 {
+                                                  "folded": true,
                                                   "type": "BuiltinCommonInstructions::Standard",
                                                   "conditions": [
                                                     {
@@ -10901,6 +11228,7 @@
                                                   ]
                                                 },
                                                 {
+                                                  "folded": true,
                                                   "type": "BuiltinCommonInstructions::Standard",
                                                   "conditions": [
                                                     {
@@ -10932,6 +11260,7 @@
                                                   ]
                                                 },
                                                 {
+                                                  "folded": true,
                                                   "type": "BuiltinCommonInstructions::Standard",
                                                   "conditions": [
                                                     {
@@ -10963,6 +11292,7 @@
                                                   ]
                                                 },
                                                 {
+                                                  "folded": true,
                                                   "type": "BuiltinCommonInstructions::Standard",
                                                   "conditions": [
                                                     {
@@ -11009,6 +11339,7 @@
                                           "type": "BuiltinCommonInstructions::Group",
                                           "events": [
                                             {
+                                              "folded": true,
                                               "type": "BuiltinCommonInstructions::Standard",
                                               "conditions": [
                                                 {
@@ -11025,6 +11356,7 @@
                                               "actions": [],
                                               "events": [
                                                 {
+                                                  "folded": true,
                                                   "type": "BuiltinCommonInstructions::Standard",
                                                   "conditions": [
                                                     {
@@ -11051,6 +11383,7 @@
                                                   ]
                                                 },
                                                 {
+                                                  "folded": true,
                                                   "type": "BuiltinCommonInstructions::Standard",
                                                   "conditions": [
                                                     {
@@ -11079,6 +11412,7 @@
                                               ]
                                             },
                                             {
+                                              "folded": true,
                                               "type": "BuiltinCommonInstructions::Standard",
                                               "conditions": [
                                                 {
@@ -11095,6 +11429,7 @@
                                               "actions": [],
                                               "events": [
                                                 {
+                                                  "folded": true,
                                                   "type": "BuiltinCommonInstructions::Standard",
                                                   "conditions": [
                                                     {
@@ -11121,6 +11456,7 @@
                                                   ]
                                                 },
                                                 {
+                                                  "folded": true,
                                                   "type": "BuiltinCommonInstructions::Standard",
                                                   "conditions": [
                                                     {
@@ -11156,11 +11492,13 @@
                                           "colorG": 176,
                                           "colorR": 74,
                                           "creationTime": 0,
+                                          "folded": true,
                                           "name": "Z order",
                                           "source": "",
                                           "type": "BuiltinCommonInstructions::Group",
                                           "events": [
                                             {
+                                              "folded": true,
                                               "type": "BuiltinCommonInstructions::Standard",
                                               "conditions": [
                                                 {
@@ -11169,7 +11507,7 @@
                                                   },
                                                   "parameters": [
                                                     "node",
-                                                    "data.active.flippedVer",
+                                                    "data.active.zOrder",
                                                     "True"
                                                   ]
                                                 }
@@ -11182,7 +11520,7 @@
                                                   "parameters": [
                                                     "box",
                                                     "=",
-                                                    "node.Variable(data.anm.flippedVer)"
+                                                    "node.Variable(data.anm.zOrder)"
                                                   ]
                                                 }
                                               ]
@@ -11210,11 +11548,13 @@
                   "colorG": 176,
                   "colorR": 74,
                   "creationTime": 0,
+                  "folded": true,
                   "name": "Creating the object with copied data for duplicating the node",
                   "source": "",
                   "type": "BuiltinCommonInstructions::Group",
                   "events": [
                     {
+                      "folded": true,
                       "type": "BuiltinCommonInstructions::Standard",
                       "conditions": [
                         {
@@ -11242,6 +11582,7 @@
                       ],
                       "events": [
                         {
+                          "folded": true,
                           "type": "BuiltinCommonInstructions::Standard",
                           "conditions": [],
                           "actions": [
@@ -11300,6 +11641,7 @@
                           ]
                         },
                         {
+                          "folded": true,
                           "type": "BuiltinCommonInstructions::Standard",
                           "conditions": [],
                           "actions": []
@@ -11310,6 +11652,7 @@
                   "parameters": []
                 },
                 {
+                  "folded": true,
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [
                     {
@@ -11330,11 +11673,13 @@
                       "colorG": 176,
                       "colorR": 74,
                       "creationTime": 0,
+                      "folded": true,
                       "name": "Show",
                       "source": "",
                       "type": "BuiltinCommonInstructions::Group",
                       "events": [
                         {
+                          "folded": true,
                           "type": "BuiltinCommonInstructions::Standard",
                           "conditions": [
                             {
@@ -11380,11 +11725,13 @@
                       "colorG": 176,
                       "colorR": 74,
                       "creationTime": 0,
+                      "folded": true,
                       "name": "Create node",
                       "source": "",
                       "type": "BuiltinCommonInstructions::Group",
                       "events": [
                         {
+                          "folded": true,
                           "type": "BuiltinCommonInstructions::Standard",
                           "conditions": [
                             {
@@ -11487,11 +11834,13 @@
                               "colorG": 176,
                               "colorR": 74,
                               "creationTime": 0,
+                              "folded": true,
                               "name": "Data for node (anm, active)",
                               "source": "",
                               "type": "BuiltinCommonInstructions::Group",
                               "events": [
                                 {
+                                  "folded": true,
                                   "type": "BuiltinCommonInstructions::Standard",
                                   "conditions": [],
                                   "actions": [
@@ -11619,6 +11968,7 @@
                                   ],
                                   "events": [
                                     {
+                                      "folded": true,
                                       "type": "BuiltinCommonInstructions::Standard",
                                       "conditions": [
                                         {
@@ -11636,6 +11986,7 @@
                                       "actions": [],
                                       "events": [
                                         {
+                                          "folded": true,
                                           "type": "BuiltinCommonInstructions::Standard",
                                           "conditions": [
                                             {
@@ -11662,6 +12013,7 @@
                                           ]
                                         },
                                         {
+                                          "folded": true,
                                           "type": "BuiltinCommonInstructions::Standard",
                                           "conditions": [
                                             {
@@ -11690,6 +12042,7 @@
                                       ]
                                     },
                                     {
+                                      "folded": true,
                                       "type": "BuiltinCommonInstructions::Standard",
                                       "conditions": [],
                                       "actions": [
@@ -11705,6 +12058,7 @@
                                       ]
                                     },
                                     {
+                                      "folded": true,
                                       "type": "BuiltinCommonInstructions::ForEachChildVariable",
                                       "iterableVariableName": "nodeData.active",
                                       "valueIteratorVariableName": "paramActValue",
@@ -11713,6 +12067,7 @@
                                       "actions": [],
                                       "events": [
                                         {
+                                          "folded": true,
                                           "type": "BuiltinCommonInstructions::Standard",
                                           "conditions": [
                                             {
@@ -11740,6 +12095,7 @@
                                           ],
                                           "events": [
                                             {
+                                              "folded": true,
                                               "type": "BuiltinCommonInstructions::Standard",
                                               "conditions": [
                                                 {
@@ -11797,6 +12153,7 @@
                                           ]
                                         },
                                         {
+                                          "folded": true,
                                           "type": "BuiltinCommonInstructions::Standard",
                                           "conditions": [
                                             {
@@ -11813,11 +12170,13 @@
                                           "actions": [],
                                           "events": [
                                             {
+                                              "folded": true,
                                               "type": "BuiltinCommonInstructions::Standard",
                                               "conditions": [],
                                               "actions": []
                                             },
                                             {
+                                              "folded": true,
                                               "type": "BuiltinCommonInstructions::ForEachChildVariable",
                                               "iterableVariableName": "paramActValue",
                                               "valueIteratorVariableName": "subParamActValue",
@@ -11826,6 +12185,7 @@
                                               "actions": [],
                                               "events": [
                                                 {
+                                                  "folded": true,
                                                   "type": "BuiltinCommonInstructions::Standard",
                                                   "conditions": [],
                                                   "actions": [
@@ -11842,6 +12202,7 @@
                                                   ]
                                                 },
                                                 {
+                                                  "folded": true,
                                                   "type": "BuiltinCommonInstructions::Standard",
                                                   "conditions": [
                                                     {
@@ -11883,6 +12244,7 @@
                                       ]
                                     },
                                     {
+                                      "folded": true,
                                       "type": "BuiltinCommonInstructions::Standard",
                                       "conditions": [],
                                       "actions": [
@@ -11921,6 +12283,7 @@
                   ]
                 },
                 {
+                  "folded": true,
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [
                     {
@@ -11973,11 +12336,13 @@
                   "colorG": 176,
                   "colorR": 74,
                   "creationTime": 0,
+                  "folded": true,
                   "name": "Image",
                   "source": "",
                   "type": "BuiltinCommonInstructions::Group",
                   "events": [
                     {
+                      "folded": true,
                       "type": "BuiltinCommonInstructions::Standard",
                       "conditions": [
                         {
@@ -12058,6 +12423,7 @@
                       ],
                       "events": [
                         {
+                          "folded": true,
                           "type": "BuiltinCommonInstructions::Standard",
                           "conditions": [
                             {
@@ -12126,6 +12492,7 @@
                           ],
                           "events": [
                             {
+                              "folded": true,
                               "type": "BuiltinCommonInstructions::Standard",
                               "conditions": [
                                 {
@@ -12151,6 +12518,7 @@
                               ]
                             },
                             {
+                              "folded": true,
                               "type": "BuiltinCommonInstructions::Standard",
                               "conditions": [
                                 {
@@ -12175,6 +12543,7 @@
                               ]
                             },
                             {
+                              "folded": true,
                               "type": "BuiltinCommonInstructions::Standard",
                               "conditions": [
                                 {
@@ -12200,6 +12569,7 @@
                               ]
                             },
                             {
+                              "folded": true,
                               "type": "BuiltinCommonInstructions::Standard",
                               "conditions": [
                                 {
@@ -12224,6 +12594,7 @@
                               ]
                             },
                             {
+                              "folded": true,
                               "type": "BuiltinCommonInstructions::Standard",
                               "conditions": [],
                               "actions": [
@@ -12286,6 +12657,7 @@
                   ],
                   "events": [
                     {
+                      "folded": true,
                       "type": "BuiltinCommonInstructions::Standard",
                       "conditions": [
                         {
@@ -12295,6 +12667,15 @@
                           "parameters": [
                             "",
                             "LShift"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "KeyPressed"
+                          },
+                          "parameters": [
+                            "",
+                            "s"
                           ]
                         }
                       ],
@@ -12312,6 +12693,7 @@
                       ]
                     },
                     {
+                      "folded": true,
                       "type": "BuiltinCommonInstructions::Standard",
                       "conditions": [],
                       "actions": [
@@ -12337,11 +12719,13 @@
               "colorG": 176,
               "colorR": 74,
               "creationTime": 0,
+              "folded": true,
               "name": "Extending the node after creating it",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
               "events": [
                 {
+                  "folded": true,
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [
                     {
@@ -12358,6 +12742,7 @@
                   "actions": [],
                   "events": [
                     {
+                      "folded": true,
                       "type": "BuiltinCommonInstructions::Standard",
                       "conditions": [
                         {
@@ -12384,6 +12769,7 @@
                       ]
                     },
                     {
+                      "folded": true,
                       "type": "BuiltinCommonInstructions::Standard",
                       "conditions": [
                         {
@@ -12419,6 +12805,7 @@
                       ],
                       "events": [
                         {
+                          "folded": true,
                           "type": "BuiltinCommonInstructions::Standard",
                           "conditions": [
                             {
@@ -12464,6 +12851,7 @@
           "type": "BuiltinCommonInstructions::Group",
           "events": [
             {
+              "folded": true,
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
                 {
@@ -12557,11 +12945,13 @@
               "colorG": 176,
               "colorR": 74,
               "creationTime": 0,
+              "folded": true,
               "name": "Gride",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
               "events": [
                 {
+                  "folded": true,
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [],
                   "actions": [
@@ -12608,6 +12998,7 @@
                   ]
                 },
                 {
+                  "folded": true,
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [],
                   "actions": [
@@ -12638,6 +13029,7 @@
                   ]
                 },
                 {
+                  "folded": true,
                   "type": "BuiltinCommonInstructions::Comment",
                   "color": {
                     "b": 109,
@@ -12651,6 +13043,7 @@
                   "comment2": ""
                 },
                 {
+                  "folded": true,
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [
                     {
@@ -12727,6 +13120,7 @@
                   ]
                 },
                 {
+                  "folded": true,
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [
                     {
@@ -12762,6 +13156,7 @@
                   ]
                 },
                 {
+                  "folded": true,
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [
                     {
@@ -12789,6 +13184,7 @@
                   ]
                 },
                 {
+                  "folded": true,
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [
                     {
@@ -12816,6 +13212,7 @@
                   ]
                 },
                 {
+                  "folded": true,
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [
                     {
@@ -12843,6 +13240,7 @@
                   ]
                 },
                 {
+                  "folded": true,
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [
                     {
@@ -12870,6 +13268,7 @@
                   ]
                 },
                 {
+                  "folded": true,
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [
                     {
@@ -12914,6 +13313,7 @@
                   ]
                 },
                 {
+                  "folded": true,
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [
                     {
@@ -12965,6 +13365,7 @@
               "colorG": 176,
               "colorR": 74,
               "creationTime": 0,
+              "folded": true,
               "name": "Change UI generator",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
@@ -12979,6 +13380,7 @@
                   "type": "BuiltinCommonInstructions::Group",
                   "events": [
                     {
+                      "folded": true,
                       "type": "BuiltinCommonInstructions::Standard",
                       "conditions": [
                         {
@@ -13013,6 +13415,7 @@
                       ],
                       "events": [
                         {
+                          "folded": true,
                           "type": "BuiltinCommonInstructions::Standard",
                           "conditions": [
                             {
@@ -13086,6 +13489,7 @@
                       ],
                       "events": [
                         {
+                          "folded": true,
                           "type": "BuiltinCommonInstructions::Standard",
                           "conditions": [
                             {
@@ -13154,6 +13558,7 @@
                           ],
                           "events": [
                             {
+                              "folded": true,
                               "type": "BuiltinCommonInstructions::ForEachChildVariable",
                               "iterableVariableName": "nodeData.anm",
                               "valueIteratorVariableName": "paramValue",
@@ -13162,6 +13567,7 @@
                               "actions": [],
                               "events": [
                                 {
+                                  "folded": true,
                                   "type": "BuiltinCommonInstructions::Standard",
                                   "conditions": [
                                     {
@@ -13332,6 +13738,7 @@
                                   ],
                                   "events": [
                                     {
+                                      "folded": true,
                                       "type": "BuiltinCommonInstructions::Standard",
                                       "conditions": [],
                                       "actions": [
@@ -13357,6 +13764,7 @@
                                   ]
                                 },
                                 {
+                                  "folded": true,
                                   "type": "BuiltinCommonInstructions::Standard",
                                   "conditions": [
                                     {
@@ -13384,6 +13792,7 @@
                                   ],
                                   "events": [
                                     {
+                                      "folded": true,
                                       "type": "BuiltinCommonInstructions::Standard",
                                       "conditions": [],
                                       "actions": [
@@ -13422,6 +13831,7 @@
                                       ]
                                     },
                                     {
+                                      "folded": true,
                                       "type": "BuiltinCommonInstructions::ForEachChildVariable",
                                       "iterableVariableName": "paramValue",
                                       "valueIteratorVariableName": "subParamValue",
@@ -13430,6 +13840,7 @@
                                       "actions": [],
                                       "events": [
                                         {
+                                          "folded": true,
                                           "type": "BuiltinCommonInstructions::Standard",
                                           "conditions": [],
                                           "actions": [
@@ -13599,6 +14010,7 @@
                                           ],
                                           "events": [
                                             {
+                                              "folded": true,
                                               "type": "BuiltinCommonInstructions::Standard",
                                               "conditions": [],
                                               "actions": [
@@ -13626,6 +14038,7 @@
                                       ]
                                     },
                                     {
+                                      "folded": true,
                                       "type": "BuiltinCommonInstructions::Standard",
                                       "conditions": [],
                                       "actions": []
@@ -13633,6 +14046,7 @@
                                   ]
                                 },
                                 {
+                                  "folded": true,
                                   "type": "BuiltinCommonInstructions::Standard",
                                   "conditions": [],
                                   "actions": [
@@ -13651,6 +14065,7 @@
                               ]
                             },
                             {
+                              "folded": true,
                               "type": "BuiltinCommonInstructions::Standard",
                               "conditions": [],
                               "actions": [
@@ -13783,6 +14198,28 @@
                             },
                             {
                               "type": {
+                                "value": "ModVarObjet"
+                              },
+                              "parameters": [
+                                "box",
+                                "data.anm.opacity",
+                                "=",
+                                "box.Opacity()"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "ModVarObjet"
+                              },
+                              "parameters": [
+                                "box",
+                                "data.anm.zOrder",
+                                "=",
+                                "box.ZOrder()"
+                              ]
+                            },
+                            {
+                              "type": {
                                 "value": "JSONToVariableStructure"
                               },
                               "parameters": [
@@ -13811,6 +14248,7 @@
                               "actions": [],
                               "events": [
                                 {
+                                  "folded": true,
                                   "type": "BuiltinCommonInstructions::Standard",
                                   "conditions": [
                                     {
@@ -13927,6 +14365,7 @@
                                   ],
                                   "events": [
                                     {
+                                      "folded": true,
                                       "type": "BuiltinCommonInstructions::Standard",
                                       "conditions": [],
                                       "actions": [
@@ -13952,6 +14391,7 @@
                                   ]
                                 },
                                 {
+                                  "folded": true,
                                   "type": "BuiltinCommonInstructions::Standard",
                                   "conditions": [
                                     {
@@ -13979,6 +14419,7 @@
                                   ],
                                   "events": [
                                     {
+                                      "folded": true,
                                       "type": "BuiltinCommonInstructions::Standard",
                                       "conditions": [],
                                       "actions": [
@@ -14017,6 +14458,7 @@
                                       ]
                                     },
                                     {
+                                      "folded": true,
                                       "type": "BuiltinCommonInstructions::ForEachChildVariable",
                                       "iterableVariableName": "paramValue",
                                       "valueIteratorVariableName": "subParamValue",
@@ -14025,6 +14467,7 @@
                                       "actions": [],
                                       "events": [
                                         {
+                                          "folded": true,
                                           "type": "BuiltinCommonInstructions::Standard",
                                           "conditions": [],
                                           "actions": [
@@ -14140,6 +14583,7 @@
                                           ],
                                           "events": [
                                             {
+                                              "folded": true,
                                               "type": "BuiltinCommonInstructions::Standard",
                                               "conditions": [],
                                               "actions": [
@@ -14167,6 +14611,7 @@
                                       ]
                                     },
                                     {
+                                      "folded": true,
                                       "type": "BuiltinCommonInstructions::Standard",
                                       "conditions": [],
                                       "actions": []
@@ -14174,6 +14619,7 @@
                                   ]
                                 },
                                 {
+                                  "folded": true,
                                   "type": "BuiltinCommonInstructions::Standard",
                                   "conditions": [],
                                   "actions": [
@@ -14192,6 +14638,7 @@
                               ]
                             },
                             {
+                              "folded": true,
                               "type": "BuiltinCommonInstructions::Standard",
                               "conditions": [],
                               "actions": [
@@ -14232,6 +14679,7 @@
                           ]
                         },
                         {
+                          "folded": true,
                           "type": "BuiltinCommonInstructions::Standard",
                           "conditions": [
                             {
@@ -14258,6 +14706,7 @@
                           ],
                           "events": [
                             {
+                              "folded": true,
                               "type": "BuiltinCommonInstructions::ForEach",
                               "object": "changeUIMovable",
                               "conditions": [],
@@ -14293,6 +14742,7 @@
                   "parameters": []
                 },
                 {
+                  "folded": true,
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [],
                   "actions": [
@@ -14321,6 +14771,7 @@
                   ],
                   "events": [
                     {
+                      "folded": true,
                       "type": "BuiltinCommonInstructions::Standard",
                       "conditions": [
                         {
@@ -14383,6 +14834,7 @@
                       ],
                       "events": [
                         {
+                          "folded": true,
                           "type": "BuiltinCommonInstructions::ForEach",
                           "object": "changeUIMovable",
                           "conditions": [],
@@ -14402,6 +14854,7 @@
                       ]
                     },
                     {
+                      "folded": true,
                       "type": "BuiltinCommonInstructions::Standard",
                       "conditions": [
                         {
@@ -14445,6 +14898,7 @@
                       ]
                     },
                     {
+                      "folded": true,
                       "type": "BuiltinCommonInstructions::Standard",
                       "conditions": [
                         {
@@ -14604,6 +15058,7 @@
                                       ],
                                       "events": [
                                         {
+                                          "folded": true,
                                           "type": "BuiltinCommonInstructions::Standard",
                                           "conditions": [
                                             {
@@ -14631,6 +15086,7 @@
                                           ]
                                         },
                                         {
+                                          "folded": true,
                                           "type": "BuiltinCommonInstructions::Standard",
                                           "conditions": [
                                             {
@@ -14658,6 +15114,7 @@
                                           ]
                                         },
                                         {
+                                          "folded": true,
                                           "type": "BuiltinCommonInstructions::Standard",
                                           "conditions": [
                                             {
@@ -14685,6 +15142,7 @@
                                           ]
                                         },
                                         {
+                                          "folded": true,
                                           "type": "BuiltinCommonInstructions::Standard",
                                           "conditions": [
                                             {
@@ -14712,6 +15170,7 @@
                                           ]
                                         },
                                         {
+                                          "folded": true,
                                           "type": "BuiltinCommonInstructions::Standard",
                                           "conditions": [
                                             {
@@ -14739,6 +15198,7 @@
                                           ]
                                         },
                                         {
+                                          "folded": true,
                                           "type": "BuiltinCommonInstructions::Standard",
                                           "conditions": [
                                             {
@@ -14755,6 +15215,7 @@
                                           "actions": [],
                                           "events": [
                                             {
+                                              "folded": true,
                                               "type": "BuiltinCommonInstructions::Standard",
                                               "conditions": [
                                                 {
@@ -14772,6 +15233,7 @@
                                               "actions": [],
                                               "events": [
                                                 {
+                                                  "folded": true,
                                                   "type": "BuiltinCommonInstructions::Standard",
                                                   "conditions": [
                                                     {
@@ -14798,6 +15260,7 @@
                                                   ]
                                                 },
                                                 {
+                                                  "folded": true,
                                                   "type": "BuiltinCommonInstructions::Standard",
                                                   "conditions": [
                                                     {
@@ -14828,6 +15291,7 @@
                                           ]
                                         },
                                         {
+                                          "folded": true,
                                           "type": "BuiltinCommonInstructions::Standard",
                                           "conditions": [
                                             {
@@ -14844,6 +15308,7 @@
                                           "actions": [],
                                           "events": [
                                             {
+                                              "folded": true,
                                               "type": "BuiltinCommonInstructions::Standard",
                                               "conditions": [
                                                 {
@@ -14861,6 +15326,7 @@
                                               "actions": [],
                                               "events": [
                                                 {
+                                                  "folded": true,
                                                   "type": "BuiltinCommonInstructions::Standard",
                                                   "conditions": [
                                                     {
@@ -14887,6 +15353,7 @@
                                                   ]
                                                 },
                                                 {
+                                                  "folded": true,
                                                   "type": "BuiltinCommonInstructions::Standard",
                                                   "conditions": [
                                                     {
@@ -14919,6 +15386,7 @@
                                       ]
                                     },
                                     {
+                                      "folded": true,
                                       "type": "BuiltinCommonInstructions::Standard",
                                       "conditions": [
                                         {
@@ -14948,6 +15416,7 @@
                                       ],
                                       "events": [
                                         {
+                                          "folded": true,
                                           "type": "BuiltinCommonInstructions::Standard",
                                           "conditions": [
                                             {
@@ -14975,6 +15444,7 @@
                                           ]
                                         },
                                         {
+                                          "folded": true,
                                           "type": "BuiltinCommonInstructions::Standard",
                                           "conditions": [
                                             {
@@ -15002,6 +15472,7 @@
                                           ]
                                         },
                                         {
+                                          "folded": true,
                                           "type": "BuiltinCommonInstructions::Standard",
                                           "conditions": [
                                             {
@@ -15018,6 +15489,7 @@
                                           "actions": [],
                                           "events": [
                                             {
+                                              "folded": true,
                                               "type": "BuiltinCommonInstructions::Standard",
                                               "conditions": [
                                                 {
@@ -15071,6 +15543,7 @@
                                               ]
                                             },
                                             {
+                                              "folded": true,
                                               "type": "BuiltinCommonInstructions::Standard",
                                               "conditions": [
                                                 {
@@ -15153,11 +15626,13 @@
                       "colorG": 176,
                       "colorR": 74,
                       "creationTime": 0,
+                      "folded": true,
                       "name": "Condition for updating the data",
                       "source": "",
                       "type": "BuiltinCommonInstructions::Group",
                       "events": [
                         {
+                          "folded": true,
                           "type": "BuiltinCommonInstructions::Standard",
                           "conditions": [],
                           "actions": [
@@ -15173,6 +15648,7 @@
                           ]
                         },
                         {
+                          "folded": true,
                           "type": "BuiltinCommonInstructions::Standard",
                           "conditions": [
                             {
@@ -15198,6 +15674,7 @@
                           ]
                         },
                         {
+                          "folded": true,
                           "type": "BuiltinCommonInstructions::Standard",
                           "conditions": [
                             {
@@ -15314,6 +15791,7 @@
                           "actions": [],
                           "events": [
                             {
+                              "folded": true,
                               "type": "BuiltinCommonInstructions::Standard",
                               "conditions": [
                                 {
@@ -15363,6 +15841,7 @@
                               ],
                               "events": [
                                 {
+                                  "folded": true,
                                   "type": "BuiltinCommonInstructions::Standard",
                                   "conditions": [],
                                   "actions": [
@@ -15388,6 +15867,7 @@
                               ]
                             },
                             {
+                              "folded": true,
                               "type": "BuiltinCommonInstructions::Standard",
                               "conditions": [
                                 {
@@ -15404,6 +15884,7 @@
                               "actions": [],
                               "events": [
                                 {
+                                  "folded": true,
                                   "type": "BuiltinCommonInstructions::ForEachChildVariable",
                                   "iterableVariableName": "paramValue",
                                   "valueIteratorVariableName": "subParamValue",
@@ -15412,6 +15893,7 @@
                                   "actions": [],
                                   "events": [
                                     {
+                                      "folded": true,
                                       "type": "BuiltinCommonInstructions::Standard",
                                       "conditions": [
                                         {
@@ -15472,6 +15954,7 @@
                   ]
                 },
                 {
+                  "folded": true,
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [
                     {
@@ -15498,6 +15981,7 @@
                   "actions": [],
                   "events": [
                     {
+                      "folded": true,
                       "type": "BuiltinCommonInstructions::Standard",
                       "conditions": [
                         {
@@ -15564,12 +16048,14 @@
                       ]
                     },
                     {
+                      "folded": true,
                       "type": "BuiltinCommonInstructions::ForEach",
                       "object": "paramCheckbox",
                       "conditions": [],
                       "actions": [],
                       "events": [
                         {
+                          "folded": true,
                           "type": "BuiltinCommonInstructions::Standard",
                           "conditions": [
                             {
@@ -15599,6 +16085,7 @@
                           ]
                         },
                         {
+                          "folded": true,
                           "type": "BuiltinCommonInstructions::Standard",
                           "conditions": [
                             {
@@ -15630,12 +16117,14 @@
                       ]
                     },
                     {
+                      "folded": true,
                       "type": "BuiltinCommonInstructions::ForEach",
                       "object": "paramValue",
                       "conditions": [],
                       "actions": [],
                       "events": [
                         {
+                          "folded": true,
                           "type": "BuiltinCommonInstructions::Standard",
                           "conditions": [
                             {
@@ -15664,6 +16153,7 @@
                           ],
                           "events": [
                             {
+                              "folded": true,
                               "type": "BuiltinCommonInstructions::ForEach",
                               "object": "node",
                               "conditions": [
@@ -15681,6 +16171,7 @@
                               "actions": [],
                               "events": [
                                 {
+                                  "folded": true,
                                   "type": "BuiltinCommonInstructions::Standard",
                                   "conditions": [
                                     {
@@ -15710,6 +16201,7 @@
                                   ]
                                 },
                                 {
+                                  "folded": true,
                                   "type": "BuiltinCommonInstructions::Standard",
                                   "conditions": [
                                     {
@@ -15739,6 +16231,7 @@
                                   ],
                                   "events": [
                                     {
+                                      "folded": true,
                                       "type": "BuiltinCommonInstructions::Standard",
                                       "conditions": [
                                         {
@@ -15766,6 +16259,7 @@
                                       ]
                                     },
                                     {
+                                      "folded": true,
                                       "type": "BuiltinCommonInstructions::Standard",
                                       "conditions": [
                                         {
@@ -15802,11 +16296,13 @@
                               "colorR": 74,
                               "creationTime": 0,
                               "disabled": true,
+                              "folded": true,
                               "name": "Grouped events",
                               "source": "",
                               "type": "BuiltinCommonInstructions::Group",
                               "events": [
                                 {
+                                  "folded": true,
                                   "type": "BuiltinCommonInstructions::Standard",
                                   "conditions": [
                                     {
@@ -15836,6 +16332,7 @@
                                   ]
                                 },
                                 {
+                                  "folded": true,
                                   "type": "BuiltinCommonInstructions::Standard",
                                   "conditions": [
                                     {
@@ -15876,11 +16373,13 @@
                       "colorG": 176,
                       "colorR": 74,
                       "creationTime": 0,
+                      "folded": true,
                       "name": "Condition for updating the data",
                       "source": "",
                       "type": "BuiltinCommonInstructions::Group",
                       "events": [
                         {
+                          "folded": true,
                           "type": "BuiltinCommonInstructions::Standard",
                           "conditions": [],
                           "actions": [
@@ -15905,6 +16404,7 @@
                           ]
                         },
                         {
+                          "folded": true,
                           "type": "BuiltinCommonInstructions::Standard",
                           "conditions": [
                             {
@@ -15950,6 +16450,7 @@
                           ]
                         },
                         {
+                          "folded": true,
                           "type": "BuiltinCommonInstructions::Standard",
                           "conditions": [
                             {
@@ -15975,6 +16476,7 @@
                           ]
                         },
                         {
+                          "folded": true,
                           "type": "BuiltinCommonInstructions::Standard",
                           "conditions": [
                             {
@@ -16009,6 +16511,7 @@
                           ]
                         },
                         {
+                          "folded": true,
                           "type": "BuiltinCommonInstructions::Standard",
                           "conditions": [
                             {
@@ -16037,6 +16540,7 @@
                       "parameters": []
                     },
                     {
+                      "folded": true,
                       "type": "BuiltinCommonInstructions::Standard",
                       "conditions": [
                         {
@@ -16075,6 +16579,7 @@
                       ],
                       "events": [
                         {
+                          "folded": true,
                           "type": "BuiltinCommonInstructions::Standard",
                           "conditions": [
                             {
@@ -16157,6 +16662,7 @@
                           ]
                         },
                         {
+                          "folded": true,
                           "type": "BuiltinCommonInstructions::Standard",
                           "conditions": [],
                           "actions": [
@@ -16172,6 +16678,7 @@
                           ]
                         },
                         {
+                          "folded": true,
                           "type": "BuiltinCommonInstructions::ForEachChildVariable",
                           "iterableVariableName": "nodeData.anm",
                           "valueIteratorVariableName": "paramValue",
@@ -16180,6 +16687,7 @@
                           "actions": [],
                           "events": [
                             {
+                              "folded": true,
                               "type": "BuiltinCommonInstructions::Standard",
                               "conditions": [
                                 {
@@ -16229,6 +16737,7 @@
                               ],
                               "events": [
                                 {
+                                  "folded": true,
                                   "type": "BuiltinCommonInstructions::Standard",
                                   "conditions": [],
                                   "actions": [
@@ -16254,6 +16763,7 @@
                               ]
                             },
                             {
+                              "folded": true,
                               "type": "BuiltinCommonInstructions::Standard",
                               "conditions": [
                                 {
@@ -16270,6 +16780,7 @@
                               "actions": [],
                               "events": [
                                 {
+                                  "folded": true,
                                   "type": "BuiltinCommonInstructions::ForEachChildVariable",
                                   "iterableVariableName": "paramValue",
                                   "valueIteratorVariableName": "subParamValue",
@@ -16278,6 +16789,7 @@
                                   "actions": [],
                                   "events": [
                                     {
+                                      "folded": true,
                                       "type": "BuiltinCommonInstructions::Standard",
                                       "conditions": [
                                         {
@@ -16344,6 +16856,7 @@
           "parameters": []
         },
         {
+          "folded": true,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [],
           "actions": []
@@ -16352,6 +16865,7 @@
       "parameters": []
     },
     {
+      "folded": true,
       "type": "BuiltinCommonInstructions::Standard",
       "conditions": [],
       "actions": []
