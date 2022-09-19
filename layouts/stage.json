@@ -5911,7 +5911,6 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
-          "folded": true,
           "name": "Saving the project",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -7562,7 +7561,6 @@
               ]
             },
             {
-              "folded": true,
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
                 {
@@ -7577,27 +7575,37 @@
                   ]
                 }
               ],
-              "actions": [
-                {
-                  "type": {
-                    "value": "VariableClearChildren"
-                  },
-                  "parameters": [
-                    "saveData"
-                  ]
-                }
-              ],
+              "actions": [],
               "events": [
                 {
                   "folded": true,
-                  "type": "BuiltinCommonInstructions::ForEach",
-                  "object": "box",
-                  "conditions": [],
-                  "actions": [],
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "KeyPressed"
+                      },
+                      "parameters": [
+                        "",
+                        "LShift"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "VariableClearChildren"
+                      },
+                      "parameters": [
+                        "saveData"
+                      ]
+                    }
+                  ],
                   "events": [
                     {
                       "folded": true,
-                      "type": "BuiltinCommonInstructions::Standard",
+                      "type": "BuiltinCommonInstructions::ForEach",
+                      "object": "box",
                       "conditions": [],
                       "actions": [],
                       "events": [
@@ -7605,106 +7613,188 @@
                           "folded": true,
                           "type": "BuiltinCommonInstructions::Standard",
                           "conditions": [],
-                          "actions": [
-                            {
-                              "type": {
-                                "value": "ObjectVariableClearChildren"
-                              },
-                              "parameters": [
-                                "box",
-                                "data.node"
-                              ]
-                            },
-                            {
-                              "type": {
-                                "value": "ModVarObjet"
-                              },
-                              "parameters": [
-                                "box",
-                                "data.anm.position.Y",
-                                "=",
-                                "box.Y()"
-                              ]
-                            },
-                            {
-                              "type": {
-                                "value": "ModVarObjet"
-                              },
-                              "parameters": [
-                                "box",
-                                "data.anm.position.X",
-                                "=",
-                                "box.X()"
-                              ]
-                            },
-                            {
-                              "type": {
-                                "value": "ModVarObjet"
-                              },
-                              "parameters": [
-                                "box",
-                                "data.anm.width",
-                                "=",
-                                "box.Width()"
-                              ]
-                            },
-                            {
-                              "type": {
-                                "value": "ModVarObjet"
-                              },
-                              "parameters": [
-                                "box",
-                                "data.anm.height",
-                                "=",
-                                "box.Height()"
-                              ]
-                            },
-                            {
-                              "type": {
-                                "value": "ModVarObjet"
-                              },
-                              "parameters": [
-                                "box",
-                                "data.anm.angle",
-                                "=",
-                                "box.Angle()"
-                              ]
-                            },
-                            {
-                              "type": {
-                                "value": "ModVarObjet"
-                              },
-                              "parameters": [
-                                "box",
-                                "data.anm.opacity",
-                                "=",
-                                "box.Opacity()"
-                              ]
-                            },
-                            {
-                              "type": {
-                                "value": "ModVarObjet"
-                              },
-                              "parameters": [
-                                "box",
-                                "data.anm.flippedHor",
-                                "=",
-                                "0"
-                              ]
-                            },
-                            {
-                              "type": {
-                                "value": "ModVarObjet"
-                              },
-                              "parameters": [
-                                "box",
-                                "data.anm.flippedVer",
-                                "=",
-                                "0"
-                              ]
-                            }
-                          ],
+                          "actions": [],
                           "events": [
+                            {
+                              "folded": true,
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "ObjectVariableClearChildren"
+                                  },
+                                  "parameters": [
+                                    "box",
+                                    "data.node"
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "ModVarObjet"
+                                  },
+                                  "parameters": [
+                                    "box",
+                                    "data.anm.position.Y",
+                                    "=",
+                                    "box.Y()"
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "ModVarObjet"
+                                  },
+                                  "parameters": [
+                                    "box",
+                                    "data.anm.position.X",
+                                    "=",
+                                    "box.X()"
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "ModVarObjet"
+                                  },
+                                  "parameters": [
+                                    "box",
+                                    "data.anm.width",
+                                    "=",
+                                    "box.Width()"
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "ModVarObjet"
+                                  },
+                                  "parameters": [
+                                    "box",
+                                    "data.anm.height",
+                                    "=",
+                                    "box.Height()"
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "ModVarObjet"
+                                  },
+                                  "parameters": [
+                                    "box",
+                                    "data.anm.angle",
+                                    "=",
+                                    "box.Angle()"
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "ModVarObjet"
+                                  },
+                                  "parameters": [
+                                    "box",
+                                    "data.anm.opacity",
+                                    "=",
+                                    "box.Opacity()"
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "ModVarObjet"
+                                  },
+                                  "parameters": [
+                                    "box",
+                                    "data.anm.flippedHor",
+                                    "=",
+                                    "0"
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "ModVarObjet"
+                                  },
+                                  "parameters": [
+                                    "box",
+                                    "data.anm.flippedVer",
+                                    "=",
+                                    "0"
+                                  ]
+                                }
+                              ],
+                              "events": [
+                                {
+                                  "folded": true,
+                                  "type": "BuiltinCommonInstructions::Standard",
+                                  "conditions": [
+                                    {
+                                      "type": {
+                                        "value": "LinkedObjects::PickObjectsLinkedTo"
+                                      },
+                                      "parameters": [
+                                        "",
+                                        "boxImage",
+                                        "box",
+                                        ""
+                                      ]
+                                    }
+                                  ],
+                                  "actions": [],
+                                  "events": [
+                                    {
+                                      "folded": true,
+                                      "type": "BuiltinCommonInstructions::Standard",
+                                      "conditions": [
+                                        {
+                                          "type": {
+                                            "value": "FlippedX"
+                                          },
+                                          "parameters": [
+                                            "boxImage"
+                                          ]
+                                        }
+                                      ],
+                                      "actions": [
+                                        {
+                                          "type": {
+                                            "value": "ModVarObjet"
+                                          },
+                                          "parameters": [
+                                            "box",
+                                            "data.anm.flippedHor",
+                                            "=",
+                                            "1"
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "folded": true,
+                                      "type": "BuiltinCommonInstructions::Standard",
+                                      "conditions": [
+                                        {
+                                          "type": {
+                                            "value": "FlippedY"
+                                          },
+                                          "parameters": [
+                                            "boxImage"
+                                          ]
+                                        }
+                                      ],
+                                      "actions": [
+                                        {
+                                          "type": {
+                                            "value": "ModVarObjet"
+                                          },
+                                          "parameters": [
+                                            "box",
+                                            "data.anm.flippedVer",
+                                            "=",
+                                            "1"
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
                             {
                               "folded": true,
                               "type": "BuiltinCommonInstructions::Standard",
@@ -7715,7 +7805,7 @@
                                   },
                                   "parameters": [
                                     "",
-                                    "boxImage",
+                                    "node",
                                     "box",
                                     ""
                                   ]
@@ -7725,134 +7815,119 @@
                               "events": [
                                 {
                                   "folded": true,
-                                  "type": "BuiltinCommonInstructions::Standard",
-                                  "conditions": [
+                                  "type": "BuiltinCommonInstructions::ForEach",
+                                  "object": "node",
+                                  "conditions": [],
+                                  "actions": [],
+                                  "events": [
                                     {
-                                      "type": {
-                                        "value": "FlippedX"
-                                      },
-                                      "parameters": [
-                                        "boxImage"
-                                      ]
-                                    }
-                                  ],
-                                  "actions": [
-                                    {
-                                      "type": {
-                                        "value": "ModVarObjet"
-                                      },
-                                      "parameters": [
-                                        "box",
-                                        "data.anm.flippedHor",
-                                        "=",
-                                        "1"
-                                      ]
-                                    }
-                                  ]
-                                },
-                                {
-                                  "folded": true,
-                                  "type": "BuiltinCommonInstructions::Standard",
-                                  "conditions": [
-                                    {
-                                      "type": {
-                                        "value": "FlippedY"
-                                      },
-                                      "parameters": [
-                                        "boxImage"
-                                      ]
-                                    }
-                                  ],
-                                  "actions": [
-                                    {
-                                      "type": {
-                                        "value": "ModVarObjet"
-                                      },
-                                      "parameters": [
-                                        "box",
-                                        "data.anm.flippedVer",
-                                        "=",
-                                        "1"
+                                      "folded": true,
+                                      "type": "BuiltinCommonInstructions::Standard",
+                                      "conditions": [],
+                                      "actions": [
+                                        {
+                                          "type": {
+                                            "value": "ModVarObjet"
+                                          },
+                                          "parameters": [
+                                            "node",
+                                            "data.anm.timeline.start",
+                                            "=",
+                                            "(ToNumber(timeLength.Text())/timeline.Width())*(node.X()-timeline.X())"
+                                          ]
+                                        },
+                                        {
+                                          "type": {
+                                            "value": "ModVarObjet"
+                                          },
+                                          "parameters": [
+                                            "node",
+                                            "data.anm.timeline.length",
+                                            "=",
+                                            "(ToNumber(timeLength.Text())/timeline.Width())*(node.Width())"
+                                          ]
+                                        },
+                                        {
+                                          "type": {
+                                            "value": "ModVarObjet"
+                                          },
+                                          "parameters": [
+                                            "node",
+                                            "data.phys.X",
+                                            "=",
+                                            "node.X()"
+                                          ]
+                                        },
+                                        {
+                                          "type": {
+                                            "value": "ModVarObjet"
+                                          },
+                                          "parameters": [
+                                            "node",
+                                            "data.phys.Y",
+                                            "=",
+                                            "node.Y()"
+                                          ]
+                                        },
+                                        {
+                                          "type": {
+                                            "value": "JSONToVariableStructure"
+                                          },
+                                          "parameters": [
+                                            "ObjectVarToJSON(node, data)",
+                                            "nodeSaveData"
+                                          ]
+                                        },
+                                        {
+                                          "type": {
+                                            "value": "ObjectVariablePush"
+                                          },
+                                          "parameters": [
+                                            "box",
+                                            "data.node",
+                                            "nodeSaveData"
+                                          ]
+                                        }
                                       ]
                                     }
                                   ]
                                 }
                               ]
-                            }
-                          ]
-                        },
-                        {
-                          "folded": true,
-                          "type": "BuiltinCommonInstructions::Standard",
-                          "conditions": [
+                            },
                             {
-                              "type": {
-                                "value": "LinkedObjects::PickObjectsLinkedTo"
-                              },
-                              "parameters": [
-                                "",
-                                "node",
-                                "box",
-                                ""
-                              ]
-                            }
-                          ],
-                          "actions": [],
-                          "events": [
-                            {
+                              "colorB": 228,
+                              "colorG": 176,
+                              "colorR": 74,
+                              "creationTime": 0,
                               "folded": true,
-                              "type": "BuiltinCommonInstructions::ForEach",
-                              "object": "node",
-                              "conditions": [],
-                              "actions": [],
+                              "name": "UUID, checking if another object also has the same UUID",
+                              "source": "",
+                              "type": "BuiltinCommonInstructions::Group",
                               "events": [
                                 {
                                   "folded": true,
                                   "type": "BuiltinCommonInstructions::Standard",
-                                  "conditions": [],
+                                  "conditions": [
+                                    {
+                                      "type": {
+                                        "value": "VariableChildExists"
+                                      },
+                                      "parameters": [
+                                        "saveData.box",
+                                        "box.VariableString(data.anm.object.UUID)"
+                                      ]
+                                    }
+                                  ],
                                   "actions": [
                                     {
                                       "type": {
-                                        "value": "ModVarObjet"
+                                        "value": "ModVarObjetTxt"
                                       },
                                       "parameters": [
-                                        "node",
-                                        "data.anm.timeline.start",
+                                        "box",
+                                        "data.anm.object.UUID",
                                         "=",
-                                        "(ToNumber(timeLength.Text())/timeline.Width())*(node.X()-timeline.X())"
-                                      ]
-                                    },
-                                    {
-                                      "type": {
-                                        "value": "ModVarObjet"
-                                      },
-                                      "parameters": [
-                                        "node",
-                                        "data.anm.timeline.length",
-                                        "=",
-                                        "(ToNumber(timeLength.Text())/timeline.Width())*(node.Width())"
-                                      ]
-                                    },
-                                    {
-                                      "type": {
-                                        "value": "ModVarObjet"
-                                      },
-                                      "parameters": [
-                                        "node",
-                                        "data.phys.X",
-                                        "=",
-                                        "node.X()"
-                                      ]
-                                    },
-                                    {
-                                      "type": {
-                                        "value": "ModVarObjet"
-                                      },
-                                      "parameters": [
-                                        "node",
-                                        "data.phys.Y",
-                                        "=",
-                                        "node.Y()"
+                                        "UUID::GenerateUUIDv4()"
                                       ]
                                     },
                                     {
@@ -7860,235 +7935,175 @@
                                         "value": "JSONToVariableStructure"
                                       },
                                       "parameters": [
-                                        "ObjectVarToJSON(node, data)",
-                                        "nodeSaveData"
+                                        "ObjectVarToJSON(box, data)",
+                                        "saveData.box[box.VariableString(data.anm.object.UUID)]"
                                       ]
-                                    },
+                                    }
+                                  ]
+                                },
+                                {
+                                  "folded": true,
+                                  "type": "BuiltinCommonInstructions::Standard",
+                                  "conditions": [
                                     {
                                       "type": {
-                                        "value": "ObjectVariablePush"
+                                        "inverted": true,
+                                        "value": "VariableChildExists"
                                       },
                                       "parameters": [
-                                        "box",
-                                        "data.node",
-                                        "nodeSaveData"
+                                        "saveData.box",
+                                        "box.VariableString(data.anm.object.UUID)"
+                                      ]
+                                    }
+                                  ],
+                                  "actions": [
+                                    {
+                                      "type": {
+                                        "value": "JSONToVariableStructure"
+                                      },
+                                      "parameters": [
+                                        "ObjectVarToJSON(box, data)",
+                                        "saveData.box[box.VariableString(data.anm.object.UUID)]"
                                       ]
                                     }
                                   ]
                                 }
-                              ]
-                            }
-                          ]
-                        },
-                        {
-                          "colorB": 228,
-                          "colorG": 176,
-                          "colorR": 74,
-                          "creationTime": 0,
-                          "folded": true,
-                          "name": "UUID, checking if another object also has the same UUID",
-                          "source": "",
-                          "type": "BuiltinCommonInstructions::Group",
-                          "events": [
-                            {
-                              "folded": true,
-                              "type": "BuiltinCommonInstructions::Standard",
-                              "conditions": [
-                                {
-                                  "type": {
-                                    "value": "VariableChildExists"
-                                  },
-                                  "parameters": [
-                                    "saveData.box",
-                                    "box.VariableString(data.anm.object.UUID)"
-                                  ]
-                                }
                               ],
-                              "actions": [
-                                {
-                                  "type": {
-                                    "value": "ModVarObjetTxt"
-                                  },
-                                  "parameters": [
-                                    "box",
-                                    "data.anm.object.UUID",
-                                    "=",
-                                    "UUID::GenerateUUIDv4()"
-                                  ]
-                                },
-                                {
-                                  "type": {
-                                    "value": "JSONToVariableStructure"
-                                  },
-                                  "parameters": [
-                                    "ObjectVarToJSON(box, data)",
-                                    "saveData.box[box.VariableString(data.anm.object.UUID)]"
-                                  ]
-                                }
-                              ]
+                              "parameters": []
                             },
                             {
                               "folded": true,
                               "type": "BuiltinCommonInstructions::Standard",
-                              "conditions": [
-                                {
-                                  "type": {
-                                    "inverted": true,
-                                    "value": "VariableChildExists"
-                                  },
-                                  "parameters": [
-                                    "saveData.box",
-                                    "box.VariableString(data.anm.object.UUID)"
-                                  ]
-                                }
-                              ],
-                              "actions": [
-                                {
-                                  "type": {
-                                    "value": "JSONToVariableStructure"
-                                  },
-                                  "parameters": [
-                                    "ObjectVarToJSON(box, data)",
-                                    "saveData.box[box.VariableString(data.anm.object.UUID)]"
-                                  ]
-                                }
+                              "conditions": [],
+                              "actions": []
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "colorB": 228,
+                      "colorG": 176,
+                      "colorR": 74,
+                      "creationTime": 0,
+                      "name": "Project settings and saving",
+                      "source": "",
+                      "type": "BuiltinCommonInstructions::Group",
+                      "events": [
+                        {
+                          "folded": true,
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "LireFichierTxt"
+                              },
+                              "parameters": [
+                                "\"Root/Save/SaveList\"",
+                                "\"saveList\"",
+                                "GlobalVarToJSON(saveList)",
+                                "saveListJSON"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "JSONToVariableStructure"
+                              },
+                              "parameters": [
+                                "VariableString(saveListJSON)",
+                                "saveList"
                               ]
                             }
-                          ],
-                          "parameters": []
+                          ]
                         },
                         {
                           "folded": true,
                           "type": "BuiltinCommonInstructions::Standard",
                           "conditions": [],
-                          "actions": []
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "ModVarScene"
+                              },
+                              "parameters": [
+                                "saveData.settings.time",
+                                "=",
+                                "ToNumber(timeLength.Text())"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "ModVarSceneTxt"
+                              },
+                              "parameters": [
+                                "saveData.settings.saveTime",
+                                "=",
+                                "ToString(Time(\"mday\"))+\" \"+GlobalVariableString(months[Time(\"mon\")])+\", 20\"+SubStr(ToString(Time(\"year\")), 1, 2)"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "ModVarSceneTxt"
+                              },
+                              "parameters": [
+                                "saveData.settings.saveTimeSmall",
+                                "=",
+                                "ToString(Time(\"hour\"))+\":\"+ToString(Time(\"min\"))"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "ModVarSceneTxt"
+                              },
+                              "parameters": [
+                                "saveData.settings.version",
+                                "=",
+                                "GlobalVariableString(version[0])+\".\"+GlobalVariableString(version[1])+\".\"+GlobalVariableString(version[2])"
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "folded": true,
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "EcrireFichierTxt"
+                              },
+                              "parameters": [
+                                "\"Root/Save/LastSave\"",
+                                "\"lastSave\"",
+                                "ToJSON(saveData)"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "SceneVariablePush"
+                              },
+                              "parameters": [
+                                "saveList",
+                                "saveData"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "EcrireFichierTxt"
+                              },
+                              "parameters": [
+                                "\"Root/Save/SaveList\"",
+                                "\"saveList\"",
+                                "ToJSON(saveList)"
+                              ]
+                            }
+                          ]
                         }
-                      ]
+                      ],
+                      "parameters": []
                     }
                   ]
-                },
-                {
-                  "colorB": 228,
-                  "colorG": 176,
-                  "colorR": 74,
-                  "creationTime": 0,
-                  "folded": true,
-                  "name": "Project settings and saving",
-                  "source": "",
-                  "type": "BuiltinCommonInstructions::Group",
-                  "events": [
-                    {
-                      "folded": true,
-                      "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [],
-                      "actions": [
-                        {
-                          "type": {
-                            "value": "LireFichierTxt"
-                          },
-                          "parameters": [
-                            "\"Root/Save/SaveList\"",
-                            "\"saveList\"",
-                            "GlobalVarToJSON(saveList)",
-                            "saveListJSON"
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "JSONToVariableStructure"
-                          },
-                          "parameters": [
-                            "VariableString(saveListJSON)",
-                            "saveList"
-                          ]
-                        }
-                      ]
-                    },
-                    {
-                      "folded": true,
-                      "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [],
-                      "actions": [
-                        {
-                          "type": {
-                            "value": "ModVarScene"
-                          },
-                          "parameters": [
-                            "saveData.settings.time",
-                            "=",
-                            "ToNumber(timeLength.Text())"
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "ModVarSceneTxt"
-                          },
-                          "parameters": [
-                            "saveData.settings.saveTime",
-                            "=",
-                            "ToString(Time(\"mday\"))+\" \"+GlobalVariableString(months[Time(\"mon\")])+\", 20\"+SubStr(ToString(Time(\"year\")), 1, 2)"
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "ModVarSceneTxt"
-                          },
-                          "parameters": [
-                            "saveData.settings.saveTimeSmall",
-                            "=",
-                            "ToString(Time(\"hour\"))+\":\"+ToString(Time(\"min\"))"
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "ModVarSceneTxt"
-                          },
-                          "parameters": [
-                            "saveData.settings.version",
-                            "=",
-                            "GlobalVariableString(version[0])+\".\"+GlobalVariableString(version[1])+\".\"+GlobalVariableString(version[2])"
-                          ]
-                        }
-                      ]
-                    },
-                    {
-                      "folded": true,
-                      "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [],
-                      "actions": [
-                        {
-                          "type": {
-                            "value": "EcrireFichierTxt"
-                          },
-                          "parameters": [
-                            "\"Root/Save/LastSave\"",
-                            "\"lastSave\"",
-                            "ToJSON(saveData)"
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "SceneVariablePush"
-                          },
-                          "parameters": [
-                            "saveList",
-                            "saveData"
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "EcrireFichierTxt"
-                          },
-                          "parameters": [
-                            "\"Root/Save/SaveList\"",
-                            "\"saveList\"",
-                            "ToJSON(saveList)"
-                          ]
-                        }
-                      ]
-                    }
-                  ],
-                  "parameters": []
                 },
                 {
                   "folded": true,
@@ -9358,6 +9373,7 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
+          "folded": true,
           "name": "Boxes, For each node",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",

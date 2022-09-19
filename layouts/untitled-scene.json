@@ -18,7 +18,7 @@
     "gridColor": 10401023,
     "gridAlpha": 0.8,
     "snap": false,
-    "zoomFactor": 0.42499999999999977,
+    "zoomFactor": 0.6249999999999999,
     "windowMask": false
   },
   "objectsGroups": [
@@ -67,8 +67,8 @@
         {
           "name": "ObjectAnimator",
           "type": "GDaitorAnimator::ObjectAnimator",
-          "ModelJSON": "{\"box\":{\"1\":{\"anm\":{\"object\":{\"objName\":\"box\",\"UUID\":\"1\",\"imgURL\":\"\"},\"position\":{\"X\":-310.7246376811594,\"Y\":22.260869565217376},\"width\":128,\"height\":128,\"angle\":0,\"opacity\":255,\"zOrder\":10,\"flippedHor\":0,\"flippedVer\":0},\"node\":0}}}",
-          "AnimationsJSON": "{\"aaa\":{\"settings\":{\"loop\":true,\"time\":5},\"box\":{\"1\":[{\"anm\":{\"easing\":\"linear\",\"position\":{\"X\":-146.7063197026023,\"Y\":-1.2490706319701417},\"height\":128,\"width\":128,\"angle\":0,\"opacity\":255,\"zOrder\":\"11\",\"flippedHor\":0,\"flippedVer\":0,\"sprite\":{\"animation\":0},\"timeline\":{\"start\":0,\"length\":2.5414641120960826}},\"active\":{\"easing\":1,\"position\":{\"X\":1,\"Y\":1},\"height\":1,\"width\":1,\"angle\":1,\"opacity\":0,\"zOrder\":1,\"flippedHor\":0,\"flippedVer\":0,\"sprite\":{\"animation\":0},\"timeline\":{\"start\":0,\"length\":0}},\"phys\":{\"X\":32,\"Y\":864}},{\"anm\":{\"easing\":\"linear\",\"position\":{\"X\":145.0408921933083,\"Y\":-3.9256505576206564},\"height\":128,\"width\":128,\"angle\":0,\"opacity\":255,\"zOrder\":10,\"flippedHor\":0,\"flippedVer\":0,\"sprite\":{\"animation\":0},\"timeline\":{\"start\":2.8003467257649417,\"length\":2.1996532742350587}},\"active\":{\"easing\":1,\"position\":{\"X\":1,\"Y\":1},\"height\":1,\"width\":1,\"angle\":1,\"opacity\":0,\"zOrder\":1,\"flippedHor\":0,\"flippedVer\":0,\"sprite\":{\"animation\":0},\"timeline\":{\"start\":0,\"length\":0}},\"phys\":{\"X\":963.9553903345725,\"Y\":928}}],\"2\":[{\"anm\":{\"easing\":\"linear\",\"position\":{\"X\":-146.7063197026023,\"Y\":-1.2490706319701417},\"height\":128,\"width\":128,\"angle\":0,\"opacity\":255,\"zOrder\":\"11\",\"flippedHor\":0,\"flippedVer\":0,\"sprite\":{\"animation\":0},\"timeline\":{\"start\":0,\"length\":2.5414641120960826}},\"active\":{\"easing\":1,\"position\":{\"X\":1,\"Y\":1},\"height\":1,\"width\":1,\"angle\":1,\"opacity\":0,\"zOrder\":1,\"flippedHor\":0,\"flippedVer\":0,\"sprite\":{\"animation\":0},\"timeline\":{\"start\":0,\"length\":0}},\"phys\":{\"X\":32,\"Y\":864}},{\"anm\":{\"easing\":\"linear\",\"position\":{\"X\":145.0408921933083,\"Y\":-3.9256505576206564},\"height\":128,\"width\":128,\"angle\":0,\"opacity\":255,\"zOrder\":10,\"flippedHor\":0,\"flippedVer\":0,\"sprite\":{\"animation\":0},\"timeline\":{\"start\":2.8003467257649417,\"length\":2.1996532742350587}},\"active\":{\"easing\":1,\"position\":{\"X\":1,\"Y\":1},\"height\":1,\"width\":1,\"angle\":1,\"opacity\":0,\"zOrder\":1,\"flippedHor\":0,\"flippedVer\":0,\"sprite\":{\"animation\":0},\"timeline\":{\"start\":0,\"length\":0}},\"phys\":{\"X\":963.9553903345725,\"Y\":928}},{\"anm\":{\"easing\":\"linear\",\"position\":{\"X\":147.717472118959,\"Y\":9.457249070631974},\"height\":128,\"width\":128,\"angle\":0,\"opacity\":255,\"zOrder\":10,\"flippedHor\":0,\"flippedVer\":0,\"sprite\":{\"animation\":0},\"timeline\":{\"start\":0,\"length\":2.3403989133543033}},\"active\":{\"easing\":1,\"position\":{\"X\":1,\"Y\":1},\"height\":1,\"width\":1,\"angle\":1,\"opacity\":0,\"zOrder\":1,\"flippedHor\":0,\"flippedVer\":0,\"sprite\":{\"animation\":0},\"timeline\":{\"start\":0,\"length\":0}},\"phys\":{\"X\":32,\"Y\":928}},{\"anm\":{\"easing\":\"linear\",\"position\":{\"X\":-168.11895910780686,\"Y\":0.08921933085503042},\"height\":128,\"width\":128,\"angle\":0,\"opacity\":255,\"zOrder\":\"11\",\"flippedHor\":0,\"flippedVer\":0,\"sprite\":{\"animation\":0},\"timeline\":{\"start\":2.7923041178152705,\"length\":2.20769588218473}},\"active\":{\"easing\":1,\"position\":{\"X\":1,\"Y\":1},\"height\":1,\"width\":1,\"angle\":1,\"opacity\":0,\"zOrder\":1,\"flippedHor\":0,\"flippedVer\":0,\"sprite\":{\"animation\":0},\"timeline\":{\"start\":0,\"length\":0}},\"phys\":{\"X\":961.2788104089219,\"Y\":832}}]}}}",
+          "ModelJSON": "{\"box\":{\"1\":{\"anm\":{\"object\":{\"objName\":\"jcop\",\"UUID\":\"1\",\"imgURL\":\"\"},\"position\":{\"X\":-146.7063197026023,\"Y\":-1.2490706319701417},\"width\":128,\"height\":128,\"angle\":0,\"opacity\":255,\"zOrder\":10,\"flippedHor\":0,\"flippedVer\":0},\"node\":[]},\"2\":{\"anm\":{\"object\":{\"objName\":\"jcop\",\"UUID\":\"2\",\"imgURL\":\"\"},\"position\":{\"X\":147.717472118959,\"Y\":9.457249070631974},\"width\":128,\"height\":128,\"angle\":0,\"opacity\":255,\"zOrder\":10,\"flippedHor\":0,\"flippedVer\":0},\"node\":[]}}}",
+          "AnimationsJSON": "{\"aaa\":{\"settings\":{\"loop\":false,\"time\":2},\"box\":{\"2\":0}}}",
           "Tween": "Tween"
         },
         {
@@ -246,7 +246,6 @@
   ],
   "events": [
     {
-      "disabled": true,
       "type": "BuiltinCommonInstructions::Standard",
       "conditions": [],
       "actions": [
@@ -345,7 +344,7 @@
           "parameters": [
             "NewSprite",
             "ObjectAnimator",
-            "jcop"
+            ""
           ]
         }
       ]
