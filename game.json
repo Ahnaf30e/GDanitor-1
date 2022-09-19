@@ -753,6 +753,15 @@
         "name": "buttonzx\\savelistitem.png",
         "smoothed": false,
         "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/lgotas/jacob.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\lgotas\\jacob.png",
+        "smoothed": false,
+        "userAdded": true
       }
     ],
     "resourceFolders": []
