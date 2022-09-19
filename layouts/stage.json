@@ -1704,14 +1704,12 @@
       "colorG": 176,
       "colorR": 74,
       "creationTime": 0,
-      "folded": true,
-      "name": "stupid",
+      "name": "Debugging",
       "source": "",
       "type": "BuiltinCommonInstructions::Group",
       "events": [
         {
           "disabled": true,
-          "folded": true,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [],
           "actions": [
@@ -1731,7 +1729,6 @@
         },
         {
           "disabled": true,
-          "folded": true,
           "type": "BuiltinCommonInstructions::ForEach",
           "object": "box",
           "conditions": [
@@ -1801,7 +1798,7 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
-          "name": "Slect boxies",
+          "name": "Boxes",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
           "events": [
@@ -1810,7 +1807,7 @@
               "colorG": 176,
               "colorR": 74,
               "creationTime": 0,
-              "name": "shorty hots mate 🐀",
+              "name": "Select all ",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
               "events": [
@@ -1866,7 +1863,6 @@
                   ],
                   "events": [
                     {
-                      "folded": true,
                       "type": "BuiltinCommonInstructions::Standard",
                       "conditions": [
                         {
@@ -1904,13 +1900,11 @@
               "colorG": 176,
               "colorR": 74,
               "creationTime": 0,
-              "folded": true,
-              "name": "clecked toggle oand untoggle",
+              "name": "Box Selection",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
               "events": [
                 {
-                  "folded": true,
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [],
                   "actions": [
@@ -1926,7 +1920,6 @@
                   ]
                 },
                 {
-                  "folded": true,
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [
                     {
@@ -1964,7 +1957,6 @@
                   ]
                 },
                 {
-                  "folded": true,
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [
                     {
@@ -2004,7 +1996,7 @@
                   "colorG": 176,
                   "colorR": 74,
                   "creationTime": 0,
-                  "name": "Select?",
+                  "name": "Select",
                   "source": "",
                   "type": "BuiltinCommonInstructions::Group",
                   "events": [
@@ -2131,7 +2123,6 @@
                           ],
                           "events": [
                             {
-                              "folded": true,
                               "type": "BuiltinCommonInstructions::Standard",
                               "conditions": [
                                 {
@@ -2171,7 +2162,7 @@
                   "colorG": 176,
                   "colorR": 74,
                   "creationTime": 0,
-                  "name": "Deselectc?",
+                  "name": "Deselect",
                   "source": "",
                   "type": "BuiltinCommonInstructions::Group",
                   "events": [
@@ -2288,7 +2279,6 @@
                                   "actions": [],
                                   "events": [
                                     {
-                                      "folded": true,
                                       "type": "BuiltinCommonInstructions::Standard",
                                       "conditions": [
                                         {
@@ -2316,7 +2306,6 @@
                                       ]
                                     },
                                     {
-                                      "folded": true,
                                       "type": "BuiltinCommonInstructions::Standard",
                                       "conditions": [
                                         {
@@ -2367,7 +2356,6 @@
                                   ]
                                 },
                                 {
-                                  "folded": true,
                                   "type": "BuiltinCommonInstructions::Standard",
                                   "conditions": [],
                                   "actions": [
@@ -2388,7 +2376,6 @@
                           "parameters": []
                         },
                         {
-                          "folded": true,
                           "type": "BuiltinCommonInstructions::Standard",
                           "conditions": [],
                           "actions": []
@@ -2406,13 +2393,11 @@
               "colorG": 176,
               "colorR": 74,
               "creationTime": 0,
-              "folded": true,
-              "name": "LOOKS",
+              "name": "Box Selection Effects",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
               "events": [
                 {
-                  "folded": true,
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [
                     {
@@ -2440,7 +2425,6 @@
                   ]
                 },
                 {
-                  "folded": true,
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [
                     {
@@ -2468,7 +2452,6 @@
                   ]
                 },
                 {
-                  "folded": true,
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [
                     {
@@ -2506,7 +2489,6 @@
                   ]
                 },
                 {
-                  "folded": true,
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [
                     {
@@ -2542,13 +2524,11 @@
               "colorG": 176,
               "colorR": 74,
               "creationTime": 0,
-              "folded": true,
               "name": "Create boxes",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
               "events": [
                 {
-                  "folded": true,
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [
                     {
@@ -2618,12 +2598,11 @@
                       "colorG": 176,
                       "colorR": 74,
                       "creationTime": 0,
-                      "name": "data",
+                      "name": "Data",
                       "source": "",
                       "type": "BuiltinCommonInstructions::Group",
                       "events": [
                         {
-                          "folded": true,
                           "type": "BuiltinCommonInstructions::Standard",
                           "conditions": [],
                           "actions": [
@@ -2854,7 +2833,6 @@
                           ],
                           "events": [
                             {
-                              "folded": true,
                               "type": "BuiltinCommonInstructions::Standard",
                               "conditions": [],
                               "actions": [
@@ -2950,7 +2928,6 @@
                       "parameters": []
                     },
                     {
-                      "folded": true,
                       "type": "BuiltinCommonInstructions::Standard",
                       "conditions": [
                         {
@@ -2968,7 +2945,6 @@
                       "actions": [],
                       "events": [
                         {
-                          "folded": true,
                           "type": "BuiltinCommonInstructions::Standard",
                           "conditions": [
                             {
@@ -2995,7 +2971,6 @@
                           ]
                         },
                         {
-                          "folded": true,
                           "type": "BuiltinCommonInstructions::Standard",
                           "conditions": [
                             {
@@ -3026,7 +3001,6 @@
                   ]
                 },
                 {
-                  "folded": true,
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [
                     {
@@ -3056,7 +3030,6 @@
                   ]
                 },
                 {
-                  "folded": true,
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [
                     {
@@ -3093,7 +3066,6 @@
                   ],
                   "events": [
                     {
-                      "folded": true,
                       "type": "BuiltinCommonInstructions::Standard",
                       "conditions": [
                         {
@@ -3130,8 +3102,7 @@
               "colorG": 176,
               "colorR": 74,
               "creationTime": 0,
-              "folded": true,
-              "name": "DUPLICTAE boxies copppppy pasteeeeee",
+              "name": "Duplicate boxes",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
               "events": [
@@ -3140,12 +3111,11 @@
                   "colorG": 176,
                   "colorR": 74,
                   "creationTime": 0,
-                  "name": "savery",
+                  "name": "Copying the data and the creating another box with the data",
                   "source": "",
                   "type": "BuiltinCommonInstructions::Group",
                   "events": [
                     {
-                      "folded": true,
                       "type": "BuiltinCommonInstructions::Standard",
                       "conditions": [
                         {
@@ -3299,7 +3269,6 @@
                                   "actions": [],
                                   "events": [
                                     {
-                                      "folded": true,
                                       "type": "BuiltinCommonInstructions::Standard",
                                       "conditions": [
                                         {
@@ -3326,7 +3295,6 @@
                                       ]
                                     },
                                     {
-                                      "folded": true,
                                       "type": "BuiltinCommonInstructions::Standard",
                                       "conditions": [
                                         {
@@ -3973,8 +3941,7 @@
               "colorG": 176,
               "colorR": 74,
               "creationTime": 0,
-              "folded": true,
-              "name": "snappy snappy",
+              "name": "Snap to grid",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
               "events": [
@@ -4025,8 +3992,7 @@
               "colorG": 176,
               "colorR": 74,
               "creationTime": 0,
-              "folded": true,
-              "name": "Delete da box",
+              "name": "Delete boxes",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
               "events": [
@@ -4127,6 +4093,7 @@
               "colorG": 176,
               "colorR": 74,
               "creationTime": 0,
+              "disabled": true,
               "name": "Copy da box",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
@@ -4250,8 +4217,7 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
-          "folded": true,
-          "name": "nodes out side",
+          "name": "Nodes",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
           "events": [
@@ -4260,12 +4226,11 @@
               "colorG": 176,
               "colorR": 74,
               "creationTime": 0,
-              "name": "slecte nodez",
+              "name": "Selecting nodes",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
               "events": [
                 {
-                  "folded": true,
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [
                     {
@@ -4337,7 +4302,6 @@
                       ],
                       "events": [
                         {
-                          "folded": true,
                           "type": "BuiltinCommonInstructions::Standard",
                           "conditions": [
                             {
@@ -4368,7 +4332,6 @@
                   ]
                 },
                 {
-                  "folded": true,
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [],
                   "actions": []
@@ -4384,8 +4347,7 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
-          "folded": true,
-          "name": "Supporters",
+          "name": "Box supporters",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
           "events": [
@@ -4399,12 +4361,11 @@
                   "colorG": 176,
                   "colorR": 74,
                   "creationTime": 0,
-                  "name": "size",
+                  "name": "Size",
                   "source": "",
                   "type": "BuiltinCommonInstructions::Group",
                   "events": [
                     {
-                      "folded": true,
                       "type": "BuiltinCommonInstructions::Standard",
                       "conditions": [
                         {
@@ -4608,7 +4569,6 @@
                           ],
                           "events": [
                             {
-                              "folded": true,
                               "type": "BuiltinCommonInstructions::Standard",
                               "conditions": [
                                 {
@@ -4646,7 +4606,6 @@
                               ]
                             },
                             {
-                              "folded": true,
                               "type": "BuiltinCommonInstructions::Standard",
                               "conditions": [
                                 {
@@ -4698,7 +4657,6 @@
                               "actions": [],
                               "events": [
                                 {
-                                  "folded": true,
                                   "type": "BuiltinCommonInstructions::Standard",
                                   "conditions": [
                                     {
@@ -4742,7 +4700,6 @@
                                   ]
                                 },
                                 {
-                                  "folded": true,
                                   "type": "BuiltinCommonInstructions::Standard",
                                   "conditions": [],
                                   "actions": [
@@ -4771,7 +4728,6 @@
                               ]
                             },
                             {
-                              "folded": true,
                               "type": "BuiltinCommonInstructions::Standard",
                               "conditions": [],
                               "actions": [
@@ -4798,7 +4754,6 @@
                               ]
                             },
                             {
-                              "folded": true,
                               "type": "BuiltinCommonInstructions::Standard",
                               "conditions": [],
                               "actions": [
@@ -4835,7 +4790,6 @@
                           "actions": [],
                           "events": [
                             {
-                              "folded": true,
                               "type": "BuiltinCommonInstructions::Standard",
                               "conditions": [],
                               "actions": [
@@ -4863,7 +4817,6 @@
                             },
                             {
                               "disabled": true,
-                              "folded": true,
                               "type": "BuiltinCommonInstructions::Standard",
                               "conditions": [
                                 {
@@ -4914,13 +4867,11 @@
                   "colorG": 176,
                   "colorR": 74,
                   "creationTime": 0,
-                  "folded": true,
-                  "name": "angle",
+                  "name": "Angle",
                   "source": "",
                   "type": "BuiltinCommonInstructions::Group",
                   "events": [
                     {
-                      "folded": true,
                       "type": "BuiltinCommonInstructions::Standard",
                       "conditions": [
                         {
@@ -5065,7 +5016,6 @@
                       "actions": [],
                       "events": [
                         {
-                          "folded": true,
                           "type": "BuiltinCommonInstructions::Standard",
                           "conditions": [
                             {
@@ -5120,7 +5070,6 @@
                           "actions": [],
                           "events": [
                             {
-                              "folded": true,
                               "type": "BuiltinCommonInstructions::Standard",
                               "conditions": [],
                               "actions": [
@@ -5137,7 +5086,6 @@
                               ]
                             },
                             {
-                              "folded": true,
                               "type": "BuiltinCommonInstructions::Standard",
                               "conditions": [
                                 {
@@ -5164,7 +5112,6 @@
                               ]
                             },
                             {
-                              "folded": true,
                               "type": "BuiltinCommonInstructions::Standard",
                               "conditions": [
                                 {
@@ -5223,7 +5170,6 @@
                           ],
                           "events": [
                             {
-                              "folded": true,
                               "type": "BuiltinCommonInstructions::Standard",
                               "conditions": [],
                               "actions": [
@@ -5263,7 +5209,7 @@
                   "colorG": 176,
                   "colorR": 74,
                   "creationTime": 0,
-                  "name": "moved",
+                  "name": "Label for position when moving",
                   "source": "",
                   "type": "BuiltinCommonInstructions::Group",
                   "events": [
@@ -5362,7 +5308,6 @@
               ]
             },
             {
-              "folded": true,
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
                 {
@@ -5462,13 +5407,11 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
-          "folded": true,
-          "name": "play and unplayfied",
+          "name": "Timeline events",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
           "events": [
             {
-              "folded": true,
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
                 {
@@ -5495,7 +5438,6 @@
               ]
             },
             {
-              "folded": true,
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
                 {
@@ -5557,7 +5499,6 @@
               ],
               "events": [
                 {
-                  "folded": true,
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [
                     {
@@ -5619,7 +5560,6 @@
                   ]
                 },
                 {
-                  "folded": true,
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [
                     {
@@ -5683,7 +5623,6 @@
               ],
               "events": [
                 {
-                  "folded": true,
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [
                     {
@@ -5711,7 +5650,6 @@
                   ]
                 },
                 {
-                  "folded": true,
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [],
                   "actions": [
@@ -5728,7 +5666,6 @@
                   ]
                 },
                 {
-                  "folded": true,
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [
                     {
@@ -5766,7 +5703,6 @@
                   ]
                 },
                 {
-                  "folded": true,
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [
                     {
@@ -5842,13 +5778,11 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
-          "folded": true,
-          "name": "savery",
+          "name": "Saving the project",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
           "events": [
             {
-              "folded": true,
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
                 {
@@ -5875,7 +5809,6 @@
               ],
               "events": [
                 {
-                  "folded": true,
                   "type": "BuiltinCommonInstructions::ForEach",
                   "object": "box",
                   "conditions": [],
@@ -6007,7 +5940,6 @@
                               "actions": [],
                               "events": [
                                 {
-                                  "folded": true,
                                   "type": "BuiltinCommonInstructions::Standard",
                                   "conditions": [
                                     {
@@ -6034,7 +5966,6 @@
                                   ]
                                 },
                                 {
-                                  "folded": true,
                                   "type": "BuiltinCommonInstructions::Standard",
                                   "conditions": [
                                     {
@@ -6069,8 +6000,7 @@
                           "colorG": 176,
                           "colorR": 74,
                           "creationTime": 0,
-                          "folded": true,
-                          "name": "damn",
+                          "name": "UUID, checking if another object also has the same UUID",
                           "source": "",
                           "type": "BuiltinCommonInstructions::Group",
                           "events": [
@@ -6153,7 +6083,7 @@
                   "colorG": 176,
                   "colorR": 74,
                   "creationTime": 0,
-                  "name": "prjet 💀 ",
+                  "name": "Project settings and saving",
                   "source": "",
                   "type": "BuiltinCommonInstructions::Group",
                   "events": [
@@ -6191,7 +6121,6 @@
                   ],
                   "events": [
                     {
-                      "folded": true,
                       "type": "BuiltinCommonInstructions::ForEach",
                       "object": "box",
                       "conditions": [],
@@ -6323,7 +6252,6 @@
                                   "actions": [],
                                   "events": [
                                     {
-                                      "folded": true,
                                       "type": "BuiltinCommonInstructions::Standard",
                                       "conditions": [
                                         {
@@ -6350,7 +6278,6 @@
                                       ]
                                     },
                                     {
-                                      "folded": true,
                                       "type": "BuiltinCommonInstructions::Standard",
                                       "conditions": [
                                         {
@@ -6481,7 +6408,7 @@
                               "colorG": 176,
                               "colorR": 74,
                               "creationTime": 0,
-                              "name": "damn",
+                              "name": "UUID, checking if another object also has the same UUID",
                               "source": "",
                               "type": "BuiltinCommonInstructions::Group",
                               "events": [
@@ -6564,7 +6491,7 @@
                       "colorG": 176,
                       "colorR": 74,
                       "creationTime": 0,
-                      "name": "prjet 💀 ",
+                      "name": "Project settings and saving",
                       "source": "",
                       "type": "BuiltinCommonInstructions::Group",
                       "events": [
@@ -6683,7 +6610,6 @@
               ]
             },
             {
-              "folded": true,
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
                 {
@@ -6725,7 +6651,6 @@
                   ]
                 },
                 {
-                  "folded": true,
                   "type": "BuiltinCommonInstructions::ForEach",
                   "object": "box",
                   "conditions": [],
@@ -6814,7 +6739,7 @@
                           "colorG": 176,
                           "colorR": 74,
                           "creationTime": 0,
-                          "name": "damn",
+                          "name": "UUID, checking if another object also has the same UUID",
                           "source": "",
                           "type": "BuiltinCommonInstructions::Group",
                           "events": [
@@ -6897,7 +6822,7 @@
                   "colorG": 176,
                   "colorR": 74,
                   "creationTime": 0,
-                  "name": "prjet 💀 ",
+                  "name": "Project settings and saving",
                   "source": "",
                   "type": "BuiltinCommonInstructions::Group",
                   "events": [
@@ -6951,7 +6876,6 @@
                   ],
                   "events": [
                     {
-                      "folded": true,
                       "type": "BuiltinCommonInstructions::ForEach",
                       "object": "box",
                       "conditions": [],
@@ -7083,7 +7007,6 @@
                                   "actions": [],
                                   "events": [
                                     {
-                                      "folded": true,
                                       "type": "BuiltinCommonInstructions::Standard",
                                       "conditions": [
                                         {
@@ -7110,7 +7033,6 @@
                                       ]
                                     },
                                     {
-                                      "folded": true,
                                       "type": "BuiltinCommonInstructions::Standard",
                                       "conditions": [
                                         {
@@ -7241,7 +7163,7 @@
                               "colorG": 176,
                               "colorR": 74,
                               "creationTime": 0,
-                              "name": "damn",
+                              "name": "UUID, checking if another object also has the same UUID",
                               "source": "",
                               "type": "BuiltinCommonInstructions::Group",
                               "events": [
@@ -7324,7 +7246,7 @@
                       "colorG": 176,
                       "colorR": 74,
                       "creationTime": 0,
-                      "name": "prjet 💀 ",
+                      "name": "Project settings and saving",
                       "source": "",
                       "type": "BuiltinCommonInstructions::Group",
                       "events": [
@@ -7443,7 +7365,6 @@
               ]
             },
             {
-              "folded": true,
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
                 {
@@ -7470,7 +7391,6 @@
               ],
               "events": [
                 {
-                  "folded": true,
                   "type": "BuiltinCommonInstructions::ForEach",
                   "object": "box",
                   "conditions": [],
@@ -7602,7 +7522,6 @@
                               "actions": [],
                               "events": [
                                 {
-                                  "folded": true,
                                   "type": "BuiltinCommonInstructions::Standard",
                                   "conditions": [
                                     {
@@ -7629,7 +7548,6 @@
                                   ]
                                 },
                                 {
-                                  "folded": true,
                                   "type": "BuiltinCommonInstructions::Standard",
                                   "conditions": [
                                     {
@@ -7760,7 +7678,7 @@
                           "colorG": 176,
                           "colorR": 74,
                           "creationTime": 0,
-                          "name": "damn",
+                          "name": "UUID, checking if another object also has the same UUID",
                           "source": "",
                           "type": "BuiltinCommonInstructions::Group",
                           "events": [
@@ -7843,7 +7761,7 @@
                   "colorG": 176,
                   "colorR": 74,
                   "creationTime": 0,
-                  "name": "prjet 💀 ",
+                  "name": "Project settings and saving",
                   "source": "",
                   "type": "BuiltinCommonInstructions::Group",
                   "events": [
@@ -7976,7 +7894,6 @@
               ]
             },
             {
-              "folded": true,
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
                 {
@@ -8003,7 +7920,6 @@
               ],
               "events": [
                 {
-                  "folded": true,
                   "type": "BuiltinCommonInstructions::ForEach",
                   "object": "box",
                   "conditions": [],
@@ -8135,7 +8051,6 @@
                               "actions": [],
                               "events": [
                                 {
-                                  "folded": true,
                                   "type": "BuiltinCommonInstructions::Standard",
                                   "conditions": [
                                     {
@@ -8162,7 +8077,6 @@
                                   ]
                                 },
                                 {
-                                  "folded": true,
                                   "type": "BuiltinCommonInstructions::Standard",
                                   "conditions": [
                                     {
@@ -8293,7 +8207,7 @@
                           "colorG": 176,
                           "colorR": 74,
                           "creationTime": 0,
-                          "name": "damn",
+                          "name": "UUID, checking if another object also has the same UUID",
                           "source": "",
                           "type": "BuiltinCommonInstructions::Group",
                           "events": [
@@ -8376,7 +8290,7 @@
                   "colorG": 176,
                   "colorR": 74,
                   "creationTime": 0,
-                  "name": "prjet 💀 ",
+                  "name": "Project settings and saving",
                   "source": "",
                   "type": "BuiltinCommonInstructions::Group",
                   "events": [
@@ -8503,7 +8417,6 @@
               ]
             },
             {
-              "folded": true,
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
                 {
@@ -8687,7 +8600,6 @@
                               "colorG": 176,
                               "colorR": 74,
                               "creationTime": 0,
-                              "folded": true,
                               "name": "Images",
                               "source": "",
                               "type": "BuiltinCommonInstructions::Group",
@@ -8993,20 +8905,17 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
-          "folded": true,
-          "name": "Tools",
+          "name": "Tools and buttons for actions",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
           "events": [
             {
-              "folded": true,
               "type": "BuiltinCommonInstructions::ForEach",
               "object": "tools",
               "conditions": [],
               "actions": [],
               "events": [
                 {
-                  "folded": true,
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [
                     {
@@ -9074,7 +8983,6 @@
                   ]
                 },
                 {
-                  "folded": true,
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [
                     {
@@ -9112,7 +9020,6 @@
                   ]
                 },
                 {
-                  "folded": true,
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [
                     {
@@ -9155,13 +9062,11 @@
               "colorG": 176,
               "colorR": 74,
               "creationTime": 0,
-              "folded": true,
-              "name": "pen",
+              "name": "Pen tool (tool for creating nodes easily)",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
               "events": [
                 {
-                  "folded": true,
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [
                     {
@@ -9199,12 +9104,11 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
-          "name": "boxes but mainly Nodes",
+          "name": "Boxes, For each node",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
           "events": [
             {
-              "folded": true,
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
                 {
@@ -9230,7 +9134,6 @@
               ]
             },
             {
-              "folded": true,
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
                 {
@@ -9257,7 +9160,6 @@
               ]
             },
             {
-              "folded": true,
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [],
               "actions": [
@@ -9302,7 +9204,6 @@
               ]
             },
             {
-              "folded": true,
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
                 {
@@ -9350,20 +9251,6 @@
               ]
             },
             {
-              "folded": true,
-              "type": "BuiltinCommonInstructions::Comment",
-              "color": {
-                "b": 120,
-                "g": 146,
-                "r": 151,
-                "textB": 43,
-                "textG": 43,
-                "textR": 170
-              },
-              "comment": "Create node in here vvvv",
-              "comment2": ""
-            },
-            {
               "type": "BuiltinCommonInstructions::ForEach",
               "object": "box",
               "conditions": [],
@@ -9374,8 +9261,7 @@
                   "colorG": 176,
                   "colorR": 74,
                   "creationTime": 0,
-                  "folded": true,
-                  "name": "Suports?",
+                  "name": "Box supporters",
                   "source": "",
                   "type": "BuiltinCommonInstructions::Group",
                   "events": [
@@ -9400,7 +9286,7 @@
                           "colorG": 176,
                           "colorR": 74,
                           "creationTime": 0,
-                          "name": "boxs",
+                          "name": "Support",
                           "source": "",
                           "type": "BuiltinCommonInstructions::Group",
                           "events": [
@@ -9409,239 +9295,221 @@
                               "colorG": 176,
                               "colorR": 74,
                               "creationTime": 0,
-                              "name": "support",
+                              "name": "Creating the suport handles",
                               "source": "",
                               "type": "BuiltinCommonInstructions::Group",
                               "events": [
                                 {
-                                  "colorB": 228,
-                                  "colorG": 176,
-                                  "colorR": 74,
-                                  "creationTime": 0,
-                                  "name": "move and crap sapwn",
-                                  "source": "",
-                                  "type": "BuiltinCommonInstructions::Group",
-                                  "events": [
+                                  "type": "BuiltinCommonInstructions::Standard",
+                                  "conditions": [
                                     {
-                                      "folded": true,
-                                      "type": "BuiltinCommonInstructions::Standard",
-                                      "conditions": [
-                                        {
-                                          "type": {
-                                            "value": "ObjectVariableAsBoolean"
-                                          },
-                                          "parameters": [
-                                            "box",
-                                            "supported",
-                                            "False"
-                                          ]
-                                        }
-                                      ],
-                                      "actions": [
-                                        {
-                                          "type": {
-                                            "value": "SetObjectVariableAsBoolean"
-                                          },
-                                          "parameters": [
-                                            "box",
-                                            "supported",
-                                            "True"
-                                          ]
-                                        }
-                                      ],
-                                      "events": [
-                                        {
-                                          "folded": true,
-                                          "type": "BuiltinCommonInstructions::Standard",
-                                          "conditions": [],
-                                          "actions": [
-                                            {
-                                              "type": {
-                                                "value": "Create"
-                                              },
-                                              "parameters": [
-                                                "",
-                                                "boxSupporters",
-                                                "box.PointX(\"Angle\")",
-                                                "box.PointY(\"Angle\")",
-                                                "\"\""
-                                              ]
-                                            },
-                                            {
-                                              "type": {
-                                                "value": "SetAnimationName"
-                                              },
-                                              "parameters": [
-                                                "boxSupporters",
-                                                "\"Angle\""
-                                              ]
-                                            },
-                                            {
-                                              "type": {
-                                                "value": "LinkedObjects::LinkObjects"
-                                              },
-                                              "parameters": [
-                                                "",
-                                                "boxSupporters",
-                                                "box"
-                                              ]
-                                            },
-                                            {
-                                              "type": {
-                                                "value": "ChangeScale"
-                                              },
-                                              "parameters": [
-                                                "boxSupporters",
-                                                "=",
-                                                "4"
-                                              ]
-                                            }
-                                          ]
-                                        },
-                                        {
-                                          "folded": true,
-                                          "type": "BuiltinCommonInstructions::Standard",
-                                          "conditions": [],
-                                          "actions": [
-                                            {
-                                              "type": {
-                                                "value": "Create"
-                                              },
-                                              "parameters": [
-                                                "",
-                                                "boxSupporters",
-                                                "box.PointX(\"Size\")",
-                                                "box.PointY(\"Size\")",
-                                                "\"\""
-                                              ]
-                                            },
-                                            {
-                                              "type": {
-                                                "value": "LinkedObjects::LinkObjects"
-                                              },
-                                              "parameters": [
-                                                "",
-                                                "boxSupporters",
-                                                "box"
-                                              ]
-                                            },
-                                            {
-                                              "type": {
-                                                "value": "ChangeScale"
-                                              },
-                                              "parameters": [
-                                                "boxSupporters",
-                                                "=",
-                                                "4"
-                                              ]
-                                            }
-                                          ]
-                                        }
+                                      "type": {
+                                        "value": "ObjectVariableAsBoolean"
+                                      },
+                                      "parameters": [
+                                        "box",
+                                        "supported",
+                                        "False"
                                       ]
                                     }
                                   ],
-                                  "parameters": []
-                                },
-                                {
-                                  "colorB": 228,
-                                  "colorG": 176,
-                                  "colorR": 74,
-                                  "creationTime": 0,
-                                  "name": "MOVE",
-                                  "source": "",
-                                  "type": "BuiltinCommonInstructions::Group",
+                                  "actions": [
+                                    {
+                                      "type": {
+                                        "value": "SetObjectVariableAsBoolean"
+                                      },
+                                      "parameters": [
+                                        "box",
+                                        "supported",
+                                        "True"
+                                      ]
+                                    }
+                                  ],
                                   "events": [
                                     {
-                                      "folded": true,
                                       "type": "BuiltinCommonInstructions::Standard",
-                                      "conditions": [
+                                      "conditions": [],
+                                      "actions": [
                                         {
                                           "type": {
-                                            "value": "LinkedObjects::PickObjectsLinkedTo"
+                                            "value": "Create"
                                           },
                                           "parameters": [
                                             "",
                                             "boxSupporters",
-                                            "box",
-                                            ""
+                                            "box.PointX(\"Angle\")",
+                                            "box.PointY(\"Angle\")",
+                                            "\"\""
+                                          ]
+                                        },
+                                        {
+                                          "type": {
+                                            "value": "SetAnimationName"
+                                          },
+                                          "parameters": [
+                                            "boxSupporters",
+                                            "\"Angle\""
+                                          ]
+                                        },
+                                        {
+                                          "type": {
+                                            "value": "LinkedObjects::LinkObjects"
+                                          },
+                                          "parameters": [
+                                            "",
+                                            "boxSupporters",
+                                            "box"
+                                          ]
+                                        },
+                                        {
+                                          "type": {
+                                            "value": "ChangeScale"
+                                          },
+                                          "parameters": [
+                                            "boxSupporters",
+                                            "=",
+                                            "4"
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "BuiltinCommonInstructions::Standard",
+                                      "conditions": [],
+                                      "actions": [
+                                        {
+                                          "type": {
+                                            "value": "Create"
+                                          },
+                                          "parameters": [
+                                            "",
+                                            "boxSupporters",
+                                            "box.PointX(\"Size\")",
+                                            "box.PointY(\"Size\")",
+                                            "\"\""
+                                          ]
+                                        },
+                                        {
+                                          "type": {
+                                            "value": "LinkedObjects::LinkObjects"
+                                          },
+                                          "parameters": [
+                                            "",
+                                            "boxSupporters",
+                                            "box"
+                                          ]
+                                        },
+                                        {
+                                          "type": {
+                                            "value": "ChangeScale"
+                                          },
+                                          "parameters": [
+                                            "boxSupporters",
+                                            "=",
+                                            "4"
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ],
+                              "parameters": []
+                            },
+                            {
+                              "colorB": 228,
+                              "colorG": 176,
+                              "colorR": 74,
+                              "creationTime": 0,
+                              "name": "Changing position of the handles based on what type of handle they are",
+                              "source": "",
+                              "type": "BuiltinCommonInstructions::Group",
+                              "events": [
+                                {
+                                  "type": "BuiltinCommonInstructions::Standard",
+                                  "conditions": [
+                                    {
+                                      "type": {
+                                        "value": "LinkedObjects::PickObjectsLinkedTo"
+                                      },
+                                      "parameters": [
+                                        "",
+                                        "boxSupporters",
+                                        "box",
+                                        ""
+                                      ]
+                                    }
+                                  ],
+                                  "actions": [
+                                    {
+                                      "type": {
+                                        "value": "SetAngle"
+                                      },
+                                      "parameters": [
+                                        "boxSupporters",
+                                        "=",
+                                        "box.Angle()"
+                                      ]
+                                    }
+                                  ],
+                                  "events": [
+                                    {
+                                      "type": "BuiltinCommonInstructions::Standard",
+                                      "conditions": [
+                                        {
+                                          "type": {
+                                            "value": "AnimationName"
+                                          },
+                                          "parameters": [
+                                            "boxSupporters",
+                                            "\"Size\""
                                           ]
                                         }
                                       ],
                                       "actions": [
                                         {
                                           "type": {
-                                            "value": "SetAngle"
+                                            "value": "MettreXY"
                                           },
                                           "parameters": [
                                             "boxSupporters",
                                             "=",
-                                            "box.Angle()"
+                                            "box.PointX(\"Size\")",
+                                            "=",
+                                            "box.PointY(\"Size\")"
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "BuiltinCommonInstructions::Standard",
+                                      "conditions": [
+                                        {
+                                          "type": {
+                                            "value": "AnimationName"
+                                          },
+                                          "parameters": [
+                                            "boxSupporters",
+                                            "\"Angle\""
                                           ]
                                         }
                                       ],
-                                      "events": [
+                                      "actions": [
                                         {
-                                          "folded": true,
-                                          "type": "BuiltinCommonInstructions::Standard",
-                                          "conditions": [
-                                            {
-                                              "type": {
-                                                "value": "AnimationName"
-                                              },
-                                              "parameters": [
-                                                "boxSupporters",
-                                                "\"Size\""
-                                              ]
-                                            }
-                                          ],
-                                          "actions": [
-                                            {
-                                              "type": {
-                                                "value": "MettreXY"
-                                              },
-                                              "parameters": [
-                                                "boxSupporters",
-                                                "=",
-                                                "box.PointX(\"Size\")",
-                                                "=",
-                                                "box.PointY(\"Size\")"
-                                              ]
-                                            }
-                                          ]
-                                        },
-                                        {
-                                          "folded": true,
-                                          "type": "BuiltinCommonInstructions::Standard",
-                                          "conditions": [
-                                            {
-                                              "type": {
-                                                "value": "AnimationName"
-                                              },
-                                              "parameters": [
-                                                "boxSupporters",
-                                                "\"Angle\""
-                                              ]
-                                            }
-                                          ],
-                                          "actions": [
-                                            {
-                                              "type": {
-                                                "value": "MettreXY"
-                                              },
-                                              "parameters": [
-                                                "boxSupporters",
-                                                "=",
-                                                "box.PointX(\"Angle\")",
-                                                "=",
-                                                "box.PointY(\"Angle\")"
-                                              ]
-                                            }
+                                          "type": {
+                                            "value": "MettreXY"
+                                          },
+                                          "parameters": [
+                                            "boxSupporters",
+                                            "=",
+                                            "box.PointX(\"Angle\")",
+                                            "=",
+                                            "box.PointY(\"Angle\")"
                                           ]
                                         }
                                       ]
                                     }
-                                  ],
-                                  "parameters": []
+                                  ]
                                 }
                               ],
                               "parameters": []
@@ -9707,8 +9575,7 @@
                                   "colorG": 176,
                                   "colorR": 74,
                                   "creationTime": 0,
-                                  "folded": true,
-                                  "name": "DUPLEICATOR???",
+                                  "name": "Copying the node data for duplicating node",
                                   "source": "",
                                   "type": "BuiltinCommonInstructions::Group",
                                   "events": [
@@ -9821,8 +9688,7 @@
                                   "colorG": 176,
                                   "colorR": 74,
                                   "creationTime": 0,
-                                  "folded": true,
-                                  "name": "onCursor????",
+                                  "name": "Check if cursor on node",
                                   "source": "",
                                   "type": "BuiltinCommonInstructions::Group",
                                   "events": [
@@ -9893,7 +9759,6 @@
                                       ],
                                       "events": [
                                         {
-                                          "folded": true,
                                           "type": "BuiltinCommonInstructions::Standard",
                                           "conditions": [
                                             {
@@ -9949,8 +9814,7 @@
                                   "colorG": 176,
                                   "colorR": 74,
                                   "creationTime": 0,
-                                  "folded": true,
-                                  "name": "select",
+                                  "name": "Selecting nodes",
                                   "source": "",
                                   "type": "BuiltinCommonInstructions::Group",
                                   "events": [
@@ -9983,7 +9847,6 @@
                                       "actions": [],
                                       "events": [
                                         {
-                                          "folded": true,
                                           "type": "BuiltinCommonInstructions::Standard",
                                           "conditions": [
                                             {
@@ -10240,12 +10103,11 @@
                                   "colorG": 176,
                                   "colorR": 74,
                                   "creationTime": 0,
-                                  "name": "extendo",
+                                  "name": "Extending nodes",
                                   "source": "",
                                   "type": "BuiltinCommonInstructions::Group",
                                   "events": [
                                     {
-                                      "folded": true,
                                       "type": "BuiltinCommonInstructions::Standard",
                                       "conditions": [
                                         {
@@ -10402,7 +10264,6 @@
                                           ],
                                           "events": [
                                             {
-                                              "folded": true,
                                               "type": "BuiltinCommonInstructions::Standard",
                                               "conditions": [
                                                 {
@@ -10440,13 +10301,11 @@
                                   "colorG": 176,
                                   "colorR": 74,
                                   "creationTime": 0,
-                                  "folded": true,
-                                  "name": "selectshow",
+                                  "name": "Effects for selecting nodes",
                                   "source": "",
                                   "type": "BuiltinCommonInstructions::Group",
                                   "events": [
                                     {
-                                      "folded": true,
                                       "type": "BuiltinCommonInstructions::Standard",
                                       "conditions": [
                                         {
@@ -10473,7 +10332,6 @@
                                       ],
                                       "events": [
                                         {
-                                          "folded": true,
                                           "type": "BuiltinCommonInstructions::Standard",
                                           "conditions": [
                                             {
@@ -10503,7 +10361,6 @@
                                       ]
                                     },
                                     {
-                                      "folded": true,
                                       "type": "BuiltinCommonInstructions::Standard",
                                       "conditions": [
                                         {
@@ -10530,7 +10387,6 @@
                                       ],
                                       "events": [
                                         {
-                                          "folded": true,
                                           "type": "BuiltinCommonInstructions::Standard",
                                           "conditions": [
                                             {
@@ -10579,12 +10435,11 @@
                               "colorG": 176,
                               "colorR": 74,
                               "creationTime": 0,
-                              "name": "guiide",
+                              "name": "Extend guide",
                               "source": "",
                               "type": "BuiltinCommonInstructions::Group",
                               "events": [
                                 {
-                                  "folded": true,
                                   "type": "BuiltinCommonInstructions::Standard",
                                   "conditions": [
                                     {
@@ -10620,8 +10475,7 @@
                               "colorG": 55,
                               "colorR": 131,
                               "creationTime": 0,
-                              "folded": true,
-                              "name": "aniamte",
+                              "name": "Animate",
                               "source": "",
                               "type": "BuiltinCommonInstructions::Group",
                               "events": [
@@ -10676,7 +10530,7 @@
                                       "colorG": 176,
                                       "colorR": 74,
                                       "creationTime": 0,
-                                      "name": "yooo",
+                                      "name": "Tweens",
                                       "source": "",
                                       "type": "BuiltinCommonInstructions::Group",
                                       "events": [
@@ -10707,32 +10561,99 @@
                                           ]
                                         },
                                         {
+                                          "colorB": 228,
+                                          "colorG": 176,
+                                          "colorR": 74,
+                                          "creationTime": 0,
                                           "folded": true,
-                                          "type": "BuiltinCommonInstructions::Standard",
-                                          "conditions": [
-                                            {
-                                              "type": {
-                                                "value": "VarObjetTxt"
-                                              },
-                                              "parameters": [
-                                                "node",
-                                                "data.anm.easing",
-                                                "=",
-                                                "\"\""
-                                              ]
-                                            }
-                                          ],
-                                          "actions": [],
+                                          "name": "Instant",
+                                          "source": "",
+                                          "type": "BuiltinCommonInstructions::Group",
                                           "events": [
                                             {
-                                              "colorB": 228,
-                                              "colorG": 176,
-                                              "colorR": 74,
-                                              "creationTime": 0,
-                                              "name": "positoin",
-                                              "source": "",
-                                              "type": "BuiltinCommonInstructions::Group",
+                                              "folded": true,
+                                              "type": "BuiltinCommonInstructions::Standard",
+                                              "conditions": [
+                                                {
+                                                  "type": {
+                                                    "value": "VarObjetTxt"
+                                                  },
+                                                  "parameters": [
+                                                    "node",
+                                                    "data.anm.easing",
+                                                    "=",
+                                                    "\"\""
+                                                  ]
+                                                }
+                                              ],
+                                              "actions": [],
                                               "events": [
+                                                {
+                                                  "colorB": 228,
+                                                  "colorG": 176,
+                                                  "colorR": 74,
+                                                  "creationTime": 0,
+                                                  "name": "positoin",
+                                                  "source": "",
+                                                  "type": "BuiltinCommonInstructions::Group",
+                                                  "events": [
+                                                    {
+                                                      "type": "BuiltinCommonInstructions::Standard",
+                                                      "conditions": [
+                                                        {
+                                                          "type": {
+                                                            "value": "ObjectVariableAsBoolean"
+                                                          },
+                                                          "parameters": [
+                                                            "node",
+                                                            "data.active.position.X",
+                                                            "True"
+                                                          ]
+                                                        }
+                                                      ],
+                                                      "actions": [
+                                                        {
+                                                          "type": {
+                                                            "value": "MettreX"
+                                                          },
+                                                          "parameters": [
+                                                            "box",
+                                                            "=",
+                                                            "node.Variable(data.anm.position.X)"
+                                                          ]
+                                                        }
+                                                      ]
+                                                    },
+                                                    {
+                                                      "type": "BuiltinCommonInstructions::Standard",
+                                                      "conditions": [
+                                                        {
+                                                          "type": {
+                                                            "value": "ObjectVariableAsBoolean"
+                                                          },
+                                                          "parameters": [
+                                                            "node",
+                                                            "data.active.position.Y",
+                                                            "True"
+                                                          ]
+                                                        }
+                                                      ],
+                                                      "actions": [
+                                                        {
+                                                          "type": {
+                                                            "value": "MettreY"
+                                                          },
+                                                          "parameters": [
+                                                            "box",
+                                                            "=",
+                                                            "node.Variable(data.anm.position.Y)"
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ],
+                                                  "parameters": []
+                                                },
                                                 {
                                                   "type": "BuiltinCommonInstructions::Standard",
                                                   "conditions": [
@@ -10742,7 +10663,7 @@
                                                       },
                                                       "parameters": [
                                                         "node",
-                                                        "data.active.position.X",
+                                                        "data.active.width",
                                                         "True"
                                                       ]
                                                     }
@@ -10750,12 +10671,12 @@
                                                   "actions": [
                                                     {
                                                       "type": {
-                                                        "value": "MettreX"
+                                                        "value": "ChangeWidth"
                                                       },
                                                       "parameters": [
                                                         "box",
                                                         "=",
-                                                        "node.Variable(data.anm.position.X)"
+                                                        "node.Variable(data.anm.width)"
                                                       ]
                                                     }
                                                   ]
@@ -10769,7 +10690,7 @@
                                                       },
                                                       "parameters": [
                                                         "node",
-                                                        "data.active.position.Y",
+                                                        "data.active.height",
                                                         "True"
                                                       ]
                                                     }
@@ -10777,182 +10698,12 @@
                                                   "actions": [
                                                     {
                                                       "type": {
-                                                        "value": "MettreY"
+                                                        "value": "ChangeHeight"
                                                       },
                                                       "parameters": [
                                                         "box",
                                                         "=",
-                                                        "node.Variable(data.anm.position.Y)"
-                                                      ]
-                                                    }
-                                                  ]
-                                                }
-                                              ],
-                                              "parameters": []
-                                            },
-                                            {
-                                              "type": "BuiltinCommonInstructions::Standard",
-                                              "conditions": [
-                                                {
-                                                  "type": {
-                                                    "value": "ObjectVariableAsBoolean"
-                                                  },
-                                                  "parameters": [
-                                                    "node",
-                                                    "data.active.width",
-                                                    "True"
-                                                  ]
-                                                }
-                                              ],
-                                              "actions": [
-                                                {
-                                                  "type": {
-                                                    "value": "ChangeWidth"
-                                                  },
-                                                  "parameters": [
-                                                    "box",
-                                                    "=",
-                                                    "node.Variable(data.anm.width)"
-                                                  ]
-                                                }
-                                              ]
-                                            },
-                                            {
-                                              "type": "BuiltinCommonInstructions::Standard",
-                                              "conditions": [
-                                                {
-                                                  "type": {
-                                                    "value": "ObjectVariableAsBoolean"
-                                                  },
-                                                  "parameters": [
-                                                    "node",
-                                                    "data.active.height",
-                                                    "True"
-                                                  ]
-                                                }
-                                              ],
-                                              "actions": [
-                                                {
-                                                  "type": {
-                                                    "value": "ChangeHeight"
-                                                  },
-                                                  "parameters": [
-                                                    "box",
-                                                    "=",
-                                                    "node.Variable(data.anm.height)"
-                                                  ]
-                                                }
-                                              ]
-                                            },
-                                            {
-                                              "type": "BuiltinCommonInstructions::Standard",
-                                              "conditions": [
-                                                {
-                                                  "type": {
-                                                    "value": "ObjectVariableAsBoolean"
-                                                  },
-                                                  "parameters": [
-                                                    "node",
-                                                    "data.active.angle",
-                                                    "True"
-                                                  ]
-                                                }
-                                              ],
-                                              "actions": [
-                                                {
-                                                  "type": {
-                                                    "value": "SetAngle"
-                                                  },
-                                                  "parameters": [
-                                                    "box",
-                                                    "=",
-                                                    "node.Variable(data.anm.angle)"
-                                                  ]
-                                                }
-                                              ]
-                                            },
-                                            {
-                                              "type": "BuiltinCommonInstructions::Standard",
-                                              "conditions": [
-                                                {
-                                                  "type": {
-                                                    "value": "ObjectVariableAsBoolean"
-                                                  },
-                                                  "parameters": [
-                                                    "node",
-                                                    "data.active.opacity",
-                                                    "True"
-                                                  ]
-                                                }
-                                              ],
-                                              "actions": [
-                                                {
-                                                  "type": {
-                                                    "value": "Opacity"
-                                                  },
-                                                  "parameters": [
-                                                    "box",
-                                                    "=",
-                                                    "node.Variable(data.anm.opacity)"
-                                                  ]
-                                                }
-                                              ]
-                                            }
-                                          ]
-                                        },
-                                        {
-                                          "type": "BuiltinCommonInstructions::Standard",
-                                          "conditions": [
-                                            {
-                                              "type": {
-                                                "value": "VarObjetTxt"
-                                              },
-                                              "parameters": [
-                                                "node",
-                                                "data.anm.easing",
-                                                "!=",
-                                                "\"\""
-                                              ]
-                                            }
-                                          ],
-                                          "actions": [],
-                                          "events": [
-                                            {
-                                              "colorB": 228,
-                                              "colorG": 176,
-                                              "colorR": 74,
-                                              "creationTime": 0,
-                                              "name": "positoin",
-                                              "source": "",
-                                              "type": "BuiltinCommonInstructions::Group",
-                                              "events": [
-                                                {
-                                                  "type": "BuiltinCommonInstructions::Standard",
-                                                  "conditions": [
-                                                    {
-                                                      "type": {
-                                                        "value": "ObjectVariableAsBoolean"
-                                                      },
-                                                      "parameters": [
-                                                        "node",
-                                                        "data.active.position.X",
-                                                        "True"
-                                                      ]
-                                                    }
-                                                  ],
-                                                  "actions": [
-                                                    {
-                                                      "type": {
-                                                        "value": "Tween::AddObjectPositionXTween"
-                                                      },
-                                                      "parameters": [
-                                                        "box",
-                                                        "Tween",
-                                                        "\"X\"",
-                                                        "node.Variable(data.anm.position.X)",
-                                                        "VariableString(playEase)",
-                                                        "Variable(playLength)",
-                                                        ""
+                                                        "node.Variable(data.anm.height)"
                                                       ]
                                                     }
                                                   ]
@@ -10966,7 +10717,7 @@
                                                       },
                                                       "parameters": [
                                                         "node",
-                                                        "data.active.position.Y",
+                                                        "data.active.angle",
                                                         "True"
                                                       ]
                                                     }
@@ -10974,155 +10725,286 @@
                                                   "actions": [
                                                     {
                                                       "type": {
-                                                        "value": "Tween::AddObjectPositionYTween"
+                                                        "value": "SetAngle"
                                                       },
                                                       "parameters": [
                                                         "box",
-                                                        "Tween",
-                                                        "\"Y\"",
-                                                        "node.Variable(data.anm.position.Y)",
-                                                        "VariableString(playEase)",
-                                                        "Variable(playLength)",
-                                                        ""
+                                                        "=",
+                                                        "node.Variable(data.anm.angle)"
+                                                      ]
+                                                    }
+                                                  ]
+                                                },
+                                                {
+                                                  "type": "BuiltinCommonInstructions::Standard",
+                                                  "conditions": [
+                                                    {
+                                                      "type": {
+                                                        "value": "ObjectVariableAsBoolean"
+                                                      },
+                                                      "parameters": [
+                                                        "node",
+                                                        "data.active.opacity",
+                                                        "True"
+                                                      ]
+                                                    }
+                                                  ],
+                                                  "actions": [
+                                                    {
+                                                      "type": {
+                                                        "value": "Opacity"
+                                                      },
+                                                      "parameters": [
+                                                        "box",
+                                                        "=",
+                                                        "node.Variable(data.anm.opacity)"
                                                       ]
                                                     }
                                                   ]
                                                 }
-                                              ],
-                                              "parameters": []
-                                            },
-                                            {
-                                              "type": "BuiltinCommonInstructions::Standard",
-                                              "conditions": [
-                                                {
-                                                  "type": {
-                                                    "value": "ObjectVariableAsBoolean"
-                                                  },
-                                                  "parameters": [
-                                                    "node",
-                                                    "data.active.width",
-                                                    "True"
-                                                  ]
-                                                }
-                                              ],
-                                              "actions": [
-                                                {
-                                                  "type": {
-                                                    "value": "Tween::AddObjectWidthTween"
-                                                  },
-                                                  "parameters": [
-                                                    "box",
-                                                    "Tween",
-                                                    "\"W\"",
-                                                    "node.Variable(data.anm.width)",
-                                                    "VariableString(playEase)",
-                                                    "Variable(playLength)",
-                                                    ""
-                                                  ]
-                                                }
-                                              ]
-                                            },
-                                            {
-                                              "type": "BuiltinCommonInstructions::Standard",
-                                              "conditions": [
-                                                {
-                                                  "type": {
-                                                    "value": "ObjectVariableAsBoolean"
-                                                  },
-                                                  "parameters": [
-                                                    "node",
-                                                    "data.active.height",
-                                                    "True"
-                                                  ]
-                                                }
-                                              ],
-                                              "actions": [
-                                                {
-                                                  "type": {
-                                                    "value": "Tween::AddObjectHeightTween"
-                                                  },
-                                                  "parameters": [
-                                                    "box",
-                                                    "Tween",
-                                                    "\"H\"",
-                                                    "node.Variable(data.anm.height)",
-                                                    "VariableString(playEase)",
-                                                    "Variable(playLength)",
-                                                    ""
-                                                  ]
-                                                }
-                                              ]
-                                            },
-                                            {
-                                              "type": "BuiltinCommonInstructions::Standard",
-                                              "conditions": [
-                                                {
-                                                  "type": {
-                                                    "value": "ObjectVariableAsBoolean"
-                                                  },
-                                                  "parameters": [
-                                                    "node",
-                                                    "data.active.angle",
-                                                    "True"
-                                                  ]
-                                                }
-                                              ],
-                                              "actions": [
-                                                {
-                                                  "type": {
-                                                    "value": "Tween::AddObjectAngleTween"
-                                                  },
-                                                  "parameters": [
-                                                    "box",
-                                                    "Tween",
-                                                    "\"An\"",
-                                                    "node.Variable(data.anm.angle)",
-                                                    "VariableString(playEase)",
-                                                    "Variable(playLength)",
-                                                    ""
-                                                  ]
-                                                }
-                                              ]
-                                            },
-                                            {
-                                              "type": "BuiltinCommonInstructions::Standard",
-                                              "conditions": [
-                                                {
-                                                  "type": {
-                                                    "value": "ObjectVariableAsBoolean"
-                                                  },
-                                                  "parameters": [
-                                                    "node",
-                                                    "data.active.opacity",
-                                                    "True"
-                                                  ]
-                                                }
-                                              ],
-                                              "actions": [
-                                                {
-                                                  "type": {
-                                                    "value": "Tween::AddObjectOpacityTween"
-                                                  },
-                                                  "parameters": [
-                                                    "box",
-                                                    "Tween",
-                                                    "\"Op\"",
-                                                    "node.Variable(data.anm.opacity)",
-                                                    "VariableString(playEase)",
-                                                    "Variable(playLength)",
-                                                    ""
-                                                  ]
-                                                }
                                               ]
                                             }
-                                          ]
+                                          ],
+                                          "parameters": []
                                         },
                                         {
                                           "colorB": 228,
                                           "colorG": 176,
                                           "colorR": 74,
                                           "creationTime": 0,
-                                          "name": "Flipppp",
+                                          "folded": true,
+                                          "name": "Easing",
+                                          "source": "",
+                                          "type": "BuiltinCommonInstructions::Group",
+                                          "events": [
+                                            {
+                                              "folded": true,
+                                              "type": "BuiltinCommonInstructions::Standard",
+                                              "conditions": [
+                                                {
+                                                  "type": {
+                                                    "value": "VarObjetTxt"
+                                                  },
+                                                  "parameters": [
+                                                    "node",
+                                                    "data.anm.easing",
+                                                    "!=",
+                                                    "\"\""
+                                                  ]
+                                                }
+                                              ],
+                                              "actions": [],
+                                              "events": [
+                                                {
+                                                  "colorB": 228,
+                                                  "colorG": 176,
+                                                  "colorR": 74,
+                                                  "creationTime": 0,
+                                                  "name": "positoin",
+                                                  "source": "",
+                                                  "type": "BuiltinCommonInstructions::Group",
+                                                  "events": [
+                                                    {
+                                                      "type": "BuiltinCommonInstructions::Standard",
+                                                      "conditions": [
+                                                        {
+                                                          "type": {
+                                                            "value": "ObjectVariableAsBoolean"
+                                                          },
+                                                          "parameters": [
+                                                            "node",
+                                                            "data.active.position.X",
+                                                            "True"
+                                                          ]
+                                                        }
+                                                      ],
+                                                      "actions": [
+                                                        {
+                                                          "type": {
+                                                            "value": "Tween::AddObjectPositionXTween"
+                                                          },
+                                                          "parameters": [
+                                                            "box",
+                                                            "Tween",
+                                                            "\"X\"",
+                                                            "node.Variable(data.anm.position.X)",
+                                                            "VariableString(playEase)",
+                                                            "Variable(playLength)",
+                                                            ""
+                                                          ]
+                                                        }
+                                                      ]
+                                                    },
+                                                    {
+                                                      "type": "BuiltinCommonInstructions::Standard",
+                                                      "conditions": [
+                                                        {
+                                                          "type": {
+                                                            "value": "ObjectVariableAsBoolean"
+                                                          },
+                                                          "parameters": [
+                                                            "node",
+                                                            "data.active.position.Y",
+                                                            "True"
+                                                          ]
+                                                        }
+                                                      ],
+                                                      "actions": [
+                                                        {
+                                                          "type": {
+                                                            "value": "Tween::AddObjectPositionYTween"
+                                                          },
+                                                          "parameters": [
+                                                            "box",
+                                                            "Tween",
+                                                            "\"Y\"",
+                                                            "node.Variable(data.anm.position.Y)",
+                                                            "VariableString(playEase)",
+                                                            "Variable(playLength)",
+                                                            ""
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ],
+                                                  "parameters": []
+                                                },
+                                                {
+                                                  "type": "BuiltinCommonInstructions::Standard",
+                                                  "conditions": [
+                                                    {
+                                                      "type": {
+                                                        "value": "ObjectVariableAsBoolean"
+                                                      },
+                                                      "parameters": [
+                                                        "node",
+                                                        "data.active.width",
+                                                        "True"
+                                                      ]
+                                                    }
+                                                  ],
+                                                  "actions": [
+                                                    {
+                                                      "type": {
+                                                        "value": "Tween::AddObjectWidthTween"
+                                                      },
+                                                      "parameters": [
+                                                        "box",
+                                                        "Tween",
+                                                        "\"W\"",
+                                                        "node.Variable(data.anm.width)",
+                                                        "VariableString(playEase)",
+                                                        "Variable(playLength)",
+                                                        ""
+                                                      ]
+                                                    }
+                                                  ]
+                                                },
+                                                {
+                                                  "type": "BuiltinCommonInstructions::Standard",
+                                                  "conditions": [
+                                                    {
+                                                      "type": {
+                                                        "value": "ObjectVariableAsBoolean"
+                                                      },
+                                                      "parameters": [
+                                                        "node",
+                                                        "data.active.height",
+                                                        "True"
+                                                      ]
+                                                    }
+                                                  ],
+                                                  "actions": [
+                                                    {
+                                                      "type": {
+                                                        "value": "Tween::AddObjectHeightTween"
+                                                      },
+                                                      "parameters": [
+                                                        "box",
+                                                        "Tween",
+                                                        "\"H\"",
+                                                        "node.Variable(data.anm.height)",
+                                                        "VariableString(playEase)",
+                                                        "Variable(playLength)",
+                                                        ""
+                                                      ]
+                                                    }
+                                                  ]
+                                                },
+                                                {
+                                                  "type": "BuiltinCommonInstructions::Standard",
+                                                  "conditions": [
+                                                    {
+                                                      "type": {
+                                                        "value": "ObjectVariableAsBoolean"
+                                                      },
+                                                      "parameters": [
+                                                        "node",
+                                                        "data.active.angle",
+                                                        "True"
+                                                      ]
+                                                    }
+                                                  ],
+                                                  "actions": [
+                                                    {
+                                                      "type": {
+                                                        "value": "Tween::AddObjectAngleTween"
+                                                      },
+                                                      "parameters": [
+                                                        "box",
+                                                        "Tween",
+                                                        "\"An\"",
+                                                        "node.Variable(data.anm.angle)",
+                                                        "VariableString(playEase)",
+                                                        "Variable(playLength)",
+                                                        ""
+                                                      ]
+                                                    }
+                                                  ]
+                                                },
+                                                {
+                                                  "type": "BuiltinCommonInstructions::Standard",
+                                                  "conditions": [
+                                                    {
+                                                      "type": {
+                                                        "value": "ObjectVariableAsBoolean"
+                                                      },
+                                                      "parameters": [
+                                                        "node",
+                                                        "data.active.opacity",
+                                                        "True"
+                                                      ]
+                                                    }
+                                                  ],
+                                                  "actions": [
+                                                    {
+                                                      "type": {
+                                                        "value": "Tween::AddObjectOpacityTween"
+                                                      },
+                                                      "parameters": [
+                                                        "box",
+                                                        "Tween",
+                                                        "\"Op\"",
+                                                        "node.Variable(data.anm.opacity)",
+                                                        "VariableString(playEase)",
+                                                        "Variable(playLength)",
+                                                        ""
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ],
+                                          "parameters": []
+                                        },
+                                        {
+                                          "colorB": 228,
+                                          "colorG": 176,
+                                          "colorR": 74,
+                                          "creationTime": 0,
+                                          "folded": true,
+                                          "name": "Flipping",
                                           "source": "",
                                           "type": "BuiltinCommonInstructions::Group",
                                           "events": [
@@ -11268,6 +11150,45 @@
                                             }
                                           ],
                                           "parameters": []
+                                        },
+                                        {
+                                          "colorB": 228,
+                                          "colorG": 176,
+                                          "colorR": 74,
+                                          "creationTime": 0,
+                                          "name": "Z order",
+                                          "source": "",
+                                          "type": "BuiltinCommonInstructions::Group",
+                                          "events": [
+                                            {
+                                              "type": "BuiltinCommonInstructions::Standard",
+                                              "conditions": [
+                                                {
+                                                  "type": {
+                                                    "value": "ObjectVariableAsBoolean"
+                                                  },
+                                                  "parameters": [
+                                                    "node",
+                                                    "data.active.flippedVer",
+                                                    "True"
+                                                  ]
+                                                }
+                                              ],
+                                              "actions": [
+                                                {
+                                                  "type": {
+                                                    "value": "ChangePlan"
+                                                  },
+                                                  "parameters": [
+                                                    "box",
+                                                    "=",
+                                                    "node.Variable(data.anm.flippedVer)"
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ],
+                                          "parameters": []
                                         }
                                       ],
                                       "parameters": []
@@ -11289,8 +11210,7 @@
                   "colorG": 176,
                   "colorR": 74,
                   "creationTime": 0,
-                  "folded": true,
-                  "name": "DUPABLICATOH PARTH 2?????????",
+                  "name": "Creating the object with copied data for duplicating the node",
                   "source": "",
                   "type": "BuiltinCommonInstructions::Group",
                   "events": [
@@ -11390,20 +11310,6 @@
                   "parameters": []
                 },
                 {
-                  "folded": true,
-                  "type": "BuiltinCommonInstructions::Comment",
-                  "color": {
-                    "b": 109,
-                    "g": 230,
-                    "r": 255,
-                    "textB": 0,
-                    "textG": 0,
-                    "textR": 0
-                  },
-                  "comment": "Create node in here vvvv",
-                  "comment2": ""
-                },
-                {
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [
                     {
@@ -11424,13 +11330,11 @@
                       "colorG": 176,
                       "colorR": 74,
                       "creationTime": 0,
-                      "folded": true,
                       "name": "Show",
                       "source": "",
                       "type": "BuiltinCommonInstructions::Group",
                       "events": [
                         {
-                          "folded": true,
                           "type": "BuiltinCommonInstructions::Standard",
                           "conditions": [
                             {
@@ -11476,7 +11380,7 @@
                       "colorG": 176,
                       "colorR": 74,
                       "creationTime": 0,
-                      "name": "create",
+                      "name": "Create node",
                       "source": "",
                       "type": "BuiltinCommonInstructions::Group",
                       "events": [
@@ -11583,7 +11487,7 @@
                               "colorG": 176,
                               "colorR": 74,
                               "creationTime": 0,
-                              "name": "data (anm, active)",
+                              "name": "Data for node (anm, active)",
                               "source": "",
                               "type": "BuiltinCommonInstructions::Group",
                               "events": [
@@ -11732,7 +11636,6 @@
                                       "actions": [],
                                       "events": [
                                         {
-                                          "folded": true,
                                           "type": "BuiltinCommonInstructions::Standard",
                                           "conditions": [
                                             {
@@ -11759,7 +11662,6 @@
                                           ]
                                         },
                                         {
-                                          "folded": true,
                                           "type": "BuiltinCommonInstructions::Standard",
                                           "conditions": [
                                             {
@@ -11788,7 +11690,6 @@
                                       ]
                                     },
                                     {
-                                      "folded": true,
                                       "type": "BuiltinCommonInstructions::Standard",
                                       "conditions": [],
                                       "actions": [
@@ -11812,7 +11713,6 @@
                                       "actions": [],
                                       "events": [
                                         {
-                                          "folded": true,
                                           "type": "BuiltinCommonInstructions::Standard",
                                           "conditions": [
                                             {
@@ -11840,7 +11740,6 @@
                                           ],
                                           "events": [
                                             {
-                                              "folded": true,
                                               "type": "BuiltinCommonInstructions::Standard",
                                               "conditions": [
                                                 {
@@ -11914,7 +11813,6 @@
                                           "actions": [],
                                           "events": [
                                             {
-                                              "folded": true,
                                               "type": "BuiltinCommonInstructions::Standard",
                                               "conditions": [],
                                               "actions": []
@@ -11928,7 +11826,6 @@
                                               "actions": [],
                                               "events": [
                                                 {
-                                                  "folded": true,
                                                   "type": "BuiltinCommonInstructions::Standard",
                                                   "conditions": [],
                                                   "actions": [
@@ -11945,7 +11842,6 @@
                                                   ]
                                                 },
                                                 {
-                                                  "folded": true,
                                                   "type": "BuiltinCommonInstructions::Standard",
                                                   "conditions": [
                                                     {
@@ -11987,7 +11883,6 @@
                                       ]
                                     },
                                     {
-                                      "folded": true,
                                       "type": "BuiltinCommonInstructions::Standard",
                                       "conditions": [],
                                       "actions": [
@@ -12026,7 +11921,6 @@
                   ]
                 },
                 {
-                  "folded": true,
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [
                     {
@@ -12079,7 +11973,7 @@
                   "colorG": 176,
                   "colorR": 74,
                   "creationTime": 0,
-                  "name": "image",
+                  "name": "Image",
                   "source": "",
                   "type": "BuiltinCommonInstructions::Group",
                   "events": [
@@ -12164,7 +12058,6 @@
                       ],
                       "events": [
                         {
-                          "folded": true,
                           "type": "BuiltinCommonInstructions::Standard",
                           "conditions": [
                             {
@@ -12233,7 +12126,6 @@
                           ],
                           "events": [
                             {
-                              "folded": true,
                               "type": "BuiltinCommonInstructions::Standard",
                               "conditions": [
                                 {
@@ -12259,7 +12151,6 @@
                               ]
                             },
                             {
-                              "folded": true,
                               "type": "BuiltinCommonInstructions::Standard",
                               "conditions": [
                                 {
@@ -12284,7 +12175,6 @@
                               ]
                             },
                             {
-                              "folded": true,
                               "type": "BuiltinCommonInstructions::Standard",
                               "conditions": [
                                 {
@@ -12310,7 +12200,6 @@
                               ]
                             },
                             {
-                              "folded": true,
                               "type": "BuiltinCommonInstructions::Standard",
                               "conditions": [
                                 {
@@ -12335,7 +12224,6 @@
                               ]
                             },
                             {
-                              "folded": true,
                               "type": "BuiltinCommonInstructions::Standard",
                               "conditions": [],
                               "actions": [
@@ -12367,7 +12255,7 @@
               "colorG": 176,
               "colorR": 74,
               "creationTime": 0,
-              "name": "move emm nodes babeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee",
+              "name": "Moving nodes",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
               "events": [
@@ -12449,7 +12337,7 @@
               "colorG": 176,
               "colorR": 74,
               "creationTime": 0,
-              "name": "extensd after creat",
+              "name": "Extending the node after creating it",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
               "events": [
@@ -12470,7 +12358,6 @@
                   "actions": [],
                   "events": [
                     {
-                      "folded": true,
                       "type": "BuiltinCommonInstructions::Standard",
                       "conditions": [
                         {
@@ -12532,7 +12419,6 @@
                       ],
                       "events": [
                         {
-                          "folded": true,
                           "type": "BuiltinCommonInstructions::Standard",
                           "conditions": [
                             {
@@ -12573,12 +12459,11 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
-          "name": "Ui ",
+          "name": "UI",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
           "events": [
             {
-              "folded": true,
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
                 {
@@ -12672,8 +12557,7 @@
               "colorG": 176,
               "colorR": 74,
               "creationTime": 0,
-              "folded": true,
-              "name": "grid",
+              "name": "Gride",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
               "events": [
@@ -13081,7 +12965,7 @@
               "colorG": 176,
               "colorR": 74,
               "creationTime": 0,
-              "name": "changer generator",
+              "name": "Change UI generator",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
               "events": [
@@ -13090,12 +12974,11 @@
                   "colorG": 139,
                   "colorR": 81,
                   "creationTime": 0,
-                  "name": "Createndeleteth",
+                  "name": "Create and delete the UI",
                   "source": "",
                   "type": "BuiltinCommonInstructions::Group",
                   "events": [
                     {
-                      "folded": true,
                       "type": "BuiltinCommonInstructions::Standard",
                       "conditions": [
                         {
@@ -13130,7 +13013,6 @@
                       ],
                       "events": [
                         {
-                          "folded": true,
                           "type": "BuiltinCommonInstructions::Standard",
                           "conditions": [
                             {
@@ -13272,7 +13154,6 @@
                           ],
                           "events": [
                             {
-                              "folded": true,
                               "type": "BuiltinCommonInstructions::ForEachChildVariable",
                               "iterableVariableName": "nodeData.anm",
                               "valueIteratorVariableName": "paramValue",
@@ -13281,7 +13162,6 @@
                               "actions": [],
                               "events": [
                                 {
-                                  "folded": true,
                                   "type": "BuiltinCommonInstructions::Standard",
                                   "conditions": [
                                     {
@@ -13452,7 +13332,6 @@
                                   ],
                                   "events": [
                                     {
-                                      "folded": true,
                                       "type": "BuiltinCommonInstructions::Standard",
                                       "conditions": [],
                                       "actions": [
@@ -13505,7 +13384,6 @@
                                   ],
                                   "events": [
                                     {
-                                      "folded": true,
                                       "type": "BuiltinCommonInstructions::Standard",
                                       "conditions": [],
                                       "actions": [
@@ -13552,7 +13430,6 @@
                                       "actions": [],
                                       "events": [
                                         {
-                                          "folded": true,
                                           "type": "BuiltinCommonInstructions::Standard",
                                           "conditions": [],
                                           "actions": [
@@ -13722,7 +13599,6 @@
                                           ],
                                           "events": [
                                             {
-                                              "folded": true,
                                               "type": "BuiltinCommonInstructions::Standard",
                                               "conditions": [],
                                               "actions": [
@@ -13757,7 +13633,6 @@
                                   ]
                                 },
                                 {
-                                  "folded": true,
                                   "type": "BuiltinCommonInstructions::Standard",
                                   "conditions": [],
                                   "actions": [
@@ -13928,7 +13803,6 @@
                           ],
                           "events": [
                             {
-                              "folded": true,
                               "type": "BuiltinCommonInstructions::ForEachChildVariable",
                               "iterableVariableName": "nodeData.anm",
                               "valueIteratorVariableName": "paramValue",
@@ -14053,7 +13927,6 @@
                                   ],
                                   "events": [
                                     {
-                                      "folded": true,
                                       "type": "BuiltinCommonInstructions::Standard",
                                       "conditions": [],
                                       "actions": [
@@ -14106,7 +13979,6 @@
                                   ],
                                   "events": [
                                     {
-                                      "folded": true,
                                       "type": "BuiltinCommonInstructions::Standard",
                                       "conditions": [],
                                       "actions": [
@@ -14268,7 +14140,6 @@
                                           ],
                                           "events": [
                                             {
-                                              "folded": true,
                                               "type": "BuiltinCommonInstructions::Standard",
                                               "conditions": [],
                                               "actions": [
@@ -14303,7 +14174,6 @@
                                   ]
                                 },
                                 {
-                                  "folded": true,
                                   "type": "BuiltinCommonInstructions::Standard",
                                   "conditions": [],
                                   "actions": [
@@ -14613,7 +14483,6 @@
                   ]
                 },
                 {
-                  "folded": true,
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [
                     {
@@ -14735,7 +14604,6 @@
                                       ],
                                       "events": [
                                         {
-                                          "folded": true,
                                           "type": "BuiltinCommonInstructions::Standard",
                                           "conditions": [
                                             {
@@ -14763,7 +14631,6 @@
                                           ]
                                         },
                                         {
-                                          "folded": true,
                                           "type": "BuiltinCommonInstructions::Standard",
                                           "conditions": [
                                             {
@@ -14791,7 +14658,6 @@
                                           ]
                                         },
                                         {
-                                          "folded": true,
                                           "type": "BuiltinCommonInstructions::Standard",
                                           "conditions": [
                                             {
@@ -14819,7 +14685,6 @@
                                           ]
                                         },
                                         {
-                                          "folded": true,
                                           "type": "BuiltinCommonInstructions::Standard",
                                           "conditions": [
                                             {
@@ -14847,7 +14712,6 @@
                                           ]
                                         },
                                         {
-                                          "folded": true,
                                           "type": "BuiltinCommonInstructions::Standard",
                                           "conditions": [
                                             {
@@ -14875,7 +14739,6 @@
                                           ]
                                         },
                                         {
-                                          "folded": true,
                                           "type": "BuiltinCommonInstructions::Standard",
                                           "conditions": [
                                             {
@@ -14892,7 +14755,6 @@
                                           "actions": [],
                                           "events": [
                                             {
-                                              "folded": true,
                                               "type": "BuiltinCommonInstructions::Standard",
                                               "conditions": [
                                                 {
@@ -14910,7 +14772,6 @@
                                               "actions": [],
                                               "events": [
                                                 {
-                                                  "folded": true,
                                                   "type": "BuiltinCommonInstructions::Standard",
                                                   "conditions": [
                                                     {
@@ -14937,7 +14798,6 @@
                                                   ]
                                                 },
                                                 {
-                                                  "folded": true,
                                                   "type": "BuiltinCommonInstructions::Standard",
                                                   "conditions": [
                                                     {
@@ -14968,7 +14828,6 @@
                                           ]
                                         },
                                         {
-                                          "folded": true,
                                           "type": "BuiltinCommonInstructions::Standard",
                                           "conditions": [
                                             {
@@ -14985,7 +14844,6 @@
                                           "actions": [],
                                           "events": [
                                             {
-                                              "folded": true,
                                               "type": "BuiltinCommonInstructions::Standard",
                                               "conditions": [
                                                 {
@@ -15003,7 +14861,6 @@
                                               "actions": [],
                                               "events": [
                                                 {
-                                                  "folded": true,
                                                   "type": "BuiltinCommonInstructions::Standard",
                                                   "conditions": [
                                                     {
@@ -15030,7 +14887,6 @@
                                                   ]
                                                 },
                                                 {
-                                                  "folded": true,
                                                   "type": "BuiltinCommonInstructions::Standard",
                                                   "conditions": [
                                                     {
@@ -15092,7 +14948,6 @@
                                       ],
                                       "events": [
                                         {
-                                          "folded": true,
                                           "type": "BuiltinCommonInstructions::Standard",
                                           "conditions": [
                                             {
@@ -15120,7 +14975,6 @@
                                           ]
                                         },
                                         {
-                                          "folded": true,
                                           "type": "BuiltinCommonInstructions::Standard",
                                           "conditions": [
                                             {
@@ -15164,7 +15018,6 @@
                                           "actions": [],
                                           "events": [
                                             {
-                                              "folded": true,
                                               "type": "BuiltinCommonInstructions::Standard",
                                               "conditions": [
                                                 {
@@ -15218,7 +15071,6 @@
                                               ]
                                             },
                                             {
-                                              "folded": true,
                                               "type": "BuiltinCommonInstructions::Standard",
                                               "conditions": [
                                                 {
@@ -15301,13 +15153,11 @@
                       "colorG": 176,
                       "colorR": 74,
                       "creationTime": 0,
-                      "folded": true,
-                      "name": "Moved?",
+                      "name": "Condition for updating the data",
                       "source": "",
                       "type": "BuiltinCommonInstructions::Group",
                       "events": [
                         {
-                          "folded": true,
                           "type": "BuiltinCommonInstructions::Standard",
                           "conditions": [],
                           "actions": [
@@ -15323,7 +15173,6 @@
                           ]
                         },
                         {
-                          "folded": true,
                           "type": "BuiltinCommonInstructions::Standard",
                           "conditions": [
                             {
@@ -15349,7 +15198,6 @@
                           ]
                         },
                         {
-                          "folded": true,
                           "type": "BuiltinCommonInstructions::Standard",
                           "conditions": [
                             {
@@ -15466,7 +15314,6 @@
                           "actions": [],
                           "events": [
                             {
-                              "folded": true,
                               "type": "BuiltinCommonInstructions::Standard",
                               "conditions": [
                                 {
@@ -15516,7 +15363,6 @@
                               ],
                               "events": [
                                 {
-                                  "folded": true,
                                   "type": "BuiltinCommonInstructions::Standard",
                                   "conditions": [],
                                   "actions": [
@@ -15566,7 +15412,6 @@
                                   "actions": [],
                                   "events": [
                                     {
-                                      "folded": true,
                                       "type": "BuiltinCommonInstructions::Standard",
                                       "conditions": [
                                         {
@@ -15627,7 +15472,6 @@
                   ]
                 },
                 {
-                  "folded": true,
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [
                     {
@@ -15654,7 +15498,6 @@
                   "actions": [],
                   "events": [
                     {
-                      "folded": true,
                       "type": "BuiltinCommonInstructions::Standard",
                       "conditions": [
                         {
@@ -15721,14 +15564,12 @@
                       ]
                     },
                     {
-                      "folded": true,
                       "type": "BuiltinCommonInstructions::ForEach",
                       "object": "paramCheckbox",
                       "conditions": [],
                       "actions": [],
                       "events": [
                         {
-                          "folded": true,
                           "type": "BuiltinCommonInstructions::Standard",
                           "conditions": [
                             {
@@ -15758,7 +15599,6 @@
                           ]
                         },
                         {
-                          "folded": true,
                           "type": "BuiltinCommonInstructions::Standard",
                           "conditions": [
                             {
@@ -15841,7 +15681,6 @@
                               "actions": [],
                               "events": [
                                 {
-                                  "folded": true,
                                   "type": "BuiltinCommonInstructions::Standard",
                                   "conditions": [
                                     {
@@ -15900,7 +15739,6 @@
                                   ],
                                   "events": [
                                     {
-                                      "folded": true,
                                       "type": "BuiltinCommonInstructions::Standard",
                                       "conditions": [
                                         {
@@ -15928,7 +15766,6 @@
                                       ]
                                     },
                                     {
-                                      "folded": true,
                                       "type": "BuiltinCommonInstructions::Standard",
                                       "conditions": [
                                         {
@@ -15965,13 +15802,11 @@
                               "colorR": 74,
                               "creationTime": 0,
                               "disabled": true,
-                              "folded": true,
                               "name": "Grouped events",
                               "source": "",
                               "type": "BuiltinCommonInstructions::Group",
                               "events": [
                                 {
-                                  "folded": true,
                                   "type": "BuiltinCommonInstructions::Standard",
                                   "conditions": [
                                     {
@@ -16001,7 +15836,6 @@
                                   ]
                                 },
                                 {
-                                  "folded": true,
                                   "type": "BuiltinCommonInstructions::Standard",
                                   "conditions": [
                                     {
@@ -16042,12 +15876,11 @@
                       "colorG": 176,
                       "colorR": 74,
                       "creationTime": 0,
-                      "name": "Moved?",
+                      "name": "Condition for updating the data",
                       "source": "",
                       "type": "BuiltinCommonInstructions::Group",
                       "events": [
                         {
-                          "folded": true,
                           "type": "BuiltinCommonInstructions::Standard",
                           "conditions": [],
                           "actions": [
@@ -16072,7 +15905,6 @@
                           ]
                         },
                         {
-                          "folded": true,
                           "type": "BuiltinCommonInstructions::Standard",
                           "conditions": [
                             {
@@ -16118,7 +15950,6 @@
                           ]
                         },
                         {
-                          "folded": true,
                           "type": "BuiltinCommonInstructions::Standard",
                           "conditions": [
                             {
@@ -16144,7 +15975,6 @@
                           ]
                         },
                         {
-                          "folded": true,
                           "type": "BuiltinCommonInstructions::Standard",
                           "conditions": [
                             {
@@ -16179,7 +16009,6 @@
                           ]
                         },
                         {
-                          "folded": true,
                           "type": "BuiltinCommonInstructions::Standard",
                           "conditions": [
                             {
@@ -16351,7 +16180,6 @@
                           "actions": [],
                           "events": [
                             {
-                              "folded": true,
                               "type": "BuiltinCommonInstructions::Standard",
                               "conditions": [
                                 {
@@ -16401,7 +16229,6 @@
                               ],
                               "events": [
                                 {
-                                  "folded": true,
                                   "type": "BuiltinCommonInstructions::Standard",
                                   "conditions": [],
                                   "actions": [
@@ -16451,7 +16278,6 @@
                                   "actions": [],
                                   "events": [
                                     {
-                                      "folded": true,
                                       "type": "BuiltinCommonInstructions::Standard",
                                       "conditions": [
                                         {
@@ -16518,7 +16344,6 @@
           "parameters": []
         },
         {
-          "folded": true,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [],
           "actions": []
