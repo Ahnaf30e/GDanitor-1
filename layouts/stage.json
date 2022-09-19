@@ -18,7 +18,7 @@
     "gridColor": 10401023,
     "gridAlpha": 0.8,
     "snap": true,
-    "zoomFactor": 0.9750000000000006,
+    "zoomFactor": 0.7250000000000008,
     "windowMask": false
   },
   "objectsGroups": [
@@ -49,6 +49,23 @@
         },
         {
           "name": "paramName"
+        },
+        {
+          "name": "paramCheckbox"
+        },
+        {
+          "name": "paramListMask"
+        }
+      ]
+    },
+    {
+      "name": "changeUIMovable",
+      "objects": [
+        {
+          "name": "paramName"
+        },
+        {
+          "name": "paramValue"
         },
         {
           "name": "paramCheckbox"
@@ -331,6 +348,21 @@
       "x": 19,
       "y": 17,
       "zOrder": 19,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "height": 32,
+      "layer": "GUI",
+      "name": "paramListEnd",
+      "persistentUuid": "f47abea6-3007-40f1-8d1b-a630b0b887ca",
+      "width": 256,
+      "x": 32,
+      "y": 640,
+      "zOrder": 20,
       "numberProperties": [],
       "stringProperties": [],
       "initialVariables": []
@@ -1076,6 +1108,88 @@
     },
     {
       "assetStoreId": "",
+      "name": "paramListEnd",
+      "tags": "",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [],
+      "effects": [],
+      "behaviors": [],
+      "animations": [
+        {
+          "name": "paramlist",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.07999999821186066,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "assets\\paramlist-1.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "assetStoreId": "",
+      "name": "paramListMask",
+      "tags": "",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [],
+      "effects": [],
+      "behaviors": [],
+      "animations": [
+        {
+          "name": "paramlist",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.07999999821186066,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "assets\\paramlist-1.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "assetStoreId": "",
       "name": "supporterGuide",
       "tags": "",
       "type": "PrimitiveDrawing::Drawer",
@@ -1687,7 +1801,6 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
-          "folded": true,
           "name": "Slect boxies",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -1791,6 +1904,7 @@
               "colorG": 176,
               "colorR": 74,
               "creationTime": 0,
+              "folded": true,
               "name": "clecked toggle oand untoggle",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
@@ -2292,6 +2406,7 @@
               "colorG": 176,
               "colorR": 74,
               "creationTime": 0,
+              "folded": true,
               "name": "LOOKS",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
@@ -2427,11 +2542,13 @@
               "colorG": 176,
               "colorR": 74,
               "creationTime": 0,
+              "folded": true,
               "name": "Create boxes",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
               "events": [
                 {
+                  "folded": true,
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [
                     {
@@ -2607,6 +2724,17 @@
                                 "data.anm.opacity",
                                 "=",
                                 "box.Opacity()"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "ModVarObjet"
+                              },
+                              "parameters": [
+                                "box",
+                                "data.anm.zOrder",
+                                "=",
+                                "box.ZOrder()"
                               ]
                             },
                             {
@@ -3017,6 +3145,7 @@
                   "type": "BuiltinCommonInstructions::Group",
                   "events": [
                     {
+                      "folded": true,
                       "type": "BuiltinCommonInstructions::Standard",
                       "conditions": [
                         {
@@ -3137,6 +3266,17 @@
                                     "data.anm.opacity",
                                     "=",
                                     "box.Opacity()"
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "ModVarObjet"
+                                  },
+                                  "parameters": [
+                                    "box",
+                                    "data.anm.zOrder",
+                                    "=",
+                                    "box.ZOrder()"
                                   ]
                                 }
                               ],
@@ -3432,6 +3572,16 @@
                                     "box",
                                     "=",
                                     "Variable(boxData.anm.opacity)"
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "ChangePlan"
+                                  },
+                                  "parameters": [
+                                    "box",
+                                    "=",
+                                    "Variable(boxData.anm.zOrder)"
                                   ]
                                 },
                                 {
@@ -3823,6 +3973,7 @@
               "colorG": 176,
               "colorR": 74,
               "creationTime": 0,
+              "folded": true,
               "name": "snappy snappy",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
@@ -3874,6 +4025,7 @@
               "colorG": 176,
               "colorR": 74,
               "creationTime": 0,
+              "folded": true,
               "name": "Delete da box",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
@@ -4098,6 +4250,7 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
+          "folded": true,
           "name": "nodes out side",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -9554,6 +9707,7 @@
                                   "colorG": 176,
                                   "colorR": 74,
                                   "creationTime": 0,
+                                  "folded": true,
                                   "name": "DUPLEICATOR???",
                                   "source": "",
                                   "type": "BuiltinCommonInstructions::Group",
@@ -11322,7 +11476,6 @@
                       "colorG": 176,
                       "colorR": 74,
                       "creationTime": 0,
-                      "folded": true,
                       "name": "create",
                       "source": "",
                       "type": "BuiltinCommonInstructions::Group",
@@ -11513,6 +11666,17 @@
                                         "data.anm.opacity",
                                         "=",
                                         "box.Opacity()"
+                                      ]
+                                    },
+                                    {
+                                      "type": {
+                                        "value": "ModVarObjet"
+                                      },
+                                      "parameters": [
+                                        "node",
+                                        "data.anm.zOrder",
+                                        "=",
+                                        "box.ZOrder()"
                                       ]
                                     },
                                     {
@@ -11915,13 +12079,11 @@
                   "colorG": 176,
                   "colorR": 74,
                   "creationTime": 0,
-                  "folded": true,
                   "name": "image",
                   "source": "",
                   "type": "BuiltinCommonInstructions::Group",
                   "events": [
                     {
-                      "folded": true,
                       "type": "BuiltinCommonInstructions::Standard",
                       "conditions": [
                         {
@@ -12411,7 +12573,6 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
-          "folded": true,
           "name": "Ui ",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -12436,6 +12597,14 @@
                   },
                   "parameters": [
                     "paramListStart"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Cache"
+                  },
+                  "parameters": [
+                    "paramListEnd"
                   ]
                 },
                 {
@@ -12503,6 +12672,7 @@
               "colorG": 176,
               "colorR": 74,
               "creationTime": 0,
+              "folded": true,
               "name": "grid",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
@@ -12548,7 +12718,7 @@
                       "parameters": [
                         "grid",
                         "=",
-                        "CameraCenterY()+32"
+                        "CameraCenterY()+16"
                       ]
                     }
                   ]
@@ -12825,6 +12995,25 @@
                       "parameters": [
                         ""
                       ]
+                    },
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::Not"
+                      },
+                      "parameters": [],
+                      "subInstructions": [
+                        {
+                          "type": {
+                            "value": "SourisSurObjet"
+                          },
+                          "parameters": [
+                            "controlPLate",
+                            "",
+                            "",
+                            ""
+                          ]
+                        }
+                      ]
                     }
                   ],
                   "actions": [
@@ -12849,6 +13038,25 @@
                       },
                       "parameters": [
                         ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::Not"
+                      },
+                      "parameters": [],
+                      "subInstructions": [
+                        {
+                          "type": {
+                            "value": "SourisSurObjet"
+                          },
+                          "parameters": [
+                            "controlPLate",
+                            "",
+                            "",
+                            ""
+                          ]
+                        }
                       ]
                     }
                   ],
@@ -12887,6 +13095,7 @@
                   "type": "BuiltinCommonInstructions::Group",
                   "events": [
                     {
+                      "folded": true,
                       "type": "BuiltinCommonInstructions::Standard",
                       "conditions": [
                         {
@@ -13063,6 +13272,7 @@
                           ],
                           "events": [
                             {
+                              "folded": true,
                               "type": "BuiltinCommonInstructions::ForEachChildVariable",
                               "iterableVariableName": "nodeData.anm",
                               "valueIteratorVariableName": "paramValue",
@@ -13542,18 +13752,7 @@
                                     {
                                       "type": "BuiltinCommonInstructions::Standard",
                                       "conditions": [],
-                                      "actions": [
-                                        {
-                                          "type": {
-                                            "value": "ModVarScene"
-                                          },
-                                          "parameters": [
-                                            "createChangeUICount",
-                                            "-",
-                                            "1"
-                                          ]
-                                        }
-                                      ]
+                                      "actions": []
                                     }
                                   ]
                                 },
@@ -13572,6 +13771,44 @@
                                         "1"
                                       ]
                                     }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "ModVarScene"
+                                  },
+                                  "parameters": [
+                                    "createChangeUILimit",
+                                    "=",
+                                    "(Variable(createChangeUICount)*40)-100"
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "Create"
+                                  },
+                                  "parameters": [
+                                    "",
+                                    "paramListMask",
+                                    "0",
+                                    "71",
+                                    "\"GUI\""
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "SetSize"
+                                  },
+                                  "parameters": [
+                                    "paramListMask",
+                                    "320",
+                                    "601"
                                   ]
                                 }
                               ]
@@ -13691,6 +13928,7 @@
                           ],
                           "events": [
                             {
+                              "folded": true,
                               "type": "BuiltinCommonInstructions::ForEachChildVariable",
                               "iterableVariableName": "nodeData.anm",
                               "valueIteratorVariableName": "paramValue",
@@ -14060,18 +14298,7 @@
                                     {
                                       "type": "BuiltinCommonInstructions::Standard",
                                       "conditions": [],
-                                      "actions": [
-                                        {
-                                          "type": {
-                                            "value": "ModVarScene"
-                                          },
-                                          "parameters": [
-                                            "createChangeUICount",
-                                            "-",
-                                            "1"
-                                          ]
-                                        }
-                                      ]
+                                      "actions": []
                                     }
                                   ]
                                 },
@@ -14093,6 +14320,100 @@
                                   ]
                                 }
                               ]
+                            },
+                            {
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "ModVarScene"
+                                  },
+                                  "parameters": [
+                                    "createChangeUILimit",
+                                    "=",
+                                    "(Variable(createChangeUICount)*40)-100"
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "Create"
+                                  },
+                                  "parameters": [
+                                    "",
+                                    "paramListMask",
+                                    "0",
+                                    "71",
+                                    "\"GUI\""
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "SetSize"
+                                  },
+                                  "parameters": [
+                                    "paramListMask",
+                                    "320",
+                                    "601"
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "AjoutObjConcern"
+                              },
+                              "parameters": [
+                                "",
+                                "changeUIMovable"
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "ModVarScene"
+                              },
+                              "parameters": [
+                                "changeUIScroll",
+                                "=",
+                                "clamp(Variable(changeUIScroll), -16, Variable(createChangeUILimit))"
+                              ]
+                            }
+                          ],
+                          "events": [
+                            {
+                              "type": "BuiltinCommonInstructions::ForEach",
+                              "object": "changeUIMovable",
+                              "conditions": [],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "ModVarObjet"
+                                  },
+                                  "parameters": [
+                                    "changeUIMovable",
+                                    "changeUIPositonY",
+                                    "=",
+                                    "changeUIMovable.Y()"
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "MettreY"
+                                  },
+                                  "parameters": [
+                                    "changeUIMovable",
+                                    "=",
+                                    "changeUIMovable.Variable(changeUIPositonY)-Variable(changeUIScroll)"
+                                  ]
+                                }
+                              ]
                             }
                           ]
                         }
@@ -14100,6 +14421,196 @@
                     }
                   ],
                   "parameters": []
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SpriteMasking::Mask"
+                      },
+                      "parameters": [
+                        "",
+                        "paramCheckbox",
+                        "paramListMask",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SpriteMasking::Mask"
+                      },
+                      "parameters": [
+                        "",
+                        "paramName",
+                        "paramListMask",
+                        ""
+                      ]
+                    }
+                  ],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "SourisSurObjet"
+                          },
+                          "parameters": [
+                            "paramListMask",
+                            "",
+                            "",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "BuiltinCommonInstructions::Or"
+                          },
+                          "parameters": [],
+                          "subInstructions": [
+                            {
+                              "type": {
+                                "value": "IsMouseWheelScrollingDown"
+                              },
+                              "parameters": [
+                                ""
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "IsMouseWheelScrollingUp"
+                              },
+                              "parameters": [
+                                ""
+                              ]
+                            }
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "ModVarScene"
+                          },
+                          "parameters": [
+                            "changeUIScroll",
+                            "-",
+                            "MouseWheelDelta()/2"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ModVarScene"
+                          },
+                          "parameters": [
+                            "changeUIScroll",
+                            "=",
+                            "clamp(Variable(changeUIScroll), -16, Variable(createChangeUILimit))"
+                          ]
+                        }
+                      ],
+                      "events": [
+                        {
+                          "type": "BuiltinCommonInstructions::ForEach",
+                          "object": "changeUIMovable",
+                          "conditions": [],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "MettreY"
+                              },
+                              "parameters": [
+                                "changeUIMovable",
+                                "=",
+                                "changeUIMovable.Variable(changeUIPositonY)-Variable(changeUIScroll)"
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "BuiltinCommonInstructions::Or"
+                          },
+                          "parameters": [],
+                          "subInstructions": [
+                            {
+                              "type": {
+                                "value": "PosY"
+                              },
+                              "parameters": [
+                                "paramValue",
+                                "<",
+                                "paramListStart.Y()"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "PosY"
+                              },
+                              "parameters": [
+                                "paramValue",
+                                ">",
+                                "paramListEnd.Y()"
+                              ]
+                            }
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "Cache"
+                          },
+                          "parameters": [
+                            "paramValue"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "PosY"
+                          },
+                          "parameters": [
+                            "paramValue",
+                            ">",
+                            "paramListStart.Y()"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "PosY"
+                          },
+                          "parameters": [
+                            "paramValue",
+                            "<",
+                            "paramListEnd.Y()"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "Montre"
+                          },
+                          "parameters": [
+                            "paramValue",
+                            ""
+                          ]
+                        }
+                      ]
+                    }
+                  ]
                 },
                 {
                   "folded": true,
@@ -14195,7 +14706,6 @@
                                   "actions": [],
                                   "events": [
                                     {
-                                      "folded": true,
                                       "type": "BuiltinCommonInstructions::Standard",
                                       "conditions": [
                                         {
@@ -14327,6 +14837,34 @@
                                             {
                                               "type": {
                                                 "value": "Opacity"
+                                              },
+                                              "parameters": [
+                                                "box",
+                                                "=",
+                                                "box.Variable(data.anm[paramValue.VariableString(location)])"
+                                              ]
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "folded": true,
+                                          "type": "BuiltinCommonInstructions::Standard",
+                                          "conditions": [
+                                            {
+                                              "type": {
+                                                "value": "BuiltinCommonInstructions::CompareStrings"
+                                              },
+                                              "parameters": [
+                                                "paramValue.VariableString(location)",
+                                                "=",
+                                                "\"zOrder\""
+                                              ]
+                                            }
+                                          ],
+                                          "actions": [
+                                            {
+                                              "type": {
+                                                "value": "ChangePlan"
                                               },
                                               "parameters": [
                                                 "box",
@@ -15089,6 +15627,7 @@
                   ]
                 },
                 {
+                  "folded": true,
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [
                     {
@@ -15133,6 +15672,17 @@
                           },
                           "parameters": [
                             "paramCheckbox",
+                            "",
+                            "",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SourisSurObjet"
+                          },
+                          "parameters": [
+                            "paramListMask",
                             "",
                             "",
                             ""

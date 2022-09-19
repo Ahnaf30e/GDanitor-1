@@ -18,7 +18,7 @@
     "gridColor": 10401023,
     "gridAlpha": 0.8,
     "snap": false,
-    "zoomFactor": 0.9500000000000002,
+    "zoomFactor": 0.8250000000000001,
     "windowMask": false
   },
   "objectsGroups": [
@@ -44,21 +44,6 @@
       "x": 49,
       "y": 15,
       "zOrder": 1,
-      "numberProperties": [],
-      "stringProperties": [],
-      "initialVariables": []
-    },
-    {
-      "angle": 0,
-      "customSize": false,
-      "height": 0,
-      "layer": "",
-      "name": "player",
-      "persistentUuid": "79c7c635-0e7f-4b8b-954d-0892a1192ffc",
-      "width": 0,
-      "x": 806,
-      "y": 391,
-      "zOrder": 2,
       "numberProperties": [],
       "stringProperties": [],
       "initialVariables": []
@@ -201,7 +186,31 @@
       "updateIfNotVisible": false,
       "variables": [],
       "effects": [],
-      "behaviors": [],
+      "behaviors": [
+        {
+          "name": "Physics2",
+          "type": "Physics2::Physics2Behavior",
+          "bodyType": "Dynamic",
+          "bullet": false,
+          "fixedRotation": false,
+          "canSleep": true,
+          "shape": "Box",
+          "shapeDimensionA": 0,
+          "shapeDimensionB": 0,
+          "shapeOffsetX": 0,
+          "shapeOffsetY": 0,
+          "polygonOrigin": "Center",
+          "vertices": [],
+          "density": 1,
+          "friction": 0.3,
+          "restitution": 0.1,
+          "linearDamping": 0.1,
+          "angularDamping": 0.1,
+          "gravityScale": 1,
+          "layers": 1,
+          "masks": 1
+        }
+      ],
       "animations": [
         {
           "name": "NewSprite2",
@@ -479,6 +488,10 @@
     {
       "name": "ObjectAnimator",
       "type": "GDaitorAnimator::ObjectAnimator"
+    },
+    {
+      "name": "Physics2",
+      "type": "Physics2::Physics2Behavior"
     },
     {
       "name": "Tween",
