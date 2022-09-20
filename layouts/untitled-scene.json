@@ -87,7 +87,7 @@
               "sprites": [
                 {
                   "hasCustomCollisionMask": false,
-                  "image": "assets\\NewSprite-1-0.png",
+                  "image": "assets\\NewSprite-1-1.png",
                   "points": [],
                   "originPoint": {
                     "name": "origine",
@@ -339,6 +339,16 @@
         },
         {
           "type": {
+            "value": "ChangeScale"
+          },
+          "parameters": [
+            "NewSprite",
+            "=",
+            "0.45"
+          ]
+        },
+        {
+          "type": {
             "value": "GDaitorAnimator::ObjectAnimator::CreateModel"
           },
           "parameters": [
@@ -350,6 +360,7 @@
       ]
     },
     {
+      "disabled": true,
       "type": "BuiltinCommonInstructions::ForEach",
       "object": "NewSprite",
       "conditions": [],

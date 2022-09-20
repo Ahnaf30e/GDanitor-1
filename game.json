@@ -762,6 +762,15 @@
         "name": "assets\\lgotas\\jacob.png",
         "smoothed": false,
         "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/NewSprite-1-1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\NewSprite-1-1.png",
+        "smoothed": false,
+        "userAdded": true
       }
     ],
     "resourceFolders": []
