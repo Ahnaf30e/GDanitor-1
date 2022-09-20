@@ -1802,7 +1802,6 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
-          "folded": true,
           "name": "Boxes",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -1812,7 +1811,6 @@
               "colorG": 176,
               "colorR": 74,
               "creationTime": 0,
-              "folded": true,
               "name": "Select all ",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
@@ -1908,7 +1906,6 @@
               "colorG": 176,
               "colorR": 74,
               "creationTime": 0,
-              "folded": true,
               "name": "Box Selection",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
@@ -2008,13 +2005,11 @@
                   "colorG": 176,
                   "colorR": 74,
                   "creationTime": 0,
-                  "folded": true,
                   "name": "Select",
                   "source": "",
                   "type": "BuiltinCommonInstructions::Group",
                   "events": [
                     {
-                      "folded": true,
                       "type": "BuiltinCommonInstructions::Standard",
                       "conditions": [
                         {
@@ -2178,13 +2173,11 @@
                   "colorG": 176,
                   "colorR": 74,
                   "creationTime": 0,
-                  "folded": true,
                   "name": "Deselect",
                   "source": "",
                   "type": "BuiltinCommonInstructions::Group",
                   "events": [
                     {
-                      "folded": true,
                       "type": "BuiltinCommonInstructions::Standard",
                       "conditions": [
                         {
@@ -2259,13 +2252,11 @@
                           "colorG": 176,
                           "colorR": 74,
                           "creationTime": 0,
-                          "folded": true,
                           "name": "Control over what is selected",
                           "source": "",
                           "type": "BuiltinCommonInstructions::Group",
                           "events": [
                             {
-                              "folded": true,
                               "type": "BuiltinCommonInstructions::Standard",
                               "conditions": [
                                 {
@@ -2293,7 +2284,6 @@
                               ],
                               "events": [
                                 {
-                                  "folded": true,
                                   "type": "BuiltinCommonInstructions::ForEach",
                                   "object": "box",
                                   "conditions": [],
@@ -2418,7 +2408,6 @@
               "colorG": 176,
               "colorR": 74,
               "creationTime": 0,
-              "folded": true,
               "name": "Box Selection Effects",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
@@ -4070,7 +4059,6 @@
               "colorG": 176,
               "colorR": 74,
               "creationTime": 0,
-              "folded": true,
               "name": "Delete boxes",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
@@ -4175,7 +4163,6 @@
               "colorR": 74,
               "creationTime": 0,
               "disabled": true,
-              "folded": true,
               "name": "Copy da box",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
@@ -4436,13 +4423,11 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
-          "folded": true,
           "name": "Box supporters",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
           "events": [
             {
-              "folded": true,
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [],
               "actions": [],
@@ -4452,7 +4437,6 @@
                   "colorG": 176,
                   "colorR": 74,
                   "creationTime": 0,
-                  "folded": true,
                   "name": "Size",
                   "source": "",
                   "type": "BuiltinCommonInstructions::Group",
@@ -4973,7 +4957,6 @@
                   "colorG": 176,
                   "colorR": 74,
                   "creationTime": 0,
-                  "folded": true,
                   "name": "Angle",
                   "source": "",
                   "type": "BuiltinCommonInstructions::Group",
@@ -9378,7 +9361,6 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
-          "folded": true,
           "name": "Boxes, For each node event",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -9540,13 +9522,11 @@
                   "colorG": 176,
                   "colorR": 74,
                   "creationTime": 0,
-                  "folded": true,
                   "name": "Box supporters",
                   "source": "",
                   "type": "BuiltinCommonInstructions::Group",
                   "events": [
                     {
-                      "folded": true,
                       "type": "BuiltinCommonInstructions::Standard",
                       "conditions": [
                         {
@@ -9817,13 +9797,11 @@
                   "colorG": 176,
                   "colorR": 74,
                   "creationTime": 0,
-                  "folded": true,
                   "name": "For each node",
                   "source": "",
                   "type": "BuiltinCommonInstructions::Group",
                   "events": [
                     {
-                      "folded": true,
                       "type": "BuiltinCommonInstructions::Standard",
                       "conditions": [
                         {
@@ -9841,7 +9819,6 @@
                       "actions": [],
                       "events": [
                         {
-                          "folded": true,
                           "type": "BuiltinCommonInstructions::ForEach",
                           "object": "node",
                           "conditions": [],

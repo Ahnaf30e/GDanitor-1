@@ -37,7 +37,7 @@
           "events": [
             {
               "type": "BuiltinCommonInstructions::JsCode",
-              "inlineCode": "const modelData = JSON.parse(objects[0].getBehavior(\"ObjectAnimator\")._getModelJSON());\r\n\r\nfor (const box in modelData.box) {\r\n    const objectData = modelData.box[box].anm;\r\n    const object = runtimeScene.createObject(objectData.object.objName);\r\n\r\n    object.getVariables().get(\"__GDanitorAnimator\").getChild(\"UUID\").setString(box);\r\n    gdjs.evtTools.linkedObjects.linkObjects(runtimeScene, object, objects[0]);\r\n\r\n\r\n    object.setAngle(objectData.angle + objects[0].getAngle());\r\n    object.getVariables().get(\"__GDanitorAnimator\").getChild(\"IdleData\").getChild(\"Angle\").setNumber(objectData.angle);\r\n\r\n    object.setPosition(gdjs.evtTools.common.getXFromAngleAndDistance(gdjs.evtTools.common.angleBetweenPositions(0, 0, objectData.position.X * objects[0].getScaleX(), objectData.position.Y * objects[0].getScaleY()) + objects[0].getAngle(), gdjs.evtTools.common.distanceBetweenPositions(0, 0, objectData.position.X * objects[0].getScaleX(), objectData.position.Y * objects[0].getScaleY())) + objects[0].getX(), gdjs.evtTools.common.getYFromAngleAndDistance(gdjs.evtTools.common.angleBetweenPositions(0, 0, objectData.position.X * objects[0].getScaleX(), objectData.position.Y * objects[0].getScaleY()) + objects[0].getAngle(), gdjs.evtTools.common.distanceBetweenPositions(0, 0, objectData.position.X * objects[0].getScaleX(), objectData.position.Y * objects[0].getScaleY())) + objects[0].getY());\r\n    object.getVariables().get(\"__GDanitorAnimator\").getChild(\"IdleData\").getChild(\"X\").setNumber(objectData.position.X);\r\n    object.getVariables().get(\"__GDanitorAnimator\").getChild(\"IdleData\").getChild(\"Y\").setNumber(objectData.position.Y);\r\n\r\n    object.setHeight(objectData.height * objects[0].getScaleY());\r\n    object.setWidth(objectData.width * objects[0].getScaleX());\r\n    object.getVariables().get(\"__GDanitorAnimator\").getChild(\"IdleData\").getChild(\"Height\").setNumber(objectData.height);\r\n    object.getVariables().get(\"__GDanitorAnimator\").getChild(\"IdleData\").getChild(\"Width\").setNumber(objectData.width);\r\n\r\n    object.setOpacity(objectData.opacity * gdjs.evtTools.common.normalize(objects[0].getOpacity(), 0, 255));\r\n    object.getVariables().get(\"__GDanitorAnimator\").getChild(\"IdleData\").getChild(\"Opacity\").setNumber(objectData.opacity);\r\n\r\n    object.flipX(!!objectData.flippedHor);\r\n    object.flipY(!!objectData.flippedVer);\r\n    object.getVariables().get(\"__GDanitorAnimator\").getChild(\"IdleData\").getChild(\"FlippedHor\").setNumber(objectData.flippedHor);\r\n    object.getVariables().get(\"__GDanitorAnimator\").getChild(\"IdleData\").getChild(\"FlippedVer\").setNumber(objectData.flippedVer);\r\n}",
+              "inlineCode": "const modelData = JSON.parse(objects[0].getBehavior(\"ObjectAnimator\")._getModelJSON());\r\n\r\nfor (const box in modelData.box) {\r\n    const objectData = modelData.box[box].anm;\r\n    const object = runtimeScene.createObject(objectData.object.objName);\r\n\r\n    object.getVariables().get(\"__GDanitorAnimator\").getChild(\"UUID\").setString(box);\r\n    gdjs.evtTools.linkedObjects.linkObjects(runtimeScene, object, objects[0]);\r\n\r\n\r\n    object.setAngle(objectData.angle + objects[0].getAngle());\r\n    object.getVariables().get(\"__GDanitorAnimator\").getChild(\"IdleData\").getChild(\"Angle\").setNumber(objectData.angle);\r\n\r\n    object.setPosition(gdjs.evtTools.common.getXFromAngleAndDistance(gdjs.evtTools.common.angleBetweenPositions(0, 0, objectData.position.X * objects[0].getScaleX(), objectData.position.Y * objects[0].getScaleY()) + objects[0].getAngle(), gdjs.evtTools.common.distanceBetweenPositions(0, 0, objectData.position.X * objects[0].getScaleX(), objectData.position.Y * objects[0].getScaleY())) + objects[0].getX(), gdjs.evtTools.common.getYFromAngleAndDistance(gdjs.evtTools.common.angleBetweenPositions(0, 0, objectData.position.X * objects[0].getScaleX(), objectData.position.Y * objects[0].getScaleY()) + objects[0].getAngle(), gdjs.evtTools.common.distanceBetweenPositions(0, 0, objectData.position.X * objects[0].getScaleX(), objectData.position.Y * objects[0].getScaleY())) + objects[0].getY());\r\n    object.getVariables().get(\"__GDanitorAnimator\").getChild(\"IdleData\").getChild(\"X\").setNumber(objectData.position.X);\r\n    object.getVariables().get(\"__GDanitorAnimator\").getChild(\"IdleData\").getChild(\"Y\").setNumber(objectData.position.Y);\r\n\r\n    object.setHeight(objectData.height * objects[0].getScaleY());\r\n    object.setWidth(objectData.width * objects[0].getScaleX());\r\n    object.getVariables().get(\"__GDanitorAnimator\").getChild(\"IdleData\").getChild(\"Height\").setNumber(objectData.height);\r\n    object.getVariables().get(\"__GDanitorAnimator\").getChild(\"IdleData\").getChild(\"Width\").setNumber(objectData.width);\r\n\r\n    object.setOpacity(objectData.opacity * gdjs.evtTools.common.normalize(objects[0].getOpacity(), 0, 255));\r\n    object.getVariables().get(\"__GDanitorAnimator\").getChild(\"IdleData\").getChild(\"Opacity\").setNumber(objectData.opacity);\r\n\r\n    object.setZOrder(objectData.zOrder + objects[0].getZOrder());\r\n    object.getVariables().get(\"__GDanitorAnimator\").getChild(\"IdleData\").getChild(\"ZOrder\").setNumber(objectData.zOrder);\r\n\r\n    object.flipX(!!objectData.flippedHor);\r\n    object.flipY(!!objectData.flippedVer);\r\n    object.getVariables().get(\"__GDanitorAnimator\").getChild(\"IdleData\").getChild(\"FlippedHor\").setNumber(objectData.flippedHor);\r\n    object.getVariables().get(\"__GDanitorAnimator\").getChild(\"IdleData\").getChild(\"FlippedVer\").setNumber(objectData.flippedVer);\r\n}",
               "parameterObjects": "Object",
               "useStrict": true,
               "eventsSheetExpanded": true
@@ -241,7 +241,6 @@
                           "colorG": 176,
                           "colorR": 74,
                           "creationTime": 0,
-                          "folded": true,
                           "name": "Idle state updates",
                           "source": "",
                           "type": "BuiltinCommonInstructions::Group",
@@ -251,6 +250,7 @@
                               "colorG": 176,
                               "colorR": 74,
                               "creationTime": 0,
+                              "folded": true,
                               "name": "Idle state (when there is no tween playing)",
                               "source": "",
                               "type": "BuiltinCommonInstructions::Group",
@@ -421,6 +421,22 @@
                                   ]
                                 },
                                 {
+                                  "type": "BuiltinCommonInstructions::Standard",
+                                  "conditions": [],
+                                  "actions": [
+                                    {
+                                      "type": {
+                                        "value": "ChangePlan"
+                                      },
+                                      "parameters": [
+                                        "Parts",
+                                        "=",
+                                        "Parts.Variable(__GDanitorAnimator.IdleData.ZOrder)"
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
                                   "colorB": 228,
                                   "colorG": 176,
                                   "colorR": 74,
@@ -535,6 +551,7 @@
                           "parameters": []
                         },
                         {
+                          "folded": true,
                           "type": "BuiltinCommonInstructions::ForEachChildVariable",
                           "iterableVariableName": "__GDanitorAnimator.PlayingNodeList",
                           "valueIteratorVariableName": "__GDanitorAnimator.Node",
@@ -573,6 +590,7 @@
                                       "colorG": 176,
                                       "colorR": 74,
                                       "creationTime": 0,
+                                      "folded": true,
                                       "name": "Position",
                                       "source": "",
                                       "type": "BuiltinCommonInstructions::Group",
@@ -756,6 +774,32 @@
                                             "VariableString(__GDanitorAnimator.Node.anm.easing)",
                                             "Variable(__GDanitorAnimator.Node.anm.timeline.length)*1000",
                                             ""
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "BuiltinCommonInstructions::Standard",
+                                      "conditions": [
+                                        {
+                                          "type": {
+                                            "value": "SceneVariableAsBoolean"
+                                          },
+                                          "parameters": [
+                                            "__GDanitorAnimator.Node.active.zOrder",
+                                            "True"
+                                          ]
+                                        }
+                                      ],
+                                      "actions": [
+                                        {
+                                          "type": {
+                                            "value": "ChangePlan"
+                                          },
+                                          "parameters": [
+                                            "Parts",
+                                            "=",
+                                            "Variable(__GDanitorAnimator.Node.anm.zOrder)"
                                           ]
                                         }
                                       ]
@@ -975,6 +1019,7 @@
                           "colorG": 176,
                           "colorR": 74,
                           "creationTime": 0,
+                          "folded": true,
                           "name": "Idle state (when there is a tween playing)",
                           "source": "",
                           "type": "BuiltinCommonInstructions::Group",
@@ -1150,7 +1195,19 @@
                             {
                               "type": "BuiltinCommonInstructions::Standard",
                               "conditions": [],
-                              "actions": []
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "ModVarObjet"
+                                  },
+                                  "parameters": [
+                                    "Parts",
+                                    "__GDanitorAnimator.IdleData.ZOrder",
+                                    "=",
+                                    "Parts.ZOrder()"
+                                  ]
+                                }
+                              ]
                             }
                           ],
                           "parameters": []
@@ -1321,23 +1378,6 @@
                               ]
                             },
                             {
-                              "disabled": true,
-                              "type": "BuiltinCommonInstructions::Standard",
-                              "conditions": [],
-                              "actions": [
-                                {
-                                  "type": {
-                                    "value": "MettreY"
-                                  },
-                                  "parameters": [
-                                    "Parts",
-                                    "=",
-                                    "Parts.Variable(__GDanitorAnimator.IdleData.Y)+Object.Y()"
-                                  ]
-                                }
-                              ]
-                            },
-                            {
                               "folded": true,
                               "type": "BuiltinCommonInstructions::Standard",
                               "conditions": [],
@@ -1419,6 +1459,38 @@
                               ]
                             },
                             {
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "ChangeLayer"
+                                  },
+                                  "parameters": [
+                                    "Parts",
+                                    "Object.Layer()"
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "ChangePlan"
+                                  },
+                                  "parameters": [
+                                    "Parts",
+                                    "=",
+                                    "Parts.Variable(__GDanitorAnimator.IdleData.ZOrder)+Object.ZOrder()"
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "folded": true,
                               "type": "BuiltinCommonInstructions::Standard",
                               "conditions": [],
                               "actions": [
@@ -1513,6 +1585,7 @@
                               ]
                             },
                             {
+                              "folded": true,
                               "type": "BuiltinCommonInstructions::Standard",
                               "conditions": [],
                               "actions": [
@@ -1862,7 +1935,7 @@
               "events": [
                 {
                   "type": "BuiltinCommonInstructions::JsCode",
-                  "inlineCode": "for (const objectName in objects) {\r\n    const object = objects[objectName];\r\n    object.getVariables().get(\"__GDanitorAnimator\").getChild(\"IdleData\").getChild(\"Angle\").setNumber(object.getAngle());\r\n\r\n    object.getVariables().get(\"__GDanitorAnimator\").getChild(\"IdleData\").getChild(\"X\").setNumber(object.getX());\r\n    object.getVariables().get(\"__GDanitorAnimator\").getChild(\"IdleData\").getChild(\"Y\").setNumber(object.getY());\r\n\r\n    object.getVariables().get(\"__GDanitorAnimator\").getChild(\"IdleData\").getChild(\"Height\").setNumber(object.getHeight());\r\n    object.getVariables().get(\"__GDanitorAnimator\").getChild(\"IdleData\").getChild(\"Width\").setNumber(object.getWidth());\r\n\r\n    object.getVariables().get(\"__GDanitorAnimator\").getChild(\"IdleData\").getChild(\"Opacity\").setNumber(object.getOpacity());\r\n}",
+                  "inlineCode": "for (const objectName in objects) {\r\n    const object = objects[objectName];\r\n    object.getVariables().get(\"__GDanitorAnimator\").getChild(\"IdleData\").getChild(\"Angle\").setNumber(object.getAngle());\r\n\r\n    object.getVariables().get(\"__GDanitorAnimator\").getChild(\"IdleData\").getChild(\"X\").setNumber(object.getX());\r\n    object.getVariables().get(\"__GDanitorAnimator\").getChild(\"IdleData\").getChild(\"Y\").setNumber(object.getY());\r\n\r\n    object.getVariables().get(\"__GDanitorAnimator\").getChild(\"IdleData\").getChild(\"Height\").setNumber(object.getHeight());\r\n    object.getVariables().get(\"__GDanitorAnimator\").getChild(\"IdleData\").getChild(\"Width\").setNumber(object.getWidth());\r\n\r\n    object.getVariables().get(\"__GDanitorAnimator\").getChild(\"IdleData\").getChild(\"Opacity\").setNumber(object.getOpacity());\r\n    object.getVariables().get(\"__GDanitorAnimator\").getChild(\"IdleData\").getChild(\"ZOrder\").setNumber(object.getZOrder())\r\n}",
                   "parameterObjects": "Part",
                   "useStrict": true,
                   "eventsSheetExpanded": true
