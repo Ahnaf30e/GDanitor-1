@@ -942,7 +942,7 @@
                 "",
                 "\"scroll\"",
                 "CameraX()",
-                "clamp(CameraY()+MouseWheelDelta()*-2, 540, Variable(listLimit))",
+                "clamp(CameraY()+MouseWheelDelta()*-3, 540, Variable(listLimit))",
                 "\"\"",
                 "250",
                 "\"easeOutQuad\""
