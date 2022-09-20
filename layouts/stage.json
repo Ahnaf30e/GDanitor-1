@@ -18,7 +18,7 @@
     "gridColor": 10401023,
     "gridAlpha": 0.8,
     "snap": true,
-    "zoomFactor": 0.7250000000000008,
+    "zoomFactor": 0.42500000000000066,
     "windowMask": false
   },
   "objectsGroups": [
@@ -363,6 +363,36 @@
       "x": 32,
       "y": 640,
       "zOrder": 20,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "height": 32,
+      "layer": "GUI",
+      "name": "projectName",
+      "persistentUuid": "c02f997e-60e3-44b3-a2a2-50516a4471d9",
+      "width": 352,
+      "x": 576,
+      "y": 704,
+      "zOrder": 21,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "height": 19,
+      "layer": "GUI",
+      "name": "projectNameGuide",
+      "persistentUuid": "56d91c26-f232-4ff3-bcb7-2756d6358cca",
+      "width": 96,
+      "x": 480,
+      "y": 704,
+      "zOrder": 22,
       "numberProperties": [],
       "stringProperties": [],
       "initialVariables": []
@@ -773,6 +803,51 @@
           ]
         }
       ]
+    },
+    {
+      "assetStoreId": "",
+      "name": "projectName",
+      "tags": "",
+      "type": "TextInput::TextInputObject",
+      "variables": [],
+      "effects": [],
+      "behaviors": [],
+      "content": {
+        "initialValue": "Untitled",
+        "placeholder": "Project Name",
+        "fontResourceName": "Minecraft.ttf",
+        "fontSize": 32,
+        "inputType": "text",
+        "textColor": "255;255;255",
+        "fillColor": "35;35;53",
+        "fillOpacity": 255,
+        "borderColor": "35;35;53",
+        "borderOpacity": 255,
+        "borderWidth": 2,
+        "readOnly": false,
+        "disabled": false
+      }
+    },
+    {
+      "assetStoreId": "",
+      "bold": false,
+      "italic": false,
+      "name": "projectNameGuide",
+      "smoothed": true,
+      "tags": "",
+      "type": "TextObject::Text",
+      "underlined": false,
+      "variables": [],
+      "effects": [],
+      "behaviors": [],
+      "string": "Project Name:",
+      "font": "Minecraft.ttf",
+      "characterSize": 16,
+      "color": {
+        "b": 255,
+        "g": 255,
+        "r": 255
+      }
     },
     {
       "assetStoreId": "",
@@ -1802,6 +1877,7 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
+          "folded": true,
           "name": "Boxes",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -4423,6 +4499,7 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
+          "folded": true,
           "name": "Box supporters",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -6237,7 +6314,6 @@
                   "parameters": []
                 },
                 {
-                  "folded": true,
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [],
                   "actions": [
@@ -6635,7 +6711,6 @@
                       "colorG": 176,
                       "colorR": 74,
                       "creationTime": 0,
-                      "folded": true,
                       "name": "Project settings and saving",
                       "source": "",
                       "type": "BuiltinCommonInstructions::Group",
@@ -6707,6 +6782,16 @@
                                 "value": "ModVarSceneTxt"
                               },
                               "parameters": [
+                                "saveData.settings.name",
+                                "=",
+                                "projectName.Text()"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "ModVarSceneTxt"
+                              },
+                              "parameters": [
                                 "saveData.settings.version",
                                 "=",
                                 "GlobalVariableString(version[0])+\".\"+GlobalVariableString(version[1])+\".\"+GlobalVariableString(version[2])"
@@ -6758,6 +6843,7 @@
               ]
             },
             {
+              "folded": true,
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
                 {
@@ -6800,6 +6886,7 @@
                   ]
                 },
                 {
+                  "folded": true,
                   "type": "BuiltinCommonInstructions::ForEach",
                   "object": "box",
                   "conditions": [],
@@ -7426,7 +7513,6 @@
                       "colorG": 176,
                       "colorR": 74,
                       "creationTime": 0,
-                      "folded": true,
                       "name": "Project settings and saving",
                       "source": "",
                       "type": "BuiltinCommonInstructions::Group",
@@ -7498,6 +7584,16 @@
                                 "value": "ModVarSceneTxt"
                               },
                               "parameters": [
+                                "saveData.settings.name",
+                                "=",
+                                "projectName.Text()"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "ModVarSceneTxt"
+                              },
+                              "parameters": [
                                 "saveData.settings.version",
                                 "=",
                                 "GlobalVariableString(version[0])+\".\"+GlobalVariableString(version[1])+\".\"+GlobalVariableString(version[2])"
@@ -7549,6 +7645,7 @@
               ]
             },
             {
+              "folded": true,
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
                 {
@@ -7566,7 +7663,6 @@
               "actions": [],
               "events": [
                 {
-                  "folded": true,
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [
                     {
@@ -8045,6 +8141,16 @@
                                 "value": "ModVarSceneTxt"
                               },
                               "parameters": [
+                                "saveData.settings.name",
+                                "=",
+                                "projectName.Text()"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "ModVarSceneTxt"
+                              },
+                              "parameters": [
                                 "saveData.settings.version",
                                 "=",
                                 "GlobalVariableString(version[0])+\".\"+GlobalVariableString(version[1])+\".\"+GlobalVariableString(version[2])"
@@ -8113,7 +8219,6 @@
               ]
             },
             {
-              "folded": true,
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
                 {
@@ -8523,7 +8628,6 @@
                   "colorG": 176,
                   "colorR": 74,
                   "creationTime": 0,
-                  "folded": true,
                   "name": "Project settings and saving",
                   "source": "",
                   "type": "BuiltinCommonInstructions::Group",
@@ -8595,6 +8699,16 @@
                             "value": "ModVarSceneTxt"
                           },
                           "parameters": [
+                            "saveData.settings.name",
+                            "=",
+                            "projectName.Text()"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ModVarSceneTxt"
+                          },
+                          "parameters": [
                             "saveData.settings.version",
                             "=",
                             "GlobalVariableString(version[0])+\".\"+GlobalVariableString(version[1])+\".\"+GlobalVariableString(version[2])"
@@ -8654,7 +8768,6 @@
               ]
             },
             {
-              "folded": true,
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
                 {
@@ -8669,7 +8782,6 @@
               "actions": [],
               "events": [
                 {
-                  "folded": true,
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [
                     {
@@ -8715,6 +8827,16 @@
                             "timeLength",
                             "=",
                             "VariableString(saveData.settings.time)"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "TextInput::TextInputObject::SetText"
+                          },
+                          "parameters": [
+                            "projectName",
+                            "=",
+                            "VariableString(saveData.settings.name)"
                           ]
                         }
                       ]

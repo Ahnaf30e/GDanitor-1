@@ -534,7 +534,6 @@
       "type": "BuiltinCommonInstructions::Group",
       "events": [
         {
-          "folded": true,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
             {
@@ -719,12 +718,21 @@
                         },
                         {
                           "type": {
+                            "value": "BBText::SetWordWrap"
+                          },
+                          "parameters": [
+                            "listObjectText",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
                             "value": "BBText::SetBBText"
                           },
                           "parameters": [
                             "listObjectText",
                             "=",
-                            "\"[size=32]\"+VariableString(saveData.settings.saveTime)+\"[/size]\"+NewLine()+VariableString(saveData.settings.saveTimeSmall)+\",  [i]Version: \"+VariableString(saveData.settings.version)+\"[/i]\""
+                            "\"[size=32][color=#477d85][spacing=2][i]\"+VariableString(saveData.settings.name)+\": [/i][/spacing][/color][/size][size=24]\"+VariableString(saveData.settings.saveTime)+\"[/size]\"+NewLine()+VariableString(saveData.settings.saveTimeSmall)+\",  [i]Version: \"+VariableString(saveData.settings.version)+\"[/i]\""
                           ]
                         },
                         {
@@ -756,6 +764,53 @@
                             "",
                             "listObjectText",
                             "listObject"
+                          ]
+                        }
+                      ],
+                      "events": [
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "BuiltinCommonInstructions::Or"
+                              },
+                              "parameters": [],
+                              "subInstructions": [
+                                {
+                                  "type": {
+                                    "value": "VarSceneTxt"
+                                  },
+                                  "parameters": [
+                                    "saveData.settings.name",
+                                    "=",
+                                    "\"0\""
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "VarSceneTxt"
+                                  },
+                                  "parameters": [
+                                    "saveData.settings.name",
+                                    "=",
+                                    "\"\""
+                                  ]
+                                }
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "BBText::SetBBText"
+                              },
+                              "parameters": [
+                                "listObjectText",
+                                "=",
+                                "\"[size=32]\"+VariableString(saveData.settings.saveTime)+\"[/size]\"+NewLine()+VariableString(saveData.settings.saveTimeSmall)+\",  [i]Version: \"+VariableString(saveData.settings.version)+\"[/i]\""
+                              ]
+                            }
                           ]
                         }
                       ]
