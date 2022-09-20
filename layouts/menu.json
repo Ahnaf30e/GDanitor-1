@@ -515,7 +515,7 @@
       "colorG": 226,
       "colorR": 235,
       "creationTime": 0,
-      "name": "damn all of em",
+      "name": "All events",
       "source": "",
       "type": "BuiltinCommonInstructions::Group",
       "events": [
@@ -585,7 +585,7 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
-          "name": "plates",
+          "name": "Plate (the thing for buttons)",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
           "events": [

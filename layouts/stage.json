@@ -1802,6 +1802,7 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
+          "folded": true,
           "name": "Boxes",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -6774,7 +6775,6 @@
               ]
             },
             {
-              "folded": true,
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
                 {
@@ -6817,14 +6817,21 @@
                   ]
                 },
                 {
-                  "folded": true,
                   "type": "BuiltinCommonInstructions::ForEach",
                   "object": "box",
                   "conditions": [],
-                  "actions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "VariableClearChildren"
+                      },
+                      "parameters": [
+                        "nodeList"
+                      ]
+                    }
+                  ],
                   "events": [
                     {
-                      "folded": true,
                       "type": "BuiltinCommonInstructions::Standard",
                       "conditions": [],
                       "actions": [],
@@ -6848,7 +6855,6 @@
                           "actions": [],
                           "events": [
                             {
-                              "folded": true,
                               "type": "BuiltinCommonInstructions::ForEach",
                               "object": "node",
                               "conditions": [],
@@ -6910,7 +6916,6 @@
                           "colorG": 176,
                           "colorR": 74,
                           "creationTime": 0,
-                          "folded": true,
                           "name": "UUID, checking if another object also has the same UUID",
                           "source": "",
                           "type": "BuiltinCommonInstructions::Group",
@@ -9374,7 +9379,7 @@
           "colorR": 74,
           "creationTime": 0,
           "folded": true,
-          "name": "Boxes, For each node",
+          "name": "Boxes, For each node event",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
           "events": [
