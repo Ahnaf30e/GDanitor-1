@@ -1,0 +1,454 @@
+{
+  "b": 209,
+  "disableInputWhenNotFocused": true,
+  "mangledName": "Bad_32example_32scene",
+  "name": "Bad example scene",
+  "r": 209,
+  "standardSortMethod": true,
+  "stopSoundsOnStartup": true,
+  "title": "",
+  "v": 209,
+  "uiSettings": {
+    "grid": false,
+    "gridType": "rectangular",
+    "gridWidth": 32,
+    "gridHeight": 32,
+    "gridOffsetX": 0,
+    "gridOffsetY": 0,
+    "gridColor": 10401023,
+    "gridAlpha": 0.8,
+    "snap": false,
+    "zoomFactor": 0.6249999999999999,
+    "windowMask": false
+  },
+  "objectsGroups": [
+    {
+      "name": "Group",
+      "objects": [
+        {
+          "name": "jcop"
+        }
+      ]
+    }
+  ],
+  "variables": [],
+  "instances": [
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "",
+      "name": "dfs",
+      "persistentUuid": "19cd6f7b-46cc-48f9-8139-9738ef4de6b7",
+      "width": 0,
+      "x": 49,
+      "y": 15,
+      "zOrder": 1,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    }
+  ],
+  "objects": [
+    {
+      "assetStoreId": "",
+      "name": "NewSprite",
+      "tags": "",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [],
+      "effects": [],
+      "behaviors": [
+        {
+          "name": "Draggable",
+          "type": "DraggableBehavior::Draggable",
+          "checkCollisionMask": true
+        },
+        {
+          "name": "ObjectAnimator",
+          "type": "GDaitorAnimator::ObjectAnimator",
+          "ModelJSON": "{\"box\":{\"1\":{\"anm\":{\"object\":{\"objName\":\"jcop\",\"UUID\":\"1\",\"imgURL\":\"\"},\"position\":{\"X\":-146.7063197026023,\"Y\":-1.2490706319701417},\"width\":128,\"height\":128,\"angle\":0,\"opacity\":255,\"zOrder\":10,\"flippedHor\":0,\"flippedVer\":0},\"node\":[]},\"2\":{\"anm\":{\"object\":{\"objName\":\"jcop\",\"UUID\":\"2\",\"imgURL\":\"\"},\"position\":{\"X\":147.717472118959,\"Y\":9.457249070631974},\"width\":128,\"height\":128,\"angle\":0,\"opacity\":255,\"zOrder\":10,\"flippedHor\":0,\"flippedVer\":0},\"node\":[]}}}",
+          "AnimationsJSON": "{\"aaa\":{\"settings\":{\"loop\":true,\"time\":0.5},\"box\":{\"1\":[{\"anm\":{\"easing\":\"linear\",\"position\":{\"X\":-237.71003717472126,\"Y\":-15.970260223048285},\"height\":128,\"width\":128,\"angle\":0,\"opacity\":255,\"zOrder\":10,\"flippedHor\":0,\"flippedVer\":0,\"sprite\":{\"animation\":0},\"timeline\":{\"start\":0.006067700886474118,\"length\":0.23162710895052901}},\"active\":{\"easing\":1,\"position\":{\"X\":1,\"Y\":1},\"height\":1,\"width\":1,\"angle\":1,\"opacity\":0,\"zOrder\":1,\"flippedHor\":0,\"flippedVer\":0,\"sprite\":{\"animation\":0}}},{\"anm\":{\"easing\":\"linear\",\"position\":{\"X\":237.38289962825252,\"Y\":-30.691449814126372},\"height\":128,\"width\":128,\"angle\":0,\"opacity\":255,\"zOrder\":10,\"flippedHor\":0,\"flippedVer\":0,\"sprite\":{\"animation\":0},\"timeline\":{\"start\":0.26624606805833567,\"length\":0.22036745782098943}},\"active\":{\"easing\":1,\"position\":{\"X\":1,\"Y\":1},\"height\":1,\"width\":1,\"angle\":1,\"opacity\":0,\"zOrder\":1,\"flippedHor\":0,\"flippedVer\":0,\"sprite\":{\"animation\":0}}}],\"2\":[{\"anm\":{\"easing\":\"linear\",\"position\":{\"X\":185.18959107806677,\"Y\":-61.472118959107775},\"height\":128,\"width\":128,\"angle\":0,\"opacity\":255,\"zOrder\":10,\"flippedHor\":0,\"flippedVer\":0,\"sprite\":{\"animation\":0},\"timeline\":{\"start\":0.004459179296539914,\"length\":0.23162710895052901}},\"active\":{\"easing\":1,\"position\":{\"X\":1,\"Y\":1},\"height\":1,\"width\":1,\"angle\":1,\"opacity\":0,\"zOrder\":1,\"flippedHor\":0,\"flippedVer\":0,\"sprite\":{\"animation\":0},\"timeline\":{\"start\":0,\"length\":0}}},{\"anm\":{\"easing\":\"linear\",\"position\":{\"X\":-350.1263940520447,\"Y\":14.810408921933117},\"height\":128,\"width\":128,\"angle\":0,\"opacity\":255,\"zOrder\":10,\"flippedHor\":0,\"flippedVer\":0,\"sprite\":{\"animation\":0},\"timeline\":{\"start\":0.26745245925078637,\"length\":0.22036745782098943}},\"active\":{\"easing\":1,\"position\":{\"X\":1,\"Y\":1},\"height\":1,\"width\":1,\"angle\":1,\"opacity\":0,\"zOrder\":1,\"flippedHor\":0,\"flippedVer\":0,\"sprite\":{\"animation\":0},\"timeline\":{\"start\":0,\"length\":0}}}]}}}",
+          "Tween": "Tween"
+        },
+        {
+          "name": "Tween",
+          "type": "Tween::TweenBehavior"
+        }
+      ],
+      "animations": [
+        {
+          "name": "NewSprite",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.07999999821186066,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "assets\\NewSprite-1-1.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 8,
+                    "y": 8
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "assetStoreId": "",
+      "name": "jcop",
+      "tags": "",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [],
+      "effects": [],
+      "behaviors": [
+        {
+          "name": "Tween",
+          "type": "Tween::TweenBehavior"
+        }
+      ],
+      "animations": [
+        {
+          "name": "plate",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.07999999821186066,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "buttonzx\\plate-1.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 16,
+                    "y": 16
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "assetStoreId": "",
+      "name": "dfs",
+      "tags": "",
+      "type": "PrimitiveDrawing::Drawer",
+      "variables": [],
+      "effects": [],
+      "behaviors": [],
+      "fillOpacity": 255,
+      "outlineSize": 1,
+      "outlineOpacity": 255,
+      "fillColor": {
+        "b": 255,
+        "g": 255,
+        "r": 255
+      },
+      "outlineColor": {
+        "b": 0,
+        "g": 0,
+        "r": 0
+      },
+      "absoluteCoordinates": true,
+      "clearBetweenFrames": true
+    },
+    {
+      "assetStoreId": "",
+      "name": "player",
+      "tags": "",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [],
+      "effects": [],
+      "behaviors": [
+        {
+          "name": "Physics2",
+          "type": "Physics2::Physics2Behavior",
+          "bodyType": "Dynamic",
+          "bullet": false,
+          "fixedRotation": false,
+          "canSleep": true,
+          "shape": "Box",
+          "shapeDimensionA": 0,
+          "shapeDimensionB": 0,
+          "shapeOffsetX": 0,
+          "shapeOffsetY": 0,
+          "polygonOrigin": "Center",
+          "vertices": [],
+          "density": 1,
+          "friction": 0.3,
+          "restitution": 0.1,
+          "linearDamping": 0.1,
+          "angularDamping": 0.1,
+          "gravityScale": 1,
+          "layers": 1,
+          "masks": 1
+        }
+      ],
+      "animations": [
+        {
+          "name": "NewSprite2",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.07999999821186066,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "NewSprite2-1.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "events": [
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [],
+      "actions": [
+        {
+          "type": {
+            "value": "GDaitorAnimator::ObjectAnimator::AnimateModel"
+          },
+          "parameters": [
+            "NewSprite",
+            "ObjectAnimator",
+            "Group",
+            "Tween",
+            ""
+          ]
+        },
+        {
+          "type": {
+            "value": "SetCameraCenterX"
+          },
+          "parameters": [
+            "",
+            "=",
+            "0",
+            "\"\"",
+            "0"
+          ]
+        },
+        {
+          "type": {
+            "value": "SetCameraCenterY"
+          },
+          "parameters": [
+            "",
+            "=",
+            "0",
+            "\"\"",
+            "0"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "value": "DepartScene"
+          },
+          "parameters": [
+            ""
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "value": "JSONToGlobalVariableStructure"
+          },
+          "parameters": [
+            "\"[\\\"January\\\",\\\"February\\\",\\\"March\\\",\\\"April\\\",\\\"May\\\",\\\"June\\\",\\\"July\\\",\\\"August\\\",\\\"September\\\",\\\"October\\\",\\\"November\\\",\\\"December\\\"]\"",
+            "months"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "value": "MouseButtonReleased"
+          },
+          "parameters": [
+            "",
+            "Right"
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "value": "Create"
+          },
+          "parameters": [
+            "",
+            "NewSprite",
+            "MouseX()",
+            "MouseY()",
+            ""
+          ]
+        },
+        {
+          "type": {
+            "value": "ChangeScale"
+          },
+          "parameters": [
+            "NewSprite",
+            "=",
+            "0.45"
+          ]
+        },
+        {
+          "type": {
+            "value": "GDaitorAnimator::ObjectAnimator::CreateModel"
+          },
+          "parameters": [
+            "NewSprite",
+            "ObjectAnimator",
+            ""
+          ]
+        }
+      ]
+    },
+    {
+      "disabled": true,
+      "type": "BuiltinCommonInstructions::ForEach",
+      "object": "NewSprite",
+      "conditions": [],
+      "actions": [],
+      "events": [
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": [
+            {
+              "type": {
+                "value": "LinkedObjects::PickObjectsLinkedTo"
+              },
+              "parameters": [
+                "",
+                "jcop",
+                "NewSprite",
+                ""
+              ]
+            }
+          ],
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::ForEach",
+              "object": "jcop",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "PrimitiveDrawing::LineV2"
+                  },
+                  "parameters": [
+                    "dfs",
+                    "NewSprite.X()",
+                    "NewSprite.Y()",
+                    "jcop.X()",
+                    "jcop.Y()",
+                    "7"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [],
+      "actions": []
+    }
+  ],
+  "layers": [
+    {
+      "ambientLightColorB": 9671608,
+      "ambientLightColorG": 150995054,
+      "ambientLightColorR": 1869182049,
+      "followBaseLayerCamera": false,
+      "isLightingLayer": false,
+      "name": "",
+      "visibility": true,
+      "cameras": [
+        {
+          "defaultSize": true,
+          "defaultViewport": true,
+          "height": 0,
+          "viewportBottom": 1,
+          "viewportLeft": 0,
+          "viewportRight": 1,
+          "viewportTop": 0,
+          "width": 0
+        }
+      ],
+      "effects": []
+    }
+  ],
+  "behaviorsSharedData": [
+    {
+      "name": "ObjectAnimator",
+      "type": "GDaitorAnimator::ObjectAnimator"
+    },
+    {
+      "name": "Physics2",
+      "type": "Physics2::Physics2Behavior"
+    },
+    {
+      "name": "Tween",
+      "type": "Tween::TweenBehavior"
+    }
+  ]
+}
