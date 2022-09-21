@@ -771,6 +771,60 @@
         "name": "assets\\NewSprite-1-1.png",
         "smoothed": false,
         "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/example_assets/plateform.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\example_assets\\plateform.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/example_assets/NewSprite-1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\example_assets\\NewSprite-1.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/example_assets/plateformerMan.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\example_assets\\plateformerMan.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/example_assets/plateformerHand.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\example_assets\\plateformerHand.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/example_assets/plateformerLeg.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\example_assets\\plateformerLeg.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "buttonzx/movedrag.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "buttonzx\\movedrag.png",
+        "smoothed": false,
+        "userAdded": false
       }
     ],
     "resourceFolders": []
@@ -826,6 +880,10 @@
     {
       "__REFERENCE_TO_SPLIT_OBJECT": true,
       "referenceTo": "/layouts/bad-example-scene"
+    },
+    {
+      "__REFERENCE_TO_SPLIT_OBJECT": true,
+      "referenceTo": "/layouts/plateformer"
     }
   ],
   "externalEvents": [
@@ -839,6 +897,10 @@
     }
   ],
   "eventsFunctionsExtensions": [
+    {
+      "__REFERENCE_TO_SPLIT_OBJECT": true,
+      "referenceTo": "/eventsFunctionsExtensions/mousepointerlock"
+    },
     {
       "__REFERENCE_TO_SPLIT_OBJECT": true,
       "referenceTo": "/eventsFunctionsExtensions/spritemasking"

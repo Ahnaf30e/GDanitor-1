@@ -18,7 +18,7 @@
     "gridColor": 10401023,
     "gridAlpha": 0.8,
     "snap": true,
-    "zoomFactor": 0.42500000000000066,
+    "zoomFactor": 0.7250000000000009,
     "windowMask": false
   },
   "objectsGroups": [
@@ -393,6 +393,21 @@
       "x": 480,
       "y": 704,
       "zOrder": 22,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "height": 128,
+      "layer": "GUI",
+      "name": "moveEverythingTool",
+      "persistentUuid": "ae358552-0705-40ab-aef1-f148a1ef62da",
+      "width": 128,
+      "x": 1728,
+      "y": 928,
+      "zOrder": 23,
       "numberProperties": [],
       "stringProperties": [],
       "initialVariables": []
@@ -784,6 +799,47 @@
                 {
                   "hasCustomCollisionMask": false,
                   "image": "buttonzx\\boxdrag.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "assetStoreId": "",
+      "name": "moveEverythingTool",
+      "tags": "",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [],
+      "effects": [],
+      "behaviors": [],
+      "animations": [
+        {
+          "name": "pen",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.07999999821186066,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "buttonzx\\movedrag.png",
                   "points": [],
                   "originPoint": {
                     "name": "origine",
@@ -5972,6 +6028,7 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
+          "folded": true,
           "name": "Saving the project",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -9277,7 +9334,6 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
-          "folded": true,
           "name": "Tools and buttons for actions",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -9468,6 +9524,88 @@
                       "parameters": [
                         "penTool",
                         "on"
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "parameters": []
+            },
+            {
+              "colorB": 228,
+              "colorG": 176,
+              "colorR": 74,
+              "creationTime": 0,
+              "name": "Move \"everything single x and y thing that exists\" tool",
+              "source": "",
+              "type": "BuiltinCommonInstructions::Group",
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "Click::click"
+                      },
+                      "parameters": [
+                        "",
+                        "Left",
+                        "moveEverythingTool",
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetSceneVariableAsBoolean"
+                      },
+                      "parameters": [
+                        "movingEverything",
+                        "True"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "MousePointerLock::RequestPointerLock"
+                      },
+                      "parameters": [
+                        "",
+                        ""
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "MouseButtonReleased"
+                      },
+                      "parameters": [
+                        "",
+                        "Left"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetSceneVariableAsBoolean"
+                      },
+                      "parameters": [
+                        "movingEverything",
+                        "False"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "MousePointerLock::ExitPointerLock"
+                      },
+                      "parameters": [
+                        "",
+                        ""
                       ]
                     }
                   ]
@@ -9908,6 +10046,41 @@
                             }
                           ],
                           "parameters": []
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "SceneVariableAsBoolean"
+                              },
+                              "parameters": [
+                                "movingEverything",
+                                "True"
+                              ]
+                            }
+                          ],
+                          "actions": [],
+                          "events": [
+                            {
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "MettreXY"
+                                  },
+                                  "parameters": [
+                                    "box",
+                                    "+",
+                                    "MousePointerLock::MovementX()",
+                                    "+",
+                                    "MousePointerLock::MovementY()"
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
                         }
                       ]
                     }
@@ -9947,7 +10120,6 @@
                           "actions": [],
                           "events": [
                             {
-                              "folded": true,
                               "type": "BuiltinCommonInstructions::Standard",
                               "conditions": [
                                 {
@@ -9963,6 +10135,51 @@
                               ],
                               "actions": [],
                               "events": [
+                                {
+                                  "type": "BuiltinCommonInstructions::Standard",
+                                  "conditions": [
+                                    {
+                                      "type": {
+                                        "value": "SceneVariableAsBoolean"
+                                      },
+                                      "parameters": [
+                                        "movingEverything",
+                                        "True"
+                                      ]
+                                    }
+                                  ],
+                                  "actions": [],
+                                  "events": [
+                                    {
+                                      "type": "BuiltinCommonInstructions::Standard",
+                                      "conditions": [],
+                                      "actions": [
+                                        {
+                                          "type": {
+                                            "value": "ModVarObjet"
+                                          },
+                                          "parameters": [
+                                            "node",
+                                            "data.anm.position.X",
+                                            "+",
+                                            "MousePointerLock::MovementX()"
+                                          ]
+                                        },
+                                        {
+                                          "type": {
+                                            "value": "ModVarObjet"
+                                          },
+                                          "parameters": [
+                                            "node",
+                                            "data.anm.position.Y",
+                                            "+",
+                                            "MousePointerLock::MovementY()"
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
                                 {
                                   "colorB": 228,
                                   "colorG": 176,
@@ -12746,6 +12963,7 @@
               "colorG": 176,
               "colorR": 74,
               "creationTime": 0,
+              "folded": true,
               "name": "Moving nodes",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
@@ -12966,6 +13184,7 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
+          "folded": true,
           "name": "UI",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
