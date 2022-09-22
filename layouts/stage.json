@@ -18,7 +18,7 @@
     "gridColor": 10401023,
     "gridAlpha": 0.8,
     "snap": true,
-    "zoomFactor": 0.8499999999999995,
+    "zoomFactor": 1.175,
     "windowMask": false
   },
   "objectsGroups": [
@@ -27,6 +27,9 @@
       "objects": [
         {
           "name": "penTool"
+        },
+        {
+          "name": "timeCursorTool"
         }
       ]
     },
@@ -408,6 +411,36 @@
       "x": 1728,
       "y": 800,
       "zOrder": 23,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "height": 64,
+      "layer": "GUI",
+      "name": "moveNodeTool",
+      "persistentUuid": "28e9cc96-6799-4ac2-8066-96ba15cf2502",
+      "width": 64,
+      "x": 1824,
+      "y": 800,
+      "zOrder": 24,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "height": 32,
+      "layer": "GUI",
+      "name": "timeCursorTool",
+      "persistentUuid": "f0723133-9e1a-4fb4-ada3-dbb1edbf5c92",
+      "width": 32,
+      "x": 1856,
+      "y": 736,
+      "zOrder": 25,
       "numberProperties": [],
       "stringProperties": [],
       "initialVariables": []
@@ -810,6 +843,47 @@
     },
     {
       "assetStoreId": "",
+      "name": "timeCursorTool",
+      "tags": "",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [],
+      "effects": [],
+      "behaviors": [],
+      "animations": [
+        {
+          "name": "pen",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.07999999821186066,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "buttonzx\\tweenframe.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "assetStoreId": "",
       "name": "boxTool",
       "tags": "",
       "type": "Sprite",
@@ -870,6 +944,47 @@
                 {
                   "hasCustomCollisionMask": false,
                   "image": "buttonzx\\movedrag.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "assetStoreId": "",
+      "name": "moveNodeTool",
+      "tags": "",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [],
+      "effects": [],
+      "behaviors": [],
+      "animations": [
+        {
+          "name": "pen",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.07999999821186066,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "buttonzx\\nodedrag.png",
                   "points": [],
                   "originPoint": {
                     "name": "origine",
@@ -4488,7 +4603,6 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
-          "folded": true,
           "name": "Nodes",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -4498,6 +4612,7 @@
               "colorG": 176,
               "colorR": 74,
               "creationTime": 0,
+              "folded": true,
               "name": "Selecting nodes",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
@@ -4621,6 +4736,7 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
+          "folded": true,
           "name": "Box supporters",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -6115,7 +6231,6 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
-          "folded": true,
           "name": "Saving the project",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -8363,6 +8478,7 @@
               ]
             },
             {
+              "folded": true,
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
                 {
@@ -8912,6 +9028,7 @@
               ]
             },
             {
+              "folded": true,
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
                 {
@@ -9421,13 +9538,11 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
-          "folded": true,
           "name": "Tools and buttons for actions",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
           "events": [
             {
-              "folded": true,
               "type": "BuiltinCommonInstructions::ForEach",
               "object": "tools",
               "conditions": [],
@@ -9583,7 +9698,6 @@
               "colorG": 176,
               "colorR": 74,
               "creationTime": 0,
-              "folded": true,
               "name": "Pen tool (tool for creating nodes easily)",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
@@ -9599,7 +9713,18 @@
                       "parameters": [
                         "",
                         "Left",
-                        "penTool",
+                        "tools",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SourisSurObjet"
+                      },
+                      "parameters": [
+                        "tools",
+                        "",
+                        "",
                         ""
                       ]
                     }
@@ -9610,7 +9735,7 @@
                         "value": "ToggleObjectVariableAsBoolean"
                       },
                       "parameters": [
-                        "penTool",
+                        "tools",
                         "on"
                       ]
                     }
@@ -9624,10 +9749,46 @@
               "colorG": 176,
               "colorR": 74,
               "creationTime": 0,
-              "name": "Move \"everything single x and y thing that exists\" tool",
+              "name": "Move \"everything single thing that exists\" tools",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
               "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "Click::click"
+                      },
+                      "parameters": [
+                        "",
+                        "Left",
+                        "moveNodeTool",
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetSceneVariableAsBoolean"
+                      },
+                      "parameters": [
+                        "movingEveryNode",
+                        "True"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "MousePointerLock::RequestPointerLock"
+                      },
+                      "parameters": [
+                        "",
+                        ""
+                      ]
+                    }
+                  ]
+                },
                 {
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [
@@ -9694,6 +9855,52 @@
                       "parameters": [
                         "",
                         ""
+                      ]
+                    }
+                  ],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "SceneVariableAsBoolean"
+                          },
+                          "parameters": [
+                            "movingEveryNode",
+                            "True"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "SetSceneVariableAsBoolean"
+                          },
+                          "parameters": [
+                            "movingEveryNode",
+                            "False"
+                          ]
+                        }
+                      ],
+                      "events": [
+                        {
+                          "type": "BuiltinCommonInstructions::ForEach",
+                          "object": "node",
+                          "conditions": [],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "MettreY"
+                              },
+                              "parameters": [
+                                "node",
+                                "=",
+                                "round(node.Y()/32)*32"
+                              ]
+                            }
+                          ]
+                        }
                       ]
                     }
                   ]
@@ -9870,6 +10077,7 @@
                   "colorG": 176,
                   "colorR": 74,
                   "creationTime": 0,
+                  "folded": true,
                   "name": "Box supporters",
                   "source": "",
                   "type": "BuiltinCommonInstructions::Group",
@@ -9895,6 +10103,7 @@
                           "colorG": 176,
                           "colorR": 74,
                           "creationTime": 0,
+                          "folded": true,
                           "name": "Support",
                           "source": "",
                           "type": "BuiltinCommonInstructions::Group",
@@ -10227,6 +10436,60 @@
                                         "value": "SceneVariableAsBoolean"
                                       },
                                       "parameters": [
+                                        "movingEveryNode",
+                                        "True"
+                                      ]
+                                    },
+                                    {
+                                      "type": {
+                                        "value": "ObjectVariableAsBoolean"
+                                      },
+                                      "parameters": [
+                                        "node",
+                                        "selected",
+                                        "True"
+                                      ]
+                                    }
+                                  ],
+                                  "actions": [],
+                                  "events": [
+                                    {
+                                      "type": "BuiltinCommonInstructions::Standard",
+                                      "conditions": [],
+                                      "actions": [
+                                        {
+                                          "type": {
+                                            "value": "MettreX"
+                                          },
+                                          "parameters": [
+                                            "node",
+                                            "+",
+                                            "MousePointerLock::MovementX()"
+                                          ]
+                                        },
+                                        {
+                                          "type": {
+                                            "value": "MettreY"
+                                          },
+                                          "parameters": [
+                                            "node",
+                                            "+",
+                                            "MousePointerLock::MovementY()"
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "folded": true,
+                                  "type": "BuiltinCommonInstructions::Standard",
+                                  "conditions": [
+                                    {
+                                      "type": {
+                                        "value": "SceneVariableAsBoolean"
+                                      },
+                                      "parameters": [
                                         "movingEverything",
                                         "True"
                                       ]
@@ -10391,7 +10654,6 @@
                                   "type": "BuiltinCommonInstructions::Group",
                                   "events": [
                                     {
-                                      "folded": true,
                                       "type": "BuiltinCommonInstructions::Standard",
                                       "conditions": [
                                         {
@@ -11214,7 +11476,545 @@
                               "type": "BuiltinCommonInstructions::Group",
                               "events": [
                                 {
-                                  "folded": true,
+                                  "disabled": true,
+                                  "type": "BuiltinCommonInstructions::Standard",
+                                  "conditions": [
+                                    {
+                                      "type": {
+                                        "value": "SceneVariableAsBoolean"
+                                      },
+                                      "parameters": [
+                                        "playing",
+                                        "False"
+                                      ]
+                                    },
+                                    {
+                                      "type": {
+                                        "value": "PosX"
+                                      },
+                                      "parameters": [
+                                        "timeCursor",
+                                        ">",
+                                        "node.X()"
+                                      ]
+                                    },
+                                    {
+                                      "type": {
+                                        "value": "PosX"
+                                      },
+                                      "parameters": [
+                                        "timeCursor",
+                                        "<",
+                                        "node.X()+node.Width()"
+                                      ]
+                                    },
+                                    {
+                                      "type": {
+                                        "value": "ObjectVariableAsBoolean"
+                                      },
+                                      "parameters": [
+                                        "timeCursorTool",
+                                        "on",
+                                        "True"
+                                      ]
+                                    }
+                                  ],
+                                  "actions": [],
+                                  "events": [
+                                    {
+                                      "colorB": 228,
+                                      "colorG": 176,
+                                      "colorR": 74,
+                                      "creationTime": 0,
+                                      "name": "Frame",
+                                      "source": "",
+                                      "type": "BuiltinCommonInstructions::Group",
+                                      "events": [
+                                        {
+                                          "type": "BuiltinCommonInstructions::Standard",
+                                          "conditions": [],
+                                          "actions": [
+                                            {
+                                              "type": {
+                                                "value": "ModVarScene"
+                                              },
+                                              "parameters": [
+                                                "playNormalized",
+                                                "=",
+                                                "normalize(timeCursor.X(), node.X(), node.X()+node.Width())"
+                                              ]
+                                            },
+                                            {
+                                              "type": {
+                                                "value": "ModVarScene"
+                                              },
+                                              "parameters": [
+                                                "playNodeX",
+                                                "=",
+                                                "node.X()"
+                                              ]
+                                            },
+                                            {
+                                              "type": {
+                                                "value": "ModVarSceneTxt"
+                                              },
+                                              "parameters": [
+                                                "playEase",
+                                                "=",
+                                                "node.VariableString(data.anm.easing)"
+                                              ]
+                                            }
+                                          ],
+                                          "events": [
+                                            {
+                                              "type": "BuiltinCommonInstructions::Standard",
+                                              "conditions": [
+                                                {
+                                                  "type": {
+                                                    "value": "AjoutObjConcern"
+                                                  },
+                                                  "parameters": [
+                                                    "",
+                                                    "node"
+                                                  ]
+                                                },
+                                                {
+                                                  "type": {
+                                                    "value": "PosX"
+                                                  },
+                                                  "parameters": [
+                                                    "node",
+                                                    "<",
+                                                    "Variable(playNodeX)"
+                                                  ]
+                                                }
+                                              ],
+                                              "actions": [],
+                                              "events": [
+                                                {
+                                                  "type": "BuiltinCommonInstructions::ForEach",
+                                                  "object": "node",
+                                                  "conditions": [],
+                                                  "actions": [],
+                                                  "events": [
+                                                    {
+                                                      "type": "BuiltinCommonInstructions::Standard",
+                                                      "conditions": [],
+                                                      "actions": []
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "colorB": 228,
+                                          "colorG": 176,
+                                          "colorR": 74,
+                                          "creationTime": 0,
+                                          "folded": true,
+                                          "name": "Instant",
+                                          "source": "",
+                                          "type": "BuiltinCommonInstructions::Group",
+                                          "events": [
+                                            {
+                                              "type": "BuiltinCommonInstructions::Standard",
+                                              "conditions": [],
+                                              "actions": [],
+                                              "events": [
+                                                {
+                                                  "colorB": 228,
+                                                  "colorG": 176,
+                                                  "colorR": 74,
+                                                  "creationTime": 0,
+                                                  "folded": true,
+                                                  "name": "positoin",
+                                                  "source": "",
+                                                  "type": "BuiltinCommonInstructions::Group",
+                                                  "events": [
+                                                    {
+                                                      "folded": true,
+                                                      "type": "BuiltinCommonInstructions::Standard",
+                                                      "conditions": [
+                                                        {
+                                                          "type": {
+                                                            "value": "ObjectVariableAsBoolean"
+                                                          },
+                                                          "parameters": [
+                                                            "node",
+                                                            "data.active.position.X",
+                                                            "True"
+                                                          ]
+                                                        }
+                                                      ],
+                                                      "actions": [
+                                                        {
+                                                          "type": {
+                                                            "value": "MettreX"
+                                                          },
+                                                          "parameters": [
+                                                            "box",
+                                                            "=",
+                                                            "node.Variable(data.anm.position.X)"
+                                                          ]
+                                                        }
+                                                      ]
+                                                    },
+                                                    {
+                                                      "folded": true,
+                                                      "type": "BuiltinCommonInstructions::Standard",
+                                                      "conditions": [
+                                                        {
+                                                          "type": {
+                                                            "value": "ObjectVariableAsBoolean"
+                                                          },
+                                                          "parameters": [
+                                                            "node",
+                                                            "data.active.position.Y",
+                                                            "True"
+                                                          ]
+                                                        }
+                                                      ],
+                                                      "actions": [
+                                                        {
+                                                          "type": {
+                                                            "value": "MettreY"
+                                                          },
+                                                          "parameters": [
+                                                            "box",
+                                                            "=",
+                                                            "node.Variable(data.anm.position.Y)"
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ],
+                                                  "parameters": []
+                                                },
+                                                {
+                                                  "folded": true,
+                                                  "type": "BuiltinCommonInstructions::Standard",
+                                                  "conditions": [
+                                                    {
+                                                      "type": {
+                                                        "value": "ObjectVariableAsBoolean"
+                                                      },
+                                                      "parameters": [
+                                                        "node",
+                                                        "data.active.width",
+                                                        "True"
+                                                      ]
+                                                    }
+                                                  ],
+                                                  "actions": [
+                                                    {
+                                                      "type": {
+                                                        "value": "ChangeWidth"
+                                                      },
+                                                      "parameters": [
+                                                        "box",
+                                                        "=",
+                                                        "node.Variable(data.anm.width)"
+                                                      ]
+                                                    }
+                                                  ]
+                                                },
+                                                {
+                                                  "folded": true,
+                                                  "type": "BuiltinCommonInstructions::Standard",
+                                                  "conditions": [
+                                                    {
+                                                      "type": {
+                                                        "value": "ObjectVariableAsBoolean"
+                                                      },
+                                                      "parameters": [
+                                                        "node",
+                                                        "data.active.height",
+                                                        "True"
+                                                      ]
+                                                    }
+                                                  ],
+                                                  "actions": [
+                                                    {
+                                                      "type": {
+                                                        "value": "ChangeHeight"
+                                                      },
+                                                      "parameters": [
+                                                        "box",
+                                                        "=",
+                                                        "node.Variable(data.anm.height)"
+                                                      ]
+                                                    }
+                                                  ]
+                                                },
+                                                {
+                                                  "folded": true,
+                                                  "type": "BuiltinCommonInstructions::Standard",
+                                                  "conditions": [
+                                                    {
+                                                      "type": {
+                                                        "value": "ObjectVariableAsBoolean"
+                                                      },
+                                                      "parameters": [
+                                                        "node",
+                                                        "data.active.angle",
+                                                        "True"
+                                                      ]
+                                                    }
+                                                  ],
+                                                  "actions": [
+                                                    {
+                                                      "type": {
+                                                        "value": "SetAngle"
+                                                      },
+                                                      "parameters": [
+                                                        "box",
+                                                        "=",
+                                                        "node.Variable(data.anm.angle)"
+                                                      ]
+                                                    }
+                                                  ]
+                                                },
+                                                {
+                                                  "folded": true,
+                                                  "type": "BuiltinCommonInstructions::Standard",
+                                                  "conditions": [
+                                                    {
+                                                      "type": {
+                                                        "value": "ObjectVariableAsBoolean"
+                                                      },
+                                                      "parameters": [
+                                                        "node",
+                                                        "data.active.opacity",
+                                                        "True"
+                                                      ]
+                                                    }
+                                                  ],
+                                                  "actions": [
+                                                    {
+                                                      "type": {
+                                                        "value": "Opacity"
+                                                      },
+                                                      "parameters": [
+                                                        "box",
+                                                        "=",
+                                                        "node.Variable(data.anm.opacity)"
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ],
+                                          "parameters": []
+                                        },
+                                        {
+                                          "colorB": 228,
+                                          "colorG": 176,
+                                          "colorR": 74,
+                                          "creationTime": 0,
+                                          "folded": true,
+                                          "name": "Flipping",
+                                          "source": "",
+                                          "type": "BuiltinCommonInstructions::Group",
+                                          "events": [
+                                            {
+                                              "folded": true,
+                                              "type": "BuiltinCommonInstructions::Standard",
+                                              "conditions": [
+                                                {
+                                                  "type": {
+                                                    "value": "ObjectVariableAsBoolean"
+                                                  },
+                                                  "parameters": [
+                                                    "node",
+                                                    "data.active.flippedVer",
+                                                    "True"
+                                                  ]
+                                                }
+                                              ],
+                                              "actions": [],
+                                              "events": [
+                                                {
+                                                  "folded": true,
+                                                  "type": "BuiltinCommonInstructions::Standard",
+                                                  "conditions": [
+                                                    {
+                                                      "type": {
+                                                        "value": "ObjectVariableAsBoolean"
+                                                      },
+                                                      "parameters": [
+                                                        "node",
+                                                        "data.anm.flippedVer",
+                                                        "True"
+                                                      ]
+                                                    }
+                                                  ],
+                                                  "actions": [
+                                                    {
+                                                      "type": {
+                                                        "value": "FlipY"
+                                                      },
+                                                      "parameters": [
+                                                        "box",
+                                                        "yes"
+                                                      ]
+                                                    }
+                                                  ]
+                                                },
+                                                {
+                                                  "folded": true,
+                                                  "type": "BuiltinCommonInstructions::Standard",
+                                                  "conditions": [
+                                                    {
+                                                      "type": {
+                                                        "value": "ObjectVariableAsBoolean"
+                                                      },
+                                                      "parameters": [
+                                                        "node",
+                                                        "data.anm.flippedVer",
+                                                        "False"
+                                                      ]
+                                                    }
+                                                  ],
+                                                  "actions": [
+                                                    {
+                                                      "type": {
+                                                        "value": "FlipY"
+                                                      },
+                                                      "parameters": [
+                                                        "box",
+                                                        "no"
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "folded": true,
+                                              "type": "BuiltinCommonInstructions::Standard",
+                                              "conditions": [
+                                                {
+                                                  "type": {
+                                                    "value": "ObjectVariableAsBoolean"
+                                                  },
+                                                  "parameters": [
+                                                    "node",
+                                                    "data.active.flippedHor",
+                                                    "True"
+                                                  ]
+                                                }
+                                              ],
+                                              "actions": [],
+                                              "events": [
+                                                {
+                                                  "folded": true,
+                                                  "type": "BuiltinCommonInstructions::Standard",
+                                                  "conditions": [
+                                                    {
+                                                      "type": {
+                                                        "value": "ObjectVariableAsBoolean"
+                                                      },
+                                                      "parameters": [
+                                                        "node",
+                                                        "data.anm.flippedHor",
+                                                        "False"
+                                                      ]
+                                                    }
+                                                  ],
+                                                  "actions": [
+                                                    {
+                                                      "type": {
+                                                        "value": "FlipX"
+                                                      },
+                                                      "parameters": [
+                                                        "box",
+                                                        "no"
+                                                      ]
+                                                    }
+                                                  ]
+                                                },
+                                                {
+                                                  "folded": true,
+                                                  "type": "BuiltinCommonInstructions::Standard",
+                                                  "conditions": [
+                                                    {
+                                                      "type": {
+                                                        "value": "ObjectVariableAsBoolean"
+                                                      },
+                                                      "parameters": [
+                                                        "node",
+                                                        "data.anm.flippedHor",
+                                                        "True"
+                                                      ]
+                                                    }
+                                                  ],
+                                                  "actions": [
+                                                    {
+                                                      "type": {
+                                                        "value": "FlipX"
+                                                      },
+                                                      "parameters": [
+                                                        "box",
+                                                        "yes"
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ],
+                                          "parameters": []
+                                        },
+                                        {
+                                          "colorB": 228,
+                                          "colorG": 176,
+                                          "colorR": 74,
+                                          "creationTime": 0,
+                                          "folded": true,
+                                          "name": "Z order",
+                                          "source": "",
+                                          "type": "BuiltinCommonInstructions::Group",
+                                          "events": [
+                                            {
+                                              "folded": true,
+                                              "type": "BuiltinCommonInstructions::Standard",
+                                              "conditions": [
+                                                {
+                                                  "type": {
+                                                    "value": "ObjectVariableAsBoolean"
+                                                  },
+                                                  "parameters": [
+                                                    "node",
+                                                    "data.active.zOrder",
+                                                    "True"
+                                                  ]
+                                                }
+                                              ],
+                                              "actions": [
+                                                {
+                                                  "type": {
+                                                    "value": "ChangePlan"
+                                                  },
+                                                  "parameters": [
+                                                    "box",
+                                                    "=",
+                                                    "node.Variable(data.anm.zOrder)"
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ],
+                                          "parameters": []
+                                        }
+                                      ],
+                                      "parameters": []
+                                    }
+                                  ]
+                                },
+                                {
                                   "type": "BuiltinCommonInstructions::Standard",
                                   "conditions": [
                                     {
@@ -12073,7 +12873,6 @@
                   "parameters": []
                 },
                 {
-                  "folded": true,
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [
                     {
@@ -12145,13 +12944,11 @@
                       "colorG": 176,
                       "colorR": 74,
                       "creationTime": 0,
-                      "folded": true,
                       "name": "Create node",
                       "source": "",
                       "type": "BuiltinCommonInstructions::Group",
                       "events": [
                         {
-                          "folded": true,
                           "type": "BuiltinCommonInstructions::Standard",
                           "conditions": [
                             {
@@ -12746,7 +13543,7 @@
                       "parameters": [
                         "node",
                         "=",
-                        "0"
+                        "25"
                       ]
                     }
                   ]
@@ -13046,7 +13843,6 @@
               "colorG": 176,
               "colorR": 74,
               "creationTime": 0,
-              "folded": true,
               "name": "Moving nodes",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
@@ -13796,6 +14592,7 @@
                   "colorG": 139,
                   "colorR": 81,
                   "creationTime": 0,
+                  "folded": true,
                   "name": "Create and delete the UI",
                   "source": "",
                   "type": "BuiltinCommonInstructions::Group",
@@ -15357,6 +16154,7 @@
                   ]
                 },
                 {
+                  "folded": true,
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [
                     {
@@ -16046,7 +16844,6 @@
                       "colorG": 176,
                       "colorR": 74,
                       "creationTime": 0,
-                      "folded": true,
                       "name": "Condition for updating the data",
                       "source": "",
                       "type": "BuiltinCommonInstructions::Group",
@@ -16078,6 +16875,31 @@
                               "parameters": [
                                 "box",
                                 "Draggable"
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "SetSceneVariableAsBoolean"
+                              },
+                              "parameters": [
+                                "gettingMoved",
+                                "True"
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "SceneVariableAsBoolean"
+                              },
+                              "parameters": [
+                                "movingEverything",
+                                "True"
                               ]
                             }
                           ],
@@ -16374,7 +17196,6 @@
                   ]
                 },
                 {
-                  "folded": true,
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [
                     {
@@ -16793,7 +17614,6 @@
                       "colorG": 176,
                       "colorR": 74,
                       "creationTime": 0,
-                      "folded": true,
                       "name": "Condition for updating the data",
                       "source": "",
                       "type": "BuiltinCommonInstructions::Group",
@@ -16880,6 +17700,56 @@
                               "parameters": [
                                 "node",
                                 "Draggable"
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "SetSceneVariableAsBoolean"
+                              },
+                              "parameters": [
+                                "gettingMoved",
+                                "True"
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "SceneVariableAsBoolean"
+                              },
+                              "parameters": [
+                                "movingEveryNode",
+                                "True"
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "SetSceneVariableAsBoolean"
+                              },
+                              "parameters": [
+                                "gettingMoved",
+                                "True"
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "SceneVariableAsBoolean"
+                              },
+                              "parameters": [
+                                "movingEverything",
+                                "True"
                               ]
                             }
                           ],

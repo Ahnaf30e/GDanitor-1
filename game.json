@@ -825,6 +825,42 @@
         "name": "buttonzx\\movedrag.png",
         "smoothed": false,
         "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "buttonzx/nodedrag.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "buttonzx\\nodedrag.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "buttonzx/tweenframe.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "buttonzx\\tweenframe.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "buttonzx/github.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "buttonzx\\github.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "buttonzx/liluo.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "buttonzx\\liluo.png",
+        "smoothed": false,
+        "userAdded": true
       }
     ],
     "resourceFolders": []

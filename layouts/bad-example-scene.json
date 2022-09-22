@@ -1,13 +1,13 @@
 {
-  "b": 209,
+  "b": 20,
   "disableInputWhenNotFocused": true,
   "mangledName": "Bad_32example_32scene",
   "name": "Bad example scene",
-  "r": 209,
+  "r": 17,
   "standardSortMethod": true,
   "stopSoundsOnStartup": true,
   "title": "",
-  "v": 209,
+  "v": 17,
   "uiSettings": {
     "grid": false,
     "gridType": "rectangular",
@@ -251,48 +251,6 @@
       "actions": [
         {
           "type": {
-            "value": "GDaitorAnimator::ObjectAnimator::AnimateModelSprites"
-          },
-          "parameters": [
-            "NewSprite",
-            "ObjectAnimator",
-            "Group",
-            "Tween",
-            ""
-          ]
-        },
-        {
-          "type": {
-            "value": "SetCameraCenterX"
-          },
-          "parameters": [
-            "",
-            "=",
-            "0",
-            "\"\"",
-            "0"
-          ]
-        },
-        {
-          "type": {
-            "value": "SetCameraCenterY"
-          },
-          "parameters": [
-            "",
-            "=",
-            "0",
-            "\"\"",
-            "0"
-          ]
-        }
-      ]
-    },
-    {
-      "type": "BuiltinCommonInstructions::Standard",
-      "conditions": [],
-      "actions": [
-        {
-          "type": {
             "value": "Rotate"
           },
           "parameters": [
@@ -360,7 +318,7 @@
           "parameters": [
             "NewSprite",
             "=",
-            "0.2"
+            "0.5"
           ]
         },
         {
@@ -427,6 +385,56 @@
       "type": "BuiltinCommonInstructions::Standard",
       "conditions": [],
       "actions": []
+    },
+    {
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [],
+      "actions": [
+        {
+          "type": {
+            "value": "GDaitorAnimator::ObjectAnimator::AnimateModelSprites"
+          },
+          "parameters": [
+            "NewSprite",
+            "ObjectAnimator",
+            "Group",
+            "Tween",
+            ""
+          ]
+        },
+        {
+          "type": {
+            "value": "SetCameraCenterX"
+          },
+          "parameters": [
+            "",
+            "=",
+            "0",
+            "\"\"",
+            "0"
+          ]
+        },
+        {
+          "type": {
+            "value": "SetCameraCenterY"
+          },
+          "parameters": [
+            "",
+            "=",
+            "0",
+            "\"\"",
+            "0"
+          ]
+        },
+        {
+          "type": {
+            "value": "Cache"
+          },
+          "parameters": [
+            "NewSprite"
+          ]
+        }
+      ]
     }
   ],
   "layers": [
