@@ -149,8 +149,8 @@
       "behaviors": [
         {
           "name": "Platform",
-          "platformType": "Jumpthru",
           "type": "PlatformBehavior::PlatformBehavior",
+          "platformType": "Jumpthru",
           "canBeGrabbed": false,
           "yGrabOffset": 0
         }
@@ -166,9 +166,9 @@
       "effects": [],
       "behaviors": [
         {
-          "jumpSpeed": 1100,
           "name": "PlatformerObject",
           "type": "PlatformBehavior::PlatformerObjectBehavior",
+          "jumpSpeed": 1100,
           "acceleration": 8000,
           "canGoDownFromJumpthru": true,
           "canGrabPlatforms": false,
@@ -437,17 +437,26 @@
             "Tween",
             ""
           ]
-        },
+        }
+      ],
+      "events": [
         {
-          "type": {
-            "value": "SetCameraCenterX"
-          },
-          "parameters": [
-            "",
-            "=",
-            "player.X()",
-            "\"\"",
-            "0"
+          "disabled": true,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": [
+            {
+              "type": {
+                "value": "SetCameraCenterX"
+              },
+              "parameters": [
+                "",
+                "=",
+                "player.X()",
+                "\"\"",
+                "0"
+              ]
+            }
           ]
         }
       ]

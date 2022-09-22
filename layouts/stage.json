@@ -18,7 +18,7 @@
     "gridColor": 10401023,
     "gridAlpha": 0.8,
     "snap": true,
-    "zoomFactor": 0.7250000000000009,
+    "zoomFactor": 0.8499999999999995,
     "windowMask": false
   },
   "objectsGroups": [
@@ -400,13 +400,13 @@
     {
       "angle": 0,
       "customSize": true,
-      "height": 128,
+      "height": 64,
       "layer": "GUI",
       "name": "moveEverythingTool",
       "persistentUuid": "ae358552-0705-40ab-aef1-f148a1ef62da",
-      "width": 128,
+      "width": 64,
       "x": 1728,
-      "y": 928,
+      "y": 800,
       "zOrder": 23,
       "numberProperties": [],
       "stringProperties": [],
@@ -561,7 +561,7 @@
               "timeBetweenFrames": 0.07999999821186066,
               "sprites": [
                 {
-                  "hasCustomCollisionMask": false,
+                  "hasCustomCollisionMask": true,
                   "image": "assets\\Size-1.png",
                   "points": [],
                   "originPoint": {
@@ -575,7 +575,22 @@
                     "x": 0,
                     "y": 0
                   },
-                  "customCollisionMask": []
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 8,
+                        "y": 0
+                      },
+                      {
+                        "x": 8,
+                        "y": 8
+                      },
+                      {
+                        "x": 0,
+                        "y": 8
+                      }
+                    ]
+                  ]
                 }
               ]
             }
@@ -590,7 +605,7 @@
               "timeBetweenFrames": 0.07999999821186066,
               "sprites": [
                 {
-                  "hasCustomCollisionMask": false,
+                  "hasCustomCollisionMask": true,
                   "image": "assets\\Angle-1-2.png",
                   "points": [],
                   "originPoint": {
@@ -604,7 +619,22 @@
                     "x": 0,
                     "y": 0
                   },
-                  "customCollisionMask": []
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 8,
+                        "y": 0
+                      },
+                      {
+                        "x": 0,
+                        "y": 0
+                      },
+                      {
+                        "x": 0,
+                        "y": 8
+                      }
+                    ]
+                  ]
                 }
               ]
             }
@@ -1933,7 +1963,6 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
-          "folded": true,
           "name": "Boxes",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -1943,6 +1972,7 @@
               "colorG": 176,
               "colorR": 74,
               "creationTime": 0,
+              "folded": true,
               "name": "Select all ",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
@@ -2038,6 +2068,7 @@
               "colorG": 176,
               "colorR": 74,
               "creationTime": 0,
+              "folded": true,
               "name": "Box Selection",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
@@ -2540,6 +2571,7 @@
               "colorG": 176,
               "colorR": 74,
               "creationTime": 0,
+              "folded": true,
               "name": "Box Selection Effects",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
@@ -3192,7 +3224,6 @@
                   ]
                 },
                 {
-                  "folded": true,
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [
                     {
@@ -4130,6 +4161,7 @@
               "colorG": 176,
               "colorR": 74,
               "creationTime": 0,
+              "folded": true,
               "name": "Snap to grid",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
@@ -4191,12 +4223,12 @@
               "colorG": 176,
               "colorR": 74,
               "creationTime": 0,
+              "folded": true,
               "name": "Delete boxes",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
               "events": [
                 {
-                  "folded": true,
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [
                     {
@@ -4247,22 +4279,52 @@
                       ]
                     }
                   ],
-                  "actions": [
-                    {
-                      "type": {
-                        "value": "Delete"
-                      },
-                      "parameters": [
-                        "box",
-                        ""
-                      ]
-                    }
-                  ],
+                  "actions": [],
                   "events": [
                     {
                       "folded": true,
                       "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [],
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "LinkedObjects::PickObjectsLinkedTo"
+                          },
+                          "parameters": [
+                            "",
+                            "node",
+                            "box",
+                            ""
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "Delete"
+                          },
+                          "parameters": [
+                            "node",
+                            ""
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "folded": true,
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "LinkedObjects::PickObjectsLinkedTo"
+                          },
+                          "parameters": [
+                            "",
+                            "boxSupporters",
+                            "box",
+                            ""
+                          ]
+                        }
+                      ],
                       "actions": [
                         {
                           "type": {
@@ -4272,13 +4334,19 @@
                             "boxSupporters",
                             ""
                           ]
-                        },
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [],
+                      "actions": [
                         {
                           "type": {
                             "value": "Delete"
                           },
                           "parameters": [
-                            "node",
+                            "box",
                             ""
                           ]
                         }
@@ -4295,6 +4363,7 @@
               "colorR": 74,
               "creationTime": 0,
               "disabled": true,
+              "folded": true,
               "name": "Copy da box",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
@@ -4429,13 +4498,11 @@
               "colorG": 176,
               "colorR": 74,
               "creationTime": 0,
-              "folded": true,
               "name": "Selecting nodes",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
               "events": [
                 {
-                  "folded": true,
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [
                     {
@@ -4453,7 +4520,6 @@
                   "actions": [],
                   "events": [
                     {
-                      "folded": true,
                       "type": "BuiltinCommonInstructions::Standard",
                       "conditions": [
                         {
@@ -4555,7 +4621,6 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
-          "folded": true,
           "name": "Box supporters",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -4570,6 +4635,7 @@
                   "colorG": 176,
                   "colorR": 74,
                   "creationTime": 0,
+                  "folded": true,
                   "name": "Size",
                   "source": "",
                   "type": "BuiltinCommonInstructions::Group",
@@ -4618,6 +4684,16 @@
                             "box",
                             "boxSupporters",
                             ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "inverted": true,
+                            "value": "KeyPressed"
+                          },
+                          "parameters": [
+                            "",
+                            "LAlt"
                           ]
                         }
                       ],
@@ -5090,6 +5166,7 @@
                   "colorG": 176,
                   "colorR": 74,
                   "creationTime": 0,
+                  "folded": true,
                   "name": "Angle",
                   "source": "",
                   "type": "BuiltinCommonInstructions::Group",
@@ -5138,6 +5215,16 @@
                             "box",
                             "boxSupporters",
                             ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "inverted": true,
+                            "value": "KeyPressed"
+                          },
+                          "parameters": [
+                            "",
+                            "LAlt"
                           ]
                         }
                       ],
@@ -9334,6 +9421,7 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
+          "folded": true,
           "name": "Tools and buttons for actions",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -9807,7 +9895,6 @@
                           "colorG": 176,
                           "colorR": 74,
                           "creationTime": 0,
-                          "folded": true,
                           "name": "Support",
                           "source": "",
                           "type": "BuiltinCommonInstructions::Group",
@@ -9817,13 +9904,11 @@
                               "colorG": 176,
                               "colorR": 74,
                               "creationTime": 0,
-                              "folded": true,
                               "name": "Creating the suport handles",
                               "source": "",
                               "type": "BuiltinCommonInstructions::Group",
                               "events": [
                                 {
-                                  "folded": true,
                                   "type": "BuiltinCommonInstructions::Standard",
                                   "conditions": [
                                     {
@@ -9947,13 +10032,11 @@
                               "colorG": 176,
                               "colorR": 74,
                               "creationTime": 0,
-                              "folded": true,
                               "name": "Changing position of the handles based on what type of handle they are",
                               "source": "",
                               "type": "BuiltinCommonInstructions::Group",
                               "events": [
                                 {
-                                  "folded": true,
                                   "type": "BuiltinCommonInstructions::Standard",
                                   "conditions": [
                                     {
@@ -10092,6 +10175,7 @@
                   "colorG": 176,
                   "colorR": 74,
                   "creationTime": 0,
+                  "folded": true,
                   "name": "For each node",
                   "source": "",
                   "type": "BuiltinCommonInstructions::Group",
@@ -12010,7 +12094,6 @@
                       "colorG": 176,
                       "colorR": 74,
                       "creationTime": 0,
-                      "folded": true,
                       "name": "Show",
                       "source": "",
                       "type": "BuiltinCommonInstructions::Group",
@@ -13704,7 +13787,6 @@
               "colorG": 176,
               "colorR": 74,
               "creationTime": 0,
-              "folded": true,
               "name": "Change UI generator",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
@@ -13719,7 +13801,6 @@
                   "type": "BuiltinCommonInstructions::Group",
                   "events": [
                     {
-                      "folded": true,
                       "type": "BuiltinCommonInstructions::Standard",
                       "conditions": [
                         {
