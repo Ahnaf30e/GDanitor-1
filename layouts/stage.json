@@ -4338,6 +4338,7 @@
               "colorG": 176,
               "colorR": 74,
               "creationTime": 0,
+              "folded": true,
               "name": "Delete boxes",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
@@ -10410,7 +10411,6 @@
                   "colorG": 176,
                   "colorR": 74,
                   "creationTime": 0,
-                  "folded": true,
                   "name": "For each node",
                   "source": "",
                   "type": "BuiltinCommonInstructions::Group",
@@ -10802,13 +10802,11 @@
                                   "colorG": 176,
                                   "colorR": 74,
                                   "creationTime": 0,
-                                  "folded": true,
                                   "name": "Selecting nodes",
                                   "source": "",
                                   "type": "BuiltinCommonInstructions::Group",
                                   "events": [
                                     {
-                                      "folded": true,
                                       "type": "BuiltinCommonInstructions::Standard",
                                       "conditions": [
                                         {
@@ -10874,7 +10872,6 @@
                                           ]
                                         },
                                         {
-                                          "folded": true,
                                           "type": "BuiltinCommonInstructions::Standard",
                                           "conditions": [],
                                           "actions": [
@@ -11321,7 +11318,6 @@
                                   "type": "BuiltinCommonInstructions::Group",
                                   "events": [
                                     {
-                                      "folded": true,
                                       "type": "BuiltinCommonInstructions::Standard",
                                       "conditions": [
                                         {
@@ -11378,7 +11374,6 @@
                                       ]
                                     },
                                     {
-                                      "folded": true,
                                       "type": "BuiltinCommonInstructions::Standard",
                                       "conditions": [
                                         {
@@ -12899,7 +12894,6 @@
                   "parameters": []
                 },
                 {
-                  "folded": true,
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [
                     {
@@ -12959,6 +12953,16 @@
                                 "node",
                                 "Draggable",
                                 "yes"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "SetObjectVariableAsBoolean"
+                              },
+                              "parameters": [
+                                "node",
+                                "shown",
+                                "True"
                               ]
                             }
                           ]
@@ -13571,6 +13575,16 @@
                         "node",
                         "=",
                         "25"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetObjectVariableAsBoolean"
+                      },
+                      "parameters": [
+                        "node",
+                        "shown",
+                        "False"
                       ]
                     }
                   ]
