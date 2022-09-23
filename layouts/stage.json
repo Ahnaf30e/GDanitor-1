@@ -4338,7 +4338,6 @@
               "colorG": 176,
               "colorR": 74,
               "creationTime": 0,
-              "folded": true,
               "name": "Delete boxes",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
@@ -4448,6 +4447,32 @@
                           "parameters": [
                             "boxSupporters",
                             ""
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "ObjectVariableAsBoolean"
+                          },
+                          "parameters": [
+                            "box",
+                            "her",
+                            "True"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "SetSceneVariableAsBoolean"
+                          },
+                          "parameters": [
+                            "deleteChangeUI",
+                            "True"
                           ]
                         }
                       ]
@@ -9538,6 +9563,7 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
+          "folded": true,
           "name": "Tools and buttons for actions",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -12873,6 +12899,7 @@
                   "parameters": []
                 },
                 {
+                  "folded": true,
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [
                     {
