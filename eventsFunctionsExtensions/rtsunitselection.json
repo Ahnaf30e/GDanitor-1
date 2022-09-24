@@ -1,0 +1,4557 @@
+{
+  "author": "Slash, Tristan Rhodes, @VictrisGames",
+  "category": "",
+  "description": "How To Use:\n- The \"Allow player to select units\" action must run every frame to work properly\n- When a drag is in progress, all units inside the selection box will be \"PreSelected\"\n- When the drag is released, all \"PreSelected\" units will be changed to \"Selected\"\n- Hold the additive select key to add units to selection\n- Hold the subtractive select key to remove units from selection\n\nControl Group controls:\n- Ctrl + (1,2,3,4,5,6,7,9,0) assigns that Control Group to Selected units\n- (1,2,3,4,5,6,7,9,0) selects all units that are assigned to that Control Group\n\nSelection box:\n- When dragging, the selection area will be drawn by a Shape Painter object. \n- If a Shape Painter instance has not been added in the scene, it will be created automatically.\n- To change the appearance of the selection area, change the Shape Painter properties.\n- Reduce the fill opacity of the SelectionBox (shape painter object) so that units and terrain can be seen behind it.\n\nTips:\n- Use the \"Preselected\" and \"Selected\" conditions to highlight units that are being interacted with\n- Create an object group (i.e. \"SelectableUnits\") to control which types of objects can be selected\n- Use conditions to restrict which object instances can be selected. \n- Use the \"SelectedUnitID\" to design formations of units.\n- Shape painter object should be on the same layer as the units being selected\n- Always use ForEach() events when using the conditions in this extension because extension conditions do not currently perform object picking.",
+  "extensionNamespace": "",
+  "fullName": "RTS-like unit selection",
+  "helpPath": "https://victrisgames.itch.io/rts-like-unit-selection",
+  "iconUrl": "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0ibWRpLXBlbmNpbC1ib3gtb3V0bGluZSIgd2lkdGg9IjI0IiBoZWlnaHQ9IjI0IiB2aWV3Qm94PSIwIDAgMjQgMjQiPjxwYXRoIGQ9Ik0xOSwxOVY1SDVWMTlIMTlNMTksM0EyLDIgMCAwLDEgMjEsNVYxOUMyMSwyMC4xMSAyMC4xLDIxIDE5LDIxSDVBMiwyIDAgMCwxIDMsMTlWNUEyLDIgMCAwLDEgNSwzSDE5TTE2LjcsOS4zNUwxNS43LDEwLjM1TDEzLjY1LDguM0wxNC42NSw3LjNDMTQuODYsNy4wOCAxNS4yMSw3LjA4IDE1LjQyLDcuM0wxNi43LDguNThDMTYuOTIsOC43OSAxNi45Miw5LjE0IDE2LjcsOS4zNU03LDE0Ljk0TDEzLjA2LDguODhMMTUuMTIsMTAuOTRMOS4wNiwxN0g3VjE0Ljk0WiIgLz48L3N2Zz4=",
+  "name": "RTSUnitSelection",
+  "previewIconUrl": "https://resources.gdevelop-app.com/assets/Icons/pencil-box-outline.svg",
+  "shortDescription": "Allow player to select units by clicking on them or dragging a selection box.",
+  "version": "2.3.2",
+  "origin": {
+    "identifier": "RTSUnitSelection",
+    "name": "gdevelop-extension-store"
+  },
+  "tags": [
+    "rts",
+    "unit",
+    "select",
+    "selector",
+    "selection",
+    "multi-select",
+    "control group"
+  ],
+  "authorIds": [
+    "gqDaZjCfevOOxBYkK6zlhtZnXCg1",
+    "jZp7TS5D4NeOcwG8NCSu2vIzVWI2"
+  ],
+  "dependencies": [],
+  "eventsFunctions": [
+    {
+      "description": "Allow player to select units by clicking on them or dragging a selection box.",
+      "fullName": "Allow player to select units by clicking on them or dragging a selection box",
+      "functionType": "Action",
+      "group": "",
+      "name": "RTSUnitSelection",
+      "private": false,
+      "sentence": "Allow player to select _PARAM1_ with _PARAM7_ mouse button (or touch). Draw a selection box using _PARAM2_ on Layer: _PARAM3_ with Z order: _PARAM4_. Hold _PARAM5_ to add units and _PARAM6_ to remove units",
+      "events": [
+        {
+          "colorB": 228,
+          "colorG": 176,
+          "colorR": 74,
+          "creationTime": 0,
+          "name": "RTSUnitSelection Extension",
+          "source": "",
+          "type": "BuiltinCommonInstructions::Group",
+          "events": [
+            {
+              "colorB": 228,
+              "colorG": 176,
+              "colorR": 74,
+              "creationTime": 0,
+              "name": "Setup shape painter for selection box",
+              "source": "",
+              "type": "BuiltinCommonInstructions::Group",
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Comment",
+                  "color": {
+                    "b": 109,
+                    "g": 230,
+                    "r": 255,
+                    "textB": 0,
+                    "textG": 0,
+                    "textR": 0
+                  },
+                  "comment": "Create shape painter (if one hasn't been added already)",
+                  "comment2": ""
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "NbObjet"
+                      },
+                      "parameters": [
+                        "SelectionBox",
+                        "=",
+                        "0"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "Create"
+                      },
+                      "parameters": [
+                        "",
+                        "SelectionBox",
+                        "0",
+                        "0",
+                        "GetArgumentAsString(\"Layer\")"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Comment",
+                  "color": {
+                    "b": 109,
+                    "g": 230,
+                    "r": 255,
+                    "textB": 0,
+                    "textG": 0,
+                    "textR": 0
+                  },
+                  "comment": "Enforce correct properties of shape painter",
+                  "comment2": ""
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "PrimitiveDrawing::AreCoordinatesRelative"
+                      },
+                      "parameters": [
+                        "SelectionBox"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "PrimitiveDrawing::UseRelativeCoordinates"
+                      },
+                      "parameters": [
+                        "SelectionBox",
+                        "no"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "inverted": true,
+                        "value": "PrimitiveDrawing::ClearBetweenFrames"
+                      },
+                      "parameters": [
+                        "SelectionBox"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "PrimitiveDrawing::ClearBetweenFrames"
+                      },
+                      "parameters": [
+                        "SelectionBox",
+                        "yes"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "Egal"
+                      },
+                      "parameters": [
+                        "GetArgumentAsNumber(\"Zorder\")",
+                        "!=",
+                        "0"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "ChangePlan"
+                      },
+                      "parameters": [
+                        "SelectionBox",
+                        "=",
+                        "GetArgumentAsNumber(\"Zorder\")"
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "parameters": []
+            },
+            {
+              "colorB": 228,
+              "colorG": 176,
+              "colorR": 74,
+              "creationTime": 0,
+              "name": "Unit selection",
+              "source": "",
+              "type": "BuiltinCommonInstructions::Group",
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Comment",
+                  "color": {
+                    "b": 109,
+                    "g": 230,
+                    "r": 255,
+                    "textB": 0,
+                    "textG": 0,
+                    "textR": 0
+                  },
+                  "comment": "Allow using any of the 3 mouse buttons",
+                  "comment2": ""
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::Or"
+                      },
+                      "parameters": [],
+                      "subInstructions": [
+                        {
+                          "type": {
+                            "value": "BuiltinCommonInstructions::And"
+                          },
+                          "parameters": [],
+                          "subInstructions": [
+                            {
+                              "type": {
+                                "value": "SourisBouton"
+                              },
+                              "parameters": [
+                                "",
+                                "Left"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "StrEqual"
+                              },
+                              "parameters": [
+                                "GetArgumentAsString(\"MouseButtonSelect\")",
+                                "=",
+                                "\"Left\""
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "BuiltinCommonInstructions::And"
+                          },
+                          "parameters": [],
+                          "subInstructions": [
+                            {
+                              "type": {
+                                "value": "SourisBouton"
+                              },
+                              "parameters": [
+                                "",
+                                "Right"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "StrEqual"
+                              },
+                              "parameters": [
+                                "GetArgumentAsString(\"MouseButtonSelect\")",
+                                "=",
+                                "\"Right\""
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "BuiltinCommonInstructions::And"
+                          },
+                          "parameters": [],
+                          "subInstructions": [
+                            {
+                              "type": {
+                                "value": "SourisBouton"
+                              },
+                              "parameters": [
+                                "",
+                                "Middle"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "StrEqual"
+                              },
+                              "parameters": [
+                                "GetArgumentAsString(\"MouseButtonSelect\")",
+                                "=",
+                                "\"Middle\""
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ],
+                  "actions": [],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Comment",
+                      "color": {
+                        "b": 109,
+                        "g": 230,
+                        "r": 255,
+                        "textB": 0,
+                        "textG": 0,
+                        "textR": 0
+                      },
+                      "comment": "Save initial location of click",
+                      "comment2": ""
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "ObjectVariableAsBoolean"
+                          },
+                          "parameters": [
+                            "SelectionBox",
+                            "__RTSUnitSelection.ClickStarted",
+                            "False"
+                          ]
+                        }
+                      ],
+                      "actions": [],
+                      "events": [
+                        {
+                          "type": "BuiltinCommonInstructions::Comment",
+                          "color": {
+                            "b": 109,
+                            "g": 230,
+                            "r": 255,
+                            "textB": 0,
+                            "textG": 0,
+                            "textR": 0
+                          },
+                          "comment": "Save the starting position ",
+                          "comment2": ""
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "ModVarObjet"
+                              },
+                              "parameters": [
+                                "SelectionBox",
+                                "__RTSUnitSelection.StartX",
+                                "=",
+                                "MouseX(GetArgumentAsString(\"Layer\"),0)"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "ModVarObjet"
+                              },
+                              "parameters": [
+                                "SelectionBox",
+                                "__RTSUnitSelection.StartY",
+                                "=",
+                                "MouseY(GetArgumentAsString(\"Layer\"),0)"
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Comment",
+                          "color": {
+                            "b": 109,
+                            "g": 230,
+                            "r": 255,
+                            "textB": 0,
+                            "textG": 0,
+                            "textR": 0
+                          },
+                          "comment": "Unselect all objects if Control or Shift is not being pressed",
+                          "comment2": ""
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "inverted": true,
+                                "value": "KeyFromTextPressed"
+                              },
+                              "parameters": [
+                                "",
+                                "GetArgumentAsString(\"AdditiveSelectKey\")"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "inverted": true,
+                                "value": "KeyFromTextPressed"
+                              },
+                              "parameters": [
+                                "",
+                                "GetArgumentAsString(\"SubtractiveSelectKey\")"
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "RTSUnitSelection::SetSelected"
+                              },
+                              "parameters": [
+                                "",
+                                "Objects",
+                                "",
+                                ""
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Comment",
+                          "color": {
+                            "b": 109,
+                            "g": 230,
+                            "r": 255,
+                            "textB": 0,
+                            "textG": 0,
+                            "textR": 0
+                          },
+                          "comment": "Change state",
+                          "comment2": ""
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "SetObjectVariableAsBoolean"
+                              },
+                              "parameters": [
+                                "SelectionBox",
+                                "__RTSUnitSelection.ClickStarted",
+                                "True"
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Comment",
+                      "color": {
+                        "b": 109,
+                        "g": 230,
+                        "r": 255,
+                        "textB": 0,
+                        "textG": 0,
+                        "textR": 0
+                      },
+                      "comment": " Single click select",
+                      "comment2": ""
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "SourisSurObjet"
+                          },
+                          "parameters": [
+                            "Objects",
+                            "",
+                            "",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "BuiltinCommonInstructions::Once"
+                          },
+                          "parameters": []
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "RTSUnitSelection::SetPreSelected"
+                          },
+                          "parameters": [
+                            "",
+                            "Objects",
+                            "True",
+                            ""
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Comment",
+                      "color": {
+                        "b": 109,
+                        "g": 230,
+                        "r": 255,
+                        "textB": 0,
+                        "textG": 0,
+                        "textR": 0
+                      },
+                      "comment": "Detect dragging",
+                      "comment2": ""
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "SourisX"
+                          },
+                          "parameters": [
+                            "",
+                            "!=",
+                            "SelectionBox.Variable(__RTSUnitSelection.StartX)",
+                            "GetArgumentAsString(\"Layer\")",
+                            "0"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SourisY"
+                          },
+                          "parameters": [
+                            "",
+                            "!=",
+                            "SelectionBox.Variable(__RTSUnitSelection.StartY)",
+                            "GetArgumentAsString(\"Layer\")",
+                            "0"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "SetObjectVariableAsBoolean"
+                          },
+                          "parameters": [
+                            "SelectionBox",
+                            "__RTSUnitSelection.Dragging",
+                            "True"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Comment",
+                      "color": {
+                        "b": 109,
+                        "g": 230,
+                        "r": 255,
+                        "textB": 0,
+                        "textG": 0,
+                        "textR": 0
+                      },
+                      "comment": "Actions to take while holding down the cursor",
+                      "comment2": ""
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "ObjectVariableAsBoolean"
+                          },
+                          "parameters": [
+                            "SelectionBox",
+                            "__RTSUnitSelection.Dragging",
+                            "True"
+                          ]
+                        }
+                      ],
+                      "actions": [],
+                      "events": [
+                        {
+                          "type": "BuiltinCommonInstructions::Comment",
+                          "color": {
+                            "b": 109,
+                            "g": 230,
+                            "r": 255,
+                            "textB": 0,
+                            "textG": 0,
+                            "textR": 0
+                          },
+                          "comment": "Save the current mouse location",
+                          "comment2": ""
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "ModVarObjet"
+                              },
+                              "parameters": [
+                                "SelectionBox",
+                                "__RTSUnitSelection.EndX",
+                                "=",
+                                "MouseX(GetArgumentAsString(\"Layer\"),0)"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "ModVarObjet"
+                              },
+                              "parameters": [
+                                "SelectionBox",
+                                "__RTSUnitSelection.EndY",
+                                "=",
+                                "MouseY(GetArgumentAsString(\"Layer\"),0)"
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Comment",
+                          "color": {
+                            "b": 109,
+                            "g": 230,
+                            "r": 255,
+                            "textB": 0,
+                            "textG": 0,
+                            "textR": 0
+                          },
+                          "comment": "Calculate the min and max values of the selection area",
+                          "comment2": ""
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "ModVarObjet"
+                              },
+                              "parameters": [
+                                "SelectionBox",
+                                "RTSUnitSelection.MinX",
+                                "=",
+                                "min(SelectionBox.Variable(__RTSUnitSelection.StartX), SelectionBox.Variable(__RTSUnitSelection.EndX))"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "ModVarObjet"
+                              },
+                              "parameters": [
+                                "SelectionBox",
+                                "RTSUnitSelection.MaxX",
+                                "=",
+                                "max(SelectionBox.Variable(__RTSUnitSelection.StartX), SelectionBox.Variable(__RTSUnitSelection.EndX))"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "ModVarObjet"
+                              },
+                              "parameters": [
+                                "SelectionBox",
+                                "RTSUnitSelection.MinY",
+                                "=",
+                                "min(SelectionBox.Variable(__RTSUnitSelection.StartY), SelectionBox.Variable(__RTSUnitSelection.EndY))"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "ModVarObjet"
+                              },
+                              "parameters": [
+                                "SelectionBox",
+                                "RTSUnitSelection.MaxY",
+                                "=",
+                                "max(SelectionBox.Variable(__RTSUnitSelection.StartY), SelectionBox.Variable(__RTSUnitSelection.EndY))"
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Comment",
+                          "color": {
+                            "b": 109,
+                            "g": 230,
+                            "r": 255,
+                            "textB": 0,
+                            "textG": 0,
+                            "textR": 0
+                          },
+                          "comment": "Draw selection area",
+                          "comment2": ""
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "PrimitiveDrawing::Rectangle"
+                              },
+                              "parameters": [
+                                "SelectionBox",
+                                "SelectionBox.Variable(RTSUnitSelection.MinX)",
+                                "SelectionBox.Variable(RTSUnitSelection.MinY)",
+                                "SelectionBox.Variable(RTSUnitSelection.MaxX)",
+                                "SelectionBox.Variable(RTSUnitSelection.MaxY)"
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Comment",
+                          "color": {
+                            "b": 109,
+                            "g": 230,
+                            "r": 255,
+                            "textB": 0,
+                            "textG": 0,
+                            "textR": 0
+                          },
+                          "comment": "Check if objects are OUTSIDE selection area",
+                          "comment2": ""
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "BuiltinCommonInstructions::Or"
+                              },
+                              "parameters": [],
+                              "subInstructions": [
+                                {
+                                  "type": {
+                                    "value": "CenterX"
+                                  },
+                                  "parameters": [
+                                    "Objects",
+                                    "<",
+                                    "SelectionBox.Variable(RTSUnitSelection.MinX)"
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "CenterX"
+                                  },
+                                  "parameters": [
+                                    "Objects",
+                                    ">",
+                                    "SelectionBox.Variable(RTSUnitSelection.MaxX)"
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "CenterY"
+                                  },
+                                  "parameters": [
+                                    "Objects",
+                                    "<",
+                                    "SelectionBox.Variable(RTSUnitSelection.MinY)"
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "CenterY"
+                                  },
+                                  "parameters": [
+                                    "Objects",
+                                    ">",
+                                    "SelectionBox.Variable(RTSUnitSelection.MaxY)"
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": {
+                                "inverted": true,
+                                "value": "SourisSurObjet"
+                              },
+                              "parameters": [
+                                "Objects",
+                                "",
+                                "",
+                                ""
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "RTSUnitSelection::SetPreSelected"
+                              },
+                              "parameters": [
+                                "",
+                                "Objects",
+                                "False",
+                                ""
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Comment",
+                          "color": {
+                            "b": 109,
+                            "g": 230,
+                            "r": 255,
+                            "textB": 0,
+                            "textG": 0,
+                            "textR": 0
+                          },
+                          "comment": "Check if objects are INSIDE selection area",
+                          "comment2": ""
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "CenterY"
+                              },
+                              "parameters": [
+                                "Objects",
+                                ">=",
+                                "SelectionBox.Variable(RTSUnitSelection.MinY)"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "CenterX"
+                              },
+                              "parameters": [
+                                "Objects",
+                                "<=",
+                                "SelectionBox.Variable(RTSUnitSelection.MaxX)"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "CenterX"
+                              },
+                              "parameters": [
+                                "Objects",
+                                ">=",
+                                "SelectionBox.Variable(RTSUnitSelection.MinX)"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "CenterY"
+                              },
+                              "parameters": [
+                                "Objects",
+                                "<=",
+                                "SelectionBox.Variable(RTSUnitSelection.MaxY)"
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "RTSUnitSelection::SetPreSelected"
+                              },
+                              "parameters": [
+                                "",
+                                "Objects",
+                                "True",
+                                ""
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Comment",
+                  "color": {
+                    "b": 109,
+                    "g": 230,
+                    "r": 255,
+                    "textB": 0,
+                    "textG": 0,
+                    "textR": 0
+                  },
+                  "comment": "Reset Drawing state when cursor is released",
+                  "comment2": ""
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::Or"
+                      },
+                      "parameters": [],
+                      "subInstructions": [
+                        {
+                          "type": {
+                            "value": "BuiltinCommonInstructions::And"
+                          },
+                          "parameters": [],
+                          "subInstructions": [
+                            {
+                              "type": {
+                                "value": "MouseButtonReleased"
+                              },
+                              "parameters": [
+                                "",
+                                "Left"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "StrEqual"
+                              },
+                              "parameters": [
+                                "GetArgumentAsString(\"MouseButtonSelect\")",
+                                "=",
+                                "\"Left\""
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "BuiltinCommonInstructions::And"
+                          },
+                          "parameters": [],
+                          "subInstructions": [
+                            {
+                              "type": {
+                                "value": "MouseButtonReleased"
+                              },
+                              "parameters": [
+                                "",
+                                "Right"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "StrEqual"
+                              },
+                              "parameters": [
+                                "GetArgumentAsString(\"MouseButtonSelect\")",
+                                "=",
+                                "\"Right\""
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "BuiltinCommonInstructions::And"
+                          },
+                          "parameters": [],
+                          "subInstructions": [
+                            {
+                              "type": {
+                                "value": "MouseButtonReleased"
+                              },
+                              "parameters": [
+                                "",
+                                "Middle"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "StrEqual"
+                              },
+                              "parameters": [
+                                "GetArgumentAsString(\"MouseButtonSelect\")",
+                                "=",
+                                "\"Middle\""
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ],
+                  "actions": [],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Comment",
+                      "color": {
+                        "b": 27,
+                        "g": 2,
+                        "r": 208,
+                        "textB": 255,
+                        "textG": 255,
+                        "textR": 255
+                      },
+                      "comment": "This \"ForEach(Object)\" is required because extension conditions do not perform object picking (hopefully that will be added in the future)",
+                      "comment2": ""
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::ForEach",
+                      "object": "Objects",
+                      "conditions": [],
+                      "actions": [],
+                      "events": [
+                        {
+                          "type": "BuiltinCommonInstructions::Comment",
+                          "color": {
+                            "b": 109,
+                            "g": 230,
+                            "r": 255,
+                            "textB": 0,
+                            "textG": 0,
+                            "textR": 0
+                          },
+                          "comment": "Deselect objects when a Selected object gets clicked on",
+                          "comment2": ""
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "RTSUnitSelection::IsPreSelected"
+                              },
+                              "parameters": [
+                                "",
+                                "Objects",
+                                ""
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "RTSUnitSelection::IsSelected"
+                              },
+                              "parameters": [
+                                "",
+                                "Objects",
+                                ""
+                              ]
+                            },
+                            {
+                              "type": {
+                                "inverted": true,
+                                "value": "KeyFromTextPressed"
+                              },
+                              "parameters": [
+                                "",
+                                "GetArgumentAsString(\"AdditiveSelectKey\")"
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "RTSUnitSelection::SetSelected"
+                              },
+                              "parameters": [
+                                "",
+                                "Objects",
+                                "",
+                                ""
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "RTSUnitSelection::SetPreSelected"
+                              },
+                              "parameters": [
+                                "",
+                                "Objects",
+                                "False",
+                                ""
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "RTSUnitSelection::IsPreSelected"
+                              },
+                              "parameters": [
+                                "",
+                                "Objects",
+                                ""
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "KeyFromTextPressed"
+                              },
+                              "parameters": [
+                                "",
+                                "GetArgumentAsString(\"SubtractiveSelectKey\")"
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "RTSUnitSelection::SetSelected"
+                              },
+                              "parameters": [
+                                "",
+                                "Objects",
+                                "",
+                                ""
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "RTSUnitSelection::SetPreSelected"
+                              },
+                              "parameters": [
+                                "",
+                                "Objects",
+                                "False",
+                                ""
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Comment",
+                          "color": {
+                            "b": 109,
+                            "g": 230,
+                            "r": 255,
+                            "textB": 0,
+                            "textG": 0,
+                            "textR": 0
+                          },
+                          "comment": "Convert PreSelected objects into Selected",
+                          "comment2": ""
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "RTSUnitSelection::IsPreSelected"
+                              },
+                              "parameters": [
+                                "",
+                                "Objects",
+                                ""
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "RTSUnitSelection::SetSelected"
+                              },
+                              "parameters": [
+                                "",
+                                "Objects",
+                                "True",
+                                ""
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "RTSUnitSelection::SetPreSelected"
+                              },
+                              "parameters": [
+                                "",
+                                "Objects",
+                                "False",
+                                ""
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Comment",
+                      "color": {
+                        "b": 109,
+                        "g": 230,
+                        "r": 255,
+                        "textB": 0,
+                        "textG": 0,
+                        "textR": 0
+                      },
+                      "comment": "Reset variables",
+                      "comment2": ""
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "SetObjectVariableAsBoolean"
+                          },
+                          "parameters": [
+                            "SelectionBox",
+                            "__RTSUnitSelection.Dragging",
+                            "False"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetObjectVariableAsBoolean"
+                          },
+                          "parameters": [
+                            "SelectionBox",
+                            "__RTSUnitSelection.ClickStarted",
+                            "False"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "ModVarObjet"
+                          },
+                          "parameters": [
+                            "SelectionBox",
+                            "__RTSUnitSelection.StartX",
+                            "=",
+                            "0"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ModVarObjet"
+                          },
+                          "parameters": [
+                            "SelectionBox",
+                            "__RTSUnitSelection.StartY",
+                            "=",
+                            "0"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "ModVarObjet"
+                          },
+                          "parameters": [
+                            "SelectionBox",
+                            "__RTSUnitSelection.EndX",
+                            "=",
+                            "0"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ModVarObjet"
+                          },
+                          "parameters": [
+                            "SelectionBox",
+                            "__RTSUnitSelection.EndY",
+                            "=",
+                            "0"
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "parameters": []
+            }
+          ],
+          "parameters": []
+        }
+      ],
+      "parameters": [
+        {
+          "codeOnly": false,
+          "defaultValue": "",
+          "description": "Units",
+          "longDescription": "Object (or object group) that can be Selected",
+          "name": "Objects",
+          "optional": false,
+          "supplementaryInformation": "",
+          "type": "objectList"
+        },
+        {
+          "codeOnly": false,
+          "defaultValue": "",
+          "description": "Selection box",
+          "longDescription": "Edit shape painter properties to change the appearance of this selection box",
+          "name": "SelectionBox",
+          "optional": false,
+          "supplementaryInformation": "PrimitiveDrawing::Drawer",
+          "type": "objectList"
+        },
+        {
+          "codeOnly": false,
+          "defaultValue": "",
+          "description": "Layer (of selection box)",
+          "longDescription": "Must be the same layer as the units being selected",
+          "name": "Layer",
+          "optional": false,
+          "supplementaryInformation": "",
+          "type": "layer"
+        },
+        {
+          "codeOnly": false,
+          "defaultValue": "",
+          "description": "Z order (of selection box)",
+          "longDescription": "Z order of the selection box",
+          "name": "Zorder",
+          "optional": false,
+          "supplementaryInformation": "",
+          "type": "expression"
+        },
+        {
+          "codeOnly": false,
+          "defaultValue": "",
+          "description": "Additive select key",
+          "longDescription": "Hold this key to add units to selection",
+          "name": "AdditiveSelectKey",
+          "optional": false,
+          "supplementaryInformation": "",
+          "type": "key"
+        },
+        {
+          "codeOnly": false,
+          "defaultValue": "",
+          "description": "Subtractive select key",
+          "longDescription": "Hold this key to remove units from selection",
+          "name": "SubtractiveSelectKey",
+          "optional": false,
+          "supplementaryInformation": "",
+          "type": "key"
+        },
+        {
+          "codeOnly": false,
+          "defaultValue": "",
+          "description": "Mouse button used to select units",
+          "longDescription": "",
+          "name": "MouseButtonSelect",
+          "optional": false,
+          "supplementaryInformation": "",
+          "type": "mouse"
+        }
+      ],
+      "objectGroups": []
+    },
+    {
+      "description": "Check if the unit is \"Preselected\".",
+      "fullName": "Is unit \"Preselected\"",
+      "functionType": "Condition",
+      "group": "",
+      "name": "IsPreSelected",
+      "private": false,
+      "sentence": "_PARAM1_ is \"Preselected\"",
+      "events": [
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "ObjectVariableAsBoolean"
+              },
+              "parameters": [
+                "Object",
+                "__RTSUnitSelection.PreSelected",
+                "False"
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "SetReturnBoolean"
+              },
+              "parameters": [
+                "False"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "ObjectVariableAsBoolean"
+              },
+              "parameters": [
+                "Object",
+                "__RTSUnitSelection.PreSelected",
+                "True"
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "SetReturnBoolean"
+              },
+              "parameters": [
+                "True"
+              ]
+            }
+          ]
+        }
+      ],
+      "parameters": [
+        {
+          "codeOnly": false,
+          "defaultValue": "",
+          "description": "Object",
+          "longDescription": "",
+          "name": "Object",
+          "optional": false,
+          "supplementaryInformation": "",
+          "type": "objectList"
+        }
+      ],
+      "objectGroups": []
+    },
+    {
+      "description": "Check if the unit is \"Selected\".",
+      "fullName": "Is unit \"Selected\"",
+      "functionType": "Condition",
+      "group": "",
+      "name": "IsSelected",
+      "private": false,
+      "sentence": "_PARAM1_ is \"Selected\"",
+      "events": [
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "ObjectVariableAsBoolean"
+              },
+              "parameters": [
+                "Object",
+                "__RTSUnitSelection.Selected",
+                "False"
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "SetReturnBoolean"
+              },
+              "parameters": [
+                "False"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "ObjectVariableAsBoolean"
+              },
+              "parameters": [
+                "Object",
+                "__RTSUnitSelection.Selected",
+                "True"
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "SetReturnBoolean"
+              },
+              "parameters": [
+                "True"
+              ]
+            }
+          ]
+        }
+      ],
+      "parameters": [
+        {
+          "codeOnly": false,
+          "defaultValue": "",
+          "description": "Object",
+          "longDescription": "",
+          "name": "Object",
+          "optional": false,
+          "supplementaryInformation": "",
+          "type": "objectList"
+        }
+      ],
+      "objectGroups": []
+    },
+    {
+      "description": "Set unit as \"Preselected\".",
+      "fullName": "Set unit as \"Preselected\"",
+      "functionType": "Action",
+      "group": "",
+      "name": "SetPreSelected",
+      "private": false,
+      "sentence": "Set _PARAM1_ as \"Preselected\": _PARAM2_",
+      "events": [
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "GetArgumentAsBoolean"
+              },
+              "parameters": [
+                "\"Value\""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "SetObjectVariableAsBoolean"
+              },
+              "parameters": [
+                "Object",
+                "__RTSUnitSelection.PreSelected",
+                "True"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": true,
+                "value": "GetArgumentAsBoolean"
+              },
+              "parameters": [
+                "\"Value\""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "SetObjectVariableAsBoolean"
+              },
+              "parameters": [
+                "Object",
+                "__RTSUnitSelection.PreSelected",
+                "False"
+              ]
+            }
+          ]
+        }
+      ],
+      "parameters": [
+        {
+          "codeOnly": false,
+          "defaultValue": "",
+          "description": "Object",
+          "longDescription": "",
+          "name": "Object",
+          "optional": false,
+          "supplementaryInformation": "",
+          "type": "objectList"
+        },
+        {
+          "codeOnly": false,
+          "defaultValue": "",
+          "description": "Value",
+          "longDescription": "",
+          "name": "Value",
+          "optional": false,
+          "supplementaryInformation": "",
+          "type": "trueorfalse"
+        }
+      ],
+      "objectGroups": []
+    },
+    {
+      "description": "Set unit as \"Selected\".",
+      "fullName": "Set unit as \"Selected\"",
+      "functionType": "Action",
+      "group": "",
+      "name": "SetSelected",
+      "private": false,
+      "sentence": "Set _PARAM1_ as \"Selected\": _PARAM2_",
+      "events": [
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "GetArgumentAsBoolean"
+              },
+              "parameters": [
+                "\"Value\""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "SetObjectVariableAsBoolean"
+              },
+              "parameters": [
+                "Object",
+                "__RTSUnitSelection.Selected",
+                "True"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": true,
+                "value": "GetArgumentAsBoolean"
+              },
+              "parameters": [
+                "\"Value\""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "SetObjectVariableAsBoolean"
+              },
+              "parameters": [
+                "Object",
+                "__RTSUnitSelection.Selected",
+                "False"
+              ]
+            }
+          ]
+        }
+      ],
+      "parameters": [
+        {
+          "codeOnly": false,
+          "defaultValue": "",
+          "description": "Object",
+          "longDescription": "",
+          "name": "Object",
+          "optional": false,
+          "supplementaryInformation": "",
+          "type": "objectList"
+        },
+        {
+          "codeOnly": false,
+          "defaultValue": "",
+          "description": "Value",
+          "longDescription": "",
+          "name": "Value",
+          "optional": false,
+          "supplementaryInformation": "",
+          "type": "trueorfalse"
+        }
+      ],
+      "objectGroups": []
+    },
+    {
+      "description": "Assign a unique ID to each \"Selected\" unit.  This should be ran every time there is a change in the number of \"Selected\" units.",
+      "fullName": "Assign a unique ID to each \"Selected\" unit",
+      "functionType": "Action",
+      "group": "",
+      "name": "AssignUnitID",
+      "private": false,
+      "sentence": "Assign a unique ID to _PARAM1_ that are \"Selected\"",
+      "events": [
+        {
+          "colorB": 228,
+          "colorG": 176,
+          "colorR": 74,
+          "creationTime": 0,
+          "name": "Assign unique IDs",
+          "source": "",
+          "type": "BuiltinCommonInstructions::Group",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 109,
+                "g": 230,
+                "r": 255,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              },
+              "comment": "Reset counter",
+              "comment2": ""
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "ModVarScene"
+                  },
+                  "parameters": [
+                    "__RTSUnitSelection.TotalSelectedUnits",
+                    "=",
+                    "0"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 27,
+                "g": 2,
+                "r": 208,
+                "textB": 255,
+                "textG": 255,
+                "textR": 255
+              },
+              "comment": "These \"ForEach(Object)\" loops are required because extension conditions do not perform object picking (hopefully that will be added in the future)",
+              "comment2": ""
+            },
+            {
+              "type": "BuiltinCommonInstructions::ForEach",
+              "object": "Object",
+              "conditions": [],
+              "actions": [],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Comment",
+                  "color": {
+                    "b": 109,
+                    "g": 230,
+                    "r": 255,
+                    "textB": 0,
+                    "textG": 0,
+                    "textR": 0
+                  },
+                  "comment": "Clean up old unit IDs",
+                  "comment2": ""
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "ModVarObjet"
+                      },
+                      "parameters": [
+                        "Object",
+                        "__RTSUnitSelection.SelectedUnitID",
+                        "=",
+                        "0"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Comment",
+                  "color": {
+                    "b": 109,
+                    "g": 230,
+                    "r": 255,
+                    "textB": 0,
+                    "textG": 0,
+                    "textR": 0
+                  },
+                  "comment": "Assign a unique number to each unit (this could be used to make formations)",
+                  "comment2": ""
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "RTSUnitSelection::IsSelected"
+                      },
+                      "parameters": [
+                        "",
+                        "Object",
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "ModVarScene"
+                      },
+                      "parameters": [
+                        "__RTSUnitSelection.TotalSelectedUnits",
+                        "+",
+                        "1"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ModVarObjet"
+                      },
+                      "parameters": [
+                        "Object",
+                        "__RTSUnitSelection.SelectedUnitID",
+                        "=",
+                        "Variable(__RTSUnitSelection.TotalSelectedUnits)"
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "parameters": []
+        }
+      ],
+      "parameters": [
+        {
+          "codeOnly": false,
+          "defaultValue": "",
+          "description": "Units",
+          "longDescription": "",
+          "name": "Object",
+          "optional": false,
+          "supplementaryInformation": "",
+          "type": "objectList"
+        }
+      ],
+      "objectGroups": []
+    },
+    {
+      "description": "Provides the total number of _PARAM1_ that are currently \"Selected\".",
+      "fullName": "Total number of \"Selected\" units",
+      "functionType": "Expression",
+      "group": "",
+      "name": "TotalSelectedUnits",
+      "private": false,
+      "sentence": "",
+      "events": [
+        {
+          "colorB": 228,
+          "colorG": 176,
+          "colorR": 74,
+          "creationTime": 0,
+          "name": "Count Selected units",
+          "source": "",
+          "type": "BuiltinCommonInstructions::Group",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 109,
+                "g": 230,
+                "r": 255,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              },
+              "comment": "Reset counter",
+              "comment2": ""
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "ModVarScene"
+                  },
+                  "parameters": [
+                    "__RTSUnitSelection.TotalSelectedUnits",
+                    "=",
+                    "0"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 27,
+                "g": 2,
+                "r": 208,
+                "textB": 255,
+                "textG": 255,
+                "textR": 255
+              },
+              "comment": "These \"ForEach(Object)\" loops are required because extension conditions do not perform object picking (hopefully that will be added in the future)",
+              "comment2": ""
+            },
+            {
+              "type": "BuiltinCommonInstructions::ForEach",
+              "object": "Object",
+              "conditions": [],
+              "actions": [],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "RTSUnitSelection::IsSelected"
+                      },
+                      "parameters": [
+                        "",
+                        "Object",
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "ModVarScene"
+                      },
+                      "parameters": [
+                        "__RTSUnitSelection.TotalSelectedUnits",
+                        "+",
+                        "1"
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetReturnNumber"
+                  },
+                  "parameters": [
+                    "Variable(__RTSUnitSelection.TotalSelectedUnits)"
+                  ]
+                }
+              ]
+            }
+          ],
+          "parameters": []
+        }
+      ],
+      "parameters": [
+        {
+          "codeOnly": false,
+          "defaultValue": "",
+          "description": "Unit",
+          "longDescription": "",
+          "name": "Object",
+          "optional": false,
+          "supplementaryInformation": "",
+          "type": "objectList"
+        }
+      ],
+      "objectGroups": []
+    },
+    {
+      "description": "Enable control groups using default controls.",
+      "fullName": "Enable control groups using default controls",
+      "functionType": "Action",
+      "group": "",
+      "name": "RTSControlGroups",
+      "private": false,
+      "sentence": "Assign _PARAM1_ to control groups using default controls (Ctrl + number)",
+      "events": [
+        {
+          "colorB": 228,
+          "colorG": 176,
+          "colorR": 74,
+          "creationTime": 0,
+          "name": "Control groups using default controls",
+          "source": "",
+          "type": "BuiltinCommonInstructions::Group",
+          "events": [
+            {
+              "colorB": 228,
+              "colorG": 176,
+              "colorR": 74,
+              "creationTime": 0,
+              "name": "Assign control group",
+              "source": "",
+              "type": "BuiltinCommonInstructions::Group",
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::Or"
+                      },
+                      "parameters": [],
+                      "subInstructions": [
+                        {
+                          "type": {
+                            "value": "KeyPressed"
+                          },
+                          "parameters": [
+                            "",
+                            "LControl"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "KeyPressed"
+                          },
+                          "parameters": [
+                            "",
+                            "RControl"
+                          ]
+                        }
+                      ]
+                    }
+                  ],
+                  "actions": [],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Comment",
+                      "color": {
+                        "b": 27,
+                        "g": 2,
+                        "r": 208,
+                        "textB": 255,
+                        "textG": 255,
+                        "textR": 255
+                      },
+                      "comment": "These \"ForEach(Object)\" loops are required because extension conditions do not perform object picking (hopefully that will be added in the future)",
+                      "comment2": ""
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "KeyPressed"
+                          },
+                          "parameters": [
+                            "",
+                            "Num1"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "BuiltinCommonInstructions::Once"
+                          },
+                          "parameters": []
+                        }
+                      ],
+                      "actions": [],
+                      "events": [
+                        {
+                          "type": "BuiltinCommonInstructions::ForEach",
+                          "object": "Objects",
+                          "conditions": [],
+                          "actions": [],
+                          "events": [
+                            {
+                              "type": "BuiltinCommonInstructions::Comment",
+                              "color": {
+                                "b": 109,
+                                "g": 230,
+                                "r": 255,
+                                "textB": 0,
+                                "textG": 0,
+                                "textR": 0
+                              },
+                              "comment": "Remove control group from non-selected objects",
+                              "comment2": ""
+                            },
+                            {
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "inverted": true,
+                                    "value": "RTSUnitSelection::IsSelected"
+                                  },
+                                  "parameters": [
+                                    "",
+                                    "Objects",
+                                    ""
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "RTSUnitSelection::IsAssignedToControlGroup"
+                                  },
+                                  "parameters": [
+                                    "",
+                                    "Objects",
+                                    "1",
+                                    ""
+                                  ]
+                                }
+                              ],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "RTSUnitSelection::AssignControlGroup"
+                                  },
+                                  "parameters": [
+                                    "",
+                                    "Objects",
+                                    "0",
+                                    ""
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "BuiltinCommonInstructions::Comment",
+                              "color": {
+                                "b": 109,
+                                "g": 230,
+                                "r": 255,
+                                "textB": 0,
+                                "textG": 0,
+                                "textR": 0
+                              },
+                              "comment": "Set the control group ID on selected objects",
+                              "comment2": ""
+                            },
+                            {
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "value": "RTSUnitSelection::IsSelected"
+                                  },
+                                  "parameters": [
+                                    "",
+                                    "Objects",
+                                    ""
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "inverted": true,
+                                    "value": "RTSUnitSelection::IsAssignedToControlGroup"
+                                  },
+                                  "parameters": [
+                                    "",
+                                    "Objects",
+                                    "1",
+                                    ""
+                                  ]
+                                }
+                              ],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "RTSUnitSelection::AssignControlGroup"
+                                  },
+                                  "parameters": [
+                                    "",
+                                    "Objects",
+                                    "1",
+                                    ""
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "KeyPressed"
+                          },
+                          "parameters": [
+                            "",
+                            "Num2"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "BuiltinCommonInstructions::Once"
+                          },
+                          "parameters": []
+                        }
+                      ],
+                      "actions": [],
+                      "events": [
+                        {
+                          "type": "BuiltinCommonInstructions::ForEach",
+                          "object": "Objects",
+                          "conditions": [],
+                          "actions": [],
+                          "events": [
+                            {
+                              "type": "BuiltinCommonInstructions::Comment",
+                              "color": {
+                                "b": 109,
+                                "g": 230,
+                                "r": 255,
+                                "textB": 0,
+                                "textG": 0,
+                                "textR": 0
+                              },
+                              "comment": "Remove control group from non-selected objects",
+                              "comment2": ""
+                            },
+                            {
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "inverted": true,
+                                    "value": "RTSUnitSelection::IsSelected"
+                                  },
+                                  "parameters": [
+                                    "",
+                                    "Objects",
+                                    ""
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "RTSUnitSelection::IsAssignedToControlGroup"
+                                  },
+                                  "parameters": [
+                                    "",
+                                    "Objects",
+                                    "2",
+                                    ""
+                                  ]
+                                }
+                              ],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "RTSUnitSelection::AssignControlGroup"
+                                  },
+                                  "parameters": [
+                                    "",
+                                    "Objects",
+                                    "0",
+                                    ""
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "BuiltinCommonInstructions::Comment",
+                              "color": {
+                                "b": 109,
+                                "g": 230,
+                                "r": 255,
+                                "textB": 0,
+                                "textG": 0,
+                                "textR": 0
+                              },
+                              "comment": "Set the control group ID on selected objects",
+                              "comment2": ""
+                            },
+                            {
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "value": "RTSUnitSelection::IsSelected"
+                                  },
+                                  "parameters": [
+                                    "",
+                                    "Objects",
+                                    ""
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "inverted": true,
+                                    "value": "RTSUnitSelection::IsAssignedToControlGroup"
+                                  },
+                                  "parameters": [
+                                    "",
+                                    "Objects",
+                                    "2",
+                                    ""
+                                  ]
+                                }
+                              ],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "RTSUnitSelection::AssignControlGroup"
+                                  },
+                                  "parameters": [
+                                    "",
+                                    "Objects",
+                                    "2",
+                                    ""
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "KeyPressed"
+                          },
+                          "parameters": [
+                            "",
+                            "Num3"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "BuiltinCommonInstructions::Once"
+                          },
+                          "parameters": []
+                        }
+                      ],
+                      "actions": [],
+                      "events": [
+                        {
+                          "type": "BuiltinCommonInstructions::ForEach",
+                          "object": "Objects",
+                          "conditions": [],
+                          "actions": [],
+                          "events": [
+                            {
+                              "type": "BuiltinCommonInstructions::Comment",
+                              "color": {
+                                "b": 109,
+                                "g": 230,
+                                "r": 255,
+                                "textB": 0,
+                                "textG": 0,
+                                "textR": 0
+                              },
+                              "comment": "Remove control group from non-selected objects",
+                              "comment2": ""
+                            },
+                            {
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "inverted": true,
+                                    "value": "RTSUnitSelection::IsSelected"
+                                  },
+                                  "parameters": [
+                                    "",
+                                    "Objects",
+                                    ""
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "RTSUnitSelection::IsAssignedToControlGroup"
+                                  },
+                                  "parameters": [
+                                    "",
+                                    "Objects",
+                                    "3",
+                                    ""
+                                  ]
+                                }
+                              ],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "RTSUnitSelection::AssignControlGroup"
+                                  },
+                                  "parameters": [
+                                    "",
+                                    "Objects",
+                                    "0",
+                                    ""
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "BuiltinCommonInstructions::Comment",
+                              "color": {
+                                "b": 109,
+                                "g": 230,
+                                "r": 255,
+                                "textB": 0,
+                                "textG": 0,
+                                "textR": 0
+                              },
+                              "comment": "Set the control group ID on selected objects",
+                              "comment2": ""
+                            },
+                            {
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "value": "RTSUnitSelection::IsSelected"
+                                  },
+                                  "parameters": [
+                                    "",
+                                    "Objects",
+                                    ""
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "inverted": true,
+                                    "value": "RTSUnitSelection::IsAssignedToControlGroup"
+                                  },
+                                  "parameters": [
+                                    "",
+                                    "Objects",
+                                    "3",
+                                    ""
+                                  ]
+                                }
+                              ],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "RTSUnitSelection::AssignControlGroup"
+                                  },
+                                  "parameters": [
+                                    "",
+                                    "Objects",
+                                    "3",
+                                    ""
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "KeyPressed"
+                          },
+                          "parameters": [
+                            "",
+                            "Num4"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "BuiltinCommonInstructions::Once"
+                          },
+                          "parameters": []
+                        }
+                      ],
+                      "actions": [],
+                      "events": [
+                        {
+                          "type": "BuiltinCommonInstructions::ForEach",
+                          "object": "Objects",
+                          "conditions": [],
+                          "actions": [],
+                          "events": [
+                            {
+                              "type": "BuiltinCommonInstructions::Comment",
+                              "color": {
+                                "b": 109,
+                                "g": 230,
+                                "r": 255,
+                                "textB": 0,
+                                "textG": 0,
+                                "textR": 0
+                              },
+                              "comment": "Remove control group from non-selected objects",
+                              "comment2": ""
+                            },
+                            {
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "inverted": true,
+                                    "value": "RTSUnitSelection::IsSelected"
+                                  },
+                                  "parameters": [
+                                    "",
+                                    "Objects",
+                                    ""
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "RTSUnitSelection::IsAssignedToControlGroup"
+                                  },
+                                  "parameters": [
+                                    "",
+                                    "Objects",
+                                    "4",
+                                    ""
+                                  ]
+                                }
+                              ],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "RTSUnitSelection::AssignControlGroup"
+                                  },
+                                  "parameters": [
+                                    "",
+                                    "Objects",
+                                    "0",
+                                    ""
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "BuiltinCommonInstructions::Comment",
+                              "color": {
+                                "b": 109,
+                                "g": 230,
+                                "r": 255,
+                                "textB": 0,
+                                "textG": 0,
+                                "textR": 0
+                              },
+                              "comment": "Set the control group ID on selected objects",
+                              "comment2": ""
+                            },
+                            {
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "value": "RTSUnitSelection::IsSelected"
+                                  },
+                                  "parameters": [
+                                    "",
+                                    "Objects",
+                                    ""
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "inverted": true,
+                                    "value": "RTSUnitSelection::IsAssignedToControlGroup"
+                                  },
+                                  "parameters": [
+                                    "",
+                                    "Objects",
+                                    "4",
+                                    ""
+                                  ]
+                                }
+                              ],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "RTSUnitSelection::AssignControlGroup"
+                                  },
+                                  "parameters": [
+                                    "",
+                                    "Objects",
+                                    "4",
+                                    ""
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "KeyPressed"
+                          },
+                          "parameters": [
+                            "",
+                            "Num5"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "BuiltinCommonInstructions::Once"
+                          },
+                          "parameters": []
+                        }
+                      ],
+                      "actions": [],
+                      "events": [
+                        {
+                          "type": "BuiltinCommonInstructions::ForEach",
+                          "object": "Objects",
+                          "conditions": [],
+                          "actions": [],
+                          "events": [
+                            {
+                              "type": "BuiltinCommonInstructions::Comment",
+                              "color": {
+                                "b": 109,
+                                "g": 230,
+                                "r": 255,
+                                "textB": 0,
+                                "textG": 0,
+                                "textR": 0
+                              },
+                              "comment": "Remove control group from non-selected objects",
+                              "comment2": ""
+                            },
+                            {
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "inverted": true,
+                                    "value": "RTSUnitSelection::IsSelected"
+                                  },
+                                  "parameters": [
+                                    "",
+                                    "Objects",
+                                    ""
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "RTSUnitSelection::IsAssignedToControlGroup"
+                                  },
+                                  "parameters": [
+                                    "",
+                                    "Objects",
+                                    "5",
+                                    ""
+                                  ]
+                                }
+                              ],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "RTSUnitSelection::AssignControlGroup"
+                                  },
+                                  "parameters": [
+                                    "",
+                                    "Objects",
+                                    "0",
+                                    ""
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "BuiltinCommonInstructions::Comment",
+                              "color": {
+                                "b": 109,
+                                "g": 230,
+                                "r": 255,
+                                "textB": 0,
+                                "textG": 0,
+                                "textR": 0
+                              },
+                              "comment": "Set the control group ID on selected objects",
+                              "comment2": ""
+                            },
+                            {
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "value": "RTSUnitSelection::IsSelected"
+                                  },
+                                  "parameters": [
+                                    "",
+                                    "Objects",
+                                    ""
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "inverted": true,
+                                    "value": "RTSUnitSelection::IsAssignedToControlGroup"
+                                  },
+                                  "parameters": [
+                                    "",
+                                    "Objects",
+                                    "5",
+                                    ""
+                                  ]
+                                }
+                              ],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "RTSUnitSelection::AssignControlGroup"
+                                  },
+                                  "parameters": [
+                                    "",
+                                    "Objects",
+                                    "5",
+                                    ""
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "KeyPressed"
+                          },
+                          "parameters": [
+                            "",
+                            "Num6"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "BuiltinCommonInstructions::Once"
+                          },
+                          "parameters": []
+                        }
+                      ],
+                      "actions": [],
+                      "events": [
+                        {
+                          "type": "BuiltinCommonInstructions::ForEach",
+                          "object": "Objects",
+                          "conditions": [],
+                          "actions": [],
+                          "events": [
+                            {
+                              "type": "BuiltinCommonInstructions::Comment",
+                              "color": {
+                                "b": 109,
+                                "g": 230,
+                                "r": 255,
+                                "textB": 0,
+                                "textG": 0,
+                                "textR": 0
+                              },
+                              "comment": "Remove control group from non-selected objects",
+                              "comment2": ""
+                            },
+                            {
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "inverted": true,
+                                    "value": "RTSUnitSelection::IsSelected"
+                                  },
+                                  "parameters": [
+                                    "",
+                                    "Objects",
+                                    ""
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "RTSUnitSelection::IsAssignedToControlGroup"
+                                  },
+                                  "parameters": [
+                                    "",
+                                    "Objects",
+                                    "6",
+                                    ""
+                                  ]
+                                }
+                              ],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "RTSUnitSelection::AssignControlGroup"
+                                  },
+                                  "parameters": [
+                                    "",
+                                    "Objects",
+                                    "0",
+                                    ""
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "BuiltinCommonInstructions::Comment",
+                              "color": {
+                                "b": 109,
+                                "g": 230,
+                                "r": 255,
+                                "textB": 0,
+                                "textG": 0,
+                                "textR": 0
+                              },
+                              "comment": "Set the control group ID on selected objects",
+                              "comment2": ""
+                            },
+                            {
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "value": "RTSUnitSelection::IsSelected"
+                                  },
+                                  "parameters": [
+                                    "",
+                                    "Objects",
+                                    ""
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "inverted": true,
+                                    "value": "RTSUnitSelection::IsAssignedToControlGroup"
+                                  },
+                                  "parameters": [
+                                    "",
+                                    "Objects",
+                                    "6",
+                                    ""
+                                  ]
+                                }
+                              ],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "RTSUnitSelection::AssignControlGroup"
+                                  },
+                                  "parameters": [
+                                    "",
+                                    "Objects",
+                                    "6",
+                                    ""
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "KeyPressed"
+                          },
+                          "parameters": [
+                            "",
+                            "Num7"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "BuiltinCommonInstructions::Once"
+                          },
+                          "parameters": []
+                        }
+                      ],
+                      "actions": [],
+                      "events": [
+                        {
+                          "type": "BuiltinCommonInstructions::ForEach",
+                          "object": "Objects",
+                          "conditions": [],
+                          "actions": [],
+                          "events": [
+                            {
+                              "type": "BuiltinCommonInstructions::Comment",
+                              "color": {
+                                "b": 109,
+                                "g": 230,
+                                "r": 255,
+                                "textB": 0,
+                                "textG": 0,
+                                "textR": 0
+                              },
+                              "comment": "Remove control group from non-selected objects",
+                              "comment2": ""
+                            },
+                            {
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "inverted": true,
+                                    "value": "RTSUnitSelection::IsSelected"
+                                  },
+                                  "parameters": [
+                                    "",
+                                    "Objects",
+                                    ""
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "RTSUnitSelection::IsAssignedToControlGroup"
+                                  },
+                                  "parameters": [
+                                    "",
+                                    "Objects",
+                                    "7",
+                                    ""
+                                  ]
+                                }
+                              ],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "RTSUnitSelection::AssignControlGroup"
+                                  },
+                                  "parameters": [
+                                    "",
+                                    "Objects",
+                                    "0",
+                                    ""
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "BuiltinCommonInstructions::Comment",
+                              "color": {
+                                "b": 109,
+                                "g": 230,
+                                "r": 255,
+                                "textB": 0,
+                                "textG": 0,
+                                "textR": 0
+                              },
+                              "comment": "Set the control group ID on selected objects",
+                              "comment2": ""
+                            },
+                            {
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "value": "RTSUnitSelection::IsSelected"
+                                  },
+                                  "parameters": [
+                                    "",
+                                    "Objects",
+                                    ""
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "inverted": true,
+                                    "value": "RTSUnitSelection::IsAssignedToControlGroup"
+                                  },
+                                  "parameters": [
+                                    "",
+                                    "Objects",
+                                    "7",
+                                    ""
+                                  ]
+                                }
+                              ],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "RTSUnitSelection::AssignControlGroup"
+                                  },
+                                  "parameters": [
+                                    "",
+                                    "Objects",
+                                    "7",
+                                    ""
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "KeyPressed"
+                          },
+                          "parameters": [
+                            "",
+                            "Num8"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "BuiltinCommonInstructions::Once"
+                          },
+                          "parameters": []
+                        }
+                      ],
+                      "actions": [],
+                      "events": [
+                        {
+                          "type": "BuiltinCommonInstructions::ForEach",
+                          "object": "Objects",
+                          "conditions": [],
+                          "actions": [],
+                          "events": [
+                            {
+                              "type": "BuiltinCommonInstructions::Comment",
+                              "color": {
+                                "b": 109,
+                                "g": 230,
+                                "r": 255,
+                                "textB": 0,
+                                "textG": 0,
+                                "textR": 0
+                              },
+                              "comment": "Remove control group from non-selected objects",
+                              "comment2": ""
+                            },
+                            {
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "inverted": true,
+                                    "value": "RTSUnitSelection::IsSelected"
+                                  },
+                                  "parameters": [
+                                    "",
+                                    "Objects",
+                                    ""
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "RTSUnitSelection::IsAssignedToControlGroup"
+                                  },
+                                  "parameters": [
+                                    "",
+                                    "Objects",
+                                    "8",
+                                    ""
+                                  ]
+                                }
+                              ],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "RTSUnitSelection::AssignControlGroup"
+                                  },
+                                  "parameters": [
+                                    "",
+                                    "Objects",
+                                    "0",
+                                    ""
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "BuiltinCommonInstructions::Comment",
+                              "color": {
+                                "b": 109,
+                                "g": 230,
+                                "r": 255,
+                                "textB": 0,
+                                "textG": 0,
+                                "textR": 0
+                              },
+                              "comment": "Set the control group ID on selected objects",
+                              "comment2": ""
+                            },
+                            {
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "value": "RTSUnitSelection::IsSelected"
+                                  },
+                                  "parameters": [
+                                    "",
+                                    "Objects",
+                                    ""
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "inverted": true,
+                                    "value": "RTSUnitSelection::IsAssignedToControlGroup"
+                                  },
+                                  "parameters": [
+                                    "",
+                                    "Objects",
+                                    "8",
+                                    ""
+                                  ]
+                                }
+                              ],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "RTSUnitSelection::AssignControlGroup"
+                                  },
+                                  "parameters": [
+                                    "",
+                                    "Objects",
+                                    "8",
+                                    ""
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "KeyPressed"
+                          },
+                          "parameters": [
+                            "",
+                            "Num9"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "BuiltinCommonInstructions::Once"
+                          },
+                          "parameters": []
+                        }
+                      ],
+                      "actions": [],
+                      "events": [
+                        {
+                          "type": "BuiltinCommonInstructions::ForEach",
+                          "object": "Objects",
+                          "conditions": [],
+                          "actions": [],
+                          "events": [
+                            {
+                              "type": "BuiltinCommonInstructions::Comment",
+                              "color": {
+                                "b": 109,
+                                "g": 230,
+                                "r": 255,
+                                "textB": 0,
+                                "textG": 0,
+                                "textR": 0
+                              },
+                              "comment": "Remove control group from non-selected objects",
+                              "comment2": ""
+                            },
+                            {
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "inverted": true,
+                                    "value": "RTSUnitSelection::IsSelected"
+                                  },
+                                  "parameters": [
+                                    "",
+                                    "Objects",
+                                    ""
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "RTSUnitSelection::IsAssignedToControlGroup"
+                                  },
+                                  "parameters": [
+                                    "",
+                                    "Objects",
+                                    "9",
+                                    ""
+                                  ]
+                                }
+                              ],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "RTSUnitSelection::AssignControlGroup"
+                                  },
+                                  "parameters": [
+                                    "",
+                                    "Objects",
+                                    "0",
+                                    ""
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "BuiltinCommonInstructions::Comment",
+                              "color": {
+                                "b": 109,
+                                "g": 230,
+                                "r": 255,
+                                "textB": 0,
+                                "textG": 0,
+                                "textR": 0
+                              },
+                              "comment": "Set the control group ID on selected objects",
+                              "comment2": ""
+                            },
+                            {
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "value": "RTSUnitSelection::IsSelected"
+                                  },
+                                  "parameters": [
+                                    "",
+                                    "Objects",
+                                    ""
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "inverted": true,
+                                    "value": "RTSUnitSelection::IsAssignedToControlGroup"
+                                  },
+                                  "parameters": [
+                                    "",
+                                    "Objects",
+                                    "9",
+                                    ""
+                                  ]
+                                }
+                              ],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "RTSUnitSelection::AssignControlGroup"
+                                  },
+                                  "parameters": [
+                                    "",
+                                    "Objects",
+                                    "9",
+                                    ""
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "KeyPressed"
+                          },
+                          "parameters": [
+                            "",
+                            "Num0"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "BuiltinCommonInstructions::Once"
+                          },
+                          "parameters": []
+                        }
+                      ],
+                      "actions": [],
+                      "events": [
+                        {
+                          "type": "BuiltinCommonInstructions::ForEach",
+                          "object": "Objects",
+                          "conditions": [],
+                          "actions": [],
+                          "events": [
+                            {
+                              "type": "BuiltinCommonInstructions::Comment",
+                              "color": {
+                                "b": 109,
+                                "g": 230,
+                                "r": 255,
+                                "textB": 0,
+                                "textG": 0,
+                                "textR": 0
+                              },
+                              "comment": "Remove control group from non-selected objects",
+                              "comment2": ""
+                            },
+                            {
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "inverted": true,
+                                    "value": "RTSUnitSelection::IsSelected"
+                                  },
+                                  "parameters": [
+                                    "",
+                                    "Objects",
+                                    ""
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "RTSUnitSelection::IsAssignedToControlGroup"
+                                  },
+                                  "parameters": [
+                                    "",
+                                    "Objects",
+                                    "10",
+                                    ""
+                                  ]
+                                }
+                              ],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "RTSUnitSelection::AssignControlGroup"
+                                  },
+                                  "parameters": [
+                                    "",
+                                    "Objects",
+                                    "0",
+                                    ""
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "BuiltinCommonInstructions::Comment",
+                              "color": {
+                                "b": 109,
+                                "g": 230,
+                                "r": 255,
+                                "textB": 0,
+                                "textG": 0,
+                                "textR": 0
+                              },
+                              "comment": "Set the control group ID on selected objects",
+                              "comment2": ""
+                            },
+                            {
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "value": "RTSUnitSelection::IsSelected"
+                                  },
+                                  "parameters": [
+                                    "",
+                                    "Objects",
+                                    ""
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "inverted": true,
+                                    "value": "RTSUnitSelection::IsAssignedToControlGroup"
+                                  },
+                                  "parameters": [
+                                    "",
+                                    "Objects",
+                                    "10",
+                                    ""
+                                  ]
+                                }
+                              ],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "RTSUnitSelection::AssignControlGroup"
+                                  },
+                                  "parameters": [
+                                    "",
+                                    "Objects",
+                                    "10",
+                                    ""
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "parameters": []
+            },
+            {
+              "colorB": 228,
+              "colorG": 176,
+              "colorR": 74,
+              "creationTime": 0,
+              "name": "Select units based on control group",
+              "source": "",
+              "type": "BuiltinCommonInstructions::Group",
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "inverted": true,
+                        "value": "KeyPressed"
+                      },
+                      "parameters": [
+                        "",
+                        "RControl"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "inverted": true,
+                        "value": "KeyPressed"
+                      },
+                      "parameters": [
+                        "",
+                        "LControl"
+                      ]
+                    }
+                  ],
+                  "actions": [],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Comment",
+                      "color": {
+                        "b": 27,
+                        "g": 2,
+                        "r": 208,
+                        "textB": 255,
+                        "textG": 255,
+                        "textR": 255
+                      },
+                      "comment": "These \"ForEach(Object)\" loops are required because extension conditions do not perform object picking (hopefully that will be added in the future)",
+                      "comment2": ""
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "KeyPressed"
+                          },
+                          "parameters": [
+                            "",
+                            "Num1"
+                          ]
+                        }
+                      ],
+                      "actions": [],
+                      "events": [
+                        {
+                          "type": "BuiltinCommonInstructions::ForEach",
+                          "object": "Objects",
+                          "conditions": [],
+                          "actions": [],
+                          "events": [
+                            {
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "inverted": true,
+                                    "value": "RTSUnitSelection::IsAssignedToControlGroup"
+                                  },
+                                  "parameters": [
+                                    "",
+                                    "Objects",
+                                    "1",
+                                    ""
+                                  ]
+                                }
+                              ],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "RTSUnitSelection::SetSelected"
+                                  },
+                                  "parameters": [
+                                    "",
+                                    "Objects",
+                                    "False",
+                                    ""
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "value": "RTSUnitSelection::IsAssignedToControlGroup"
+                                  },
+                                  "parameters": [
+                                    "",
+                                    "Objects",
+                                    "1",
+                                    ""
+                                  ]
+                                }
+                              ],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "RTSUnitSelection::SetSelected"
+                                  },
+                                  "parameters": [
+                                    "",
+                                    "Objects",
+                                    "True",
+                                    ""
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "KeyPressed"
+                          },
+                          "parameters": [
+                            "",
+                            "Num2"
+                          ]
+                        }
+                      ],
+                      "actions": [],
+                      "events": [
+                        {
+                          "type": "BuiltinCommonInstructions::ForEach",
+                          "object": "Objects",
+                          "conditions": [],
+                          "actions": [],
+                          "events": [
+                            {
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "inverted": true,
+                                    "value": "RTSUnitSelection::IsAssignedToControlGroup"
+                                  },
+                                  "parameters": [
+                                    "",
+                                    "Objects",
+                                    "2",
+                                    ""
+                                  ]
+                                }
+                              ],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "RTSUnitSelection::SetSelected"
+                                  },
+                                  "parameters": [
+                                    "",
+                                    "Objects",
+                                    "False",
+                                    ""
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "value": "RTSUnitSelection::IsAssignedToControlGroup"
+                                  },
+                                  "parameters": [
+                                    "",
+                                    "Objects",
+                                    "2",
+                                    ""
+                                  ]
+                                }
+                              ],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "RTSUnitSelection::SetSelected"
+                                  },
+                                  "parameters": [
+                                    "",
+                                    "Objects",
+                                    "True",
+                                    ""
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "KeyPressed"
+                          },
+                          "parameters": [
+                            "",
+                            "Num3"
+                          ]
+                        }
+                      ],
+                      "actions": [],
+                      "events": [
+                        {
+                          "type": "BuiltinCommonInstructions::ForEach",
+                          "object": "Objects",
+                          "conditions": [],
+                          "actions": [],
+                          "events": [
+                            {
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "inverted": true,
+                                    "value": "RTSUnitSelection::IsAssignedToControlGroup"
+                                  },
+                                  "parameters": [
+                                    "",
+                                    "Objects",
+                                    "3",
+                                    ""
+                                  ]
+                                }
+                              ],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "RTSUnitSelection::SetSelected"
+                                  },
+                                  "parameters": [
+                                    "",
+                                    "Objects",
+                                    "False",
+                                    ""
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "value": "RTSUnitSelection::IsAssignedToControlGroup"
+                                  },
+                                  "parameters": [
+                                    "",
+                                    "Objects",
+                                    "3",
+                                    ""
+                                  ]
+                                }
+                              ],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "RTSUnitSelection::SetSelected"
+                                  },
+                                  "parameters": [
+                                    "",
+                                    "Objects",
+                                    "True",
+                                    ""
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "KeyPressed"
+                          },
+                          "parameters": [
+                            "",
+                            "Num4"
+                          ]
+                        }
+                      ],
+                      "actions": [],
+                      "events": [
+                        {
+                          "type": "BuiltinCommonInstructions::ForEach",
+                          "object": "Objects",
+                          "conditions": [],
+                          "actions": [],
+                          "events": [
+                            {
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "inverted": true,
+                                    "value": "RTSUnitSelection::IsAssignedToControlGroup"
+                                  },
+                                  "parameters": [
+                                    "",
+                                    "Objects",
+                                    "4",
+                                    ""
+                                  ]
+                                }
+                              ],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "RTSUnitSelection::SetSelected"
+                                  },
+                                  "parameters": [
+                                    "",
+                                    "Objects",
+                                    "False",
+                                    ""
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "value": "RTSUnitSelection::IsAssignedToControlGroup"
+                                  },
+                                  "parameters": [
+                                    "",
+                                    "Objects",
+                                    "4",
+                                    ""
+                                  ]
+                                }
+                              ],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "RTSUnitSelection::SetSelected"
+                                  },
+                                  "parameters": [
+                                    "",
+                                    "Objects",
+                                    "True",
+                                    ""
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "KeyPressed"
+                          },
+                          "parameters": [
+                            "",
+                            "Num5"
+                          ]
+                        }
+                      ],
+                      "actions": [],
+                      "events": [
+                        {
+                          "type": "BuiltinCommonInstructions::ForEach",
+                          "object": "Objects",
+                          "conditions": [],
+                          "actions": [],
+                          "events": [
+                            {
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "inverted": true,
+                                    "value": "RTSUnitSelection::IsAssignedToControlGroup"
+                                  },
+                                  "parameters": [
+                                    "",
+                                    "Objects",
+                                    "5",
+                                    ""
+                                  ]
+                                }
+                              ],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "RTSUnitSelection::SetSelected"
+                                  },
+                                  "parameters": [
+                                    "",
+                                    "Objects",
+                                    "False",
+                                    ""
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "value": "RTSUnitSelection::IsAssignedToControlGroup"
+                                  },
+                                  "parameters": [
+                                    "",
+                                    "Objects",
+                                    "5",
+                                    ""
+                                  ]
+                                }
+                              ],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "RTSUnitSelection::SetSelected"
+                                  },
+                                  "parameters": [
+                                    "",
+                                    "Objects",
+                                    "True",
+                                    ""
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "KeyPressed"
+                          },
+                          "parameters": [
+                            "",
+                            "Num6"
+                          ]
+                        }
+                      ],
+                      "actions": [],
+                      "events": [
+                        {
+                          "type": "BuiltinCommonInstructions::ForEach",
+                          "object": "Objects",
+                          "conditions": [],
+                          "actions": [],
+                          "events": [
+                            {
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "inverted": true,
+                                    "value": "RTSUnitSelection::IsAssignedToControlGroup"
+                                  },
+                                  "parameters": [
+                                    "",
+                                    "Objects",
+                                    "6",
+                                    ""
+                                  ]
+                                }
+                              ],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "RTSUnitSelection::SetSelected"
+                                  },
+                                  "parameters": [
+                                    "",
+                                    "Objects",
+                                    "False",
+                                    ""
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "value": "RTSUnitSelection::IsAssignedToControlGroup"
+                                  },
+                                  "parameters": [
+                                    "",
+                                    "Objects",
+                                    "6",
+                                    ""
+                                  ]
+                                }
+                              ],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "RTSUnitSelection::SetSelected"
+                                  },
+                                  "parameters": [
+                                    "",
+                                    "Objects",
+                                    "True",
+                                    ""
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "KeyPressed"
+                          },
+                          "parameters": [
+                            "",
+                            "Num7"
+                          ]
+                        }
+                      ],
+                      "actions": [],
+                      "events": [
+                        {
+                          "type": "BuiltinCommonInstructions::ForEach",
+                          "object": "Objects",
+                          "conditions": [],
+                          "actions": [],
+                          "events": [
+                            {
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "inverted": true,
+                                    "value": "RTSUnitSelection::IsAssignedToControlGroup"
+                                  },
+                                  "parameters": [
+                                    "",
+                                    "Objects",
+                                    "7",
+                                    ""
+                                  ]
+                                }
+                              ],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "RTSUnitSelection::SetSelected"
+                                  },
+                                  "parameters": [
+                                    "",
+                                    "Objects",
+                                    "False",
+                                    ""
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "value": "RTSUnitSelection::IsAssignedToControlGroup"
+                                  },
+                                  "parameters": [
+                                    "",
+                                    "Objects",
+                                    "7",
+                                    ""
+                                  ]
+                                }
+                              ],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "RTSUnitSelection::SetSelected"
+                                  },
+                                  "parameters": [
+                                    "",
+                                    "Objects",
+                                    "True",
+                                    ""
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "KeyPressed"
+                          },
+                          "parameters": [
+                            "",
+                            "Num8"
+                          ]
+                        }
+                      ],
+                      "actions": [],
+                      "events": [
+                        {
+                          "type": "BuiltinCommonInstructions::ForEach",
+                          "object": "Objects",
+                          "conditions": [],
+                          "actions": [],
+                          "events": [
+                            {
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "inverted": true,
+                                    "value": "RTSUnitSelection::IsAssignedToControlGroup"
+                                  },
+                                  "parameters": [
+                                    "",
+                                    "Objects",
+                                    "8",
+                                    ""
+                                  ]
+                                }
+                              ],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "RTSUnitSelection::SetSelected"
+                                  },
+                                  "parameters": [
+                                    "",
+                                    "Objects",
+                                    "False",
+                                    ""
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "value": "RTSUnitSelection::IsAssignedToControlGroup"
+                                  },
+                                  "parameters": [
+                                    "",
+                                    "Objects",
+                                    "8",
+                                    ""
+                                  ]
+                                }
+                              ],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "RTSUnitSelection::SetSelected"
+                                  },
+                                  "parameters": [
+                                    "",
+                                    "Objects",
+                                    "True",
+                                    ""
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "KeyPressed"
+                          },
+                          "parameters": [
+                            "",
+                            "Num9"
+                          ]
+                        }
+                      ],
+                      "actions": [],
+                      "events": [
+                        {
+                          "type": "BuiltinCommonInstructions::ForEach",
+                          "object": "Objects",
+                          "conditions": [],
+                          "actions": [],
+                          "events": [
+                            {
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "inverted": true,
+                                    "value": "RTSUnitSelection::IsAssignedToControlGroup"
+                                  },
+                                  "parameters": [
+                                    "",
+                                    "Objects",
+                                    "9",
+                                    ""
+                                  ]
+                                }
+                              ],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "RTSUnitSelection::SetSelected"
+                                  },
+                                  "parameters": [
+                                    "",
+                                    "Objects",
+                                    "False",
+                                    ""
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "value": "RTSUnitSelection::IsAssignedToControlGroup"
+                                  },
+                                  "parameters": [
+                                    "",
+                                    "Objects",
+                                    "9",
+                                    ""
+                                  ]
+                                }
+                              ],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "RTSUnitSelection::SetSelected"
+                                  },
+                                  "parameters": [
+                                    "",
+                                    "Objects",
+                                    "True",
+                                    ""
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "KeyPressed"
+                          },
+                          "parameters": [
+                            "",
+                            "Num0"
+                          ]
+                        }
+                      ],
+                      "actions": [],
+                      "events": [
+                        {
+                          "type": "BuiltinCommonInstructions::ForEach",
+                          "object": "Objects",
+                          "conditions": [],
+                          "actions": [],
+                          "events": [
+                            {
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "inverted": true,
+                                    "value": "RTSUnitSelection::IsAssignedToControlGroup"
+                                  },
+                                  "parameters": [
+                                    "",
+                                    "Objects",
+                                    "10",
+                                    ""
+                                  ]
+                                }
+                              ],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "RTSUnitSelection::SetSelected"
+                                  },
+                                  "parameters": [
+                                    "",
+                                    "Objects",
+                                    "False",
+                                    ""
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "value": "RTSUnitSelection::IsAssignedToControlGroup"
+                                  },
+                                  "parameters": [
+                                    "",
+                                    "Objects",
+                                    "10",
+                                    ""
+                                  ]
+                                }
+                              ],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "RTSUnitSelection::SetSelected"
+                                  },
+                                  "parameters": [
+                                    "",
+                                    "Objects",
+                                    "True",
+                                    ""
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "parameters": []
+            }
+          ],
+          "parameters": []
+        }
+      ],
+      "parameters": [
+        {
+          "codeOnly": false,
+          "defaultValue": "",
+          "description": "Units",
+          "longDescription": "Object (or object group) that will be assigned to a control group",
+          "name": "Objects",
+          "optional": false,
+          "supplementaryInformation": "",
+          "type": "objectList"
+        }
+      ],
+      "objectGroups": []
+    },
+    {
+      "description": "Control group this unit is assigned to.",
+      "fullName": "Control group this unit is assigned to",
+      "functionType": "Expression",
+      "group": "",
+      "name": "ControlGroupID",
+      "private": false,
+      "sentence": "",
+      "events": [
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": [
+            {
+              "type": {
+                "value": "SetReturnNumber"
+              },
+              "parameters": [
+                "Object.Variable(__RTSUnitSelection.ControlGroupID)"
+              ]
+            }
+          ]
+        }
+      ],
+      "parameters": [
+        {
+          "codeOnly": false,
+          "defaultValue": "",
+          "description": "Unit",
+          "longDescription": "",
+          "name": "Object",
+          "optional": false,
+          "supplementaryInformation": "",
+          "type": "objectList"
+        }
+      ],
+      "objectGroups": []
+    },
+    {
+      "description": "Check if a unit is assigned to a control group.",
+      "fullName": "Check if a unit is assigned to a control group",
+      "functionType": "Condition",
+      "group": "",
+      "name": "IsAssignedToControlGroup",
+      "private": false,
+      "sentence": "_PARAM1_ is assigned to control group _PARAM2_",
+      "events": [
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "Egal"
+              },
+              "parameters": [
+                "RTSUnitSelection::ControlGroupID(Object)",
+                "=",
+                "GetArgumentAsNumber(\"ControlGroupID\")"
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "SetReturnBoolean"
+              },
+              "parameters": [
+                "True"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "Egal"
+              },
+              "parameters": [
+                "RTSUnitSelection::ControlGroupID(Object)",
+                "!=",
+                "GetArgumentAsNumber(\"ControlGroupID\")"
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "SetReturnBoolean"
+              },
+              "parameters": [
+                "False"
+              ]
+            }
+          ]
+        }
+      ],
+      "parameters": [
+        {
+          "codeOnly": false,
+          "defaultValue": "",
+          "description": "Object",
+          "longDescription": "",
+          "name": "Object",
+          "optional": false,
+          "supplementaryInformation": "",
+          "type": "objectList"
+        },
+        {
+          "codeOnly": false,
+          "defaultValue": "",
+          "description": "Control group ID",
+          "longDescription": "",
+          "name": "ControlGroupID",
+          "optional": false,
+          "supplementaryInformation": "",
+          "type": "expression"
+        }
+      ],
+      "objectGroups": []
+    },
+    {
+      "description": "Assign unit to a control group.",
+      "fullName": "Assign unit to a control group",
+      "functionType": "Action",
+      "group": "",
+      "name": "AssignControlGroup",
+      "private": false,
+      "sentence": "Assign _PARAM1_ to control group _PARAM2_",
+      "events": [
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": [
+            {
+              "type": {
+                "value": "ModVarObjet"
+              },
+              "parameters": [
+                "Object",
+                "__RTSUnitSelection.ControlGroupID",
+                "=",
+                "GetArgumentAsNumber(\"Value\")"
+              ]
+            }
+          ]
+        }
+      ],
+      "parameters": [
+        {
+          "codeOnly": false,
+          "defaultValue": "",
+          "description": "Object",
+          "longDescription": "",
+          "name": "Object",
+          "optional": false,
+          "supplementaryInformation": "",
+          "type": "objectList"
+        },
+        {
+          "codeOnly": false,
+          "defaultValue": "",
+          "description": "Control group ID",
+          "longDescription": "",
+          "name": "Value",
+          "optional": false,
+          "supplementaryInformation": "",
+          "type": "expression"
+        }
+      ],
+      "objectGroups": []
+    },
+    {
+      "description": "Unit ID of a selected unit.",
+      "fullName": "Unit ID of a selected unit",
+      "functionType": "Expression",
+      "group": "",
+      "name": "SelectedUnitID",
+      "private": false,
+      "sentence": "",
+      "events": [
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": [
+            {
+              "type": {
+                "value": "SetReturnNumber"
+              },
+              "parameters": [
+                "Object.Variable(__RTSUnitSelection.SelectedUnitID)"
+              ]
+            }
+          ]
+        }
+      ],
+      "parameters": [
+        {
+          "codeOnly": false,
+          "defaultValue": "",
+          "description": "Unit",
+          "longDescription": "",
+          "name": "Object",
+          "optional": false,
+          "supplementaryInformation": "",
+          "type": "objectList"
+        }
+      ],
+      "objectGroups": []
+    }
+  ],
+  "eventsBasedBehaviors": [],
+  "eventsBasedObjects": []
+}

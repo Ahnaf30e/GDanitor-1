@@ -18,7 +18,7 @@
     "gridColor": 10401023,
     "gridAlpha": 0.8,
     "snap": true,
-    "zoomFactor": 1.175,
+    "zoomFactor": 0.32500000000000007,
     "windowMask": false
   },
   "objectsGroups": [
@@ -1975,14 +1975,51 @@
     },
     {
       "assetStoreId": "",
-      "name": "nodeEnd",
+      "name": "boxSelector",
       "tags": "",
-      "type": "Sprite",
-      "updateIfNotVisible": false,
+      "type": "PrimitiveDrawing::Drawer",
       "variables": [],
       "effects": [],
       "behaviors": [],
-      "animations": []
+      "fillOpacity": 25,
+      "outlineSize": 2,
+      "outlineOpacity": 255,
+      "fillColor": {
+        "b": 199,
+        "g": 214,
+        "r": 32
+      },
+      "outlineColor": {
+        "b": 219,
+        "g": 252,
+        "r": 166
+      },
+      "absoluteCoordinates": false,
+      "clearBetweenFrames": true
+    },
+    {
+      "assetStoreId": "",
+      "name": "nodeSelector",
+      "tags": "",
+      "type": "PrimitiveDrawing::Drawer",
+      "variables": [],
+      "effects": [],
+      "behaviors": [],
+      "fillOpacity": 25,
+      "outlineSize": 2,
+      "outlineOpacity": 255,
+      "fillColor": {
+        "b": 219,
+        "g": 252,
+        "r": 166
+      },
+      "outlineColor": {
+        "b": 192,
+        "g": 243,
+        "r": 254
+      },
+      "absoluteCoordinates": false,
+      "clearBetweenFrames": true
     }
   ],
   "events": [
@@ -2194,7 +2231,6 @@
               "colorG": 176,
               "colorR": 74,
               "creationTime": 0,
-              "folded": true,
               "name": "Box Selection",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
@@ -2446,6 +2482,196 @@
                                     "node",
                                     "shown",
                                     "True"
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "MouseButtonPressed"
+                          },
+                          "parameters": [
+                            "",
+                            "Left"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "BuiltinCommonInstructions::Once"
+                          },
+                          "parameters": []
+                        },
+                        {
+                          "type": {
+                            "value": "BuiltinCommonInstructions::Not"
+                          },
+                          "parameters": [],
+                          "subInstructions": [
+                            {
+                              "type": {
+                                "value": "SourisSurObjet"
+                              },
+                              "parameters": [
+                                "controlPLate",
+                                "",
+                                "",
+                                ""
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "BuiltinCommonInstructions::Not"
+                          },
+                          "parameters": [],
+                          "subInstructions": [
+                            {
+                              "type": {
+                                "value": "SourisSurObjet"
+                              },
+                              "parameters": [
+                                "box",
+                                "",
+                                "",
+                                ""
+                              ]
+                            }
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "SetSceneVariableAsBoolean"
+                          },
+                          "parameters": [
+                            "selectingBoxes",
+                            "True"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "SceneVariableAsBoolean"
+                          },
+                          "parameters": [
+                            "selectingBoxes",
+                            "True"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "RTSUnitSelection::RTSUnitSelection"
+                          },
+                          "parameters": [
+                            "",
+                            "box",
+                            "boxSelector",
+                            "\"\"",
+                            "-2000",
+                            "a",
+                            "d",
+                            "Left",
+                            ""
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "MouseButtonReleased"
+                          },
+                          "parameters": [
+                            "",
+                            "Left"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "SetSceneVariableAsBoolean"
+                          },
+                          "parameters": [
+                            "selectingBoxes",
+                            "False"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "RTSUnitSelection::IsSelected"
+                          },
+                          "parameters": [
+                            "",
+                            "box",
+                            ""
+                          ]
+                        }
+                      ],
+                      "actions": [],
+                      "events": [
+                        {
+                          "type": "BuiltinCommonInstructions::ForEach",
+                          "object": "box",
+                          "conditions": [],
+                          "actions": [],
+                          "events": [
+                            {
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "value": "RTSUnitSelection::IsSelected"
+                                  },
+                                  "parameters": [
+                                    "",
+                                    "box",
+                                    ""
+                                  ]
+                                }
+                              ],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "SetObjectVariableAsBoolean"
+                                  },
+                                  "parameters": [
+                                    "box",
+                                    "selected",
+                                    "True"
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "RTSUnitSelection::SetSelected"
+                                  },
+                                  "parameters": [
+                                    "",
+                                    "box",
+                                    "",
+                                    ""
                                   ]
                                 }
                               ]
@@ -10105,6 +10331,12 @@
               ]
             },
             {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": []
+            },
+            {
+              "folded": true,
               "type": "BuiltinCommonInstructions::ForEach",
               "object": "box",
               "conditions": [],
@@ -11102,6 +11334,163 @@
                                                         "yes"
                                                       ]
                                                     }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "BuiltinCommonInstructions::Standard",
+                                      "conditions": [
+                                        {
+                                          "type": {
+                                            "value": "MouseButtonPressed"
+                                          },
+                                          "parameters": [
+                                            "",
+                                            "Left"
+                                          ]
+                                        },
+                                        {
+                                          "type": {
+                                            "value": "BuiltinCommonInstructions::Once"
+                                          },
+                                          "parameters": []
+                                        },
+                                        {
+                                          "type": {
+                                            "value": "SourisSurObjet"
+                                          },
+                                          "parameters": [
+                                            "timeline",
+                                            "",
+                                            "",
+                                            ""
+                                          ]
+                                        },
+                                        {
+                                          "type": {
+                                            "value": "BuiltinCommonInstructions::Not"
+                                          },
+                                          "parameters": [],
+                                          "subInstructions": [
+                                            {
+                                              "type": {
+                                                "value": "SourisSurObjet"
+                                              },
+                                              "parameters": [
+                                                "node",
+                                                "",
+                                                "",
+                                                ""
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ],
+                                      "actions": [
+                                        {
+                                          "type": {
+                                            "value": "SetSceneVariableAsBoolean"
+                                          },
+                                          "parameters": [
+                                            "selectingNodes",
+                                            "True"
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "BuiltinCommonInstructions::Standard",
+                                      "conditions": [
+                                        {
+                                          "type": {
+                                            "value": "SceneVariableAsBoolean"
+                                          },
+                                          "parameters": [
+                                            "selectingNodes",
+                                            "True"
+                                          ]
+                                        }
+                                      ],
+                                      "actions": [
+                                        {
+                                          "type": {
+                                            "value": "RTSUnitSelection::RTSUnitSelection"
+                                          },
+                                          "parameters": [
+                                            "",
+                                            "node",
+                                            "nodeSelector",
+                                            "\"GUI\"",
+                                            "3",
+                                            "a",
+                                            "d",
+                                            "Left",
+                                            ""
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "BuiltinCommonInstructions::Standard",
+                                      "conditions": [
+                                        {
+                                          "type": {
+                                            "value": "RTSUnitSelection::IsSelected"
+                                          },
+                                          "parameters": [
+                                            "",
+                                            "node",
+                                            ""
+                                          ]
+                                        }
+                                      ],
+                                      "actions": [],
+                                      "events": [
+                                        {
+                                          "type": "BuiltinCommonInstructions::ForEach",
+                                          "object": "node",
+                                          "conditions": [],
+                                          "actions": [],
+                                          "events": [
+                                            {
+                                              "type": "BuiltinCommonInstructions::Standard",
+                                              "conditions": [
+                                                {
+                                                  "type": {
+                                                    "value": "RTSUnitSelection::IsSelected"
+                                                  },
+                                                  "parameters": [
+                                                    "",
+                                                    "node",
+                                                    ""
+                                                  ]
+                                                }
+                                              ],
+                                              "actions": [
+                                                {
+                                                  "type": {
+                                                    "value": "SetObjectVariableAsBoolean"
+                                                  },
+                                                  "parameters": [
+                                                    "node",
+                                                    "selected",
+                                                    "True"
+                                                  ]
+                                                },
+                                                {
+                                                  "type": {
+                                                    "value": "RTSUnitSelection::SetSelected"
+                                                  },
+                                                  "parameters": [
+                                                    "",
+                                                    "node",
+                                                    "",
+                                                    ""
                                                   ]
                                                 }
                                               ]
@@ -14131,6 +14520,31 @@
                     }
                   ],
                   "parameters": []
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "MouseButtonReleased"
+                  },
+                  "parameters": [
+                    "",
+                    "Left"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetSceneVariableAsBoolean"
+                  },
+                  "parameters": [
+                    "selectingNodes",
+                    "False"
+                  ]
                 }
               ]
             },
