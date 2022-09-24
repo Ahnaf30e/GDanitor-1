@@ -1,7 +1,7 @@
 {
   "author": "",
   "category": "Advanced",
-  "description": "Animates the object in a model according the given GDanitor animation data. Can also be used to just create objects as a model and move them around with the object with the 'ObjectAnimator' behavior.\n\n## How to use:\n- Create an object with the behavior 'ObjectAnimator'.\n- Create the model using the action 'CreateModel'.\n- Add or delete objects to the model using the actions 'AddObjectToModel' or 'RemoveObjectFromModel'",
+  "description": "Animates the object in a model according the given GDanitor animation data. Can also be used to just create objects as a model and move them around with the object with the 'ObjectAnimator' behavior.\n\n## How to use:\n- Create an object with the behavior 'ObjectAnimator'.\n- Create the model using the action 'CreateModel'.\n- Add or delete objects to the model using the actions 'AddObjectToModel' or 'RemoveObjectFromModel'.\n- The \"AnimateObjects\" action **must** be run every frame after all events. ",
   "extensionNamespace": "",
   "fullName": "GDanitor",
   "helpPath": "",
