@@ -18,7 +18,7 @@
     "gridColor": 10401023,
     "gridAlpha": 0.2,
     "snap": true,
-    "zoomFactor": 0.5,
+    "zoomFactor": 0.55,
     "windowMask": false
   },
   "objectsGroups": [],
@@ -234,6 +234,21 @@
       "numberProperties": [],
       "stringProperties": [],
       "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "height": 56,
+      "layer": "",
+      "name": "exVersion",
+      "persistentUuid": "af8c1ad4-4f1e-49ca-8d7b-9747e9e1c587",
+      "width": 416,
+      "x": 229,
+      "y": 299,
+      "zOrder": 10,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
     }
   ],
   "objects": [
@@ -290,6 +305,25 @@
         "text": "0.0.0 ",
         "opacity": 255,
         "fontSize": 20,
+        "visible": true,
+        "color": "166;252;219",
+        "fontFamily": "Minecraft.ttf",
+        "align": "left",
+        "wordWrap": true
+      }
+    },
+    {
+      "assetStoreId": "",
+      "name": "exVersion",
+      "tags": "",
+      "type": "BBText::BBText",
+      "variables": [],
+      "effects": [],
+      "behaviors": [],
+      "content": {
+        "text": "for  GDanitor Animator extension 0.1.0 ",
+        "opacity": 55,
+        "fontSize": 16,
         "visible": true,
         "color": "166;252;219",
         "fontFamily": "Minecraft.ttf",

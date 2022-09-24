@@ -10336,7 +10336,6 @@
               "actions": []
             },
             {
-              "folded": true,
               "type": "BuiltinCommonInstructions::ForEach",
               "object": "box",
               "conditions": [],
@@ -11896,7 +11895,6 @@
                               "type": "BuiltinCommonInstructions::Group",
                               "events": [
                                 {
-                                  "folded": true,
                                   "type": "BuiltinCommonInstructions::Standard",
                                   "conditions": [
                                     {
@@ -12095,13 +12093,240 @@
                                               "colorG": 176,
                                               "colorR": 74,
                                               "creationTime": 0,
+                                              "folded": true,
                                               "name": "Instant",
                                               "source": "",
                                               "type": "BuiltinCommonInstructions::Group",
                                               "events": [
                                                 {
+                                                  "folded": true,
                                                   "type": "BuiltinCommonInstructions::Standard",
-                                                  "conditions": [],
+                                                  "conditions": [
+                                                    {
+                                                      "type": {
+                                                        "value": "VarObjetTxt"
+                                                      },
+                                                      "parameters": [
+                                                        "node",
+                                                        "data.anm.easing",
+                                                        "=",
+                                                        "\"\""
+                                                      ]
+                                                    }
+                                                  ],
+                                                  "actions": [],
+                                                  "events": [
+                                                    {
+                                                      "colorB": 228,
+                                                      "colorG": 176,
+                                                      "colorR": 74,
+                                                      "creationTime": 0,
+                                                      "folded": true,
+                                                      "name": "positoin",
+                                                      "source": "",
+                                                      "type": "BuiltinCommonInstructions::Group",
+                                                      "events": [
+                                                        {
+                                                          "folded": true,
+                                                          "type": "BuiltinCommonInstructions::Standard",
+                                                          "conditions": [
+                                                            {
+                                                              "type": {
+                                                                "value": "ObjectVariableAsBoolean"
+                                                              },
+                                                              "parameters": [
+                                                                "node",
+                                                                "data.active.position.X",
+                                                                "True"
+                                                              ]
+                                                            }
+                                                          ],
+                                                          "actions": [
+                                                            {
+                                                              "type": {
+                                                                "value": "MettreX"
+                                                              },
+                                                              "parameters": [
+                                                                "box",
+                                                                "=",
+                                                                "node.Variable(data.anm.position.X)"
+                                                              ]
+                                                            }
+                                                          ]
+                                                        },
+                                                        {
+                                                          "folded": true,
+                                                          "type": "BuiltinCommonInstructions::Standard",
+                                                          "conditions": [
+                                                            {
+                                                              "type": {
+                                                                "value": "ObjectVariableAsBoolean"
+                                                              },
+                                                              "parameters": [
+                                                                "node",
+                                                                "data.active.position.Y",
+                                                                "True"
+                                                              ]
+                                                            }
+                                                          ],
+                                                          "actions": [
+                                                            {
+                                                              "type": {
+                                                                "value": "MettreY"
+                                                              },
+                                                              "parameters": [
+                                                                "box",
+                                                                "=",
+                                                                "node.Variable(data.anm.position.Y)"
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ],
+                                                      "parameters": []
+                                                    },
+                                                    {
+                                                      "folded": true,
+                                                      "type": "BuiltinCommonInstructions::Standard",
+                                                      "conditions": [
+                                                        {
+                                                          "type": {
+                                                            "value": "ObjectVariableAsBoolean"
+                                                          },
+                                                          "parameters": [
+                                                            "node",
+                                                            "data.active.width",
+                                                            "True"
+                                                          ]
+                                                        }
+                                                      ],
+                                                      "actions": [
+                                                        {
+                                                          "type": {
+                                                            "value": "ChangeWidth"
+                                                          },
+                                                          "parameters": [
+                                                            "box",
+                                                            "=",
+                                                            "node.Variable(data.anm.width)"
+                                                          ]
+                                                        }
+                                                      ]
+                                                    },
+                                                    {
+                                                      "folded": true,
+                                                      "type": "BuiltinCommonInstructions::Standard",
+                                                      "conditions": [
+                                                        {
+                                                          "type": {
+                                                            "value": "ObjectVariableAsBoolean"
+                                                          },
+                                                          "parameters": [
+                                                            "node",
+                                                            "data.active.height",
+                                                            "True"
+                                                          ]
+                                                        }
+                                                      ],
+                                                      "actions": [
+                                                        {
+                                                          "type": {
+                                                            "value": "ChangeHeight"
+                                                          },
+                                                          "parameters": [
+                                                            "box",
+                                                            "=",
+                                                            "node.Variable(data.anm.height)"
+                                                          ]
+                                                        }
+                                                      ]
+                                                    },
+                                                    {
+                                                      "folded": true,
+                                                      "type": "BuiltinCommonInstructions::Standard",
+                                                      "conditions": [
+                                                        {
+                                                          "type": {
+                                                            "value": "ObjectVariableAsBoolean"
+                                                          },
+                                                          "parameters": [
+                                                            "node",
+                                                            "data.active.angle",
+                                                            "True"
+                                                          ]
+                                                        }
+                                                      ],
+                                                      "actions": [
+                                                        {
+                                                          "type": {
+                                                            "value": "SetAngle"
+                                                          },
+                                                          "parameters": [
+                                                            "box",
+                                                            "=",
+                                                            "node.Variable(data.anm.angle)"
+                                                          ]
+                                                        }
+                                                      ]
+                                                    },
+                                                    {
+                                                      "folded": true,
+                                                      "type": "BuiltinCommonInstructions::Standard",
+                                                      "conditions": [
+                                                        {
+                                                          "type": {
+                                                            "value": "ObjectVariableAsBoolean"
+                                                          },
+                                                          "parameters": [
+                                                            "node",
+                                                            "data.active.opacity",
+                                                            "True"
+                                                          ]
+                                                        }
+                                                      ],
+                                                      "actions": [
+                                                        {
+                                                          "type": {
+                                                            "value": "Opacity"
+                                                          },
+                                                          "parameters": [
+                                                            "box",
+                                                            "=",
+                                                            "node.Variable(data.anm.opacity)"
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ],
+                                              "parameters": []
+                                            },
+                                            {
+                                              "colorB": 228,
+                                              "colorG": 176,
+                                              "colorR": 74,
+                                              "creationTime": 0,
+                                              "folded": true,
+                                              "name": "Tween",
+                                              "source": "",
+                                              "type": "BuiltinCommonInstructions::Group",
+                                              "events": [
+                                                {
+                                                  "type": "BuiltinCommonInstructions::Standard",
+                                                  "conditions": [
+                                                    {
+                                                      "type": {
+                                                        "value": "VarObjetTxt"
+                                                      },
+                                                      "parameters": [
+                                                        "node",
+                                                        "data.anm.easing",
+                                                        "!=",
+                                                        "\"\""
+                                                      ]
+                                                    }
+                                                  ],
                                                   "actions": [],
                                                   "events": [
                                                     {
