@@ -6121,7 +6121,6 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
-          "folded": true,
           "name": "Timeline events",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -6132,13 +6131,44 @@
               "conditions": [
                 {
                   "type": {
-                    "value": "Click::click"
+                    "value": "BuiltinCommonInstructions::Or"
                   },
-                  "parameters": [
-                    "",
-                    "Left",
-                    "play",
-                    ""
+                  "parameters": [],
+                  "subInstructions": [
+                    {
+                      "type": {
+                        "value": "Click::click"
+                      },
+                      "parameters": [
+                        "",
+                        "Left",
+                        "play",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::And"
+                      },
+                      "parameters": [],
+                      "subInstructions": [
+                        {
+                          "type": {
+                            "value": "KeyPressed"
+                          },
+                          "parameters": [
+                            "",
+                            "Space"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "BuiltinCommonInstructions::Once"
+                          },
+                          "parameters": []
+                        }
+                      ]
+                    }
                   ]
                 }
               ],

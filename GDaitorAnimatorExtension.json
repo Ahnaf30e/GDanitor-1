@@ -1,0 +1,3833 @@
+{
+  "author": "",
+  "category": "Advanced",
+  "description": "Animates the object in a model according the given GDanitor animation data. Can also be used to just create objects as a model and move them around with the object with the 'ObjectAnimator' behavior.\n\n## How to use:\n- Create an object with the behavior 'ObjectAnimator'.\n- Create the model using the action 'CreateModel'.\n- Add or delete objects to the model using the actions 'AddObjectToModel' or 'RemoveObjectFromModel'.\n- The \"AnimateObjects\" action **must** be run every frame after all events. ",
+  "extensionNamespace": "",
+  "fullName": "GDanitor",
+  "helpPath": "",
+  "iconUrl": "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAyMy4wLjMsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iSWNvbnMiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB2aWV3Qm94PSIwIDAgMzIgMzIiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDMyIDMyOyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+DQo8c3R5bGUgdHlwZT0idGV4dC9jc3MiPg0KCS5zdDB7ZmlsbDpub25lO3N0cm9rZTojMDAwMDAwO3N0cm9rZS13aWR0aDoyO3N0cm9rZS1saW5lY2FwOnJvdW5kO3N0cm9rZS1saW5lam9pbjpyb3VuZDtzdHJva2UtbWl0ZXJsaW1pdDoxMDt9DQo8L3N0eWxlPg0KPGNpcmNsZSBjbGFzcz0ic3QwIiBjeD0iMTMiIGN5PSIxNiIgcj0iMiIvPg0KPGNpcmNsZSBjbGFzcz0ic3QwIiBjeD0iMTMiIGN5PSIxNiIgcj0iMTIiLz4NCjxjaXJjbGUgY2xhc3M9InN0MCIgY3g9IjgiIGN5PSIxMSIgcj0iMiIvPg0KPGNpcmNsZSBjbGFzcz0ic3QwIiBjeD0iOCIgY3k9IjIxIiByPSIyIi8+DQo8Y2lyY2xlIGNsYXNzPSJzdDAiIGN4PSIxOCIgY3k9IjIxIiByPSIyIi8+DQo8Y2lyY2xlIGNsYXNzPSJzdDAiIGN4PSIxOCIgY3k9IjExIiByPSIyIi8+DQo8cGF0aCBjbGFzcz0ic3QwIiBkPSJNMjIuNCw4LjVsMS4zLDEuM2MxLjUsMS41LDMuOCwxLjUsNS4zLDBsMCwwYzEuNS0xLjUsMS41LTMuOCwwLTUuMyIvPg0KPC9zdmc+DQo=",
+  "name": "GDaitorAnimator",
+  "previewIconUrl": "https://resources.gdevelop-app.com/assets/Icons/Line Hero Pack/Master/SVG/Movies and Entertainment/Movies and Entertainment_cinema_film_movie_movies.svg",
+  "shortDescription": "Turn animations in GDanitor into tweens for GDevelop Objects.",
+  "version": "0.1.0",
+  "tags": [
+    "animation",
+    "tween"
+  ],
+  "authorIds": [
+    "onPsboRtDkUHNOsx7OPr8R8G1oj2"
+  ],
+  "dependencies": [],
+  "eventsFunctions": [],
+  "eventsBasedBehaviors": [
+    {
+      "description": "Allows sprite objects to have GDanitor animations.",
+      "fullName": "Object Animator",
+      "name": "ObjectAnimator",
+      "objectType": "Sprite",
+      "eventsFunctions": [
+        {
+          "description": "Create the model using objects",
+          "fullName": "Create Model",
+          "functionType": "Action",
+          "group": "",
+          "name": "CreateModel",
+          "private": false,
+          "sentence": "Create the model for the object _PARAM0_.",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::JsCode",
+              "inlineCode": "const modelData = JSON.parse(objects[0].getBehavior(\"ObjectAnimator\")._getModelJSON());\r\n\r\nfor (const box in modelData.box) {\r\n    const objectData = modelData.box[box].anm;\r\n    const object = runtimeScene.createObject(objectData.object.objName);\r\n\r\n    object.getVariables().get(\"__GDanitorAnimator\").getChild(\"UUID\").setString(box);\r\n    gdjs.evtTools.linkedObjects.linkObjects(runtimeScene, object, objects[0]);\r\n\r\n\r\n    object.setAngle(objectData.angle + objects[0].getAngle());\r\n    object.getVariables().get(\"__GDanitorAnimator\").getChild(\"IdleData\").getChild(\"Angle\").setNumber(objectData.angle);\r\n\r\n    object.setPosition(gdjs.evtTools.common.getXFromAngleAndDistance(gdjs.evtTools.common.angleBetweenPositions(0, 0, objectData.position.X * objects[0].getScaleX(), objectData.position.Y * objects[0].getScaleY()) + objects[0].getAngle(), gdjs.evtTools.common.distanceBetweenPositions(0, 0, objectData.position.X * objects[0].getScaleX(), objectData.position.Y * objects[0].getScaleY())) + objects[0].getX(), gdjs.evtTools.common.getYFromAngleAndDistance(gdjs.evtTools.common.angleBetweenPositions(0, 0, objectData.position.X * objects[0].getScaleX(), objectData.position.Y * objects[0].getScaleY()) + objects[0].getAngle(), gdjs.evtTools.common.distanceBetweenPositions(0, 0, objectData.position.X * objects[0].getScaleX(), objectData.position.Y * objects[0].getScaleY())) + objects[0].getY());\r\n    object.getVariables().get(\"__GDanitorAnimator\").getChild(\"IdleData\").getChild(\"X\").setNumber(objectData.position.X);\r\n    object.getVariables().get(\"__GDanitorAnimator\").getChild(\"IdleData\").getChild(\"Y\").setNumber(objectData.position.Y);\r\n\r\n    object.setHeight(objectData.height * objects[0].getScaleY());\r\n    object.setWidth(objectData.width * objects[0].getScaleX());\r\n    object.getVariables().get(\"__GDanitorAnimator\").getChild(\"IdleData\").getChild(\"Height\").setNumber(objectData.height);\r\n    object.getVariables().get(\"__GDanitorAnimator\").getChild(\"IdleData\").getChild(\"Width\").setNumber(objectData.width);\r\n\r\n    object.setOpacity(objectData.opacity * gdjs.evtTools.common.normalize(objects[0].getOpacity(), 0, 255));\r\n    object.getVariables().get(\"__GDanitorAnimator\").getChild(\"IdleData\").getChild(\"Opacity\").setNumber(objectData.opacity);\r\n\r\n    object.setZOrder(objectData.zOrder + objects[0].getZOrder());\r\n    object.getVariables().get(\"__GDanitorAnimator\").getChild(\"IdleData\").getChild(\"ZOrder\").setNumber(objectData.zOrder);\r\n\r\n    object.flipX(!!objectData.flippedHor);\r\n    object.flipY(!!objectData.flippedVer);\r\n    object.getVariables().get(\"__GDanitorAnimator\").getChild(\"IdleData\").getChild(\"FlippedHor\").setNumber(objectData.flippedHor);\r\n    object.getVariables().get(\"__GDanitorAnimator\").getChild(\"IdleData\").getChild(\"FlippedVer\").setNumber(objectData.flippedVer);\r\n}",
+              "parameterObjects": "Object",
+              "useStrict": true,
+              "eventsSheetExpanded": true
+            }
+          ],
+          "parameters": [
+            {
+              "codeOnly": false,
+              "defaultValue": "",
+              "description": "Object",
+              "longDescription": "",
+              "name": "Object",
+              "optional": false,
+              "supplementaryInformation": "Sprite",
+              "type": "object"
+            },
+            {
+              "codeOnly": false,
+              "defaultValue": "",
+              "description": "Behavior",
+              "longDescription": "",
+              "name": "Behavior",
+              "optional": false,
+              "supplementaryInformation": "GDaitorAnimator::ObjectAnimator",
+              "type": "behavior"
+            }
+          ],
+          "objectGroups": []
+        },
+        {
+          "description": "Animate the model using sprite objects",
+          "fullName": "Animate Model Sprites",
+          "functionType": "Action",
+          "group": "",
+          "name": "AnimateModelSprites",
+          "private": false,
+          "sentence": "Animate the model of the object _PARAM0_ using sprites _PARAM2_.",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::JsCode",
+              "inlineCode": "for (const objectName in objects){\n    const object = objects[objectName];\n    if (!object.getVariables().get(\"__GDanitorAnimator\").getChild(\"Started\").getAsBoolean()){\n        ;\n        let animationData = JSON.parse(object.getBehavior(\"ObjectAnimator\")._getAnimationsJSON());\n        object.getVariables().get(\"__GDanitorAnimator\").getChild(\"AnimationData\").fromJSObject(animationData);\n        object.getVariables().get(\"__GDanitorAnimator\").getChild(\"Playing\").setString(Object.keys(animationData)[0]);\n        object.getVariables().get(\"__GDanitorAnimator\").getChild(\"PlayingData\").fromJSObject(animationData[Object.keys(animationData)[0]]);\n        object.resetTimer(\"__GDanitorAnimator_Time\");\n    }\n}\n\n",
+              "parameterObjects": "Object",
+              "useStrict": true,
+              "eventsSheetExpanded": false
+            },
+            {
+              "type": "BuiltinCommonInstructions::ForEach",
+              "object": "Object",
+              "conditions": [],
+              "actions": [],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "ObjectVariableAsBoolean"
+                      },
+                      "parameters": [
+                        "Object",
+                        "__GDanitorAnimator.Started",
+                        "False"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetObjectVariableAsBoolean"
+                      },
+                      "parameters": [
+                        "Object",
+                        "__GDanitorAnimator.Started",
+                        "True"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::Or"
+                      },
+                      "parameters": [],
+                      "subInstructions": [
+                        {
+                          "type": {
+                            "value": "BuiltinCommonInstructions::And"
+                          },
+                          "parameters": [],
+                          "subInstructions": [
+                            {
+                              "type": {
+                                "value": "CompareObjectTimer"
+                              },
+                              "parameters": [
+                                "Object",
+                                "\"__GDanitorAnimator_Time\"",
+                                ">=",
+                                "Object.Variable(__GDanitorAnimator.PlayingData.settings.time)"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "ObjectVariableAsBoolean"
+                              },
+                              "parameters": [
+                                "Object",
+                                "__GDanitorAnimator.PlayingData.settings.loop",
+                                "True"
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "GDaitorAnimator::ObjectAnimator::PropertyStartAnimation"
+                          },
+                          "parameters": [
+                            "Object",
+                            "Behavior"
+                          ]
+                        }
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "ResetObjectTimer"
+                      },
+                      "parameters": [
+                        "Object",
+                        "\"__GDanitorAnimator_Time\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "JSONToObjectVariableStructure"
+                      },
+                      "parameters": [
+                        "ObjectVarToJSON(Object, __GDanitorAnimator.AnimationData[Object.VariableString(__GDanitorAnimator.Playing)])",
+                        "Object",
+                        "__GDanitorAnimator.PlayingData"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "GDaitorAnimator::ObjectAnimator::SetPropertyStartAnimation"
+                      },
+                      "parameters": [
+                        "Object",
+                        "Behavior",
+                        "no"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "LinkedObjects::PickObjectsLinkedTo"
+                      },
+                      "parameters": [
+                        "",
+                        "Parts",
+                        "Object",
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::ForEach",
+                      "object": "Parts",
+                      "conditions": [],
+                      "actions": [],
+                      "events": [
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "JSONToVariableStructure"
+                              },
+                              "parameters": [
+                                "ObjectVarToJSON(Object, __GDanitorAnimator.PlayingData.box[Parts.VariableString(__GDanitorAnimator.UUID)])",
+                                "__GDanitorAnimator.PlayingNodeList"
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "colorB": 228,
+                          "colorG": 176,
+                          "colorR": 74,
+                          "creationTime": 0,
+                          "name": "Idle state updates",
+                          "source": "",
+                          "type": "BuiltinCommonInstructions::Group",
+                          "events": [
+                            {
+                              "colorB": 228,
+                              "colorG": 176,
+                              "colorR": 74,
+                              "creationTime": 0,
+                              "folded": true,
+                              "name": "Idle state (when there is no tween playing)",
+                              "source": "",
+                              "type": "BuiltinCommonInstructions::Group",
+                              "events": [
+                                {
+                                  "type": "BuiltinCommonInstructions::Standard",
+                                  "conditions": [
+                                    {
+                                      "type": {
+                                        "inverted": true,
+                                        "value": "Tween::IsPlaying"
+                                      },
+                                      "parameters": [
+                                        "Parts",
+                                        "Tween",
+                                        "\"__GDanitorAnimator_Angle\""
+                                      ]
+                                    }
+                                  ],
+                                  "actions": [
+                                    {
+                                      "type": {
+                                        "value": "SetAngle"
+                                      },
+                                      "parameters": [
+                                        "Parts",
+                                        "=",
+                                        "Parts.Variable(__GDanitorAnimator.IdleData.Angle)"
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "BuiltinCommonInstructions::Standard",
+                                  "conditions": [
+                                    {
+                                      "type": {
+                                        "inverted": true,
+                                        "value": "Tween::IsPlaying"
+                                      },
+                                      "parameters": [
+                                        "Parts",
+                                        "Tween",
+                                        "\"__GDanitorAnimator_X\""
+                                      ]
+                                    }
+                                  ],
+                                  "actions": [
+                                    {
+                                      "type": {
+                                        "value": "MettreX"
+                                      },
+                                      "parameters": [
+                                        "Parts",
+                                        "=",
+                                        "Parts.Variable(__GDanitorAnimator.IdleData.X)"
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "BuiltinCommonInstructions::Standard",
+                                  "conditions": [
+                                    {
+                                      "type": {
+                                        "inverted": true,
+                                        "value": "Tween::IsPlaying"
+                                      },
+                                      "parameters": [
+                                        "Parts",
+                                        "Tween",
+                                        "\"__GDanitorAnimator_Y\""
+                                      ]
+                                    }
+                                  ],
+                                  "actions": [
+                                    {
+                                      "type": {
+                                        "value": "MettreY"
+                                      },
+                                      "parameters": [
+                                        "Parts",
+                                        "=",
+                                        "Parts.Variable(__GDanitorAnimator.IdleData.Y)"
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "folded": true,
+                                  "type": "BuiltinCommonInstructions::Standard",
+                                  "conditions": [
+                                    {
+                                      "type": {
+                                        "inverted": true,
+                                        "value": "Tween::IsPlaying"
+                                      },
+                                      "parameters": [
+                                        "Parts",
+                                        "Tween",
+                                        "\"__GDanitorAnimator_Height\""
+                                      ]
+                                    }
+                                  ],
+                                  "actions": [],
+                                  "events": [
+                                    {
+                                      "type": "BuiltinCommonInstructions::JsCode",
+                                      "inlineCode": "objects[0].setHeight(objects[0].getVariables().get(\"__GDanitorAnimator\").getChild(\"IdleData\").getChild(\"Height\").getAsNumber());\n\n",
+                                      "parameterObjects": "Parts",
+                                      "useStrict": true,
+                                      "eventsSheetExpanded": false
+                                    }
+                                  ]
+                                },
+                                {
+                                  "folded": true,
+                                  "type": "BuiltinCommonInstructions::Standard",
+                                  "conditions": [
+                                    {
+                                      "type": {
+                                        "inverted": true,
+                                        "value": "Tween::IsPlaying"
+                                      },
+                                      "parameters": [
+                                        "Parts",
+                                        "Tween",
+                                        "\"__GDanitorAnimator_Width\""
+                                      ]
+                                    }
+                                  ],
+                                  "actions": [],
+                                  "events": [
+                                    {
+                                      "type": "BuiltinCommonInstructions::JsCode",
+                                      "inlineCode": "objects[0].setWidth(objects[0].getVariables().get(\"__GDanitorAnimator\").getChild(\"IdleData\").getChild(\"Width\").getAsNumber());\n\n",
+                                      "parameterObjects": "Parts",
+                                      "useStrict": true,
+                                      "eventsSheetExpanded": false
+                                    }
+                                  ]
+                                },
+                                {
+                                  "folded": true,
+                                  "type": "BuiltinCommonInstructions::Standard",
+                                  "conditions": [
+                                    {
+                                      "type": {
+                                        "inverted": true,
+                                        "value": "Tween::IsPlaying"
+                                      },
+                                      "parameters": [
+                                        "Parts",
+                                        "Tween",
+                                        "\"__GDanitorAnimator_Opacity\""
+                                      ]
+                                    }
+                                  ],
+                                  "actions": [],
+                                  "events": [
+                                    {
+                                      "type": "BuiltinCommonInstructions::JsCode",
+                                      "inlineCode": "objects[0].setOpacity(objects[0].getVariables().get(\"__GDanitorAnimator\").getChild(\"IdleData\").getChild(\"Opacity\").getAsNumber());\n\n",
+                                      "parameterObjects": "Parts",
+                                      "useStrict": true,
+                                      "eventsSheetExpanded": false
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "BuiltinCommonInstructions::Standard",
+                                  "conditions": [],
+                                  "actions": [
+                                    {
+                                      "type": {
+                                        "value": "ChangePlan"
+                                      },
+                                      "parameters": [
+                                        "Parts",
+                                        "=",
+                                        "Parts.Variable(__GDanitorAnimator.IdleData.ZOrder)"
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "colorB": 228,
+                                  "colorG": 176,
+                                  "colorR": 74,
+                                  "creationTime": 0,
+                                  "name": "Flip",
+                                  "source": "",
+                                  "type": "BuiltinCommonInstructions::Group",
+                                  "events": [
+                                    {
+                                      "type": "BuiltinCommonInstructions::Standard",
+                                      "conditions": [],
+                                      "actions": [
+                                        {
+                                          "type": {
+                                            "value": "FlipY"
+                                          },
+                                          "parameters": [
+                                            "Parts",
+                                            ""
+                                          ]
+                                        }
+                                      ],
+                                      "events": [
+                                        {
+                                          "type": "BuiltinCommonInstructions::Standard",
+                                          "conditions": [
+                                            {
+                                              "type": {
+                                                "value": "ObjectVariableAsBoolean"
+                                              },
+                                              "parameters": [
+                                                "Parts",
+                                                "__GDanitorAnimator.IdleData.FlippedVer",
+                                                "True"
+                                              ]
+                                            }
+                                          ],
+                                          "actions": [
+                                            {
+                                              "type": {
+                                                "value": "FlipY"
+                                              },
+                                              "parameters": [
+                                                "Parts",
+                                                "yes"
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "BuiltinCommonInstructions::Standard",
+                                      "conditions": [],
+                                      "actions": [
+                                        {
+                                          "type": {
+                                            "value": "FlipX"
+                                          },
+                                          "parameters": [
+                                            "Parts",
+                                            ""
+                                          ]
+                                        }
+                                      ],
+                                      "events": [
+                                        {
+                                          "type": "BuiltinCommonInstructions::Standard",
+                                          "conditions": [
+                                            {
+                                              "type": {
+                                                "value": "ObjectVariableAsBoolean"
+                                              },
+                                              "parameters": [
+                                                "Parts",
+                                                "__GDanitorAnimator.IdleData.FlippedHor",
+                                                "True"
+                                              ]
+                                            }
+                                          ],
+                                          "actions": [
+                                            {
+                                              "type": {
+                                                "value": "FlipX"
+                                              },
+                                              "parameters": [
+                                                "Parts",
+                                                "yes"
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "BuiltinCommonInstructions::Standard",
+                                      "conditions": [],
+                                      "actions": []
+                                    }
+                                  ],
+                                  "parameters": []
+                                },
+                                {
+                                  "type": "BuiltinCommonInstructions::Standard",
+                                  "conditions": [],
+                                  "actions": []
+                                }
+                              ],
+                              "parameters": []
+                            }
+                          ],
+                          "parameters": []
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::ForEachChildVariable",
+                          "iterableVariableName": "__GDanitorAnimator.PlayingNodeList",
+                          "valueIteratorVariableName": "__GDanitorAnimator.Node",
+                          "keyIteratorVariableName": "__GDanitorAnimator.NodeName",
+                          "conditions": [],
+                          "actions": [],
+                          "events": [
+                            {
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "value": "CompareObjectTimer"
+                                  },
+                                  "parameters": [
+                                    "Object",
+                                    "\"__GDanitorAnimator_Time\"",
+                                    ">=",
+                                    "Variable(__GDanitorAnimator.Node.anm.timeline.start)"
+                                  ]
+                                }
+                              ],
+                              "actions": [],
+                              "events": [
+                                {
+                                  "colorB": 228,
+                                  "colorG": 176,
+                                  "colorR": 74,
+                                  "creationTime": 0,
+                                  "name": "Animation",
+                                  "source": "",
+                                  "type": "BuiltinCommonInstructions::Group",
+                                  "events": [
+                                    {
+                                      "type": "BuiltinCommonInstructions::Standard",
+                                      "conditions": [
+                                        {
+                                          "type": {
+                                            "value": "VarSceneTxt"
+                                          },
+                                          "parameters": [
+                                            "__GDanitorAnimator.Node.anm.easing",
+                                            "=",
+                                            "\"\""
+                                          ]
+                                        }
+                                      ],
+                                      "actions": [],
+                                      "events": [
+                                        {
+                                          "colorB": 228,
+                                          "colorG": 176,
+                                          "colorR": 74,
+                                          "creationTime": 0,
+                                          "name": "Instant",
+                                          "source": "",
+                                          "type": "BuiltinCommonInstructions::Group",
+                                          "events": [
+                                            {
+                                              "colorB": 228,
+                                              "colorG": 176,
+                                              "colorR": 74,
+                                              "creationTime": 0,
+                                              "name": "Position",
+                                              "source": "",
+                                              "type": "BuiltinCommonInstructions::Group",
+                                              "events": [
+                                                {
+                                                  "type": "BuiltinCommonInstructions::Standard",
+                                                  "conditions": [
+                                                    {
+                                                      "type": {
+                                                        "value": "SceneVariableAsBoolean"
+                                                      },
+                                                      "parameters": [
+                                                        "__GDanitorAnimator.Node.active.position.X",
+                                                        "True"
+                                                      ]
+                                                    }
+                                                  ],
+                                                  "actions": [
+                                                    {
+                                                      "type": {
+                                                        "value": "MettreX"
+                                                      },
+                                                      "parameters": [
+                                                        "Parts",
+                                                        "=",
+                                                        "Variable(__GDanitorAnimator.Node.anm.position.X)"
+                                                      ]
+                                                    },
+                                                    {
+                                                      "type": {
+                                                        "value": "ModVarObjet"
+                                                      },
+                                                      "parameters": [
+                                                        "Parts",
+                                                        "__GDanitorAnimator.IdleData.X",
+                                                        "=",
+                                                        "Parts.X()"
+                                                      ]
+                                                    }
+                                                  ]
+                                                },
+                                                {
+                                                  "type": "BuiltinCommonInstructions::Standard",
+                                                  "conditions": [
+                                                    {
+                                                      "type": {
+                                                        "value": "SceneVariableAsBoolean"
+                                                      },
+                                                      "parameters": [
+                                                        "__GDanitorAnimator.Node.active.position.Y",
+                                                        "True"
+                                                      ]
+                                                    }
+                                                  ],
+                                                  "actions": [
+                                                    {
+                                                      "type": {
+                                                        "value": "MettreY"
+                                                      },
+                                                      "parameters": [
+                                                        "Parts",
+                                                        "=",
+                                                        "Variable(__GDanitorAnimator.Node.anm.position.Y)"
+                                                      ]
+                                                    },
+                                                    {
+                                                      "type": {
+                                                        "value": "ModVarObjet"
+                                                      },
+                                                      "parameters": [
+                                                        "Parts",
+                                                        "__GDanitorAnimator.IdleData.Y",
+                                                        "=",
+                                                        "Parts.Y()"
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ],
+                                              "parameters": []
+                                            },
+                                            {
+                                              "type": "BuiltinCommonInstructions::Standard",
+                                              "conditions": [
+                                                {
+                                                  "type": {
+                                                    "value": "SceneVariableAsBoolean"
+                                                  },
+                                                  "parameters": [
+                                                    "__GDanitorAnimator.Node.active.opacity",
+                                                    "True"
+                                                  ]
+                                                }
+                                              ],
+                                              "actions": [
+                                                {
+                                                  "type": {
+                                                    "value": "Opacity"
+                                                  },
+                                                  "parameters": [
+                                                    "Parts",
+                                                    "=",
+                                                    "Variable(__GDanitorAnimator.Node.anm.opacity)"
+                                                  ]
+                                                },
+                                                {
+                                                  "type": {
+                                                    "value": "ModVarObjet"
+                                                  },
+                                                  "parameters": [
+                                                    "Parts",
+                                                    "__GDanitorAnimator.IdleData.Opacity",
+                                                    "=",
+                                                    "Parts.Opacity()"
+                                                  ]
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "type": "BuiltinCommonInstructions::Standard",
+                                              "conditions": [
+                                                {
+                                                  "type": {
+                                                    "value": "SceneVariableAsBoolean"
+                                                  },
+                                                  "parameters": [
+                                                    "__GDanitorAnimator.Node.active.width",
+                                                    "True"
+                                                  ]
+                                                }
+                                              ],
+                                              "actions": [
+                                                {
+                                                  "type": {
+                                                    "value": "ChangeWidth"
+                                                  },
+                                                  "parameters": [
+                                                    "Parts",
+                                                    "=",
+                                                    "Variable(__GDanitorAnimator.Node.anm.width)"
+                                                  ]
+                                                },
+                                                {
+                                                  "type": {
+                                                    "value": "ModVarObjet"
+                                                  },
+                                                  "parameters": [
+                                                    "Parts",
+                                                    "__GDanitorAnimator.IdleData.Width",
+                                                    "=",
+                                                    "Parts.Width()"
+                                                  ]
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "type": "BuiltinCommonInstructions::Standard",
+                                              "conditions": [
+                                                {
+                                                  "type": {
+                                                    "value": "SceneVariableAsBoolean"
+                                                  },
+                                                  "parameters": [
+                                                    "__GDanitorAnimator.Node.active.height",
+                                                    "True"
+                                                  ]
+                                                }
+                                              ],
+                                              "actions": [
+                                                {
+                                                  "type": {
+                                                    "value": "ChangeHeight"
+                                                  },
+                                                  "parameters": [
+                                                    "Parts",
+                                                    "=",
+                                                    "Variable(__GDanitorAnimator.Node.anm.height)"
+                                                  ]
+                                                },
+                                                {
+                                                  "type": {
+                                                    "value": "ModVarObjet"
+                                                  },
+                                                  "parameters": [
+                                                    "Parts",
+                                                    "__GDanitorAnimator.IdleData.Height",
+                                                    "=",
+                                                    "Parts.Height()"
+                                                  ]
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "type": "BuiltinCommonInstructions::Standard",
+                                              "conditions": [
+                                                {
+                                                  "type": {
+                                                    "value": "SceneVariableAsBoolean"
+                                                  },
+                                                  "parameters": [
+                                                    "__GDanitorAnimator.Node.active.angle",
+                                                    "True"
+                                                  ]
+                                                }
+                                              ],
+                                              "actions": [
+                                                {
+                                                  "type": {
+                                                    "value": "SetAngle"
+                                                  },
+                                                  "parameters": [
+                                                    "Parts",
+                                                    "=",
+                                                    "Variable(__GDanitorAnimator.Node.anm.angle)"
+                                                  ]
+                                                },
+                                                {
+                                                  "type": {
+                                                    "value": "ModVarObjet"
+                                                  },
+                                                  "parameters": [
+                                                    "Parts",
+                                                    "__GDanitorAnimator.IdleData.Angle",
+                                                    "=",
+                                                    "Parts.Angle()"
+                                                  ]
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "colorB": 228,
+                                              "colorG": 176,
+                                              "colorR": 74,
+                                              "creationTime": 0,
+                                              "name": "Flipped",
+                                              "source": "",
+                                              "type": "BuiltinCommonInstructions::Group",
+                                              "events": [
+                                                {
+                                                  "type": "BuiltinCommonInstructions::Standard",
+                                                  "conditions": [
+                                                    {
+                                                      "type": {
+                                                        "value": "SceneVariableAsBoolean"
+                                                      },
+                                                      "parameters": [
+                                                        "__GDanitorAnimator.Node.active.flippedVer",
+                                                        "True"
+                                                      ]
+                                                    }
+                                                  ],
+                                                  "actions": [
+                                                    {
+                                                      "type": {
+                                                        "value": "FlipY"
+                                                      },
+                                                      "parameters": [
+                                                        "Parts",
+                                                        "no"
+                                                      ]
+                                                    },
+                                                    {
+                                                      "type": {
+                                                        "value": "SetObjectVariableAsBoolean"
+                                                      },
+                                                      "parameters": [
+                                                        "Parts",
+                                                        "__GDanitorAnimator.IdleData.FlippedVer",
+                                                        "="
+                                                      ]
+                                                    }
+                                                  ],
+                                                  "events": [
+                                                    {
+                                                      "type": "BuiltinCommonInstructions::Standard",
+                                                      "conditions": [
+                                                        {
+                                                          "type": {
+                                                            "value": "SceneVariableAsBoolean"
+                                                          },
+                                                          "parameters": [
+                                                            "__GDanitorAnimator.Node.anm.flippedVer",
+                                                            "True"
+                                                          ]
+                                                        }
+                                                      ],
+                                                      "actions": [
+                                                        {
+                                                          "type": {
+                                                            "value": "FlipY"
+                                                          },
+                                                          "parameters": [
+                                                            "Parts",
+                                                            "yes"
+                                                          ]
+                                                        },
+                                                        {
+                                                          "type": {
+                                                            "value": "SetObjectVariableAsBoolean"
+                                                          },
+                                                          "parameters": [
+                                                            "Parts",
+                                                            "__GDanitorAnimator.IdleData.FlippedVer",
+                                                            "True"
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                },
+                                                {
+                                                  "type": "BuiltinCommonInstructions::Standard",
+                                                  "conditions": [
+                                                    {
+                                                      "type": {
+                                                        "value": "SceneVariableAsBoolean"
+                                                      },
+                                                      "parameters": [
+                                                        "__GDanitorAnimator.Node.active.flippedHor",
+                                                        "True"
+                                                      ]
+                                                    }
+                                                  ],
+                                                  "actions": [
+                                                    {
+                                                      "type": {
+                                                        "value": "FlipX"
+                                                      },
+                                                      "parameters": [
+                                                        "Parts",
+                                                        "no"
+                                                      ]
+                                                    },
+                                                    {
+                                                      "type": {
+                                                        "value": "SetObjectVariableAsBoolean"
+                                                      },
+                                                      "parameters": [
+                                                        "Parts",
+                                                        "__GDanitorAnimator.IdleData.FlippedHor",
+                                                        "="
+                                                      ]
+                                                    }
+                                                  ],
+                                                  "events": [
+                                                    {
+                                                      "type": "BuiltinCommonInstructions::Standard",
+                                                      "conditions": [
+                                                        {
+                                                          "type": {
+                                                            "value": "SceneVariableAsBoolean"
+                                                          },
+                                                          "parameters": [
+                                                            "__GDanitorAnimator.Node.anm.flippedHor",
+                                                            "True"
+                                                          ]
+                                                        }
+                                                      ],
+                                                      "actions": [
+                                                        {
+                                                          "type": {
+                                                            "value": "FlipX"
+                                                          },
+                                                          "parameters": [
+                                                            "Parts",
+                                                            "yes"
+                                                          ]
+                                                        },
+                                                        {
+                                                          "type": {
+                                                            "value": "SetObjectVariableAsBoolean"
+                                                          },
+                                                          "parameters": [
+                                                            "Parts",
+                                                            "__GDanitorAnimator.IdleData.FlippedHor",
+                                                            "True"
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ],
+                                              "parameters": []
+                                            }
+                                          ],
+                                          "parameters": []
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "folded": true,
+                                      "type": "BuiltinCommonInstructions::Standard",
+                                      "conditions": [
+                                        {
+                                          "type": {
+                                            "value": "VarSceneTxt"
+                                          },
+                                          "parameters": [
+                                            "__GDanitorAnimator.Node.anm.easing",
+                                            "!=",
+                                            "\"\""
+                                          ]
+                                        }
+                                      ],
+                                      "actions": [],
+                                      "events": [
+                                        {
+                                          "colorB": 228,
+                                          "colorG": 176,
+                                          "colorR": 74,
+                                          "creationTime": 0,
+                                          "folded": true,
+                                          "name": "Tweens",
+                                          "source": "",
+                                          "type": "BuiltinCommonInstructions::Group",
+                                          "events": [
+                                            {
+                                              "colorB": 228,
+                                              "colorG": 176,
+                                              "colorR": 74,
+                                              "creationTime": 0,
+                                              "folded": true,
+                                              "name": "Position",
+                                              "source": "",
+                                              "type": "BuiltinCommonInstructions::Group",
+                                              "events": [
+                                                {
+                                                  "type": "BuiltinCommonInstructions::Standard",
+                                                  "conditions": [
+                                                    {
+                                                      "type": {
+                                                        "value": "SceneVariableAsBoolean"
+                                                      },
+                                                      "parameters": [
+                                                        "__GDanitorAnimator.Node.active.position.X",
+                                                        "True"
+                                                      ]
+                                                    }
+                                                  ],
+                                                  "actions": [
+                                                    {
+                                                      "type": {
+                                                        "value": "Tween::AddObjectPositionXTween"
+                                                      },
+                                                      "parameters": [
+                                                        "Parts",
+                                                        "Tween",
+                                                        "\"__GDanitorAnimator_X\"",
+                                                        "Variable(__GDanitorAnimator.Node.anm.position.X)",
+                                                        "VariableString(__GDanitorAnimator.Node.anm.easing)",
+                                                        "Variable(__GDanitorAnimator.Node.anm.timeline.length)*1000",
+                                                        ""
+                                                      ]
+                                                    }
+                                                  ]
+                                                },
+                                                {
+                                                  "type": "BuiltinCommonInstructions::Standard",
+                                                  "conditions": [
+                                                    {
+                                                      "type": {
+                                                        "value": "SceneVariableAsBoolean"
+                                                      },
+                                                      "parameters": [
+                                                        "__GDanitorAnimator.Node.active.position.Y",
+                                                        "True"
+                                                      ]
+                                                    }
+                                                  ],
+                                                  "actions": [
+                                                    {
+                                                      "type": {
+                                                        "value": "Tween::AddObjectPositionYTween"
+                                                      },
+                                                      "parameters": [
+                                                        "Parts",
+                                                        "Tween",
+                                                        "\"__GDanitorAnimator_Y\"",
+                                                        "Variable(__GDanitorAnimator.Node.anm.position.Y)",
+                                                        "VariableString(__GDanitorAnimator.Node.anm.easing)",
+                                                        "Variable(__GDanitorAnimator.Node.anm.timeline.length)*1000",
+                                                        ""
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ],
+                                              "parameters": []
+                                            },
+                                            {
+                                              "type": "BuiltinCommonInstructions::Standard",
+                                              "conditions": [
+                                                {
+                                                  "type": {
+                                                    "value": "SceneVariableAsBoolean"
+                                                  },
+                                                  "parameters": [
+                                                    "__GDanitorAnimator.Node.active.opacity",
+                                                    "True"
+                                                  ]
+                                                }
+                                              ],
+                                              "actions": [
+                                                {
+                                                  "type": {
+                                                    "value": "Tween::AddObjectOpacityTween"
+                                                  },
+                                                  "parameters": [
+                                                    "Parts",
+                                                    "Tween",
+                                                    "\"__GDanitorAnimator_Opacity\"",
+                                                    "Variable(__GDanitorAnimator.Node.anm.opacity)",
+                                                    "VariableString(__GDanitorAnimator.Node.anm.easing)",
+                                                    "Variable(__GDanitorAnimator.Node.anm.timeline.length)*1000",
+                                                    ""
+                                                  ]
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "type": "BuiltinCommonInstructions::Standard",
+                                              "conditions": [
+                                                {
+                                                  "type": {
+                                                    "value": "SceneVariableAsBoolean"
+                                                  },
+                                                  "parameters": [
+                                                    "__GDanitorAnimator.Node.active.width",
+                                                    "True"
+                                                  ]
+                                                }
+                                              ],
+                                              "actions": [
+                                                {
+                                                  "type": {
+                                                    "value": "Tween::AddObjectWidthTween"
+                                                  },
+                                                  "parameters": [
+                                                    "Parts",
+                                                    "Tween",
+                                                    "\"__GDanitorAnimator_Width\"",
+                                                    "Variable(__GDanitorAnimator.Node.anm.width)",
+                                                    "VariableString(__GDanitorAnimator.Node.anm.easing)",
+                                                    "Variable(__GDanitorAnimator.Node.anm.timeline.length)*1000",
+                                                    ""
+                                                  ]
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "type": "BuiltinCommonInstructions::Standard",
+                                              "conditions": [
+                                                {
+                                                  "type": {
+                                                    "value": "SceneVariableAsBoolean"
+                                                  },
+                                                  "parameters": [
+                                                    "__GDanitorAnimator.Node.active.height",
+                                                    "True"
+                                                  ]
+                                                }
+                                              ],
+                                              "actions": [
+                                                {
+                                                  "type": {
+                                                    "value": "Tween::AddObjectHeightTween"
+                                                  },
+                                                  "parameters": [
+                                                    "Parts",
+                                                    "Tween",
+                                                    "\"__GDanitorAnimator_Height\"",
+                                                    "Variable(__GDanitorAnimator.Node.anm.height)",
+                                                    "VariableString(__GDanitorAnimator.Node.anm.easing)",
+                                                    "Variable(__GDanitorAnimator.Node.anm.timeline.length)*1000",
+                                                    ""
+                                                  ]
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "type": "BuiltinCommonInstructions::Standard",
+                                              "conditions": [
+                                                {
+                                                  "type": {
+                                                    "value": "SceneVariableAsBoolean"
+                                                  },
+                                                  "parameters": [
+                                                    "__GDanitorAnimator.Node.active.angle",
+                                                    "True"
+                                                  ]
+                                                }
+                                              ],
+                                              "actions": [
+                                                {
+                                                  "type": {
+                                                    "value": "Tween::AddObjectAngleTween"
+                                                  },
+                                                  "parameters": [
+                                                    "Parts",
+                                                    "Tween",
+                                                    "\"__GDanitorAnimator_Angle\"",
+                                                    "Variable(__GDanitorAnimator.Node.anm.angle)",
+                                                    "VariableString(__GDanitorAnimator.Node.anm.easing)",
+                                                    "Variable(__GDanitorAnimator.Node.anm.timeline.length)*1000",
+                                                    ""
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ],
+                                          "parameters": []
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "BuiltinCommonInstructions::Standard",
+                                      "conditions": [
+                                        {
+                                          "type": {
+                                            "value": "SceneVariableAsBoolean"
+                                          },
+                                          "parameters": [
+                                            "__GDanitorAnimator.Node.active.zOrder",
+                                            "True"
+                                          ]
+                                        }
+                                      ],
+                                      "actions": [
+                                        {
+                                          "type": {
+                                            "value": "ChangePlan"
+                                          },
+                                          "parameters": [
+                                            "Parts",
+                                            "=",
+                                            "Variable(__GDanitorAnimator.Node.anm.zOrder)"
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "BuiltinCommonInstructions::Standard",
+                                      "conditions": [
+                                        {
+                                          "type": {
+                                            "value": "SceneVariableAsBoolean"
+                                          },
+                                          "parameters": [
+                                            "__GDanitorAnimator.Node.active.sprite.animation",
+                                            "True"
+                                          ]
+                                        }
+                                      ],
+                                      "actions": [
+                                        {
+                                          "type": {
+                                            "value": "ChangeAnimation"
+                                          },
+                                          "parameters": [
+                                            "Parts",
+                                            "=",
+                                            "Variable(__GDanitorAnimator.Node.anm.sprite.animation)"
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "colorB": 228,
+                                      "colorG": 176,
+                                      "colorR": 74,
+                                      "creationTime": 0,
+                                      "folded": true,
+                                      "name": "Flipped",
+                                      "source": "",
+                                      "type": "BuiltinCommonInstructions::Group",
+                                      "events": [
+                                        {
+                                          "type": "BuiltinCommonInstructions::Standard",
+                                          "conditions": [
+                                            {
+                                              "type": {
+                                                "value": "SceneVariableAsBoolean"
+                                              },
+                                              "parameters": [
+                                                "__GDanitorAnimator.Node.active.flippedVer",
+                                                "True"
+                                              ]
+                                            }
+                                          ],
+                                          "actions": [
+                                            {
+                                              "type": {
+                                                "value": "FlipY"
+                                              },
+                                              "parameters": [
+                                                "Parts",
+                                                "no"
+                                              ]
+                                            },
+                                            {
+                                              "type": {
+                                                "value": "SetObjectVariableAsBoolean"
+                                              },
+                                              "parameters": [
+                                                "Parts",
+                                                "__GDanitorAnimator.IdleData.FlippedVer",
+                                                "="
+                                              ]
+                                            }
+                                          ],
+                                          "events": [
+                                            {
+                                              "type": "BuiltinCommonInstructions::Standard",
+                                              "conditions": [
+                                                {
+                                                  "type": {
+                                                    "value": "SceneVariableAsBoolean"
+                                                  },
+                                                  "parameters": [
+                                                    "__GDanitorAnimator.Node.anm.flippedVer",
+                                                    "True"
+                                                  ]
+                                                }
+                                              ],
+                                              "actions": [
+                                                {
+                                                  "type": {
+                                                    "value": "FlipY"
+                                                  },
+                                                  "parameters": [
+                                                    "Parts",
+                                                    "yes"
+                                                  ]
+                                                },
+                                                {
+                                                  "type": {
+                                                    "value": "SetObjectVariableAsBoolean"
+                                                  },
+                                                  "parameters": [
+                                                    "Parts",
+                                                    "__GDanitorAnimator.IdleData.FlippedVer",
+                                                    "True"
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "BuiltinCommonInstructions::Standard",
+                                          "conditions": [
+                                            {
+                                              "type": {
+                                                "value": "SceneVariableAsBoolean"
+                                              },
+                                              "parameters": [
+                                                "__GDanitorAnimator.Node.active.flippedHor",
+                                                "True"
+                                              ]
+                                            }
+                                          ],
+                                          "actions": [
+                                            {
+                                              "type": {
+                                                "value": "FlipX"
+                                              },
+                                              "parameters": [
+                                                "Parts",
+                                                "no"
+                                              ]
+                                            },
+                                            {
+                                              "type": {
+                                                "value": "SetObjectVariableAsBoolean"
+                                              },
+                                              "parameters": [
+                                                "Parts",
+                                                "__GDanitorAnimator.IdleData.FlippedHor",
+                                                "="
+                                              ]
+                                            }
+                                          ],
+                                          "events": [
+                                            {
+                                              "type": "BuiltinCommonInstructions::Standard",
+                                              "conditions": [
+                                                {
+                                                  "type": {
+                                                    "value": "SceneVariableAsBoolean"
+                                                  },
+                                                  "parameters": [
+                                                    "__GDanitorAnimator.Node.anm.flippedHor",
+                                                    "True"
+                                                  ]
+                                                }
+                                              ],
+                                              "actions": [
+                                                {
+                                                  "type": {
+                                                    "value": "FlipX"
+                                                  },
+                                                  "parameters": [
+                                                    "Parts",
+                                                    "yes"
+                                                  ]
+                                                },
+                                                {
+                                                  "type": {
+                                                    "value": "SetObjectVariableAsBoolean"
+                                                  },
+                                                  "parameters": [
+                                                    "Parts",
+                                                    "__GDanitorAnimator.IdleData.FlippedHor",
+                                                    "True"
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ],
+                                      "parameters": []
+                                    }
+                                  ],
+                                  "parameters": []
+                                },
+                                {
+                                  "type": "BuiltinCommonInstructions::Standard",
+                                  "conditions": [],
+                                  "actions": [
+                                    {
+                                      "type": {
+                                        "value": "ObjectVariableRemoveAt"
+                                      },
+                                      "parameters": [
+                                        "Object",
+                                        "__GDanitorAnimator.PlayingData.box[Parts.VariableString(__GDanitorAnimator.UUID)]",
+                                        "Variable(__GDanitorAnimator.NodeName)"
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "BuiltinCommonInstructions::Standard",
+                                  "conditions": [],
+                                  "actions": []
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "colorB": 228,
+                          "colorG": 176,
+                          "colorR": 74,
+                          "creationTime": 0,
+                          "name": "Idle state (when there is a tween playing)",
+                          "source": "",
+                          "type": "BuiltinCommonInstructions::Group",
+                          "events": [
+                            {
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "value": "Tween::IsPlaying"
+                                  },
+                                  "parameters": [
+                                    "Parts",
+                                    "Tween",
+                                    "\"__GDanitorAnimator_Angle\""
+                                  ]
+                                }
+                              ],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "ModVarObjet"
+                                  },
+                                  "parameters": [
+                                    "Parts",
+                                    "__GDanitorAnimator.IdleData.Angle",
+                                    "=",
+                                    "Parts.Angle()"
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "value": "Tween::IsPlaying"
+                                  },
+                                  "parameters": [
+                                    "Parts",
+                                    "Tween",
+                                    "\"__GDanitorAnimator_X\""
+                                  ]
+                                }
+                              ],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "ModVarObjet"
+                                  },
+                                  "parameters": [
+                                    "Parts",
+                                    "__GDanitorAnimator.IdleData.X",
+                                    "=",
+                                    "Parts.X()"
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "value": "Tween::IsPlaying"
+                                  },
+                                  "parameters": [
+                                    "Parts",
+                                    "Tween",
+                                    "\"__GDanitorAnimator_Y\""
+                                  ]
+                                }
+                              ],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "ModVarObjet"
+                                  },
+                                  "parameters": [
+                                    "Parts",
+                                    "__GDanitorAnimator.IdleData.Y",
+                                    "=",
+                                    "Parts.Y()"
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "value": "Tween::IsPlaying"
+                                  },
+                                  "parameters": [
+                                    "Parts",
+                                    "Tween",
+                                    "\"__GDanitorAnimator_Height\""
+                                  ]
+                                }
+                              ],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "ModVarObjet"
+                                  },
+                                  "parameters": [
+                                    "Parts",
+                                    "__GDanitorAnimator.IdleData.Height",
+                                    "=",
+                                    "Parts.Height()"
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "value": "Tween::IsPlaying"
+                                  },
+                                  "parameters": [
+                                    "Parts",
+                                    "Tween",
+                                    "\"__GDanitorAnimator_Width\""
+                                  ]
+                                }
+                              ],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "ModVarObjet"
+                                  },
+                                  "parameters": [
+                                    "Parts",
+                                    "__GDanitorAnimator.IdleData.Width",
+                                    "=",
+                                    "Parts.Width()"
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "value": "Tween::IsPlaying"
+                                  },
+                                  "parameters": [
+                                    "Parts",
+                                    "Tween",
+                                    "\"__GDanitorAnimator_Opacity\""
+                                  ]
+                                }
+                              ],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "ModVarObjet"
+                                  },
+                                  "parameters": [
+                                    "Parts",
+                                    "__GDanitorAnimator.IdleData.Opacity",
+                                    "=",
+                                    "Parts.Opacity()"
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "ModVarObjet"
+                                  },
+                                  "parameters": [
+                                    "Parts",
+                                    "__GDanitorAnimator.IdleData.ZOrder",
+                                    "=",
+                                    "Parts.ZOrder()"
+                                  ]
+                                }
+                              ]
+                            }
+                          ],
+                          "parameters": []
+                        },
+                        {
+                          "colorB": 228,
+                          "colorG": 176,
+                          "colorR": 74,
+                          "creationTime": 0,
+                          "name": "Idle state (when there is no tween playing)",
+                          "source": "",
+                          "type": "BuiltinCommonInstructions::Group",
+                          "events": [
+                            {
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "ModVarObjet"
+                                  },
+                                  "parameters": [
+                                    "Parts",
+                                    "__GDanitorAnimator.Temp.ScaleY",
+                                    "=",
+                                    "Object.ScaleY()"
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "ModVarObjet"
+                                  },
+                                  "parameters": [
+                                    "Parts",
+                                    "__GDanitorAnimator.Temp.ScaleX",
+                                    "=",
+                                    "Object.ScaleX()"
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "ModVarObjet"
+                                  },
+                                  "parameters": [
+                                    "Parts",
+                                    "__GDanitorAnimator.Temp.X",
+                                    "=",
+                                    "Object.X()"
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "ModVarObjet"
+                                  },
+                                  "parameters": [
+                                    "Parts",
+                                    "__GDanitorAnimator.Temp.Y",
+                                    "=",
+                                    "Object.Y()"
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "ModVarObjet"
+                                  },
+                                  "parameters": [
+                                    "Parts",
+                                    "__GDanitorAnimator.Temp.Angle",
+                                    "=",
+                                    "Object.Angle()"
+                                  ]
+                                }
+                              ],
+                              "events": [
+                                {
+                                  "type": "BuiltinCommonInstructions::Standard",
+                                  "conditions": [],
+                                  "actions": [
+                                    {
+                                      "type": {
+                                        "value": "SetObjectVariableAsBoolean"
+                                      },
+                                      "parameters": [
+                                        "Parts",
+                                        "__GDanitorAnimator.Temp.FlippedHor",
+                                        "False"
+                                      ]
+                                    }
+                                  ],
+                                  "events": [
+                                    {
+                                      "type": "BuiltinCommonInstructions::Standard",
+                                      "conditions": [
+                                        {
+                                          "type": {
+                                            "value": "FlippedX"
+                                          },
+                                          "parameters": [
+                                            "Object"
+                                          ]
+                                        }
+                                      ],
+                                      "actions": [
+                                        {
+                                          "type": {
+                                            "value": "SetObjectVariableAsBoolean"
+                                          },
+                                          "parameters": [
+                                            "Parts",
+                                            "__GDanitorAnimator.Temp.FlippedHor",
+                                            "True"
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "BuiltinCommonInstructions::Standard",
+                                  "conditions": [],
+                                  "actions": [
+                                    {
+                                      "type": {
+                                        "value": "SetObjectVariableAsBoolean"
+                                      },
+                                      "parameters": [
+                                        "Parts",
+                                        "__GDanitorAnimator.Temp.FlippedVer",
+                                        "False"
+                                      ]
+                                    }
+                                  ],
+                                  "events": [
+                                    {
+                                      "type": "BuiltinCommonInstructions::Standard",
+                                      "conditions": [
+                                        {
+                                          "type": {
+                                            "value": "FlippedY"
+                                          },
+                                          "parameters": [
+                                            "Object"
+                                          ]
+                                        }
+                                      ],
+                                      "actions": [
+                                        {
+                                          "type": {
+                                            "value": "SetObjectVariableAsBoolean"
+                                          },
+                                          "parameters": [
+                                            "Parts",
+                                            "__GDanitorAnimator.Temp.FlippedVer",
+                                            "True"
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "BuiltinCommonInstructions::JsCode",
+                                  "inlineCode": "const objectData = objects[0].getVariables().get(\"__GDanitorAnimator\").getChild(\"Temp\").toJSObject();\nconst partData = objects[0].getVariables().get(\"__GDanitorAnimator\").getChild(\"IdleData\").toJSObject();\n\nlet resultAngle = partData.Angle;\nif (objectData.FlippedHor){\n    resultAngle = 360-partData.Angle\n}\nobjects[0].setAngle(((objectData.FlippedVer ? -1 : 1)*resultAngle)+objectData.Angle);\n\nobjects[0].setPosition(gdjs.evtTools.common.getXFromAngleAndDistance(gdjs.evtTools.common.angleBetweenPositions(0, 0, partData.X * objectData.ScaleX * (objectData.FlippedHor ? -1 : 1), partData.Y * objectData.ScaleY * (objectData.FlippedVer ? -1 : 1)) + objectData.Angle, gdjs.evtTools.common.distanceBetweenPositions(0, 0, partData.X * objectData.ScaleX * (objectData.FlippedHor ? -1 : 1), partData.Y * objectData.ScaleY * (objectData.FlippedVer ? -1 : 1))) + objectData.X, gdjs.evtTools.common.getYFromAngleAndDistance(gdjs.evtTools.common.angleBetweenPositions(0, 0, partData.X * objectData.ScaleX * (objectData.FlippedHor ? -1 : 1), partData.Y * objectData.ScaleY * (objectData.FlippedVer ? -1 : 1)) + objectData.Angle, gdjs.evtTools.common.distanceBetweenPositions(0, 0, partData.X * objectData.ScaleX * (objectData.FlippedHor ? -1 : 1), partData.Y * objectData.ScaleY * (objectData.FlippedVer ? -1 : 1))) + objectData.Y);",
+                                  "parameterObjects": "Parts",
+                                  "useStrict": true,
+                                  "eventsSheetExpanded": false
+                                }
+                              ]
+                            },
+                            {
+                              "folded": true,
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "ModVarObjet"
+                                  },
+                                  "parameters": [
+                                    "Parts",
+                                    "__GDanitorAnimator.Temp.Height",
+                                    "=",
+                                    "Parts.Variable(__GDanitorAnimator.IdleData.Height)*Object.ScaleY()"
+                                  ]
+                                }
+                              ],
+                              "events": [
+                                {
+                                  "type": "BuiltinCommonInstructions::JsCode",
+                                  "inlineCode": "objects[0].setHeight(objects[0].getVariables().get(\"__GDanitorAnimator\").getChild(\"Temp\").getChild(\"Height\").getAsNumber());\n\n",
+                                  "parameterObjects": "Parts",
+                                  "useStrict": true,
+                                  "eventsSheetExpanded": false
+                                }
+                              ]
+                            },
+                            {
+                              "folded": true,
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "ModVarObjet"
+                                  },
+                                  "parameters": [
+                                    "Parts",
+                                    "__GDanitorAnimator.Temp.Width",
+                                    "=",
+                                    "Parts.Variable(__GDanitorAnimator.IdleData.Width)*Object.ScaleX()"
+                                  ]
+                                }
+                              ],
+                              "events": [
+                                {
+                                  "type": "BuiltinCommonInstructions::JsCode",
+                                  "inlineCode": "objects[0].setWidth(objects[0].getVariables().get(\"__GDanitorAnimator\").getChild(\"Temp\").getChild(\"Width\").getAsNumber());\n\n",
+                                  "parameterObjects": "Parts",
+                                  "useStrict": true,
+                                  "eventsSheetExpanded": false
+                                }
+                              ]
+                            },
+                            {
+                              "folded": true,
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "ModVarObjet"
+                                  },
+                                  "parameters": [
+                                    "Parts",
+                                    "__GDanitorAnimator.Temp.Opacity",
+                                    "=",
+                                    "Parts.Variable(__GDanitorAnimator.IdleData.Opacity)*normalize(Object.Opacity(),0,255)"
+                                  ]
+                                }
+                              ],
+                              "events": [
+                                {
+                                  "type": "BuiltinCommonInstructions::JsCode",
+                                  "inlineCode": "objects[0].setOpacity(objects[0].getVariables().get(\"__GDanitorAnimator\").getChild(\"Temp\").getChild(\"Opacity\").getAsNumber());\n\n",
+                                  "parameterObjects": "Parts",
+                                  "useStrict": true,
+                                  "eventsSheetExpanded": false
+                                }
+                              ]
+                            },
+                            {
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "ChangeLayer"
+                                  },
+                                  "parameters": [
+                                    "Parts",
+                                    "Object.Layer()"
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "ChangePlan"
+                                  },
+                                  "parameters": [
+                                    "Parts",
+                                    "=",
+                                    "Parts.Variable(__GDanitorAnimator.IdleData.ZOrder)+Object.ZOrder()"
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "folded": true,
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "FlipX"
+                                  },
+                                  "parameters": [
+                                    "Parts",
+                                    "="
+                                  ]
+                                }
+                              ],
+                              "events": [
+                                {
+                                  "type": "BuiltinCommonInstructions::Standard",
+                                  "conditions": [
+                                    {
+                                      "type": {
+                                        "value": "BuiltinCommonInstructions::Or"
+                                      },
+                                      "parameters": [],
+                                      "subInstructions": [
+                                        {
+                                          "type": {
+                                            "value": "BuiltinCommonInstructions::And"
+                                          },
+                                          "parameters": [],
+                                          "subInstructions": [
+                                            {
+                                              "type": {
+                                                "value": "ObjectVariableAsBoolean"
+                                              },
+                                              "parameters": [
+                                                "Parts",
+                                                "__GDanitorAnimator.IdleData.FlippedHor",
+                                                "False"
+                                              ]
+                                            },
+                                            {
+                                              "type": {
+                                                "value": "FlippedX"
+                                              },
+                                              "parameters": [
+                                                "Object"
+                                              ]
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": {
+                                            "value": "BuiltinCommonInstructions::And"
+                                          },
+                                          "parameters": [],
+                                          "subInstructions": [
+                                            {
+                                              "type": {
+                                                "value": "ObjectVariableAsBoolean"
+                                              },
+                                              "parameters": [
+                                                "Parts",
+                                                "__GDanitorAnimator.IdleData.FlippedHor",
+                                                "True"
+                                              ]
+                                            },
+                                            {
+                                              "type": {
+                                                "inverted": true,
+                                                "value": "FlippedX"
+                                              },
+                                              "parameters": [
+                                                "Object"
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ],
+                                  "actions": [
+                                    {
+                                      "type": {
+                                        "value": "FlipX"
+                                      },
+                                      "parameters": [
+                                        "Parts",
+                                        "yes"
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "folded": true,
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "FlipY"
+                                  },
+                                  "parameters": [
+                                    "Parts",
+                                    "="
+                                  ]
+                                }
+                              ],
+                              "events": [
+                                {
+                                  "type": "BuiltinCommonInstructions::Standard",
+                                  "conditions": [
+                                    {
+                                      "type": {
+                                        "value": "BuiltinCommonInstructions::Or"
+                                      },
+                                      "parameters": [],
+                                      "subInstructions": [
+                                        {
+                                          "type": {
+                                            "value": "BuiltinCommonInstructions::And"
+                                          },
+                                          "parameters": [],
+                                          "subInstructions": [
+                                            {
+                                              "type": {
+                                                "value": "ObjectVariableAsBoolean"
+                                              },
+                                              "parameters": [
+                                                "Parts",
+                                                "__GDanitorAnimator.IdleData.FlippedVer",
+                                                "False"
+                                              ]
+                                            },
+                                            {
+                                              "type": {
+                                                "value": "FlippedY"
+                                              },
+                                              "parameters": [
+                                                "Object"
+                                              ]
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": {
+                                            "value": "BuiltinCommonInstructions::And"
+                                          },
+                                          "parameters": [],
+                                          "subInstructions": [
+                                            {
+                                              "type": {
+                                                "value": "ObjectVariableAsBoolean"
+                                              },
+                                              "parameters": [
+                                                "Parts",
+                                                "__GDanitorAnimator.IdleData.FlippedVer",
+                                                "True"
+                                              ]
+                                            },
+                                            {
+                                              "type": {
+                                                "inverted": true,
+                                                "value": "FlippedY"
+                                              },
+                                              "parameters": [
+                                                "Object"
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ],
+                                  "actions": [
+                                    {
+                                      "type": {
+                                        "value": "FlipY"
+                                      },
+                                      "parameters": [
+                                        "Parts",
+                                        "yes"
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [],
+                              "actions": []
+                            }
+                          ],
+                          "parameters": []
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": []
+            }
+          ],
+          "parameters": [
+            {
+              "codeOnly": false,
+              "defaultValue": "",
+              "description": "Object",
+              "longDescription": "",
+              "name": "Object",
+              "optional": false,
+              "supplementaryInformation": "Sprite",
+              "type": "object"
+            },
+            {
+              "codeOnly": false,
+              "defaultValue": "",
+              "description": "Behavior",
+              "longDescription": "",
+              "name": "Behavior",
+              "optional": false,
+              "supplementaryInformation": "GDaitorAnimator::ObjectAnimator",
+              "type": "behavior"
+            },
+            {
+              "codeOnly": false,
+              "defaultValue": "",
+              "description": "Parts to be animated",
+              "longDescription": "",
+              "name": "Parts",
+              "optional": false,
+              "supplementaryInformation": "Sprite",
+              "type": "objectList"
+            },
+            {
+              "codeOnly": false,
+              "defaultValue": "",
+              "description": "Behavior",
+              "longDescription": "",
+              "name": "Tween",
+              "optional": false,
+              "supplementaryInformation": "Tween::TweenBehavior",
+              "type": "behavior"
+            }
+          ],
+          "objectGroups": []
+        },
+        {
+          "description": "Animate the model using objects",
+          "fullName": "Animate Model",
+          "functionType": "Action",
+          "group": "",
+          "name": "AnimateModel",
+          "private": false,
+          "sentence": "Animate the model of the object _PARAM0_ using objects _PARAM2_.",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::JsCode",
+              "inlineCode": "for (const objectName in objects){\n    const object = objects[objectName];\n    if (!object.getVariables().get(\"__GDanitorAnimator\").getChild(\"Started\").getAsBoolean()){\n        ;\n        let animationData = JSON.parse(object.getBehavior(\"ObjectAnimator\")._getAnimationsJSON());\n        object.getVariables().get(\"__GDanitorAnimator\").getChild(\"AnimationData\").fromJSObject(animationData);\n        object.getVariables().get(\"__GDanitorAnimator\").getChild(\"Playing\").setString(Object.keys(animationData)[0]);\n        object.getVariables().get(\"__GDanitorAnimator\").getChild(\"PlayingData\").fromJSObject(animationData[Object.keys(animationData)[0]]);\n        object.resetTimer(\"__GDanitorAnimator_Time\");\n    }\n}\n\n",
+              "parameterObjects": "Object",
+              "useStrict": true,
+              "eventsSheetExpanded": false
+            },
+            {
+              "type": "BuiltinCommonInstructions::ForEach",
+              "object": "Object",
+              "conditions": [],
+              "actions": [],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "ObjectVariableAsBoolean"
+                      },
+                      "parameters": [
+                        "Object",
+                        "__GDanitorAnimator.Started",
+                        "False"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetObjectVariableAsBoolean"
+                      },
+                      "parameters": [
+                        "Object",
+                        "__GDanitorAnimator.Started",
+                        "True"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::Or"
+                      },
+                      "parameters": [],
+                      "subInstructions": [
+                        {
+                          "type": {
+                            "value": "BuiltinCommonInstructions::And"
+                          },
+                          "parameters": [],
+                          "subInstructions": [
+                            {
+                              "type": {
+                                "value": "CompareObjectTimer"
+                              },
+                              "parameters": [
+                                "Object",
+                                "\"__GDanitorAnimator_Time\"",
+                                ">=",
+                                "Object.Variable(__GDanitorAnimator.PlayingData.settings.time)"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "ObjectVariableAsBoolean"
+                              },
+                              "parameters": [
+                                "Object",
+                                "__GDanitorAnimator.PlayingData.settings.loop",
+                                "True"
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "GDaitorAnimator::ObjectAnimator::PropertyStartAnimation"
+                          },
+                          "parameters": [
+                            "Object",
+                            "Behavior"
+                          ]
+                        }
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "ResetObjectTimer"
+                      },
+                      "parameters": [
+                        "Object",
+                        "\"__GDanitorAnimator_Time\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "JSONToObjectVariableStructure"
+                      },
+                      "parameters": [
+                        "ObjectVarToJSON(Object, __GDanitorAnimator.AnimationData[Object.VariableString(__GDanitorAnimator.Playing)])",
+                        "Object",
+                        "__GDanitorAnimator.PlayingData"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "GDaitorAnimator::ObjectAnimator::SetPropertyStartAnimation"
+                      },
+                      "parameters": [
+                        "Object",
+                        "Behavior",
+                        "no"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "LinkedObjects::PickObjectsLinkedTo"
+                      },
+                      "parameters": [
+                        "",
+                        "Parts",
+                        "Object",
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::ForEach",
+                      "object": "Parts",
+                      "conditions": [],
+                      "actions": [],
+                      "events": [
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "JSONToVariableStructure"
+                              },
+                              "parameters": [
+                                "ObjectVarToJSON(Object, __GDanitorAnimator.PlayingData.box[Parts.VariableString(__GDanitorAnimator.UUID)])",
+                                "__GDanitorAnimator.PlayingNodeList"
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "colorB": 228,
+                          "colorG": 176,
+                          "colorR": 74,
+                          "creationTime": 0,
+                          "name": "Idle state updates",
+                          "source": "",
+                          "type": "BuiltinCommonInstructions::Group",
+                          "events": [
+                            {
+                              "colorB": 228,
+                              "colorG": 176,
+                              "colorR": 74,
+                              "creationTime": 0,
+                              "folded": true,
+                              "name": "Idle state (when there is no tween playing)",
+                              "source": "",
+                              "type": "BuiltinCommonInstructions::Group",
+                              "events": [
+                                {
+                                  "type": "BuiltinCommonInstructions::Standard",
+                                  "conditions": [
+                                    {
+                                      "type": {
+                                        "inverted": true,
+                                        "value": "Tween::IsPlaying"
+                                      },
+                                      "parameters": [
+                                        "Parts",
+                                        "Tween",
+                                        "\"__GDanitorAnimator_Angle\""
+                                      ]
+                                    }
+                                  ],
+                                  "actions": [
+                                    {
+                                      "type": {
+                                        "value": "SetAngle"
+                                      },
+                                      "parameters": [
+                                        "Parts",
+                                        "=",
+                                        "Parts.Variable(__GDanitorAnimator.IdleData.Angle)"
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "BuiltinCommonInstructions::Standard",
+                                  "conditions": [
+                                    {
+                                      "type": {
+                                        "inverted": true,
+                                        "value": "Tween::IsPlaying"
+                                      },
+                                      "parameters": [
+                                        "Parts",
+                                        "Tween",
+                                        "\"__GDanitorAnimator_X\""
+                                      ]
+                                    }
+                                  ],
+                                  "actions": [
+                                    {
+                                      "type": {
+                                        "value": "MettreX"
+                                      },
+                                      "parameters": [
+                                        "Parts",
+                                        "=",
+                                        "Parts.Variable(__GDanitorAnimator.IdleData.X)"
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "BuiltinCommonInstructions::Standard",
+                                  "conditions": [
+                                    {
+                                      "type": {
+                                        "inverted": true,
+                                        "value": "Tween::IsPlaying"
+                                      },
+                                      "parameters": [
+                                        "Parts",
+                                        "Tween",
+                                        "\"__GDanitorAnimator_Y\""
+                                      ]
+                                    }
+                                  ],
+                                  "actions": [
+                                    {
+                                      "type": {
+                                        "value": "MettreY"
+                                      },
+                                      "parameters": [
+                                        "Parts",
+                                        "=",
+                                        "Parts.Variable(__GDanitorAnimator.IdleData.Y)"
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "folded": true,
+                                  "type": "BuiltinCommonInstructions::Standard",
+                                  "conditions": [
+                                    {
+                                      "type": {
+                                        "inverted": true,
+                                        "value": "Tween::IsPlaying"
+                                      },
+                                      "parameters": [
+                                        "Parts",
+                                        "Tween",
+                                        "\"__GDanitorAnimator_Height\""
+                                      ]
+                                    }
+                                  ],
+                                  "actions": [],
+                                  "events": [
+                                    {
+                                      "type": "BuiltinCommonInstructions::JsCode",
+                                      "inlineCode": "objects[0].setHeight(objects[0].getVariables().get(\"__GDanitorAnimator\").getChild(\"IdleData\").getChild(\"Height\").getAsNumber());\n\n",
+                                      "parameterObjects": "Parts",
+                                      "useStrict": true,
+                                      "eventsSheetExpanded": false
+                                    }
+                                  ]
+                                },
+                                {
+                                  "folded": true,
+                                  "type": "BuiltinCommonInstructions::Standard",
+                                  "conditions": [
+                                    {
+                                      "type": {
+                                        "inverted": true,
+                                        "value": "Tween::IsPlaying"
+                                      },
+                                      "parameters": [
+                                        "Parts",
+                                        "Tween",
+                                        "\"__GDanitorAnimator_Width\""
+                                      ]
+                                    }
+                                  ],
+                                  "actions": [],
+                                  "events": [
+                                    {
+                                      "type": "BuiltinCommonInstructions::JsCode",
+                                      "inlineCode": "objects[0].setWidth(objects[0].getVariables().get(\"__GDanitorAnimator\").getChild(\"IdleData\").getChild(\"Width\").getAsNumber());\n\n",
+                                      "parameterObjects": "Parts",
+                                      "useStrict": true,
+                                      "eventsSheetExpanded": false
+                                    }
+                                  ]
+                                },
+                                {
+                                  "folded": true,
+                                  "type": "BuiltinCommonInstructions::Standard",
+                                  "conditions": [
+                                    {
+                                      "type": {
+                                        "inverted": true,
+                                        "value": "Tween::IsPlaying"
+                                      },
+                                      "parameters": [
+                                        "Parts",
+                                        "Tween",
+                                        "\"__GDanitorAnimator_Opacity\""
+                                      ]
+                                    }
+                                  ],
+                                  "actions": [],
+                                  "events": [
+                                    {
+                                      "type": "BuiltinCommonInstructions::JsCode",
+                                      "inlineCode": "objects[0].setOpacity(objects[0].getVariables().get(\"__GDanitorAnimator\").getChild(\"IdleData\").getChild(\"Opacity\").getAsNumber());\n\n",
+                                      "parameterObjects": "Parts",
+                                      "useStrict": true,
+                                      "eventsSheetExpanded": false
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "BuiltinCommonInstructions::Standard",
+                                  "conditions": [],
+                                  "actions": [
+                                    {
+                                      "type": {
+                                        "value": "ChangePlan"
+                                      },
+                                      "parameters": [
+                                        "Parts",
+                                        "=",
+                                        "Parts.Variable(__GDanitorAnimator.IdleData.ZOrder)"
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "BuiltinCommonInstructions::Standard",
+                                  "conditions": [],
+                                  "actions": []
+                                }
+                              ],
+                              "parameters": []
+                            }
+                          ],
+                          "parameters": []
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::ForEachChildVariable",
+                          "iterableVariableName": "__GDanitorAnimator.PlayingNodeList",
+                          "valueIteratorVariableName": "__GDanitorAnimator.Node",
+                          "keyIteratorVariableName": "__GDanitorAnimator.NodeName",
+                          "conditions": [],
+                          "actions": [],
+                          "events": [
+                            {
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "value": "CompareObjectTimer"
+                                  },
+                                  "parameters": [
+                                    "Object",
+                                    "\"__GDanitorAnimator_Time\"",
+                                    ">=",
+                                    "Variable(__GDanitorAnimator.Node.anm.timeline.start)"
+                                  ]
+                                }
+                              ],
+                              "actions": [],
+                              "events": [
+                                {
+                                  "colorB": 228,
+                                  "colorG": 176,
+                                  "colorR": 74,
+                                  "creationTime": 0,
+                                  "name": "Tweens",
+                                  "source": "",
+                                  "type": "BuiltinCommonInstructions::Group",
+                                  "events": [
+                                    {
+                                      "colorB": 228,
+                                      "colorG": 176,
+                                      "colorR": 74,
+                                      "creationTime": 0,
+                                      "name": "Position",
+                                      "source": "",
+                                      "type": "BuiltinCommonInstructions::Group",
+                                      "events": [
+                                        {
+                                          "type": "BuiltinCommonInstructions::Standard",
+                                          "conditions": [
+                                            {
+                                              "type": {
+                                                "value": "SceneVariableAsBoolean"
+                                              },
+                                              "parameters": [
+                                                "__GDanitorAnimator.Node.active.position.X",
+                                                "True"
+                                              ]
+                                            }
+                                          ],
+                                          "actions": [
+                                            {
+                                              "type": {
+                                                "value": "Tween::AddObjectPositionXTween"
+                                              },
+                                              "parameters": [
+                                                "Parts",
+                                                "Tween",
+                                                "\"__GDanitorAnimator_X\"",
+                                                "Variable(__GDanitorAnimator.Node.anm.position.X)",
+                                                "VariableString(__GDanitorAnimator.Node.anm.easing)",
+                                                "Variable(__GDanitorAnimator.Node.anm.timeline.length)*1000",
+                                                ""
+                                              ]
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "BuiltinCommonInstructions::Standard",
+                                          "conditions": [
+                                            {
+                                              "type": {
+                                                "value": "SceneVariableAsBoolean"
+                                              },
+                                              "parameters": [
+                                                "__GDanitorAnimator.Node.active.position.Y",
+                                                "True"
+                                              ]
+                                            }
+                                          ],
+                                          "actions": [
+                                            {
+                                              "type": {
+                                                "value": "Tween::AddObjectPositionYTween"
+                                              },
+                                              "parameters": [
+                                                "Parts",
+                                                "Tween",
+                                                "\"__GDanitorAnimator_Y\"",
+                                                "Variable(__GDanitorAnimator.Node.anm.position.Y)",
+                                                "VariableString(__GDanitorAnimator.Node.anm.easing)",
+                                                "Variable(__GDanitorAnimator.Node.anm.timeline.length)*1000",
+                                                ""
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ],
+                                      "parameters": []
+                                    },
+                                    {
+                                      "type": "BuiltinCommonInstructions::Standard",
+                                      "conditions": [
+                                        {
+                                          "type": {
+                                            "value": "SceneVariableAsBoolean"
+                                          },
+                                          "parameters": [
+                                            "__GDanitorAnimator.Node.active.opacity",
+                                            "True"
+                                          ]
+                                        }
+                                      ],
+                                      "actions": [
+                                        {
+                                          "type": {
+                                            "value": "Tween::AddObjectOpacityTween"
+                                          },
+                                          "parameters": [
+                                            "Parts",
+                                            "Tween",
+                                            "\"__GDanitorAnimator_Opacity\"",
+                                            "Variable(__GDanitorAnimator.Node.anm.opacity)",
+                                            "VariableString(__GDanitorAnimator.Node.anm.easing)",
+                                            "Variable(__GDanitorAnimator.Node.anm.timeline.length)*1000",
+                                            ""
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "BuiltinCommonInstructions::Standard",
+                                      "conditions": [
+                                        {
+                                          "type": {
+                                            "value": "SceneVariableAsBoolean"
+                                          },
+                                          "parameters": [
+                                            "__GDanitorAnimator.Node.active.width",
+                                            "True"
+                                          ]
+                                        }
+                                      ],
+                                      "actions": [
+                                        {
+                                          "type": {
+                                            "value": "Tween::AddObjectWidthTween"
+                                          },
+                                          "parameters": [
+                                            "Parts",
+                                            "Tween",
+                                            "\"__GDanitorAnimator_Width\"",
+                                            "Variable(__GDanitorAnimator.Node.anm.width)",
+                                            "VariableString(__GDanitorAnimator.Node.anm.easing)",
+                                            "Variable(__GDanitorAnimator.Node.anm.timeline.length)*1000",
+                                            ""
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "BuiltinCommonInstructions::Standard",
+                                      "conditions": [
+                                        {
+                                          "type": {
+                                            "value": "SceneVariableAsBoolean"
+                                          },
+                                          "parameters": [
+                                            "__GDanitorAnimator.Node.active.height",
+                                            "True"
+                                          ]
+                                        }
+                                      ],
+                                      "actions": [
+                                        {
+                                          "type": {
+                                            "value": "Tween::AddObjectHeightTween"
+                                          },
+                                          "parameters": [
+                                            "Parts",
+                                            "Tween",
+                                            "\"__GDanitorAnimator_Height\"",
+                                            "Variable(__GDanitorAnimator.Node.anm.height)",
+                                            "VariableString(__GDanitorAnimator.Node.anm.easing)",
+                                            "Variable(__GDanitorAnimator.Node.anm.timeline.length)*1000",
+                                            ""
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "BuiltinCommonInstructions::Standard",
+                                      "conditions": [
+                                        {
+                                          "type": {
+                                            "value": "SceneVariableAsBoolean"
+                                          },
+                                          "parameters": [
+                                            "__GDanitorAnimator.Node.active.angle",
+                                            "True"
+                                          ]
+                                        }
+                                      ],
+                                      "actions": [
+                                        {
+                                          "type": {
+                                            "value": "Tween::AddObjectAngleTween"
+                                          },
+                                          "parameters": [
+                                            "Parts",
+                                            "Tween",
+                                            "\"__GDanitorAnimator_Angle\"",
+                                            "Variable(__GDanitorAnimator.Node.anm.angle)",
+                                            "VariableString(__GDanitorAnimator.Node.anm.easing)",
+                                            "Variable(__GDanitorAnimator.Node.anm.timeline.length)*1000",
+                                            ""
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "BuiltinCommonInstructions::Standard",
+                                      "conditions": [
+                                        {
+                                          "type": {
+                                            "value": "SceneVariableAsBoolean"
+                                          },
+                                          "parameters": [
+                                            "__GDanitorAnimator.Node.active.zOrder",
+                                            "True"
+                                          ]
+                                        }
+                                      ],
+                                      "actions": [
+                                        {
+                                          "type": {
+                                            "value": "ChangePlan"
+                                          },
+                                          "parameters": [
+                                            "Parts",
+                                            "=",
+                                            "Variable(__GDanitorAnimator.Node.anm.zOrder)"
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ],
+                                  "parameters": []
+                                },
+                                {
+                                  "type": "BuiltinCommonInstructions::Standard",
+                                  "conditions": [],
+                                  "actions": [
+                                    {
+                                      "type": {
+                                        "value": "ObjectVariableRemoveAt"
+                                      },
+                                      "parameters": [
+                                        "Object",
+                                        "__GDanitorAnimator.PlayingData.box[Parts.VariableString(__GDanitorAnimator.UUID)]",
+                                        "Variable(__GDanitorAnimator.NodeName)"
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "BuiltinCommonInstructions::Standard",
+                                  "conditions": [],
+                                  "actions": []
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "colorB": 228,
+                          "colorG": 176,
+                          "colorR": 74,
+                          "creationTime": 0,
+                          "name": "Idle state (when there is a tween playing)",
+                          "source": "",
+                          "type": "BuiltinCommonInstructions::Group",
+                          "events": [
+                            {
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "value": "Tween::IsPlaying"
+                                  },
+                                  "parameters": [
+                                    "Parts",
+                                    "Tween",
+                                    "\"__GDanitorAnimator_Angle\""
+                                  ]
+                                }
+                              ],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "ModVarObjet"
+                                  },
+                                  "parameters": [
+                                    "Parts",
+                                    "__GDanitorAnimator.IdleData.Angle",
+                                    "=",
+                                    "Parts.Angle()"
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "value": "Tween::IsPlaying"
+                                  },
+                                  "parameters": [
+                                    "Parts",
+                                    "Tween",
+                                    "\"__GDanitorAnimator_X\""
+                                  ]
+                                }
+                              ],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "ModVarObjet"
+                                  },
+                                  "parameters": [
+                                    "Parts",
+                                    "__GDanitorAnimator.IdleData.X",
+                                    "=",
+                                    "Parts.X()"
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "value": "Tween::IsPlaying"
+                                  },
+                                  "parameters": [
+                                    "Parts",
+                                    "Tween",
+                                    "\"__GDanitorAnimator_Y\""
+                                  ]
+                                }
+                              ],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "ModVarObjet"
+                                  },
+                                  "parameters": [
+                                    "Parts",
+                                    "__GDanitorAnimator.IdleData.Y",
+                                    "=",
+                                    "Parts.Y()"
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "value": "Tween::IsPlaying"
+                                  },
+                                  "parameters": [
+                                    "Parts",
+                                    "Tween",
+                                    "\"__GDanitorAnimator_Height\""
+                                  ]
+                                }
+                              ],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "ModVarObjet"
+                                  },
+                                  "parameters": [
+                                    "Parts",
+                                    "__GDanitorAnimator.IdleData.Height",
+                                    "=",
+                                    "Parts.Height()"
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "value": "Tween::IsPlaying"
+                                  },
+                                  "parameters": [
+                                    "Parts",
+                                    "Tween",
+                                    "\"__GDanitorAnimator_Width\""
+                                  ]
+                                }
+                              ],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "ModVarObjet"
+                                  },
+                                  "parameters": [
+                                    "Parts",
+                                    "__GDanitorAnimator.IdleData.Width",
+                                    "=",
+                                    "Parts.Width()"
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "value": "Tween::IsPlaying"
+                                  },
+                                  "parameters": [
+                                    "Parts",
+                                    "Tween",
+                                    "\"__GDanitorAnimator_Opacity\""
+                                  ]
+                                }
+                              ],
+                              "actions": [],
+                              "events": [
+                                {
+                                  "type": "BuiltinCommonInstructions::JsCode",
+                                  "inlineCode": "objects[0].getVariables().get(\"__GDanitorAnimator\").getChild(\"IdleData\").getChild(\"Opacity\").setNumber(objects[0].getOpacity());\n\n",
+                                  "parameterObjects": "Parts",
+                                  "useStrict": true,
+                                  "eventsSheetExpanded": false
+                                }
+                              ]
+                            },
+                            {
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "ModVarObjet"
+                                  },
+                                  "parameters": [
+                                    "Parts",
+                                    "__GDanitorAnimator.IdleData.ZOrder",
+                                    "=",
+                                    "Parts.ZOrder()"
+                                  ]
+                                }
+                              ]
+                            }
+                          ],
+                          "parameters": []
+                        },
+                        {
+                          "colorB": 228,
+                          "colorG": 176,
+                          "colorR": 74,
+                          "creationTime": 0,
+                          "name": "Idle state (when there is no tween playing)",
+                          "source": "",
+                          "type": "BuiltinCommonInstructions::Group",
+                          "events": [
+                            {
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "ModVarObjet"
+                                  },
+                                  "parameters": [
+                                    "Parts",
+                                    "__GDanitorAnimator.Temp.ScaleY",
+                                    "=",
+                                    "Object.ScaleY()"
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "ModVarObjet"
+                                  },
+                                  "parameters": [
+                                    "Parts",
+                                    "__GDanitorAnimator.Temp.ScaleX",
+                                    "=",
+                                    "Object.ScaleX()"
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "ModVarObjet"
+                                  },
+                                  "parameters": [
+                                    "Parts",
+                                    "__GDanitorAnimator.Temp.X",
+                                    "=",
+                                    "Object.X()"
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "ModVarObjet"
+                                  },
+                                  "parameters": [
+                                    "Parts",
+                                    "__GDanitorAnimator.Temp.Y",
+                                    "=",
+                                    "Object.Y()"
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "ModVarObjet"
+                                  },
+                                  "parameters": [
+                                    "Parts",
+                                    "__GDanitorAnimator.Temp.Angle",
+                                    "=",
+                                    "Object.Angle()"
+                                  ]
+                                }
+                              ],
+                              "events": [
+                                {
+                                  "type": "BuiltinCommonInstructions::JsCode",
+                                  "inlineCode": "const objectData = objects[0].getVariables().get(\"__GDanitorAnimator\").getChild(\"Temp\").toJSObject();\nconst partData = objects[0].getVariables().get(\"__GDanitorAnimator\").getChild(\"IdleData\").toJSObject();\n\nlet resultAngle = partData.Angle;\nif (objectData.FlippedHor){\n    resultAngle = 360-partData.Angle\n}\nobjects[0].setAngle(((objectData.FlippedVer ? -1 : 1)*resultAngle)+objectData.Angle);\n\nobjects[0].setPosition(gdjs.evtTools.common.getXFromAngleAndDistance(gdjs.evtTools.common.angleBetweenPositions(0, 0, partData.X * objectData.ScaleX * (objectData.FlippedHor ? -1 : 1), partData.Y * objectData.ScaleY * (objectData.FlippedVer ? -1 : 1)) + objectData.Angle, gdjs.evtTools.common.distanceBetweenPositions(0, 0, partData.X * objectData.ScaleX * (objectData.FlippedHor ? -1 : 1), partData.Y * objectData.ScaleY * (objectData.FlippedVer ? -1 : 1))) + objectData.X, gdjs.evtTools.common.getYFromAngleAndDistance(gdjs.evtTools.common.angleBetweenPositions(0, 0, partData.X * objectData.ScaleX * (objectData.FlippedHor ? -1 : 1), partData.Y * objectData.ScaleY * (objectData.FlippedVer ? -1 : 1)) + objectData.Angle, gdjs.evtTools.common.distanceBetweenPositions(0, 0, partData.X * objectData.ScaleX * (objectData.FlippedHor ? -1 : 1), partData.Y * objectData.ScaleY * (objectData.FlippedVer ? -1 : 1))) + objectData.Y);",
+                                  "parameterObjects": "Parts",
+                                  "useStrict": true,
+                                  "eventsSheetExpanded": false
+                                }
+                              ]
+                            },
+                            {
+                              "folded": true,
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "ModVarObjet"
+                                  },
+                                  "parameters": [
+                                    "Parts",
+                                    "__GDanitorAnimator.Temp.Height",
+                                    "=",
+                                    "Parts.Variable(__GDanitorAnimator.IdleData.Height)*Object.ScaleY()"
+                                  ]
+                                }
+                              ],
+                              "events": [
+                                {
+                                  "type": "BuiltinCommonInstructions::JsCode",
+                                  "inlineCode": "objects[0].setHeight(objects[0].getVariables().get(\"__GDanitorAnimator\").getChild(\"Temp\").getChild(\"Height\").getAsNumber());\n\n",
+                                  "parameterObjects": "Parts",
+                                  "useStrict": true,
+                                  "eventsSheetExpanded": false
+                                }
+                              ]
+                            },
+                            {
+                              "folded": true,
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "ModVarObjet"
+                                  },
+                                  "parameters": [
+                                    "Parts",
+                                    "__GDanitorAnimator.Temp.Width",
+                                    "=",
+                                    "Parts.Variable(__GDanitorAnimator.IdleData.Width)*Object.ScaleX()"
+                                  ]
+                                }
+                              ],
+                              "events": [
+                                {
+                                  "type": "BuiltinCommonInstructions::JsCode",
+                                  "inlineCode": "objects[0].setWidth(objects[0].getVariables().get(\"__GDanitorAnimator\").getChild(\"Temp\").getChild(\"Width\").getAsNumber());\n\n",
+                                  "parameterObjects": "Parts",
+                                  "useStrict": true,
+                                  "eventsSheetExpanded": false
+                                }
+                              ]
+                            },
+                            {
+                              "folded": true,
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "ModVarObjet"
+                                  },
+                                  "parameters": [
+                                    "Parts",
+                                    "__GDanitorAnimator.Temp.Opacity",
+                                    "=",
+                                    "Parts.Variable(__GDanitorAnimator.IdleData.Opacity)*normalize(Object.Opacity(),0,255)"
+                                  ]
+                                }
+                              ],
+                              "events": [
+                                {
+                                  "type": "BuiltinCommonInstructions::JsCode",
+                                  "inlineCode": "objects[0].setOpacity(objects[0].getVariables().get(\"__GDanitorAnimator\").getChild(\"Temp\").getChild(\"Opacity\").getAsNumber());\n\n",
+                                  "parameterObjects": "Parts",
+                                  "useStrict": true,
+                                  "eventsSheetExpanded": false
+                                }
+                              ]
+                            },
+                            {
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "ChangeLayer"
+                                  },
+                                  "parameters": [
+                                    "Parts",
+                                    "Object.Layer()"
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "ChangePlan"
+                                  },
+                                  "parameters": [
+                                    "Parts",
+                                    "=",
+                                    "Parts.Variable(__GDanitorAnimator.IdleData.ZOrder)+Object.ZOrder()"
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [],
+                              "actions": []
+                            }
+                          ],
+                          "parameters": []
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": []
+            }
+          ],
+          "parameters": [
+            {
+              "codeOnly": false,
+              "defaultValue": "",
+              "description": "Object",
+              "longDescription": "",
+              "name": "Object",
+              "optional": false,
+              "supplementaryInformation": "Sprite",
+              "type": "object"
+            },
+            {
+              "codeOnly": false,
+              "defaultValue": "",
+              "description": "Behavior",
+              "longDescription": "",
+              "name": "Behavior",
+              "optional": false,
+              "supplementaryInformation": "GDaitorAnimator::ObjectAnimator",
+              "type": "behavior"
+            },
+            {
+              "codeOnly": false,
+              "defaultValue": "",
+              "description": "Parts to be animated",
+              "longDescription": "",
+              "name": "Parts",
+              "optional": false,
+              "supplementaryInformation": "",
+              "type": "objectList"
+            },
+            {
+              "codeOnly": false,
+              "defaultValue": "",
+              "description": "Behavior",
+              "longDescription": "",
+              "name": "Tween",
+              "optional": false,
+              "supplementaryInformation": "Tween::TweenBehavior",
+              "type": "behavior"
+            }
+          ],
+          "objectGroups": []
+        },
+        {
+          "description": "Start an animation for a model (Even if the animation is already playing)",
+          "fullName": "Start Animation",
+          "functionType": "Action",
+          "group": "",
+          "name": "StartAnimation",
+          "private": false,
+          "sentence": "Start animation _PARAM2_ of object _PARAM0_.",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "GDaitorAnimator::ObjectAnimator::SetPropertyStartAnimation"
+                  },
+                  "parameters": [
+                    "Object",
+                    "Behavior",
+                    "yes"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ModVarObjetTxt"
+                  },
+                  "parameters": [
+                    "Object",
+                    "__GDanitorAnimator.Playing",
+                    "=",
+                    "GetArgumentAsString(\"Animation\")"
+                  ]
+                }
+              ]
+            }
+          ],
+          "parameters": [
+            {
+              "codeOnly": false,
+              "defaultValue": "",
+              "description": "Object",
+              "longDescription": "",
+              "name": "Object",
+              "optional": false,
+              "supplementaryInformation": "Sprite",
+              "type": "object"
+            },
+            {
+              "codeOnly": false,
+              "defaultValue": "",
+              "description": "Behavior",
+              "longDescription": "",
+              "name": "Behavior",
+              "optional": false,
+              "supplementaryInformation": "GDaitorAnimator::ObjectAnimator",
+              "type": "behavior"
+            },
+            {
+              "codeOnly": false,
+              "defaultValue": "",
+              "description": "Name of the animation",
+              "longDescription": "",
+              "name": "Animation",
+              "optional": false,
+              "supplementaryInformation": "",
+              "type": "string"
+            }
+          ],
+          "objectGroups": []
+        },
+        {
+          "description": "Change the animation for a model",
+          "fullName": "Change Animation",
+          "functionType": "Action",
+          "group": "",
+          "name": "ChangeAnimation",
+          "private": false,
+          "sentence": "Change to animation _PARAM2_ of object _PARAM0_.",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "VarObjetTxt"
+                  },
+                  "parameters": [
+                    "Object",
+                    "__GDanitorAnimator.Playing",
+                    "!=",
+                    "GetArgumentAsString(\"Animation\")"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "GDaitorAnimator::ObjectAnimator::SetPropertyStartAnimation"
+                  },
+                  "parameters": [
+                    "Object",
+                    "Behavior",
+                    "yes"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ModVarObjetTxt"
+                  },
+                  "parameters": [
+                    "Object",
+                    "__GDanitorAnimator.Playing",
+                    "=",
+                    "GetArgumentAsString(\"Animation\")"
+                  ]
+                }
+              ]
+            }
+          ],
+          "parameters": [
+            {
+              "codeOnly": false,
+              "defaultValue": "",
+              "description": "Object",
+              "longDescription": "",
+              "name": "Object",
+              "optional": false,
+              "supplementaryInformation": "Sprite",
+              "type": "object"
+            },
+            {
+              "codeOnly": false,
+              "defaultValue": "",
+              "description": "Behavior",
+              "longDescription": "",
+              "name": "Behavior",
+              "optional": false,
+              "supplementaryInformation": "GDaitorAnimator::ObjectAnimator",
+              "type": "behavior"
+            },
+            {
+              "codeOnly": false,
+              "defaultValue": "",
+              "description": "Name of the animation",
+              "longDescription": "",
+              "name": "Animation",
+              "optional": false,
+              "supplementaryInformation": "",
+              "type": "string"
+            }
+          ],
+          "objectGroups": []
+        },
+        {
+          "description": "Add object to the model",
+          "fullName": "Add object",
+          "functionType": "Action",
+          "group": "",
+          "name": "AddObjectToModel",
+          "private": false,
+          "sentence": "Add object _PARAM2_ to the model of object _PARAM0_ with UUID _PARAM3_.",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "LinkedObjects::LinkObjects"
+                  },
+                  "parameters": [
+                    "",
+                    "Object",
+                    "Part"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ModVarObjetTxt"
+                  },
+                  "parameters": [
+                    "Part",
+                    "__GDanitorAnimator.UUID",
+                    "=",
+                    "GetArgumentAsString(\"UUID\")"
+                  ]
+                }
+              ],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::JsCode",
+                  "inlineCode": "for (const objectName in objects) {\r\n    const object = objects[objectName];\r\n    object.getVariables().get(\"__GDanitorAnimator\").getChild(\"IdleData\").getChild(\"Angle\").setNumber(object.getAngle());\r\n\r\n    object.getVariables().get(\"__GDanitorAnimator\").getChild(\"IdleData\").getChild(\"X\").setNumber(object.getX());\r\n    object.getVariables().get(\"__GDanitorAnimator\").getChild(\"IdleData\").getChild(\"Y\").setNumber(object.getY());\r\n\r\n    object.getVariables().get(\"__GDanitorAnimator\").getChild(\"IdleData\").getChild(\"Height\").setNumber(object.getHeight());\r\n    object.getVariables().get(\"__GDanitorAnimator\").getChild(\"IdleData\").getChild(\"Width\").setNumber(object.getWidth());\r\n\r\n    object.getVariables().get(\"__GDanitorAnimator\").getChild(\"IdleData\").getChild(\"Opacity\").setNumber(object.getOpacity());\r\n    object.getVariables().get(\"__GDanitorAnimator\").getChild(\"IdleData\").getChild(\"ZOrder\").setNumber(object.getZOrder())\r\n}",
+                  "parameterObjects": "Part",
+                  "useStrict": true,
+                  "eventsSheetExpanded": true
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": []
+            }
+          ],
+          "parameters": [
+            {
+              "codeOnly": false,
+              "defaultValue": "",
+              "description": "Object",
+              "longDescription": "",
+              "name": "Object",
+              "optional": false,
+              "supplementaryInformation": "Sprite",
+              "type": "object"
+            },
+            {
+              "codeOnly": false,
+              "defaultValue": "",
+              "description": "Behavior",
+              "longDescription": "",
+              "name": "Behavior",
+              "optional": false,
+              "supplementaryInformation": "GDaitorAnimator::ObjectAnimator",
+              "type": "behavior"
+            },
+            {
+              "codeOnly": false,
+              "defaultValue": "",
+              "description": "Object to add",
+              "longDescription": "",
+              "name": "Part",
+              "optional": false,
+              "supplementaryInformation": "",
+              "type": "objectList"
+            },
+            {
+              "codeOnly": false,
+              "defaultValue": "",
+              "description": "UUID of the object",
+              "longDescription": "",
+              "name": "UUID",
+              "optional": false,
+              "supplementaryInformation": "",
+              "type": "string"
+            }
+          ],
+          "objectGroups": []
+        },
+        {
+          "description": "Remove object from the model",
+          "fullName": "Remove object",
+          "functionType": "Action",
+          "group": "",
+          "name": "RemoveObjectFromModel",
+          "private": false,
+          "sentence": "Remove object _PARAM2_ from the model of object _PARAM0_ with UUID _PARAM3_.",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "VarObjetTxt"
+                  },
+                  "parameters": [
+                    "Part",
+                    "__GDanitorAnimator.UUID",
+                    "=",
+                    "GetArgumentAsString(\"UUID\")"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Delete"
+                  },
+                  "parameters": [
+                    "Part",
+                    ""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": []
+            }
+          ],
+          "parameters": [
+            {
+              "codeOnly": false,
+              "defaultValue": "",
+              "description": "Object",
+              "longDescription": "",
+              "name": "Object",
+              "optional": false,
+              "supplementaryInformation": "Sprite",
+              "type": "object"
+            },
+            {
+              "codeOnly": false,
+              "defaultValue": "",
+              "description": "Behavior",
+              "longDescription": "",
+              "name": "Behavior",
+              "optional": false,
+              "supplementaryInformation": "GDaitorAnimator::ObjectAnimator",
+              "type": "behavior"
+            },
+            {
+              "codeOnly": false,
+              "defaultValue": "",
+              "description": "Object to remove",
+              "longDescription": "",
+              "name": "Part",
+              "optional": false,
+              "supplementaryInformation": "",
+              "type": "objectList"
+            },
+            {
+              "codeOnly": false,
+              "defaultValue": "",
+              "description": "UUID of the object",
+              "longDescription": "",
+              "name": "UUID",
+              "optional": false,
+              "supplementaryInformation": "",
+              "type": "string"
+            }
+          ],
+          "objectGroups": []
+        },
+        {
+          "description": "Check if the animation has finished",
+          "fullName": "Animation is Finished",
+          "functionType": "Condition",
+          "group": "",
+          "name": "AnimationFinished",
+          "private": false,
+          "sentence": "Check if the animation has finished in object _PARAM0_.",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "CompareObjectTimer"
+                  },
+                  "parameters": [
+                    "Object",
+                    "\"__GDanitorAnimator_Time\"",
+                    ">=",
+                    "Object.Variable(__GDanitorAnimator.PlayingData.settings.time)"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetReturnBoolean"
+                  },
+                  "parameters": [
+                    "True"
+                  ]
+                }
+              ]
+            }
+          ],
+          "parameters": [
+            {
+              "codeOnly": false,
+              "defaultValue": "",
+              "description": "Object",
+              "longDescription": "",
+              "name": "Object",
+              "optional": false,
+              "supplementaryInformation": "Sprite",
+              "type": "object"
+            },
+            {
+              "codeOnly": false,
+              "defaultValue": "",
+              "description": "Behavior",
+              "longDescription": "",
+              "name": "Behavior",
+              "optional": false,
+              "supplementaryInformation": "GDaitorAnimator::ObjectAnimator",
+              "type": "behavior"
+            }
+          ],
+          "objectGroups": []
+        },
+        {
+          "description": "Current animation of a model",
+          "fullName": "Current Animation",
+          "functionType": "StringExpression",
+          "group": "",
+          "name": "CurrentAnimation",
+          "private": false,
+          "sentence": "Change to animation _PARAM2_ of object _PARAM0_.",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetReturnString"
+                  },
+                  "parameters": [
+                    "Object.VariableString(__GDanitorAnimator.Playing)"
+                  ]
+                }
+              ]
+            }
+          ],
+          "parameters": [
+            {
+              "codeOnly": false,
+              "defaultValue": "",
+              "description": "Object",
+              "longDescription": "",
+              "name": "Object",
+              "optional": false,
+              "supplementaryInformation": "Sprite",
+              "type": "object"
+            },
+            {
+              "codeOnly": false,
+              "defaultValue": "",
+              "description": "Behavior",
+              "longDescription": "",
+              "name": "Behavior",
+              "optional": false,
+              "supplementaryInformation": "GDaitorAnimator::ObjectAnimator",
+              "type": "behavior"
+            }
+          ],
+          "objectGroups": []
+        },
+        {
+          "description": "Time passed in an animation of a model",
+          "fullName": "Time Passed in Animation",
+          "functionType": "Expression",
+          "group": "",
+          "name": "TimePassedInAnimation",
+          "private": false,
+          "sentence": "Change to animation _PARAM2_ of object _PARAM0_.",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetReturnNumber"
+                  },
+                  "parameters": [
+                    "Object.ObjectTimerElapsedTime(\"__GDanitorAnimator_Time\")"
+                  ]
+                }
+              ]
+            }
+          ],
+          "parameters": [
+            {
+              "codeOnly": false,
+              "defaultValue": "",
+              "description": "Object",
+              "longDescription": "",
+              "name": "Object",
+              "optional": false,
+              "supplementaryInformation": "Sprite",
+              "type": "object"
+            },
+            {
+              "codeOnly": false,
+              "defaultValue": "",
+              "description": "Behavior",
+              "longDescription": "",
+              "name": "Behavior",
+              "optional": false,
+              "supplementaryInformation": "GDaitorAnimator::ObjectAnimator",
+              "type": "behavior"
+            }
+          ],
+          "objectGroups": []
+        }
+      ],
+      "propertyDescriptors": [
+        {
+          "value": "",
+          "type": "String",
+          "label": "The model to be created",
+          "description": "",
+          "group": "",
+          "extraInformation": [],
+          "hidden": false,
+          "name": "ModelJSON"
+        },
+        {
+          "value": "",
+          "type": "String",
+          "label": "Animations for the object",
+          "description": "",
+          "group": "",
+          "extraInformation": [],
+          "hidden": false,
+          "name": "AnimationsJSON"
+        },
+        {
+          "value": "",
+          "type": "Boolean",
+          "label": "",
+          "description": "",
+          "group": "",
+          "extraInformation": [],
+          "hidden": true,
+          "name": "StartAnimation"
+        }
+      ]
+    }
+  ],
+  "eventsBasedObjects": []
+}
